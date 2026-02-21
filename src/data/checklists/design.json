@@ -1,0 +1,14 @@
+[
+  { "id": "d1",  "text": "Written terminal learning objectives in ABCD format (Audience, Behavior, Condition, Degree)" },
+  { "id": "d2",  "text": "Written enabling objectives for each terminal objective" },
+  { "id": "d3",  "text": "Mapped each objective to the appropriate Bloom's Taxonomy level" },
+  { "id": "d4",  "text": "Confirmed objectives address the performance gap identified in Analysis" },
+  { "id": "d5",  "text": "Selected instructional strategies appropriate to each Bloom's level" },
+  { "id": "d6",  "text": "Defined the content sequence (logical, task-based, or spiral)" },
+  { "id": "d7",  "text": "Designed the assessment strategy (pre-test, knowledge checks, final assessment, performance task)" },
+  { "id": "d8",  "text": "Mapped each assessment item to a specific learning objective" },
+  { "id": "d9",  "text": "Chosen delivery format and media (e-learning, ILT, VILT, blended, job aid)" },
+  { "id": "d10", "text": "Produced a course outline or storyboard structure" },
+  { "id": "d11", "text": "Completed and shared the Design Document with stakeholders" },
+  { "id": "d12", "text": "Obtained SME and stakeholder sign-off on the design document" }
+]

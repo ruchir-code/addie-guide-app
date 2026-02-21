@@ -1,0 +1,32 @@
+{
+  "remember": {
+    "label": "Remember",
+    "description": "Recall facts and basic concepts",
+    "verbs": ["Define", "Duplicate", "List", "Memorize", "Recall", "Repeat", "Reproduce", "State", "Name", "Identify", "Recognize", "Match", "Label", "Outline"]
+  },
+  "understand": {
+    "label": "Understand",
+    "description": "Explain ideas or concepts in your own words",
+    "verbs": ["Classify", "Describe", "Discuss", "Explain", "Identify", "Locate", "Recognize", "Report", "Select", "Translate", "Paraphrase", "Summarize", "Interpret", "Illustrate"]
+  },
+  "apply": {
+    "label": "Apply",
+    "description": "Use information in new situations",
+    "verbs": ["Execute", "Implement", "Solve", "Use", "Demonstrate", "Interpret", "Operate", "Schedule", "Sketch", "Calculate", "Complete", "Modify", "Produce", "Show"]
+  },
+  "analyze": {
+    "label": "Analyze",
+    "description": "Draw connections among ideas",
+    "verbs": ["Differentiate", "Organize", "Relate", "Deconstruct", "Attribute", "Compare", "Contrast", "Examine", "Question", "Test", "Break down", "Distinguish", "Diagram", "Infer"]
+  },
+  "evaluate": {
+    "label": "Evaluate",
+    "description": "Justify a decision or course of action",
+    "verbs": ["Appraise", "Argue", "Defend", "Judge", "Select", "Support", "Value", "Critique", "Weigh", "Justify", "Assess", "Prioritize", "Rate", "Recommend"]
+  },
+  "create": {
+    "label": "Create",
+    "description": "Produce new or original work",
+    "verbs": ["Design", "Assemble", "Construct", "Conjecture", "Develop", "Formulate", "Author", "Investigate", "Build", "Plan", "Produce", "Compose", "Generate", "Devise"]
+  }
+}

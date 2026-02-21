@@ -1,0 +1,54 @@
+{
+  "slug": "evaluate",
+  "label": "Evaluate",
+  "color": "#2980B9",
+  "tagline": "Measure whether the training actually worked — and improve it.",
+  "whatItIs": {
+    "beginner": "Evaluation is how you find out if your training worked. Did learners like it? Did they learn? Did they change their behavior on the job? Did it help the business? Most IDs use Kirkpatrick's Four Levels of Evaluation to answer these questions. Evaluation happens both during the project (formative) and after the training is live (summative).",
+    "advanced": "Evaluation in ADDIE is both formative (ongoing, built into every phase to improve the training as it's developed) and summative (conducted post-implementation to measure impact). The Kirkpatrick Model's four levels — Reaction, Learning, Behavior, and Results — provide a hierarchical measurement framework. Phillips's ROI Model adds a fifth level calculating the financial return on training investment. A well-designed evaluation plan is built in Analysis and Design, not retrofitted after launch. Level 3 (Behavior) and Level 4 (Results) are where most training programs fail to collect evidence, leaving stakeholders unable to justify L&D investment."
+  },
+  "whyItMatters": {
+    "beginner": "Without evaluation, you're guessing. Did learners enjoy the training? Great — but did it change anything? Evaluation tells you what's working, what's not, and what to improve. It also helps you prove the value of training to managers and executives who want to see results, not just completion rates.",
+    "advanced": "Evaluation is the mechanism that links L&D investment to business outcomes and makes the case for future training budgets. Level 1 and Level 2 data (reaction and learning) are easy to collect but carry low organizational credibility. Level 3 (on-the-job behavior change) and Level 4 (business results) require longitudinal measurement, manager involvement, and control group design — but these are the data that move executives. Failing to evaluate at these levels leaves L&D vulnerable to budget cuts because the connection to performance is invisible."
+  },
+  "keyQuestions": [
+    "What evidence do we need to prove this training worked?",
+    "Which Kirkpatrick levels are we measuring, and why?",
+    "How and when will we measure Level 3 (behavior on the job)?",
+    "What baseline data do we have to compare against post-training performance?",
+    "Who owns the evaluation data collection and analysis?",
+    "What will we do with the results — how will findings drive iteration?",
+    "Is an ROI calculation expected by stakeholders?"
+  ],
+  "outputs": [
+    "Level 1: Learner reaction surveys (post-training)",
+    "Level 2: Pre/post knowledge assessment results",
+    "Level 3: On-the-job performance observation or survey data (30/60/90 days post)",
+    "Level 4: Business metrics tied to training outcomes",
+    "Evaluation report with findings and recommendations",
+    "Course revision plan based on evaluation data",
+    "ROI calculation (if required)"
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Treating the smile sheet as sufficient evaluation",
+      "fix": "Level 1 data tells you about learner satisfaction, not learning or performance. Always pair it with at least a Level 2 assessment."
+    },
+    {
+      "mistake": "Planning evaluation after launch",
+      "fix": "Baseline data must be collected before training. Evaluation plans built after launch can't prove causation."
+    },
+    {
+      "mistake": "Measuring the wrong thing",
+      "fix": "Align your evaluation metrics directly to the performance gap identified in Analysis. If you can't trace the metric back to the original problem, question its usefulness."
+    },
+    {
+      "mistake": "Never feeding evaluation findings back into the course",
+      "fix": "Evaluation without iteration is a waste. Schedule a 90-day post-launch review to update the course based on real data."
+    },
+    {
+      "mistake": "Skipping Level 3 because it feels hard",
+      "fix": "Use manager observation checklists or a simple 30-day follow-up survey. Imperfect Level 3 data beats no Level 3 data."
+    }
+  ]
+}

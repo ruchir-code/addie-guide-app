@@ -1,0 +1,54 @@
+{
+  "slug": "implement",
+  "label": "Implement",
+  "color": "#8E44AD",
+  "tagline": "Deploy the training and support learners through the experience.",
+  "whatItIs": {
+    "beginner": "Implementation is when you actually deliver or launch the training to real learners. For e-learning, this means uploading it to the LMS and enrolling learners. For instructor-led training, it means facilitating the session. This phase also includes making sure everything works, supporting learners during the experience, and communicating to managers and stakeholders that the training is live.",
+    "advanced": "The Implement phase encompasses deployment, facilitation, and learner support. For e-learning, this includes LMS configuration (enrollment, completion rules, reporting settings, due dates), learner communication campaigns, and manager briefings. For ILT/VILT, it includes facilitator preparation, logistics coordination, co-facilitation, and real-time troubleshooting. A pilot session with a representative sample before full rollout is a best practice that catches issues before they affect the entire audience."
+  },
+  "whyItMatters": {
+    "beginner": "Even perfect training can fail if implementation is messy. Learners who can't access the course, managers who don't know training exists, or facilitators who aren't prepared can all derail a project. Good implementation ensures the right people get the right training at the right time — and that it actually works.",
+    "advanced": "Implementation is where instructional design meets change management. Learner motivation, manager support, and environmental readiness significantly impact training effectiveness. A well-planned implementation includes a communication plan (who tells learners what, when, and why), manager activation (coaching managers on their role in reinforcing learning), and a support plan (help desk, FAQ, office hours). Without these elements, completion rates drop and transfer to the job suffers."
+  },
+  "keyQuestions": [
+    "Is the training accessible to all intended learners on their devices and in their environment?",
+    "Do facilitators feel prepared and have they practiced with the materials?",
+    "Have managers been briefed on the training and their role in supporting it?",
+    "What is the communication plan for announcing the training to learners?",
+    "What support is available to learners who have technical or content questions?",
+    "Is a pilot planned before full rollout?",
+    "How will completion and participation be tracked?"
+  ],
+  "outputs": [
+    "Deployed course in LMS (with enrollment, completion rules, and reporting configured)",
+    "Facilitator preparation and dry-run session notes",
+    "Learner communication (email, announcements, calendar invites)",
+    "Manager briefing document or session",
+    "Technical support plan and FAQ",
+    "Pilot session notes and adjustments",
+    "Rollout timeline and completion tracking dashboard"
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Launching without a pilot",
+      "fix": "A pilot with 5–10 representative learners will surface technical issues, confusing content, and timing problems before they affect hundreds of people."
+    },
+    {
+      "mistake": "Forgetting managers in the communication plan",
+      "fix": "Managers are your biggest lever for learning transfer. Brief them before launch so they can prime learners and reinforce post-training."
+    },
+    {
+      "mistake": "Assuming LMS deployment is automatic",
+      "fix": "Test enrollment rules, completion tracking, and reporting before go-live. LMS configurations go wrong constantly."
+    },
+    {
+      "mistake": "Treating implementation as the end of the project",
+      "fix": "Implementation is the handoff to Evaluate. Start collecting data from day one."
+    },
+    {
+      "mistake": "Not communicating the 'why' to learners",
+      "fix": "Learners who know why training matters complete it faster and transfer more. Include a clear rationale in your learner communication."
+    }
+  ]
+}

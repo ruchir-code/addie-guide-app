@@ -1,0 +1,14 @@
+[
+  { "id": "i1",  "text": "Configured the LMS: enrollment rules, completion criteria, due dates, and reporting" },
+  { "id": "i2",  "text": "Tested the course in the LMS with a test account end-to-end" },
+  { "id": "i3",  "text": "Prepared and rehearsed facilitators for ILT/VILT delivery" },
+  { "id": "i4",  "text": "Conducted a facilitator dry run with timing and Q&A practice" },
+  { "id": "i5",  "text": "Briefed managers on the training purpose, content, and their role in reinforcement" },
+  { "id": "i6",  "text": "Sent learner communication: what, why, when, and how to access" },
+  { "id": "i7",  "text": "Planned and (ideally) run a pilot session before full rollout" },
+  { "id": "i8",  "text": "Documented and addressed issues found during the pilot" },
+  { "id": "i9",  "text": "Established technical support contact or FAQ for learner issues" },
+  { "id": "i10", "text": "Set up completion and participation tracking" },
+  { "id": "i11", "text": "Confirmed all learners are enrolled and have access" },
+  { "id": "i12", "text": "Scheduled post-launch check-in with sponsor to review early completion data" }
+]

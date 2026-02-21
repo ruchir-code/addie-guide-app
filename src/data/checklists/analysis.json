@@ -1,0 +1,14 @@
+[
+  { "id": "a1",  "text": "Met with the project sponsor to understand the business problem and desired outcome" },
+  { "id": "a2",  "text": "Confirmed that the performance gap is due to a knowledge or skill deficit (training is the right solution)" },
+  { "id": "a3",  "text": "Documented the current state vs. desired state performance gap" },
+  { "id": "a4",  "text": "Identified and profiled the target learner audience (role, experience level, prior knowledge)" },
+  { "id": "a5",  "text": "Conducted at least one learner interview or observation session" },
+  { "id": "a6",  "text": "Identified the delivery context (where and how learners will access training)" },
+  { "id": "a7",  "text": "Documented all project constraints: budget, timeline, technology, headcount" },
+  { "id": "a8",  "text": "Identified available SMEs and agreed on their time commitment" },
+  { "id": "a9",  "text": "Confirmed existing materials, job aids, or training that can be leveraged or reused" },
+  { "id": "a10", "text": "Defined what success looks like and how it will be measured" },
+  { "id": "a11", "text": "Shared and obtained sign-off on the needs assessment summary or project scope agreement" },
+  { "id": "a12", "text": "Documented assumptions and flagged open risks" }
+]
