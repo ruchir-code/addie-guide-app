@@ -1,0 +1,54 @@
+{
+  "slug": "design",
+  "label": "Design",
+  "color": "#E67E22",
+  "tagline": "Blueprint the learning experience before building a single asset.",
+  "whatItIs": {
+    "beginner": "Design is where you plan your training before you build anything. You take what you learned in Analysis and turn it into a blueprint — deciding what learners will know and do by the end, how you'll teach it, how you'll test it, and what the course will look like. Think of it like an architect drawing plans before construction starts.",
+    "advanced": "The Design phase operationalises your Analysis findings into a formal instructional strategy. You write measurable performance objectives using a framework like ABCD (Audience, Behavior, Condition, Degree), sequence content using task analysis and prerequisite mapping, select instructional strategies aligned to Bloom's taxonomy levels, and define your assessment strategy (criterion-referenced tests, performance tasks, etc.). You also produce the Design Document or Blueprint — the contract between you and your stakeholders before development begins."
+  },
+  "whyItMatters": {
+    "beginner": "Designing before building saves enormous time and rework. If you start developing in PowerPoint or Articulate without a plan, you'll likely rebuild slides when stakeholders change direction. A design document gives everyone a chance to agree on direction before you invest hours of development work.",
+    "advanced": "The Design phase creates alignment between learning objectives, instructional strategies, and assessment — the 'golden thread' of instructional design. Without it, you risk developing content that doesn't map to objectives, assessments that don't measure the right behaviors, and a sequence that doesn't account for prerequisite knowledge. The Design Document also functions as a scope management tool, making it clear what is and isn't in the course."
+  },
+  "keyQuestions": [
+    "What will learners be able to do differently after this training? (Terminal objectives)",
+    "What sub-skills do learners need to achieve the terminal objectives? (Enabling objectives)",
+    "How will we assess whether learners have met the objectives?",
+    "What instructional strategies are best suited to these objectives and this audience?",
+    "What is the optimal sequence of content?",
+    "What media and format will we use and why?",
+    "What level of Bloom's taxonomy are these objectives targeting?"
+  ],
+  "outputs": [
+    "Learning Objectives (terminal + enabling) in ABCD format",
+    "Course Outline / Content Sequence",
+    "Design Document or Instructional Blueprint",
+    "Assessment Strategy (quizzes, scenarios, performance tasks)",
+    "Storyboard outline or wireframes",
+    "Media and format decisions",
+    "SME review and sign-off on objectives"
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Writing vague objectives like 'understand' or 'appreciate'",
+      "fix": "Use observable, measurable verbs. If you can't see or hear the learner doing it, it's not a good objective. Use Bloom's verb lists."
+    },
+    {
+      "mistake": "Misaligning objectives and assessments",
+      "fix": "Every assessment item should map to a specific objective. If you can't trace it back, cut it."
+    },
+    {
+      "mistake": "Designing for the wrong Bloom's level",
+      "fix": "Check the actual job task. Most workplace training needs Apply or Analyze level thinking — not just Remember."
+    },
+    {
+      "mistake": "Skipping the design document and going straight to development",
+      "fix": "A one-page design document forces alignment before expensive development work begins. Even a brief outline beats no plan."
+    },
+    {
+      "mistake": "Letting SMEs dictate content quantity instead of objectives",
+      "fix": "Anchor every content decision to an objective. If content doesn't support an objective, cut it."
+    }
+  ]
+}

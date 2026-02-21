@@ -1,0 +1,14 @@
+[
+  { "id": "e1",  "text": "Defined the evaluation plan in the Design phase (not retroactively)" },
+  { "id": "e2",  "text": "Collected baseline performance data before training launched" },
+  { "id": "e3",  "text": "Administered Level 1 reaction survey immediately after training" },
+  { "id": "e4",  "text": "Reviewed Level 1 results and flagged items with low satisfaction scores" },
+  { "id": "e5",  "text": "Collected and analyzed Level 2 (learning) pre/post assessment results" },
+  { "id": "e6",  "text": "Administered Level 3 (behavior) follow-up survey or observation at 30, 60, or 90 days" },
+  { "id": "e7",  "text": "Analyzed Level 3 results and identified where transfer is or isn't happening" },
+  { "id": "e8",  "text": "Collected Level 4 business results data tied to the original performance gap" },
+  { "id": "e9",  "text": "Identified root causes for any transfer gaps (environment, manager support, content)" },
+  { "id": "e10", "text": "Compiled findings into an evaluation report or executive summary" },
+  { "id": "e11", "text": "Presented findings and recommendations to the project sponsor" },
+  { "id": "e12", "text": "Planned and scheduled course revisions based on evaluation findings" }
+]

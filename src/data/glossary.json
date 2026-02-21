@@ -1,0 +1,443 @@
+[
+  {
+    "id": "g1",
+    "term": "ABCD Format",
+    "definition": "A structure for writing measurable learning objectives. A = Audience (who), B = Behavior (observable action), C = Condition (the context or constraints), D = Degree (the standard for success). Example: 'Given a customer complaint scenario (C), the service rep (A) will apply the de-escalation protocol (B) with 100% compliance to the four-step process (D).'",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g2",
+    "term": "ADDIE",
+    "definition": "A five-phase instructional design process model: Analysis, Design, Develop, Implement, Evaluate. It provides a systematic framework for designing and developing learning solutions. While often represented as linear, in practice ADDIE is iterative — you frequently loop back to earlier phases based on new information.",
+    "phaseLink": "/",
+    "phaseLabel": "Home"
+  },
+  {
+    "id": "g3",
+    "term": "Alpha Review",
+    "definition": "An internal quality review of a learning asset conducted by a peer instructional designer (not an SME). The alpha reviewer checks for instructional design quality, consistency, clarity, and alignment to objectives — before the content is sent to a subject matter expert for accuracy review.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g4",
+    "term": "Asynchronous Learning",
+    "definition": "Learning that happens independently, without real-time interaction. Learners access content at their own pace and time. E-learning modules, recorded video, and self-paced courses are all asynchronous. Contrast with synchronous learning (live sessions).",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g5",
+    "term": "Audience Analysis",
+    "definition": "The process of gathering detailed information about your target learners — their role, experience, prior knowledge, motivations, attitudes, and learning context. A thorough audience analysis prevents you from designing training that's too simple, too complex, or irrelevant to your learners' real work.",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g6",
+    "term": "Beta Review",
+    "definition": "A content accuracy review of a developed learning asset conducted by the subject matter expert(s). The SME checks facts, examples, terminology, and procedures for correctness. Beta review happens after the alpha review and before the pilot.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g7",
+    "term": "Blended Learning",
+    "definition": "A learning approach that combines multiple delivery formats — typically a mix of e-learning, instructor-led sessions, and performance support tools. Blended learning uses each format for what it does best: e-learning for foundational knowledge, live sessions for practice and Q&A, job aids for on-the-job reference.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g8",
+    "term": "Bloom's Taxonomy",
+    "definition": "A hierarchical model of cognitive learning objectives developed by Benjamin Bloom in 1956 and revised in 2001. The six levels (from lowest to highest): Remember, Understand, Apply, Analyze, Evaluate, Create. Most workplace training targets Apply or Analyze. The taxonomy helps IDs select the right instructional strategies and assessment types for each objective.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g9",
+    "term": "Branching Scenario",
+    "definition": "An interactive learning activity where the learner makes decisions at key points, and the story or outcome changes based on their choices. Branching scenarios are powerful for practicing complex judgment and decision-making skills. They mimic real-world consequences in a safe environment.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g10",
+    "term": "Cognitive Load",
+    "definition": "The mental effort required to process and learn new information. Instructional designers manage cognitive load by chunking content, using worked examples, limiting extraneous visuals, and building from simple to complex. Overloaded working memory prevents learning. Less is more.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g11",
+    "term": "Competency",
+    "definition": "A combination of knowledge, skills, and behaviors required to perform a job effectively. Competencies are broader than learning objectives — they describe what proficient performance looks like over time. Competency frameworks are often used in Analysis to identify what training needs to address.",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g12",
+    "term": "Completion Rate",
+    "definition": "The percentage of enrolled learners who finish a course. Completion rate is a common Level 1 metric but is not a measure of learning — only participation. A high completion rate paired with poor post-training performance indicates a content or design problem, not a success.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g13",
+    "term": "Condition (ABCD)",
+    "definition": "The 'C' in the ABCD objective format. Describes the context, tools, resources, or constraints under which the learner will perform the behavior. Example: 'Given access to the company style guide...' or 'Without reference materials...' The condition makes the objective realistic and measurable.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g14",
+    "term": "Criterion-Referenced Assessment",
+    "definition": "An assessment that measures learner performance against a fixed standard or criterion (e.g., 80% passing score), rather than comparing learners to each other. Most training assessments should be criterion-referenced — the question is whether the learner can perform the objective, not how they compare to peers.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g15",
+    "term": "Enabling Objective",
+    "definition": "A smaller, supporting objective that learners must achieve to reach a terminal (main) objective. Enabling objectives break down complex performance into teachable, assessable chunks. Also called 'supporting objectives' or 'sub-objectives.'",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g16",
+    "term": "Formative Evaluation",
+    "definition": "Evaluation conducted during the design and development process to improve the training before launch. Includes SME reviews, alpha reviews, beta reviews, and pilot sessions. Formative evaluation is iterative — you test, revise, and test again. Contrast with summative evaluation.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g17",
+    "term": "Gap Analysis",
+    "definition": "The process of identifying the difference between current performance and desired performance. The gap is what training (or another intervention) is designed to close. A clear gap statement — 'Reps currently close 40% of calls; the target is 60%' — anchors the entire design process.",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g18",
+    "term": "ILT (Instructor-Led Training)",
+    "definition": "Training delivered by a facilitator in real time, either in person or virtually. ILT is best suited for complex topics requiring discussion, coaching, practice with feedback, and relationship-building. It's resource-intensive but enables the highest level of interactivity.",
+    "phaseLink": "/implement",
+    "phaseLabel": "Implement"
+  },
+  {
+    "id": "g19",
+    "term": "Instructional Strategy",
+    "definition": "The approach used to teach content and facilitate learning. Examples include lecture, discussion, case study, simulation, scenario, demonstration, spaced practice, and peer teaching. Instructional strategy should be chosen based on the Bloom's level of the objective and the characteristics of the audience.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g20",
+    "term": "Job Aid",
+    "definition": "A performance support tool — checklist, reference card, flowchart, or quick guide — that helps someone do a task correctly at the moment they need it, without having to memorize anything. Job aids are often more effective than training for reference tasks. Ask: 'Does this need to be learned, or just accessed?'",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g21",
+    "term": "Kirkpatrick Model",
+    "definition": "The most widely used framework for evaluating training effectiveness, developed by Donald Kirkpatrick. Four levels: Level 1 (Reaction) — did learners like it? Level 2 (Learning) — did they learn? Level 3 (Behavior) — did they apply it on the job? Level 4 (Results) — did it impact the business? Most programs measure Level 1 and 2; Levels 3 and 4 are where business value is proven.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g22",
+    "term": "Knowledge Check",
+    "definition": "A low-stakes quiz or practice activity embedded within a course to check learner understanding during learning (not at the end). Knowledge checks support formative assessment and help learners self-monitor their progress. They should be tied to specific enabling objectives.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g23",
+    "term": "Learning Management System (LMS)",
+    "definition": "A software platform used to host, deliver, track, and report on training. Common LMS platforms include Cornerstone, Workday Learning, Docebo, Canvas, Moodle, and TalentLMS. The LMS tracks SCORM or xAPI data to record learner completions and scores.",
+    "phaseLink": "/implement",
+    "phaseLabel": "Implement"
+  },
+  {
+    "id": "g24",
+    "term": "Learning Objective",
+    "definition": "A specific, measurable statement of what a learner will be able to do after completing a training experience. Good objectives use observable verbs (demonstrate, calculate, differentiate) rather than vague ones (understand, appreciate, know). Objectives drive content selection, instructional strategy, and assessment design.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g25",
+    "term": "Microlearning",
+    "definition": "Short, focused learning assets (typically 3–10 minutes) that address a single objective or concept. Microlearning reduces cognitive load, fits into learner workflows, and is ideal for performance support and spaced repetition. Not a replacement for foundational skill-building, but effective for reinforcement.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g26",
+    "term": "Needs Assessment",
+    "definition": "A systematic process of identifying and documenting the gap between current performance and desired performance, and determining whether training is an appropriate solution. A thorough needs assessment asks: What is the problem? Who is affected? What is causing it? What intervention would close the gap?",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g27",
+    "term": "Non-Training Intervention",
+    "definition": "A solution to a performance problem that does not involve training. Examples include process redesign, job aids, better tools, incentive structures, environmental changes, or coaching. If a performance gap isn't caused by a knowledge or skill deficit, training won't fix it.",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g28",
+    "term": "Performance Gap",
+    "definition": "The measurable difference between how people are currently performing and how they should be performing. The performance gap defines the scope and purpose of training. Always describe the gap in behavioral, observable terms: 'Call center reps escalate 30% of calls; the target is under 15%.'",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g29",
+    "term": "Performance Objective",
+    "definition": "A learning objective written specifically at the 'Apply' level or above — one that describes a real job task the learner will be able to perform. Performance objectives connect training to the work environment and are directly linked to the job performance required to close the gap identified in Analysis.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g30",
+    "term": "Pilot",
+    "definition": "A trial run of a course or training program with a small, representative sample of the target audience before full rollout. Pilots surface technical issues, confusing content, timing problems, and low-engagement sections. Revising based on pilot feedback before full launch dramatically improves quality.",
+    "phaseLink": "/implement",
+    "phaseLabel": "Implement"
+  },
+  {
+    "id": "g31",
+    "term": "Prior Knowledge",
+    "definition": "What learners already know about a topic before training begins. Accounting for prior knowledge prevents over-teaching basics to experienced learners or under-scaffolding for novices. Use pre-assessments or audience analysis interviews to gauge it.",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g32",
+    "term": "Prototype",
+    "definition": "An early-stage, partially developed sample of a learning asset used to test design decisions before full production. A prototype typically includes one or two representative interactions or screens. It's faster and cheaper to get feedback on a prototype than to revise a finished course.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g33",
+    "term": "Rapid Prototyping",
+    "definition": "An iterative development approach where a working prototype is built quickly and refined through continuous feedback cycles — rather than completing all phases sequentially before showing anything to stakeholders. Common in Agile ID methodologies. Contrast with the traditional linear ADDIE waterfall approach.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g34",
+    "term": "SAM (Successive Approximation Model)",
+    "definition": "An agile instructional design model developed by Allen Interactions as an alternative to linear ADDIE. SAM uses short iterative design-develop-evaluate cycles rather than sequential phases. It gets stakeholders involved in review earlier and produces working prototypes faster. Particularly useful for e-learning projects with tight timelines.",
+    "phaseLink": "/",
+    "phaseLabel": "Home"
+  },
+  {
+    "id": "g35",
+    "term": "Scenario-Based Learning",
+    "definition": "An instructional approach that places learners in realistic, contextually rich situations where they must apply knowledge and make decisions. Scenarios are more effective than content delivery alone for developing judgment, problem-solving, and behavioral skills. The best scenarios mirror real job situations learners will face.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g36",
+    "term": "SCORM",
+    "definition": "Sharable Content Object Reference Model. A technical standard that defines how e-learning content packages communicate with an LMS — tracking completion, score, time spent, and status. SCORM 1.2 and SCORM 2004 are the most common versions. xAPI (Tin Can) is the modern successor.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g37",
+    "term": "SME (Subject Matter Expert)",
+    "definition": "A person with deep knowledge of the topic being trained on. The ID's job is to extract knowledge from the SME and transform it into effective learning experiences. Managing SMEs well — scheduling their time, structuring reviews, and keeping scope focused — is one of the most critical ID skills.",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g38",
+    "term": "Spaced Repetition",
+    "definition": "A learning technique where content is reviewed at increasing intervals over time, rather than in one session. Spaced repetition leverages the 'spacing effect' — information is retained longer when revisited after a delay. ID applications include follow-up emails, booster modules, and push notifications after course completion.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g39",
+    "term": "Storyboard",
+    "definition": "A slide-by-slide script and visual plan for an e-learning course or video. The storyboard specifies on-screen text, narration script, visual descriptions, interactions, and developer notes — for every screen. SME review of the storyboard (before production) is the most efficient review stage in the development process.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g40",
+    "term": "Summative Evaluation",
+    "definition": "Evaluation conducted after a training program has been implemented to measure its overall effectiveness and impact. Includes Level 1 surveys, Level 2 post-assessments, Level 3 follow-up surveys, and Level 4 business metrics. Summative evaluation answers: 'Did the training work?' Contrast with formative evaluation.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g41",
+    "term": "Synchronous Learning",
+    "definition": "Learning that happens in real time, with instructor and learners together simultaneously. Examples include in-person workshops, live webinars, and virtual classrooms (Zoom, Teams). Synchronous learning enables immediate feedback and social interaction but requires scheduling and coordination.",
+    "phaseLink": "/implement",
+    "phaseLabel": "Implement"
+  },
+  {
+    "id": "g42",
+    "term": "Task Analysis",
+    "definition": "The process of breaking down a complex job task into its component steps, decisions, and sub-tasks. Task analysis informs content sequencing, objective writing, and assessment design. Types include procedural task analysis (step-by-step tasks) and cognitive task analysis (decision-making and judgment tasks).",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g43",
+    "term": "Terminal Objective",
+    "definition": "The primary learning objective — the main thing learners should be able to do after completing the training. A course typically has one terminal objective (or a small number of closely related ones) supported by multiple enabling objectives. Terminal objectives map directly to the performance gap identified in Analysis.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g44",
+    "term": "Transfer of Learning",
+    "definition": "The degree to which learners apply what they learned in training to their actual job performance. Transfer is the goal of all training, but it's notoriously difficult to achieve without managerial support, practice opportunities, and a work environment that reinforces the new behavior.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g45",
+    "term": "VILT (Virtual Instructor-Led Training)",
+    "definition": "Live training delivered online via video conferencing platforms (Zoom, Teams, WebEx). VILT combines the interactivity of ILT with the accessibility of remote delivery. Effective VILT design uses breakout rooms, polls, chat, whiteboards, and frequent engagement checks to maintain learner attention.",
+    "phaseLink": "/implement",
+    "phaseLabel": "Implement"
+  },
+  {
+    "id": "g46",
+    "term": "WCAG",
+    "definition": "Web Content Accessibility Guidelines. A set of international standards for making web-based content accessible to people with disabilities. WCAG 2.1 Level AA is the most widely adopted standard for corporate e-learning. Key requirements include sufficient color contrast, keyboard navigation, alt text for images, and captions for audio/video.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g47",
+    "term": "xAPI (Tin Can API)",
+    "definition": "A modern e-learning specification (successor to SCORM) that tracks a much broader range of learning experiences — including offline learning, simulations, mobile apps, and social learning. xAPI uses an Activity Provider to record statements in the format 'Noun Verb Object' (e.g., 'Maria completed the scenario') in a Learning Record Store (LRS).",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g48",
+    "term": "Agile ID",
+    "definition": "An instructional design approach adapted from software development's Agile methodology. Agile ID prioritizes iterative development, stakeholder collaboration, and working deliverables over comprehensive upfront documentation. It pairs well with rapid prototyping and SAM, particularly when requirements are likely to change.",
+    "phaseLink": "/",
+    "phaseLabel": "Home"
+  },
+  {
+    "id": "g49",
+    "term": "Chunking",
+    "definition": "Breaking complex content into smaller, manageable units (chunks) to reduce cognitive load and improve retention. In e-learning, chunking typically means organizing content into short modules of 5–15 minutes, each addressing a single objective. In ILT, it means varying activities every 10–20 minutes.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g50",
+    "term": "Constructivism",
+    "definition": "A learning theory proposing that learners actively construct knowledge by connecting new information to prior experience. Constructivist instruction emphasizes discovery, problem-solving, and applying knowledge in context. Scenario-based learning and project-based learning are constructivist approaches.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g51",
+    "term": "Facilitation Guide",
+    "definition": "A detailed instructor reference document that provides everything a facilitator needs to deliver an ILT or VILT session. Includes session objectives, timing, activity instructions, discussion questions, facilitation tips, slide notes, and participant management guidance. A good facilitation guide enables a new facilitator to deliver the session confidently.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g52",
+    "term": "Formative Assessment",
+    "definition": "Low-stakes assessment during learning to check understanding and guide instruction — not to grade or certify. Knowledge checks, discussion questions, and reflection prompts are formative assessments. They give learners feedback and help IDs identify where the design isn't working.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g53",
+    "term": "Gagne's Nine Events",
+    "definition": "A sequence of nine instructional events developed by Robert Gagne that support effective learning: (1) Gain attention, (2) Inform learners of objectives, (3) Stimulate recall of prior learning, (4) Present content, (5) Provide learning guidance, (6) Elicit performance, (7) Provide feedback, (8) Assess performance, (9) Enhance retention and transfer. A useful checklist for designing any instructional sequence.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g54",
+    "term": "Kirkpatrick Level 1",
+    "definition": "The first and most commonly measured level of training evaluation: Reaction. Did learners find the training relevant, engaging, and a good use of their time? Collected via post-training surveys (smile sheets). Level 1 data is easy to collect but has limited value unless paired with higher-level evaluation.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g55",
+    "term": "Kirkpatrick Level 2",
+    "definition": "The second level of training evaluation: Learning. Did learners acquire the intended knowledge, skills, or attitudes? Measured through pre/post assessments, demonstrations, and skill tests administered during or immediately after training. Level 2 evidence proves that learning happened in the classroom.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g56",
+    "term": "Kirkpatrick Level 3",
+    "definition": "The third level of training evaluation: Behavior. Did learners apply what they learned on the job? Measured through observation, manager surveys, and follow-up assessments 30–90 days post-training. This is where most L&D teams fall short — and where business credibility is built or lost.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g57",
+    "term": "Kirkpatrick Level 4",
+    "definition": "The fourth and highest level of training evaluation: Results. Did the training produce measurable business outcomes — reduced errors, increased sales, improved safety, lower attrition? Level 4 requires baseline data collected before training and business metrics tracked over time. It's the hardest level to measure and the most credible.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g58",
+    "term": "Learning Record Store (LRS)",
+    "definition": "A database that stores xAPI statements from learning activities. Unlike an LMS, an LRS can accept data from any learning environment — mobile apps, simulations, on-the-job activities, and more. Used with xAPI to create a comprehensive record of learning across multiple systems.",
+    "phaseLink": "/implement",
+    "phaseLabel": "Implement"
+  },
+  {
+    "id": "g59",
+    "term": "Multimedia Learning",
+    "definition": "Richard Mayer's theory that people learn more deeply from words and pictures together than from words alone — but only when the design follows cognitive load principles. Key principles: coherence (remove irrelevant content), signaling (highlight key information), contiguity (place text near relevant images), and modality (use narration over on-screen text).",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g60",
+    "term": "ROI (Return on Investment)",
+    "definition": "A financial calculation that compares the monetary benefit of a training program to its cost. In L&D, ROI is sometimes called Kirkpatrick Level 5 (Phillips's extension). Formula: ROI% = [(Benefits - Costs) / Costs] × 100. ROI analysis is complex and usually reserved for large-scale, high-stakes training initiatives.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g61",
+    "term": "Scope Creep",
+    "definition": "The gradual expansion of a project's requirements beyond what was originally agreed upon. In instructional design, scope creep often appears as SMEs adding content, stakeholders requesting new features, or the project timeline expanding without additional resources. A signed design document is the best tool for managing scope.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g62",
+    "term": "70-20-10 Model",
+    "definition": "A learning and development framework suggesting that professionals learn approximately 70% from on-the-job experience, 20% from social interaction and coaching, and 10% from formal training. The model challenges L&D teams to design beyond the course and create ecosystems of performance support.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g63",
+    "term": "Working Memory",
+    "definition": "The limited cognitive system that holds and processes information in the short term. Working memory can handle roughly 4–7 items at once. Instructional designers manage working memory load by chunking content, removing extraneous information, using visuals to reduce text, and sequencing from simple to complex.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  }
+]

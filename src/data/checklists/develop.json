@@ -1,0 +1,15 @@
+[
+  { "id": "dv1",  "text": "Created a detailed storyboard or script before beginning full production" },
+  { "id": "dv2",  "text": "Obtained SME sign-off on the storyboard before building in the authoring tool" },
+  { "id": "dv3",  "text": "Developed all content assets (slides, video, audio, graphics) per the design document" },
+  { "id": "dv4",  "text": "Built assessment interactions that align to stated learning objectives" },
+  { "id": "dv5",  "text": "Applied consistent visual design (colors, fonts, layout) throughout all materials" },
+  { "id": "dv6",  "text": "Added alt text to all images and visual elements" },
+  { "id": "dv7",  "text": "Captioned all video and audio content" },
+  { "id": "dv8",  "text": "Checked color contrast ratios for accessibility (WCAG 2.1 AA)" },
+  { "id": "dv9",  "text": "Conducted alpha review: internal ID peer review for instructional quality" },
+  { "id": "dv10", "text": "Conducted beta review: SME content accuracy review with tracked revisions" },
+  { "id": "dv11", "text": "Tested all interactions, branching, and navigation in the authoring tool" },
+  { "id": "dv12", "text": "Published and tested SCORM/xAPI package in the target LMS environment" },
+  { "id": "dv13", "text": "Confirmed completion tracking and reporting work as expected in the LMS" }
+]

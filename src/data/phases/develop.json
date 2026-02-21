@@ -1,0 +1,55 @@
+{
+  "slug": "develop",
+  "label": "Develop",
+  "color": "#27AE60",
+  "tagline": "Build the actual learning assets — according to the blueprint.",
+  "whatItIs": {
+    "beginner": "Develop is the phase where you actually build the training. Based on your design plan, you create the slides, videos, activities, job aids, facilitator guides, and anything else learners will interact with. This is usually the most time-intensive phase, and it's where authoring tools like Articulate Storyline, Rise, or Lectora come in.",
+    "advanced": "The Develop phase is where your design document is translated into fully functional learning assets. This includes authoring e-learning modules (SCORM/xAPI compliant where required), producing multimedia (video, audio, graphics), building interactives and branching scenarios, writing facilitator and participant guides for ILT/VILT, and conducting alpha and beta reviews. Rigorous quality assurance — functional testing, accessibility review (WCAG 2.1 AA), and SME content validation — happens here before deployment."
+  },
+  "whyItMatters": {
+    "beginner": "This is where plans meet reality. Even a great design can fall apart if the development isn't executed well. Good development creates learning experiences that are engaging, clear, and technically functional. It also includes review cycles — getting feedback from SMEs and stakeholders before launching.",
+    "advanced": "Development is where design decisions prove their worth. Tight alignment to the design document reduces revision cycles and scope creep. A structured alpha/beta review process — separating content accuracy review (SME) from instructional effectiveness review (ID peer) — dramatically improves output quality. This phase also produces the technical package (SCORM, xAPI, HTML5) that must be tested in the target LMS or deployment environment."
+  },
+  "keyQuestions": [
+    "Does every developed asset map back to a specific objective?",
+    "Has the storyboard or script been reviewed by SMEs before full production?",
+    "What review and revision process will we use (alpha, beta, pilot)?",
+    "Is the content accessible? Does it meet WCAG 2.1 AA standards?",
+    "What file formats and technical specifications does the LMS or deployment platform require?",
+    "What is the version control process for course files?",
+    "Who has final content sign-off authority?"
+  ],
+  "outputs": [
+    "Draft e-learning modules or slide decks",
+    "Facilitator Guide and Participant Guide (for ILT/VILT)",
+    "Job aids, reference cards, and performance support tools",
+    "Assessment items (quiz questions, scenario branches)",
+    "Multimedia assets (videos, graphics, audio)",
+    "SME-reviewed and revised content",
+    "SCORM/xAPI package or published HTML5 output",
+    "Prototype or pilot-ready course"
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Starting development before the design is approved",
+      "fix": "Don't open Storyline until your design document has stakeholder sign-off. Rework is the most expensive line item in ID."
+    },
+    {
+      "mistake": "Sending SMEs everything at once for review",
+      "fix": "Stage your reviews. Storyboard first, then prototype, then full build. Smaller chunks get better, faster feedback."
+    },
+    {
+      "mistake": "Ignoring accessibility from the start",
+      "fix": "Accessibility retrofits are painful. Set alt text, caption video, and check color contrast from the very first asset."
+    },
+    {
+      "mistake": "Over-designing visually at the expense of learning",
+      "fix": "Cognitive load theory applies here. Visual complexity can interfere with learning. Clarity beats beauty."
+    },
+    {
+      "mistake": "Not testing in the actual LMS before launch",
+      "fix": "SCORM behaves differently across LMS platforms. Always do a full functional test in the target environment."
+    }
+  ]
+}

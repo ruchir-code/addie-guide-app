@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer utilities {
+  .phase-analysis { color: #E74C3C; }
+  .phase-design   { color: #E67E22; }
+  .phase-develop  { color: #27AE60; }
+  .phase-implement{ color: #8E44AD; }
+  .phase-evaluate { color: #2980B9; }
+
+  .bg-phase-analysis { background-color: #E74C3C; }
+  .bg-phase-design   { background-color: #E67E22; }
+  .bg-phase-develop  { background-color: #27AE60; }
+  .bg-phase-implement{ background-color: #8E44AD; }
+  .bg-phase-evaluate { background-color: #2980B9; }
+
+  .border-phase-analysis { border-color: #E74C3C; }
+  .border-phase-design   { border-color: #E67E22; }
+  .border-phase-develop  { border-color: #27AE60; }
+  .border-phase-implement{ border-color: #8E44AD; }
+  .border-phase-evaluate { border-color: #2980B9; }
+
+  .bg-phase-analysis-light { background-color: #fdf3f2; }
+  .bg-phase-design-light   { background-color: #fef6ee; }
+  .bg-phase-develop-light  { background-color: #f0faf3; }
+  .bg-phase-implement-light{ background-color: #f5f0fa; }
+  .bg-phase-evaluate-light { background-color: #eef6fc; }
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "analysis",
+  "label": "Analysis",
+  "color": "#E74C3C",
+  "tagline": "Understand the problem before you design the solution.",
+  "whatItIs": {
+    "beginner": "Analysis is the first phase of ADDIE. It's where you stop and ask: \"What is the real problem here, and is training actually the answer?\" Before you design a single slide or activity, you need to understand your learners, their environment, and what success looks like. Think of it as doing your homework before the project starts.",
+    "advanced": "The Analysis phase is a needs assessment and performance gap analysis combined. You are diagnosing root causes — determining whether the performance gap is due to a lack of knowledge/skill (a training problem), a motivation issue, an environmental barrier, or a process failure. Only knowledge/skill gaps are solved by training. Everything else requires a non-training intervention. A rigorous analysis also surfaces task hierarchies, prerequisite knowledge, and transfer conditions that will later drive your instructional strategy."
+  },
+  "whyItMatters": {
+    "beginner": "Skipping Analysis is the number-one reason training fails. If you build a course before understanding your audience and the real problem, you might create something no one needs — or something too hard, too easy, or aimed at the wrong people. Analysis saves time and budget by making sure you're solving the right problem.",
+    "advanced": "Skipping or rushing Analysis is the leading cause of ineffective learning solutions. Without it, you risk designing solutions for symptoms rather than root causes, over-scoping content, and producing learning that doesn't transfer to the job. Analysis data directly feeds your instructional strategy, your evaluation plan (Level 3 and Level 4 of Kirkpatrick), and your performance objectives. Getting it right here multiplies the quality of every downstream phase."
+  },
+  "keyQuestions": [
+    "What is the performance gap? What are people doing vs. what should they be doing?",
+    "Is this a training problem, or is it something else (process, tools, motivation, environment)?",
+    "Who are the learners? What do they already know? What are their attitudes toward the topic?",
+    "What constraints exist — time, budget, technology, delivery format?",
+    "What does success look like? How will we know training worked?",
+    "What is the organizational context and urgency of the problem?",
+    "What subject matter experts (SMEs) are available and how much of their time can we access?"
+  ],
+  "outputs": [
+    "Needs Assessment Report or summary memo",
+    "Learner Profile / Audience Analysis document",
+    "Performance Gap Statement",
+    "Training vs. Non-Training Recommendation",
+    "Preliminary Learning Objectives (refined in Design)",
+    "Constraints and Assumptions log",
+    "Project Scope Agreement or Statement of Work"
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Jumping straight to solutions",
+      "fix": "Always diagnose before you prescribe. Hold a discovery meeting before agreeing to any deliverable."
+    },
+    {
+      "mistake": "Conflating training with performance support",
+      "fix": "Ask whether learners need to build a new skill or just access information on the job. Job aids beat courses for reference tasks."
+    },
+    {
+      "mistake": "Only talking to managers, not learners",
+      "fix": "Go to the source. Learner interviews and observations reveal realities that managers don't always see."
+    },
+    {
+      "mistake": "Skipping constraints documentation",
+      "fix": "Surfacing budget, timeline, and tech constraints in Analysis prevents painful scope changes in Develop."
+    },
+    {
+      "mistake": "Writing vague problem statements",
+      "fix": "Quantify the gap where possible. \"Sales reps close 12% fewer deals than peers\" is more useful than \"sales reps need training.\""
+    }
+  ]
+}
