@@ -1,7 +1,7 @@
 {
   "slug": "develop",
   "label": "Develop",
-  "color": "#27AE60",
+  "color": "#059669",
   "tagline": "Build the actual learning assets — according to the blueprint.",
   "whatItIs": {
     "beginner": "Develop is the phase where you actually build the training. Based on your design plan, you create the slides, videos, activities, job aids, facilitator guides, and anything else learners will interact with. This is usually the most time-intensive phase, and it's where authoring tools like Articulate Storyline, Rise, or Lectora come in.",

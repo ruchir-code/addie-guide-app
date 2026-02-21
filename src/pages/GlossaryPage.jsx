@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import { Search, ExternalLink } from 'lucide-react'
 import glossary from '../data/glossary.json'
 import PhaseBadge from '../components/ui/PhaseBadge'
+import { PHASE_COLORS, PHASES } from '../utils/colors'
 
 const PHASE_SLUGS = ['analysis', 'design', 'develop', 'implement', 'evaluate']
 
-// Sort glossary alphabetically
 const SORTED_GLOSSARY = [...glossary].sort((a, b) =>
   a.term.localeCompare(b.term)
 )
@@ -22,7 +22,7 @@ function GlossaryTerm({ entry }) {
         {entry.phaseLink && (
           <Link
             to={entry.phaseLink}
-            className="shrink-0 flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 transition-colors"
+            className="shrink-0 flex items-center gap-1 transition-opacity hover:opacity-80"
             title={`Go to ${entry.phaseLabel}`}
           >
             {isPhase ? (
@@ -45,6 +45,11 @@ export default function GlossaryPage() {
   const [query, setQuery] = useState('')
   const [activePhase, setActivePhase] = useState('all')
 
+  const PHASE_FILTERS = [
+    { key: 'all', label: 'All', color: null },
+    ...PHASES.map((p) => ({ key: p.slug, label: p.label, color: p.color })),
+  ]
+
   const filtered = useMemo(() => {
     let result = SORTED_GLOSSARY
     if (activePhase !== 'all') {
@@ -64,7 +69,6 @@ export default function GlossaryPage() {
     return result
   }, [query, activePhase])
 
-  // Group by first letter
   const grouped = useMemo(() => {
     const map = {}
     filtered.forEach((entry) => {
@@ -76,15 +80,6 @@ export default function GlossaryPage() {
   }, [filtered])
 
   const letters = Object.keys(grouped).sort()
-
-  const PHASE_FILTERS = [
-    { key: 'all', label: 'All' },
-    { key: 'analysis',  label: 'Analysis',  color: '#E74C3C' },
-    { key: 'design',    label: 'Design',    color: '#E67E22' },
-    { key: 'develop',   label: 'Develop',   color: '#27AE60' },
-    { key: 'implement', label: 'Implement', color: '#8E44AD' },
-    { key: 'evaluate',  label: 'Evaluate',  color: '#2980B9' },
-  ]
 
   return (
     <div>
@@ -107,7 +102,8 @@ export default function GlossaryPage() {
           placeholder="Search terms or definitions…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full pl-9 pr-4 py-2.5 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white"
+          className="w-full pl-9 pr-4 py-2.5 text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 bg-white"
+          style={{ '--tw-ring-color': '#7C3AED' }}
         />
       </div>
 
@@ -121,7 +117,7 @@ export default function GlossaryPage() {
               onClick={() => setActivePhase(key)}
               className="px-3 py-1.5 rounded-full text-xs font-semibold border transition-all"
               style={
-                isActive && key !== 'all'
+                isActive && color
                   ? { backgroundColor: color, color: '#fff', borderColor: color }
                   : isActive
                   ? { backgroundColor: '#111827', color: '#fff', borderColor: '#111827' }
@@ -149,7 +145,7 @@ export default function GlossaryPage() {
         letters.map((letter) => (
           <div key={letter} className="mb-6">
             <div className="sticky top-0 bg-gray-50 z-10 py-1 mb-2">
-              <span className="text-xs font-black uppercase tracking-widest text-gray-400">
+              <span className="text-xs font-black uppercase tracking-widest" style={{ color: '#7C3AED' }}>
                 {letter}
               </span>
               <div className="border-b border-gray-100 mt-1" />

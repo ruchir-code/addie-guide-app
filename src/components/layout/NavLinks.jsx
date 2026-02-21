@@ -10,14 +10,14 @@ import {
   FileText,
   BookOpen,
 } from 'lucide-react'
+import { PHASES } from '../../utils/colors'
 
-const PHASE_LINKS = [
-  { to: '/analysis',  label: 'Analysis',  color: '#E74C3C', icon: Search },
-  { to: '/design',    label: 'Design',    color: '#E67E22', icon: Layers },
-  { to: '/develop',   label: 'Develop',   color: '#27AE60', icon: Code2 },
-  { to: '/implement', label: 'Implement', color: '#8E44AD', icon: PlayCircle },
-  { to: '/evaluate',  label: 'Evaluate',  color: '#2980B9', icon: BarChart2 },
-]
+const PHASE_LINKS = PHASES.map((p) => ({
+  to: `/${p.slug}`,
+  label: p.label,
+  color: p.color,
+  icon: { analysis: Search, design: Layers, develop: Code2, implement: PlayCircle, evaluate: BarChart2 }[p.slug],
+}))
 
 const TOOL_LINKS = [
   { to: '/objectives', label: 'Objectives Builder', icon: Target },
@@ -26,24 +26,38 @@ const TOOL_LINKS = [
 ]
 
 export default function NavLinks({ onNavigate }) {
-  const base =
-    'flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-150'
-  const active = 'bg-gray-100 text-gray-900'
-  const inactive = 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+  const base = 'flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-150'
+
+  function navClass({ isActive }) {
+    return `${base} ${isActive
+      ? 'text-white'
+      : 'hover:text-white'
+    }`
+  }
+
+  function navStyle({ isActive }) {
+    return isActive
+      ? { backgroundColor: '#1E293B', color: '#F8FAFC' }
+      : { color: '#94A3B8' }
+  }
 
   return (
-    <nav className="flex flex-col gap-1">
+    <nav className="flex flex-col gap-0.5">
       <NavLink
         to="/"
         end
-        className={({ isActive }) => `${base} ${isActive ? active : inactive}`}
+        className={navClass}
+        style={navStyle}
         onClick={onNavigate}
       >
-        <LayoutDashboard size={18} className="shrink-0 text-gray-400" />
+        <LayoutDashboard size={18} className="shrink-0" style={{ color: '#64748B' }} />
         <span>Home</span>
       </NavLink>
 
-      <p className="px-3 pt-4 pb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+      <p
+        className="px-3 pt-4 pb-1 text-xs font-semibold uppercase tracking-wider"
+        style={{ color: '#475569' }}
+      >
         Phases
       </p>
 
@@ -51,7 +65,8 @@ export default function NavLinks({ onNavigate }) {
         <NavLink
           key={to}
           to={to}
-          className={({ isActive }) => `${base} ${isActive ? active : inactive}`}
+          className={navClass}
+          style={navStyle}
           onClick={onNavigate}
         >
           <Icon size={18} className="shrink-0" style={{ color }} />
@@ -59,7 +74,10 @@ export default function NavLinks({ onNavigate }) {
         </NavLink>
       ))}
 
-      <p className="px-3 pt-4 pb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+      <p
+        className="px-3 pt-4 pb-1 text-xs font-semibold uppercase tracking-wider"
+        style={{ color: '#475569' }}
+      >
         Tools
       </p>
 
@@ -67,10 +85,11 @@ export default function NavLinks({ onNavigate }) {
         <NavLink
           key={to}
           to={to}
-          className={({ isActive }) => `${base} ${isActive ? active : inactive}`}
+          className={navClass}
+          style={navStyle}
           onClick={onNavigate}
         >
-          <Icon size={18} className="shrink-0 text-gray-400" />
+          <Icon size={18} className="shrink-0" style={{ color: '#64748B' }} />
           <span>{label}</span>
         </NavLink>
       ))}

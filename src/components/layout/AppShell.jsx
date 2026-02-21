@@ -14,17 +14,21 @@ export default function AppShell() {
 
       <div className="flex-1 flex flex-col min-w-0">
         {/* Mobile top bar */}
-        <header className="md:hidden flex items-center gap-3 px-4 py-3 bg-white border-b border-gray-200 sticky top-0 z-40">
+        <header
+          className="md:hidden flex items-center gap-3 px-4 py-3 sticky top-0 z-40"
+          style={{ backgroundColor: '#0F172A', borderBottom: '1px solid #1E293B' }}
+        >
           <button
             onClick={() => setDrawerOpen(true)}
-            className="p-1.5 rounded-md text-gray-600 hover:bg-gray-100"
+            className="p-1.5 rounded-md transition-colors"
+            style={{ color: '#94A3B8' }}
             aria-label="Open menu"
           >
             <Menu size={22} />
           </button>
-          <span className="text-lg font-black tracking-tight text-gray-900">
-            ADDIE<span className="text-indigo-600">.</span>
-            <span className="text-xs font-medium text-gray-400 ml-1">Guide</span>
+          <span className="text-lg font-black tracking-tight text-white">
+            ADDIE<span style={{ color: '#7C3AED' }}>.</span>
+            <span className="text-xs font-medium ml-1" style={{ color: '#475569' }}>Guide</span>
           </span>
         </header>
 
