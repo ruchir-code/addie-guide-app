@@ -1,7 +1,7 @@
 {
   "slug": "evaluate",
   "label": "Evaluate",
-  "color": "#2980B9",
+  "color": "#2563EB",
   "tagline": "Measure whether the training actually worked — and improve it.",
   "whatItIs": {
     "beginner": "Evaluation is how you find out if your training worked. Did learners like it? Did they learn? Did they change their behavior on the job? Did it help the business? Most IDs use Kirkpatrick's Four Levels of Evaluation to answer these questions. Evaluation happens both during the project (formative) and after the training is live (summative).",

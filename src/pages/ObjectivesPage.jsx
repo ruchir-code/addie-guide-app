@@ -8,12 +8,12 @@ const BLOOM_LEVELS = Object.entries(bloomVerbs).map(([key, val]) => ({
 }))
 
 const BLOOM_COLORS = {
-  remember:   { bg: '#fef9ec', border: '#f59e0b', text: '#92400e' },
-  understand: { bg: '#fff7ed', border: '#fb923c', text: '#9a3412' },
-  apply:      { bg: '#f0fdf4', border: '#4ade80', text: '#166534' },
-  analyze:    { bg: '#eff6ff', border: '#60a5fa', text: '#1e40af' },
-  evaluate:   { bg: '#fdf4ff', border: '#c084fc', text: '#6b21a8' },
-  create:     { bg: '#fff1f2', border: '#fb7185', text: '#9f1239' },
+  remember:   { bg: '#FFFBEB', border: '#D97706', text: '#78350F' },
+  understand: { bg: '#FFF7ED', border: '#EA580C', text: '#7C2D12' },
+  apply:      { bg: '#ECFDF5', border: '#059669', text: '#064E3B' },
+  analyze:    { bg: '#EFF6FF', border: '#2563EB', text: '#1E3A8A' },
+  evaluate:   { bg: '#F5F3FF', border: '#7C3AED', text: '#4C1D95' },
+  create:     { bg: '#FFF1F2', border: '#E11D48', text: '#881337' },
 }
 
 const EMPTY = { audience: '', bloomLevel: 'apply', verb: '', behavior: '', condition: '', degree: '' }
@@ -139,7 +139,7 @@ export default function ObjectivesPage() {
               placeholder="Or type your own verb..."
               value={form.verb}
               onChange={(e) => set('verb', e.target.value)}
-              className="mt-2 w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="mt-2 w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -154,7 +154,7 @@ export default function ObjectivesPage() {
               placeholder="e.g., new customer service representatives"
               value={form.audience}
               onChange={(e) => set('audience', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -171,7 +171,7 @@ export default function ObjectivesPage() {
               placeholder="e.g., the four-step de-escalation process"
               value={form.behavior}
               onChange={(e) => set('behavior', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
           </div>
 
@@ -188,7 +188,7 @@ export default function ObjectivesPage() {
               placeholder="e.g., a live customer complaint call without manager support"
               value={form.condition}
               onChange={(e) => set('condition', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
             <p className="mt-1 text-xs text-gray-400">
               Optional but recommended. Starts with "Given…"
@@ -208,7 +208,7 @@ export default function ObjectivesPage() {
               placeholder="e.g., 100% compliance with company protocol on 3 consecutive attempts"
               value={form.degree}
               onChange={(e) => set('degree', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
             <p className="mt-1 text-xs text-gray-400">
               Optional but important. Starts with "to…"
@@ -294,11 +294,11 @@ export default function ObjectivesPage() {
           </div>
 
           {/* Tips */}
-          <div className="mt-4 p-4 bg-indigo-50 rounded-xl border border-indigo-100">
-            <p className="text-xs font-semibold text-indigo-700 uppercase tracking-wider mb-2">
+          <div className="mt-4 p-4 rounded-xl border" style={{ backgroundColor: '#EDE9FE', borderColor: '#8B5CF6' }}>
+            <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#5B21B6' }}>
               Quick Tips
             </p>
-            <ul className="space-y-1.5 text-xs text-indigo-800">
+            <ul className="space-y-1.5 text-xs" style={{ color: '#4C1D95' }}>
               <li>• Most job tasks need <strong>Apply</strong> or <strong>Analyze</strong> level objectives</li>
               <li>• Avoid vague verbs: understand, know, appreciate, learn</li>
               <li>• If you can't observe it, it's not a good objective</li>

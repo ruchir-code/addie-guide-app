@@ -1,7 +1,7 @@
 {
   "slug": "implement",
   "label": "Implement",
-  "color": "#8E44AD",
+  "color": "#9333EA",
   "tagline": "Deploy the training and support learners through the experience.",
   "whatItIs": {
     "beginner": "Implementation is when you actually deliver or launch the training to real learners. For e-learning, this means uploading it to the LMS and enrolling learners. For instructor-led training, it means facilitating the session. This phase also includes making sure everything works, supporting learners during the experience, and communicating to managers and stakeholders that the training is live.",

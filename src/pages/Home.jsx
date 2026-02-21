@@ -8,59 +8,11 @@ import {
   ChevronRight,
   ArrowRight,
 } from 'lucide-react'
+import { PHASES as PHASE_DATA } from '../utils/colors'
 
-const PHASES = [
-  {
-    slug: 'analysis',
-    label: 'Analysis',
-    color: '#E74C3C',
-    lightBg: '#fdf3f2',
-    icon: Search,
-    number: '01',
-    tagline: 'Understand the problem before you design the solution.',
-    keyActivity: 'Needs assessment, audience analysis, gap identification',
-  },
-  {
-    slug: 'design',
-    label: 'Design',
-    color: '#E67E22',
-    lightBg: '#fef6ee',
-    icon: Layers,
-    number: '02',
-    tagline: 'Blueprint the learning experience before building anything.',
-    keyActivity: 'Learning objectives, instructional strategy, assessment design',
-  },
-  {
-    slug: 'develop',
-    label: 'Develop',
-    color: '#27AE60',
-    lightBg: '#f0faf3',
-    icon: Code2,
-    number: '03',
-    tagline: 'Build the actual learning assets — according to the blueprint.',
-    keyActivity: 'E-learning authoring, media production, SME reviews',
-  },
-  {
-    slug: 'implement',
-    label: 'Implement',
-    color: '#8E44AD',
-    lightBg: '#f5f0fa',
-    icon: PlayCircle,
-    number: '04',
-    tagline: 'Deploy training and support learners through the experience.',
-    keyActivity: 'LMS setup, learner communication, facilitation, pilot',
-  },
-  {
-    slug: 'evaluate',
-    label: 'Evaluate',
-    color: '#2980B9',
-    lightBg: '#eef6fc',
-    icon: BarChart2,
-    number: '05',
-    tagline: 'Measure whether training worked — and improve it.',
-    keyActivity: 'Kirkpatrick levels, behavior change, ROI, iteration',
-  },
-]
+const ICON_MAP = { analysis: Search, design: Layers, develop: Code2, implement: PlayCircle, evaluate: BarChart2 }
+
+const PHASES = PHASE_DATA.map((p) => ({ ...p, icon: ICON_MAP[p.slug] }))
 
 export default function Home() {
   return (
@@ -78,27 +30,27 @@ export default function Home() {
 
       {/* Phase Cards */}
       <div className="flex flex-col gap-3 mb-10">
-        {PHASES.map((phase, idx) => {
+        {PHASES.map((phase) => {
           const Icon = phase.icon
           return (
             <Link
               key={phase.slug}
               to={`/${phase.slug}`}
-              className="group flex items-center gap-4 p-4 rounded-xl border border-gray-200 bg-white hover:shadow-md transition-all duration-150"
+              className="group flex items-center gap-4 p-4 rounded-xl border border-gray-200 bg-white hover:shadow-lg transition-all duration-150"
               style={{ borderLeftWidth: 4, borderLeftColor: phase.color }}
             >
-              {/* Number */}
+              {/* Number bubble */}
               <span
                 className="hidden sm:flex items-center justify-center w-9 h-9 rounded-full text-sm font-bold shrink-0"
-                style={{ backgroundColor: phase.lightBg, color: phase.color }}
+                style={{ backgroundColor: phase.light, color: phase.color }}
               >
                 {phase.number}
               </span>
 
-              {/* Icon */}
+              {/* Icon (mobile) */}
               <div
                 className="flex items-center justify-center w-9 h-9 rounded-lg shrink-0 sm:hidden"
-                style={{ backgroundColor: phase.lightBg }}
+                style={{ backgroundColor: phase.light }}
               >
                 <Icon size={20} style={{ color: phase.color }} />
               </div>
@@ -106,10 +58,7 @@ export default function Home() {
               {/* Text */}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-0.5">
-                  <span
-                    className="font-bold text-base"
-                    style={{ color: phase.color }}
-                  >
+                  <span className="font-bold text-base" style={{ color: phase.color }}>
                     {phase.label}
                   </span>
                   <Icon size={15} className="hidden sm:block" style={{ color: phase.color }} />
@@ -120,7 +69,6 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Arrow */}
               <ChevronRight
                 size={18}
                 className="text-gray-300 group-hover:text-gray-500 shrink-0 transition-colors"
@@ -130,7 +78,7 @@ export default function Home() {
         })}
       </div>
 
-      {/* Flow diagram — horizontal on desktop */}
+      {/* Flow bar */}
       <div className="mb-10 overflow-x-auto">
         <div className="flex items-center gap-1 min-w-max">
           {PHASES.map((phase, idx) => (
@@ -138,12 +86,9 @@ export default function Home() {
               <Link
                 to={`/${phase.slug}`}
                 className="flex flex-col items-center gap-1 px-3 py-2 rounded-lg hover:opacity-80 transition-opacity"
-                style={{ backgroundColor: phase.lightBg }}
+                style={{ backgroundColor: phase.light }}
               >
-                <span
-                  className="text-xs font-bold"
-                  style={{ color: phase.color }}
-                >
+                <span className="text-xs font-bold" style={{ color: phase.color }}>
                   {phase.label}
                 </span>
               </Link>
@@ -158,14 +103,30 @@ export default function Home() {
       {/* Quick links */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {[
-          { to: '/objectives', label: 'Objectives Builder', desc: 'Write ABCD-format objectives with Bloom\'s verb lists', color: 'bg-indigo-50 text-indigo-700 border-indigo-100' },
-          { to: '/templates', label: 'Template Library', desc: '8 copy-ready ID templates organised by ADDIE phase', color: 'bg-amber-50 text-amber-700 border-amber-100' },
-          { to: '/glossary', label: 'Glossary', desc: '60+ plain-English definitions for ID terms', color: 'bg-teal-50 text-teal-700 border-teal-100' },
-        ].map(({ to, label, desc, color }) => (
+          {
+            to: '/objectives',
+            label: 'Objectives Builder',
+            desc: "Write ABCD-format objectives with Bloom's verb lists",
+            style: { backgroundColor: '#EDE9FE', borderColor: '#8B5CF6', color: '#5B21B6' },
+          },
+          {
+            to: '/templates',
+            label: 'Template Library',
+            desc: '8 copy-ready ID templates organised by ADDIE phase',
+            style: { backgroundColor: '#FFF7ED', borderColor: '#EA580C', color: '#9A3412' },
+          },
+          {
+            to: '/glossary',
+            label: 'Glossary',
+            desc: '60+ plain-English definitions for ID terms',
+            style: { backgroundColor: '#ECFDF5', borderColor: '#059669', color: '#065F46' },
+          },
+        ].map(({ to, label, desc, style }) => (
           <Link
             key={to}
             to={to}
-            className={`group p-4 rounded-xl border ${color} hover:shadow-sm transition-all duration-150`}
+            className="group p-4 rounded-xl border hover:shadow-md transition-all duration-150"
+            style={style}
           >
             <div className="font-semibold text-sm mb-1 flex items-center justify-between">
               {label}

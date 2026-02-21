@@ -3,29 +3,17 @@ import { FileText, ChevronDown, ChevronUp } from 'lucide-react'
 import templates from '../data/templates.json'
 import CopyButton from '../components/ui/CopyButton'
 import PhaseBadge from '../components/ui/PhaseBadge'
+import { PHASE_COLORS, PHASES } from '../utils/colors'
 
 const PHASE_ORDER = ['analysis', 'design', 'develop', 'implement', 'evaluate']
-const PHASE_LABELS = {
-  analysis:  'Analysis',
-  design:    'Design',
-  develop:   'Develop',
-  implement: 'Implement',
-  evaluate:  'Evaluate',
-}
-const PHASE_COLORS = {
-  analysis:  '#E74C3C',
-  design:    '#E67E22',
-  develop:   '#27AE60',
-  implement: '#8E44AD',
-  evaluate:  '#2980B9',
-}
+const PHASE_LABELS = Object.fromEntries(PHASES.map((p) => [p.slug, p.label]))
 
 function TemplateCard({ template }) {
   const [expanded, setExpanded] = useState(false)
-  const color = PHASE_COLORS[template.phase]
+  const color = PHASE_COLORS[template.phase]?.color
 
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden bg-white">
+    <div className="border border-gray-200 rounded-xl overflow-hidden bg-white hover:shadow-md transition-shadow duration-150">
       <div className="px-4 py-4">
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1 min-w-0">
@@ -44,13 +32,9 @@ function TemplateCard({ template }) {
               aria-expanded={expanded}
             >
               {expanded ? (
-                <>
-                  <ChevronUp size={13} /> Hide
-                </>
+                <><ChevronUp size={13} /> Hide</>
               ) : (
-                <>
-                  <ChevronDown size={13} /> Preview
-                </>
+                <><ChevronDown size={13} /> Preview</>
               )}
             </button>
           </div>
@@ -102,7 +86,7 @@ export default function TemplatesPage() {
         </button>
         {PHASE_ORDER.map((phase) => {
           const count = templates.filter((t) => t.phase === phase).length
-          const color = PHASE_COLORS[phase]
+          const color = PHASE_COLORS[phase]?.color
           const isActive = activePhase === phase
           return (
             <button

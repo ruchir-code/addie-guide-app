@@ -16,8 +16,8 @@ export default function CopyButton({ text, className = '' }) {
       onClick={handleCopy}
       className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-md transition-colors duration-150 ${
         copied
-          ? 'bg-green-100 text-green-700'
-          : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-900'
+          ? 'bg-emerald-100 text-emerald-700'
+          : 'bg-gray-100 text-gray-600 hover:bg-violet-100 hover:text-violet-700'
       } ${className}`}
       aria-label={copied ? 'Copied!' : 'Copy to clipboard'}
     >

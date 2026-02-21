@@ -4,7 +4,6 @@ import NavLinks from './NavLinks'
 import LevelToggle from '../ui/LevelToggle'
 
 export default function MobileDrawer({ isOpen, onClose }) {
-  // Lock body scroll when drawer is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
@@ -20,21 +19,28 @@ export default function MobileDrawer({ isOpen, onClose }) {
     <div className="fixed inset-0 z-50 md:hidden">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/40"
+        className="absolute inset-0 bg-black/50"
         onClick={onClose}
         aria-hidden="true"
       />
 
-      {/* Drawer panel */}
-      <div className="absolute left-0 top-0 h-full w-64 bg-white shadow-xl flex flex-col">
-        <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
-          <span className="text-xl font-black tracking-tight text-gray-900">
-            ADDIE<span className="text-indigo-600">.</span>
-            <span className="text-xs font-medium text-gray-400 ml-1">Guide</span>
+      {/* Drawer panel — dark navy, matching desktop sidebar */}
+      <div
+        className="absolute left-0 top-0 h-full w-64 shadow-2xl flex flex-col"
+        style={{ backgroundColor: '#0F172A' }}
+      >
+        <div
+          className="flex items-center justify-between px-4 py-4"
+          style={{ borderBottom: '1px solid #1E293B' }}
+        >
+          <span className="text-xl font-black tracking-tight text-white">
+            ADDIE<span style={{ color: '#7C3AED' }}>.</span>
+            <span className="text-xs font-medium ml-1" style={{ color: '#475569' }}>Guide</span>
           </span>
           <button
             onClick={onClose}
-            className="p-1 rounded-md text-gray-500 hover:bg-gray-100"
+            className="p-1 rounded-md transition-colors"
+            style={{ color: '#94A3B8' }}
             aria-label="Close menu"
           >
             <X size={20} />

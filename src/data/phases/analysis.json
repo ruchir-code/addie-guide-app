@@ -1,7 +1,7 @@
 {
   "slug": "analysis",
   "label": "Analysis",
-  "color": "#E74C3C",
+  "color": "#DC2626",
   "tagline": "Understand the problem before you design the solution.",
   "whatItIs": {
     "beginner": "Analysis is the first phase of ADDIE. It's where you stop and ask: \"What is the real problem here, and is training actually the answer?\" Before you design a single slide or activity, you need to understand your learners, their environment, and what success looks like. Think of it as doing your homework before the project starts.",

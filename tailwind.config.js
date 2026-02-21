@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        analysis: '#E74C3C',
-        design: '#E67E22',
-        develop: '#27AE60',
-        implement: '#8E44AD',
-        evaluate: '#2980B9',
+        analysis:  '#DC2626',
+        design:    '#EA580C',
+        develop:   '#059669',
+        implement: '#9333EA',
+        evaluate:  '#2563EB',
       },
     },
   },
