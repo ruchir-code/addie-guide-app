@@ -20,7 +20,7 @@ const PHASE_LINKS = PHASES.map((p) => ({
 }))
 
 const TOOL_LINKS = [
-  { to: '/objectives', label: 'Objectives Builder', icon: Target },
+  { to: '/objectives', label: 'Outcomes & Objectives', icon: Target },
   { to: '/templates',  label: 'Template Library',   icon: FileText },
   { to: '/glossary',   label: 'Glossary',           icon: BookOpen },
 ]
