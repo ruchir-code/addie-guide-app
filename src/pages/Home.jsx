@@ -26,8 +26,8 @@ const PHASES = PHASE_DATA.map((p) => ({ ...p, icon: ICON_MAP[p.slug] }))
 const TOOLS = [
   {
     to: '/objectives',
-    label: 'Objectives Builder',
-    desc: "Write ABCD-format objectives with Bloom's verb lists",
+    label: 'Outcomes & Objectives',
+    desc: "Build your CLO → TLO → ELO hierarchy with Bloom's verbs and coverage mapping",
     icon: Target,
     style: { backgroundColor: '#EDE9FE', borderColor: '#8B5CF6', color: '#5B21B6' },
     iconBg: '#7C3AED',
