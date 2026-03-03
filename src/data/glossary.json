@@ -544,5 +544,19 @@
     "definition": "A self-curated network of people, communities, tools, and resources that an individual uses for ongoing professional learning and development. A PLN typically includes mentors, peers, social media follows, podcasts, newsletters, and communities of practice. Associated with connectivism. Helping learners build PLNs is an increasingly recognized instructional goal for professional development programs.",
     "phaseLink": "/theories",
     "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g79",
+    "term": "Dick & Carey Model",
+    "definition": "A systematic 10-step instructional design model developed by Walter Dick and Lou Carey, first published in 1978. It treats instruction as a set of interrelated components — goals, learner analysis, performance objectives, assessments, instructional strategy, and formative and summative evaluation — that must all align as a system. More prescriptive than ADDIE, it is best suited to large-scale curriculum design, formal certification, and environments where eliminating a documented performance gap must be proven.",
+    "phaseLink": "/models",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g80",
+    "term": "Kemp Design Model",
+    "definition": "A non-linear instructional design model developed by Jerrold Kemp that treats curriculum design as an ongoing, cyclical process rather than a sequential set of phases. Unlike ADDIE, the Kemp model has no required starting point — designers can enter the process at any of nine elements (goals, learner characteristics, objectives, content sequencing, instructional strategies, resources, evaluation, support services, summative evaluation) depending on project context. It is well-suited to experienced designers managing complex, multi-stakeholder programs.",
+    "phaseLink": "/models",
+    "phaseLabel": "Foundations"
   }
 ]
