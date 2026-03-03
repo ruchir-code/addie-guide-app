@@ -11,6 +11,7 @@ import {
   BookOpen,
   Brain,
   GraduationCap,
+  Monitor,
 } from 'lucide-react'
 import { PHASES } from '../../utils/colors'
 
@@ -22,9 +23,10 @@ const PHASE_LINKS = PHASES.map((p) => ({
 }))
 
 const TOOL_LINKS = [
-  { to: '/objectives', label: 'Outcomes & Objectives', icon: Target },
-  { to: '/templates',  label: 'Template Library',      icon: FileText },
-  { to: '/glossary',   label: 'Glossary',              icon: BookOpen },
+  { to: '/objectives',  label: 'Outcomes & Objectives', icon: Target },
+  { to: '/templates',   label: 'Template Library',      icon: FileText },
+  { to: '/glossary',    label: 'Glossary',              icon: BookOpen },
+  { to: '/media-guide', label: 'Media & Format Guide',  icon: Monitor },
 ]
 
 const FOUNDATION_LINKS = [
