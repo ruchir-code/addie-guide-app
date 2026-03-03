@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import { LevelProvider } from './context/LevelContext'
 import { ChecklistProvider } from './context/ChecklistContext'
 import AppShell from './components/layout/AppShell'
@@ -45,6 +46,7 @@ export default function App() {
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
+          <SpeedInsights />
         </BrowserRouter>
       </ChecklistProvider>
     </LevelProvider>
