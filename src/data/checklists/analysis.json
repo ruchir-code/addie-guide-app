@@ -10,5 +10,8 @@
   { "id": "a9",  "text": "Confirmed existing materials, job aids, or training that can be leveraged or reused" },
   { "id": "a10", "text": "Defined what success looks like and how it will be measured" },
   { "id": "a11", "text": "Shared and obtained sign-off on the needs assessment summary or project scope agreement" },
-  { "id": "a12", "text": "Documented assumptions and flagged open risks" }
+  { "id": "a12", "text": "Documented assumptions and flagged open risks" },
+  { "id": "a13", "text": "Conducted a task analysis or hierarchical task decomposition for complex procedural skills", "level": "advanced" },
+  { "id": "a14", "text": "Identified prerequisite knowledge and skills learners must have before the training begins", "level": "advanced" },
+  { "id": "a15", "text": "Assessed the work environment for barriers to performance transfer: manager support, tools, incentives, and process constraints", "level": "advanced" }
 ]

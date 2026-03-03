@@ -10,5 +10,8 @@
   { "id": "i9",  "text": "Established technical support contact or FAQ for learner issues" },
   { "id": "i10", "text": "Set up completion and participation tracking" },
   { "id": "i11", "text": "Confirmed all learners are enrolled and have access" },
-  { "id": "i12", "text": "Scheduled post-launch check-in with sponsor to review early completion data" }
+  { "id": "i12", "text": "Scheduled post-launch check-in with sponsor to review early completion data" },
+  { "id": "i13", "text": "Created a manager activation guide with specific pre-training, during, and post-training actions for managers", "level": "advanced" },
+  { "id": "i14", "text": "Configured LMS reporting so managers have direct visibility into their team's completion and score data", "level": "advanced" },
+  { "id": "i15", "text": "Completed localization and cultural adaptation review for any content rolled out to international audiences", "level": "advanced" }
 ]

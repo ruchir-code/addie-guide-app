@@ -1,4 +1,4 @@
-import { useParams, Navigate } from 'react-router-dom'
+import { useParams, Navigate, Link } from 'react-router-dom'
 import { useLevel } from '../context/LevelContext'
 import Checklist from '../components/checklist/Checklist'
 
@@ -27,6 +27,26 @@ const PHASE_NUMBERS = {
   analysis: '01', design: '02', develop: '03', implement: '04', evaluate: '05',
 }
 
+// Visual config per insight type
+const INSIGHT_CONFIG = {
+  'rule-breaker': {
+    label: 'When to break this rule',
+    bg: '#FFFBEB', border: '#FDE68A', labelColor: '#92400E', labelBg: '#FEF3C7',
+  },
+  'tool-tip': {
+    label: 'In the tools',
+    bg: '#ECFEFF', border: '#A5F3FC', labelColor: '#164E63', labelBg: '#CFFAFE',
+  },
+  'edge-case': {
+    label: 'Edge case',
+    bg: '#F8FAFC', border: '#CBD5E1', labelColor: '#334155', labelBg: '#E2E8F0',
+  },
+  'model-link': {
+    label: 'See also',
+    bg: '#EEF2FF', border: '#C7D2FE', labelColor: '#312E81', labelBg: '#E0E7FF',
+  },
+}
+
 function Section({ title, color, children }) {
   return (
     <section className="mb-8">
@@ -41,6 +61,48 @@ function Section({ title, color, children }) {
       </div>
       {children}
     </section>
+  )
+}
+
+function AdvancedInsights({ insights }) {
+  if (!insights?.length) return null
+  return (
+    <Section title="Intermediate Insights" color="#7C3AED">
+      <div className="space-y-3">
+        {insights.map((insight, i) => {
+          const cfg = INSIGHT_CONFIG[insight.type] || INSIGHT_CONFIG['edge-case']
+          return (
+            <div
+              key={i}
+              className="rounded-xl border p-4"
+              style={{ backgroundColor: cfg.bg, borderColor: cfg.border }}
+            >
+              <div className="flex items-start gap-3">
+                <span
+                  className="text-xs font-bold px-2 py-0.5 rounded shrink-0 mt-0.5 whitespace-nowrap"
+                  style={{ backgroundColor: cfg.labelBg, color: cfg.labelColor }}
+                >
+                  {cfg.label}
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-gray-800 mb-1">{insight.heading}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">{insight.body}</p>
+                  {insight.link && (
+                    <Link
+                      to={insight.link}
+                      className="inline-flex items-center gap-1 mt-2 text-xs font-semibold"
+                      style={{ color: cfg.labelColor }}
+                    >
+                      View Instructional Models →
+                    </Link>
+                  )}
+                </div>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </Section>
   )
 }
 
@@ -158,8 +220,13 @@ export default function PhasePage() {
         </div>
       </Section>
 
+      {/* ── Intermediate Insights (advanced mode only) ─────────────── */}
+      {contentLevel === 'advanced' && data.advancedInsights && (
+        <AdvancedInsights insights={data.advancedInsights} />
+      )}
+
       {/* ── Checklist ──────────────────────────────────────────────── */}
-      <Checklist phase={phase} items={checklist} color={data.color} />
+      <Checklist phase={phase} items={checklist} color={data.color} level={contentLevel} />
     </div>
   )
 }

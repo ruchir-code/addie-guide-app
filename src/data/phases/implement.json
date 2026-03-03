@@ -50,5 +50,28 @@
       "mistake": "Not communicating the 'why' to learners",
       "fix": "Learners who know why training matters complete it faster and transfer more. Include a clear rationale in your learner communication."
     }
+  ],
+  "advancedInsights": [
+    {
+      "type": "rule-breaker",
+      "heading": "When you can't run a formal pilot",
+      "body": "For very small audiences (under 15 people) or urgent regulatory deadlines, replace a formal pilot with a structured alpha test: three representative learners complete the course under direct observation, and you address any critical issues before deployment. Document what you observed and the decisions you made — this protects you if questions arise about the launch quality later."
+    },
+    {
+      "type": "tool-tip",
+      "heading": "LMS-specific SCORM gotchas",
+      "body": "In Workday Learning, Cornerstone, SAP SuccessFactors, and most enterprise LMS platforms, test your SCORM package in a sandbox org — not just locally in your authoring tool. Completion trigger settings (slide completion vs. quiz score threshold vs. time spent) vary by LMS and can be silently misconfigured. Always verify that completion is recording correctly in your test account before enrolling the full audience."
+    },
+    {
+      "type": "edge-case",
+      "heading": "Global rollouts: localization is not just translation",
+      "body": "For programs rolling out across multiple countries, localization is a separate project within Implement. Budget time for cultural adaptation review — not just translation. Words translate; idioms, scenarios, and visual metaphors often do not. A manufacturing scenario set in Texas may be confusing or irrelevant to learners in Germany or India. Engage in-country reviewers before finalizing any localized content."
+    },
+    {
+      "type": "model-link",
+      "heading": "See also: Agile ID",
+      "body": "In Agile ID, Implementation is not a single phase — content is released in sprint cycles as each module is completed. Learners access training progressively rather than waiting for the entire program. This is ideal for large programs where a 100% completion gate before any release would delay learning by weeks or months.",
+      "link": "/models"
+    }
   ]
 }

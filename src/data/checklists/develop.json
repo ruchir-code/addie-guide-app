@@ -11,5 +11,8 @@
   { "id": "dv10", "text": "Conducted beta review: SME content accuracy review with tracked revisions" },
   { "id": "dv11", "text": "Tested all interactions, branching, and navigation in the authoring tool" },
   { "id": "dv12", "text": "Published and tested SCORM/xAPI package in the target LMS environment" },
-  { "id": "dv13", "text": "Confirmed completion tracking and reporting work as expected in the LMS" }
+  { "id": "dv13", "text": "Confirmed completion tracking and reporting work as expected in the LMS" },
+  { "id": "dv14", "text": "Applied cognitive load principles: chunked content into digestible segments, removed extraneous elements, and used worked examples for novel skills", "level": "advanced" },
+  { "id": "dv15", "text": "Completed keyboard navigation and screen reader test (NVDA, JAWS, or VoiceOver) for full accessibility compliance", "level": "advanced" },
+  { "id": "dv16", "text": "Verified xAPI statements are correctly configured and tested against the LRS if using experience tracking beyond SCORM", "level": "advanced" }
 ]

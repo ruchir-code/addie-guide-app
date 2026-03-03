@@ -18,7 +18,7 @@ export default function LevelToggle() {
       <button
         onClick={toggle}
         className="flex items-center gap-2 w-full"
-        aria-label={`Switch to ${isAdvanced ? 'Beginner' : 'Advanced'} mode`}
+        aria-label={`Switch to ${isAdvanced ? 'Beginner' : 'Intermediate'} mode`}
       >
         <div
           className="relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 focus:outline-none"
@@ -31,7 +31,7 @@ export default function LevelToggle() {
           />
         </div>
         <span className="text-sm font-medium" style={{ color: '#CBD5E1' }}>
-          {isAdvanced ? 'Advanced' : 'Beginner'}
+          {isAdvanced ? 'Intermediate' : 'Beginner'}
         </span>
       </button>
     </div>

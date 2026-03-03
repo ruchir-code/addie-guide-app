@@ -10,5 +10,8 @@
   { "id": "d9",  "text": "Chosen delivery format and media (e-learning, ILT, VILT, blended, job aid)" },
   { "id": "d10", "text": "Produced a course outline or storyboard structure" },
   { "id": "d11", "text": "Completed and shared the Design Document with stakeholders" },
-  { "id": "d12", "text": "Obtained SME and stakeholder sign-off on the design document" }
+  { "id": "d12", "text": "Obtained SME and stakeholder sign-off on the design document" },
+  { "id": "d13", "text": "Built a traceability matrix mapping each objective to its content, assessment item, and evaluation measure", "level": "advanced" },
+  { "id": "d14", "text": "Confirmed content sequence is based on task analysis results — prerequisites first, then simple-to-complex or job workflow order", "level": "advanced" },
+  { "id": "d15", "text": "Verified that the Bloom's level of each objective matches the actual cognitive demand of the job task — not just what's easiest to test", "level": "advanced" }
 ]
