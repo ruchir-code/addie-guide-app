@@ -1,16 +1,30 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
-import { Menu } from 'lucide-react'
+import { Menu, Search } from 'lucide-react'
 import Sidebar from './Sidebar'
 import MobileDrawer from './MobileDrawer'
+import GlobalSearch from '../ui/GlobalSearch'
 
 export default function AppShell() {
   const [drawerOpen, setDrawerOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
+
+  useEffect(() => {
+    const handler = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault()
+        setSearchOpen(true)
+      }
+    }
+    document.addEventListener('keydown', handler)
+    return () => document.removeEventListener('keydown', handler)
+  }, [])
 
   return (
     <div className="flex min-h-screen bg-gray-50">
-      <Sidebar />
+      <Sidebar onOpenSearch={() => setSearchOpen(true)} />
       <MobileDrawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
+      <GlobalSearch isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
       <div className="flex-1 flex flex-col min-w-0">
         {/* Mobile top bar */}
@@ -26,10 +40,18 @@ export default function AppShell() {
           >
             <Menu size={22} />
           </button>
-          <span className="text-lg font-black tracking-tight text-white">
+          <span className="flex-1 text-lg font-black tracking-tight text-white">
             ADDIE<span style={{ color: '#7C3AED' }}>.</span>
             <span className="text-xs font-medium ml-1" style={{ color: '#475569' }}>Guide</span>
           </span>
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="p-1.5 rounded-md transition-colors"
+            style={{ color: '#94A3B8' }}
+            aria-label="Search"
+          >
+            <Search size={20} />
+          </button>
         </header>
 
         <main className="flex-1 px-4 py-6 md:px-8 md:py-8 max-w-4xl w-full mx-auto">
