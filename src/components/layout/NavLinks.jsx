@@ -13,6 +13,7 @@ import {
   GraduationCap,
   Monitor,
   Network,
+  ClipboardCheck,
 } from 'lucide-react'
 import { PHASES } from '../../utils/colors'
 
@@ -24,10 +25,11 @@ const PHASE_LINKS = PHASES.map((p) => ({
 }))
 
 const TOOL_LINKS = [
-  { to: '/objectives',  label: 'Outcomes & Objectives', icon: Target },
-  { to: '/templates',   label: 'Template Library',      icon: FileText },
-  { to: '/glossary',    label: 'Glossary',              icon: BookOpen },
-  { to: '/media-guide', label: 'Media & Format Guide',  icon: Monitor },
+  { to: '/objectives',          label: 'Outcomes & Objectives',   icon: Target },
+  { to: '/templates',           label: 'Template Library',        icon: FileText },
+  { to: '/glossary',            label: 'Glossary',                icon: BookOpen },
+  { to: '/media-guide',         label: 'Media & Format Guide',    icon: Monitor },
+  { to: '/assessment-builder',  label: 'Assessment Builder',      icon: ClipboardCheck },
 ]
 
 const FOUNDATION_LINKS = [
