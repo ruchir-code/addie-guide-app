@@ -13,6 +13,7 @@ import {
   Brain,
   GraduationCap,
   Monitor,
+  Network,
 } from 'lucide-react'
 import { PHASES as PHASE_DATA } from '../utils/colors'
 
@@ -77,6 +78,14 @@ const FOUNDATIONS = [
     icon: GraduationCap,
     style: { backgroundColor: '#F0FDFA', borderColor: '#5EEAD4', color: '#0F766E' },
     iconBg: '#0D9488',
+  },
+  {
+    to: '/models',
+    label: 'Instructional Models',
+    desc: 'ADDIE, SAM, Dick & Carey, Rapid Prototyping, and Agile ID — compared side by side with a decision guide',
+    icon: Network,
+    style: { backgroundColor: '#EEF2FF', borderColor: '#C7D2FE', color: '#312E81' },
+    iconBg: '#4338CA',
   },
 ]
 

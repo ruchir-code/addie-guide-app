@@ -1,0 +1,185 @@
+[
+  {
+    "id": "m1",
+    "slug": "addie",
+    "name": "ADDIE",
+    "fullName": "ADDIE",
+    "tagline": "The five-phase sequential model that defines the instructional design field.",
+    "icon": "GitBranch",
+    "origin": "Multiple contributors; formalized in the 1970s for U.S. military and higher education training",
+    "whatItIs": "ADDIE is the foundational instructional design model, organizing the design process into five sequential phases: Analysis, Design, Develop, Implement, and Evaluate. Each phase has defined inputs, outputs, and review gates. You complete one phase before moving to the next, making it systematic and predictable. Despite frequent criticism, ADDIE remains the most widely used model in the field — not because it is perfect, but because its clarity and structure work for most project types.",
+    "phases": [
+      { "name": "Analysis",   "desc": "Define the problem, audience, goals, and constraints before any design work begins" },
+      { "name": "Design",     "desc": "Blueprint the learning experience: objectives, assessment strategy, and instructional approach" },
+      { "name": "Develop",    "desc": "Build the actual training materials — e-learning, facilitator guides, job aids, and media" },
+      { "name": "Implement",  "desc": "Deploy training and support learners and facilitators through the experience" },
+      { "name": "Evaluate",   "desc": "Measure effectiveness and drive continuous improvement using Kirkpatrick or similar models" }
+    ],
+    "pros": [
+      "Clear deliverables and phase gates make progress easy to track and report",
+      "Well-understood by stakeholders, PMOs, and procurement teams who may not know ID",
+      "Systematic approach reduces the risk of missing critical design elements",
+      "Extensive documentation supports knowledge transfer and future revisions"
+    ],
+    "cons": [
+      "Sequential structure means late-stage changes are expensive to implement",
+      "Can be slow in fast-paced environments where requirements change frequently",
+      "Risk of over-documenting early phases before enough information is known",
+      "Upfront analysis can delay time-to-delivery in urgent situations"
+    ],
+    "whenToUse": "Complex, high-stakes projects — onboarding programs, compliance certifications, technical skills training where errors have real consequences. Projects where stakeholder sign-off at each phase is a governance requirement. First-time programs where thorough upfront analysis prevents costly downstream rework.",
+    "whenNotToUse": "When requirements are highly uncertain or rapidly evolving. When the organization needs to see a working prototype before committing to a direction. When time-to-delivery is critical and content can be refined after a partial launch.",
+    "structure": "Sequential",
+    "changeToleranceLevel": "Low",
+    "relativeSpeed": "Moderate",
+    "documentationLevel": "Moderate",
+    "addieConnection": "ADDIE is the subject of this entire app — explore the phase pages for deep detail on each step."
+  },
+  {
+    "id": "m2",
+    "slug": "sam",
+    "name": "SAM",
+    "fullName": "Successive Approximation Model",
+    "tagline": "An agile alternative to ADDIE built on rapid prototyping and iterative design cycles.",
+    "icon": "RefreshCw",
+    "origin": "Developed by Michael Allen (Allen Interactions); published in 'Leaving ADDIE for SAM' (2012)",
+    "whatItIs": "SAM replaces ADDIE's linear phases with two iterative loops. A brief Preparation phase gathers background context; then the process alternates between rapid prototyping and stakeholder review until the design is confirmed; then it moves into iterative development and release cycles. The core principle: get a rough prototype in front of stakeholders as quickly as possible, because people respond to something real in ways they cannot respond to a written design document.",
+    "phases": [
+      { "name": "Preparation",       "desc": "Information gathering, background review, and initial team alignment" },
+      { "name": "Iterative Design",   "desc": "Rapid Prototype → Review with stakeholders → Revise, repeated until the design is approved" },
+      { "name": "Iterative Development", "desc": "Design → Develop → Implement → Evaluate, repeated in short cycles until the full program is complete" }
+    ],
+    "pros": [
+      "Stakeholders see a working prototype early, dramatically reducing misalignment",
+      "Changes are built into the process — not treated as failures or scope creep",
+      "Faster time to a usable (if rough) version of the content",
+      "Encourages genuine co-design with SMEs rather than review-and-sign-off"
+    ],
+    "cons": [
+      "Requires experienced IDs who can prototype quickly and make confident design decisions under pressure",
+      "Iterative reviews demand consistent, committed stakeholder availability",
+      "Can drift without discipline — 'just one more round of feedback' can extend timelines indefinitely",
+      "Less structured documentation can complicate handoffs to new team members"
+    ],
+    "whenToUse": "Tight timelines or rapidly evolving requirements where ADDIE's upfront analysis phase would be too slow. Stakeholders who struggle to react to abstract design documents but engage immediately with prototypes. Projects where building early trust through visible progress is strategically important.",
+    "whenNotToUse": "Regulated environments where documented phase gates are required for audit or compliance. Teams without experienced IDs who can make fast, sound design decisions. Projects with stakeholders who cannot commit to the frequent review meetings SAM requires.",
+    "structure": "Iterative",
+    "changeToleranceLevel": "High",
+    "relativeSpeed": "Fast",
+    "documentationLevel": "Light",
+    "addieConnection": null
+  },
+  {
+    "id": "m3",
+    "slug": "dick-carey",
+    "name": "Dick & Carey",
+    "fullName": "Dick & Carey Systems Approach Model",
+    "tagline": "A highly systematic, 10-step model built for rigorous, competency-based curriculum design.",
+    "icon": "FileCheck",
+    "origin": "Walter Dick and Lou Carey; first published in 'The Systematic Design of Instruction' (1978)",
+    "whatItIs": "The Dick & Carey model treats instruction as a set of interrelated components — learner, content, objectives, assessments, and instructional strategy — that must all align as a system. Where ADDIE has 5 phases, Dick & Carey prescribes 10 specific steps, with particularly strong emphasis on defining measurable performance objectives before building anything, and on both formative and summative evaluation. It is more prescriptive and thorough than ADDIE, and leaves less to the designer's discretion.",
+    "phases": [
+      { "name": "1. Identify Instructional Goal",       "desc": "What must learners be able to do upon completion?" },
+      { "name": "2. Instructional Analysis",            "desc": "Break the goal into subordinate skills and identify the learning hierarchy" },
+      { "name": "3. Analyze Learners & Contexts",       "desc": "Who will learn, and where will the performance occur?" },
+      { "name": "4. Write Performance Objectives",      "desc": "Define measurable outcomes for each subordinate skill" },
+      { "name": "5. Develop Assessment Instruments",    "desc": "Build assessments that directly match each performance objective — before designing instruction" },
+      { "name": "6. Develop Instructional Strategy",    "desc": "Plan the sequence, grouping, delivery method, and media for each objective" },
+      { "name": "7. Develop & Select Instruction",      "desc": "Build or source all instructional materials and activities" },
+      { "name": "8. Formative Evaluation",              "desc": "Test with representative learners before full rollout — one-to-one, small group, field trial" },
+      { "name": "9. Revise Instruction",                "desc": "Improve content based on formative evaluation data" },
+      { "name": "10. Summative Evaluation",             "desc": "Measure the program's effectiveness against the original goal after implementation" }
+    ],
+    "pros": [
+      "Leaves very little to chance — one of the most thorough ID processes available",
+      "Strong alignment guaranteed between goals, objectives, assessments, and instruction",
+      "Built-in formative evaluation at three levels (one-to-one, small group, field trial) before full launch",
+      "Well-suited to regulatory, certification, and competency-based environments that require proof of performance"
+    ],
+    "cons": [
+      "Time-intensive — the 10-step process adds significant upfront effort before any content is built",
+      "Heavy documentation burden may not be justified for smaller or informal projects",
+      "Can feel rigid in organizations that need to iterate and adapt quickly",
+      "Requires deep ID expertise to execute all 10 steps correctly"
+    ],
+    "whenToUse": "Large enterprise curriculum or formal certification programs. Government, military, or heavily regulated industry training where documentation and rigor are mandated. Any program where eliminating a performance gap must be proven — not just assumed because training was completed.",
+    "whenNotToUse": "Small, informal, or one-off training requests. Fast-moving environments where the 10-step process cannot be sustained. Stakeholders or timelines that cannot support extended analysis and evaluation phases.",
+    "structure": "Sequential",
+    "changeToleranceLevel": "Low",
+    "relativeSpeed": "Slow",
+    "documentationLevel": "Heavy",
+    "addieConnection": null
+  },
+  {
+    "id": "m4",
+    "slug": "rapid-prototyping",
+    "name": "Rapid Prototyping",
+    "fullName": "Rapid Prototyping",
+    "tagline": "Build something early, get real feedback, and refine — instead of perfecting a design on paper.",
+    "icon": "Box",
+    "origin": "Adapted from rapid application development (RAD) in software engineering; applied to ID by practitioners through the 1990s and 2000s",
+    "whatItIs": "Rapid Prototyping is not a formal sequential model but a design philosophy and set of techniques. Rather than completing all design documentation before building anything, the ID creates a rough working prototype — a single module, a clickable mockup, a sample storyboard with narration — as early as possible. Stakeholders and SMEs respond to something real, surfacing assumptions, misalignments, and preferences that no amount of design documentation would have revealed. It is most powerful when combined with a lightweight version of ADDIE's analysis phase.",
+    "phases": [
+      { "name": "Identify the core task",   "desc": "Agree on the most critical or representative learning objective to prototype first" },
+      { "name": "Build a rough prototype",  "desc": "Create a low-fidelity but working sample — speed matters more than polish" },
+      { "name": "Structured review",        "desc": "Present to stakeholders and SMEs with specific, prepared review questions" },
+      { "name": "Refine and expand",        "desc": "Incorporate feedback and build out the next section, module, or scenario" },
+      { "name": "Repeat",                   "desc": "Iterate until the full program is built, reviewed, and approved" }
+    ],
+    "pros": [
+      "Surfaces misalignments and misunderstandings before they become expensive to fix",
+      "Stakeholders who cannot engage with abstract storyboards engage readily with prototypes",
+      "Reduces the risk of a full build that misses the mark",
+      "Builds trust and confidence between ID and stakeholders early in the process"
+    ],
+    "cons": [
+      "Rough prototypes can be mistaken for finished products, creating expectation and scope problems",
+      "Requires disciplined facilitation to prevent 'death by feedback' or endless revision loops",
+      "Risk of skipping systematic analysis — moving fast without a sufficient design foundation",
+      "Stakeholder availability for frequent reviews is a bottleneck that is hard to control"
+    ],
+    "whenToUse": "When requirements are unclear and need to emerge from the design process itself. When stakeholders are visual or hands-on thinkers who need to see something to give meaningful feedback. When the risk of building the wrong thing outweighs the risk of building something slightly imperfect.",
+    "whenNotToUse": "When stakeholders are unable to distinguish a prototype from a final product. When systematic analysis is required before any build begins (regulated or high-stakes environments). When the project scope is so well-defined that prototyping would add overhead without value.",
+    "structure": "Iterative",
+    "changeToleranceLevel": "High",
+    "relativeSpeed": "Fast",
+    "documentationLevel": "Light",
+    "addieConnection": null
+  },
+  {
+    "id": "m5",
+    "slug": "agile-id",
+    "name": "Agile ID",
+    "fullName": "Agile Instructional Design",
+    "tagline": "Sprint-based, continuous delivery — Agile software principles applied to learning content development.",
+    "icon": "Repeat",
+    "origin": "Adapted from Agile software development (Scrum, Kanban); applied to ID by Conrad Gottfredson, Bob Mosher, and others",
+    "whatItIs": "Agile ID applies the principles of Agile software development to instructional design. Instead of designing and building an entire program before releasing anything, Agile ID delivers content in small, working increments. Work is organized into short sprints — typically one to two weeks — each producing a releasable piece of content. Learners access content as it is ready, and the team incorporates feedback continuously. It aligns well with tech organizations that already operate in Agile frameworks.",
+    "phases": [
+      { "name": "Sprint Planning",     "desc": "Prioritize the next batch of content — what gets designed and built in this sprint?" },
+      { "name": "Sprint Development",  "desc": "Design, develop, and review the prioritized content within the sprint window" },
+      { "name": "Sprint Review",       "desc": "Demo completed content to stakeholders and gather feedback for the next sprint" },
+      { "name": "Retrospective",       "desc": "Identify what worked and what to improve in the next sprint cycle" },
+      { "name": "Next Sprint",         "desc": "Repeat with the next prioritized content batch until the full program is complete" }
+    ],
+    "pros": [
+      "Content reaches learners faster — no waiting for the full program before any module is released",
+      "Frequent feedback loops allow continuous improvement throughout development",
+      "Works well when content scope or requirements change between development cycles",
+      "Aligns naturally with how tech and software organizations already operate"
+    ],
+    "cons": [
+      "Hard to maintain instructional coherence and curriculum alignment across disconnected sprints",
+      "Requires stakeholders to commit to regular sprint reviews — a cultural shift for many organizations",
+      "Temptation to sacrifice instructional design rigor for speed within each sprint",
+      "Does not work well in organizations with traditional phase-gate project management cultures"
+    ],
+    "whenToUse": "Tech companies or software organizations where Agile is already the operating model. Training content that changes frequently — software documentation, compliance content in evolving regulatory environments. Programs where reaching learners quickly with partial content is more valuable than waiting for a complete program.",
+    "whenNotToUse": "Organizations where traditional project management and phase-gate approvals are mandatory. Programs with complex prerequisite structures where sequence is critical. Any context where releasing partial or unfinished content could cause compliance issues, confusion, or harm.",
+    "structure": "Iterative",
+    "changeToleranceLevel": "Very High",
+    "relativeSpeed": "Fast (incremental)",
+    "documentationLevel": "Variable",
+    "addieConnection": null
+  }
+]
