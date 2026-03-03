@@ -74,5 +74,10 @@
       "body": "Agile ID moves Develop into repeating sprints rather than a single linear phase. If your content is modular and learners would benefit from early access to finished modules while others are still in development, consider sprint-based delivery. This requires modular course architecture and a stakeholder willing to review in iterations rather than waiting for a complete course.",
       "link": "/models"
     }
-  ]
+  ],
+  "caseStudy": {
+    "situation": "With the design document approved, the Meridian team moved into authoring — and quickly encountered the two most common development problems: SME perfectionism and scope creep.",
+    "approach": "SME review returned 47 comments across two cycles. The ID used an SME Review Tracker to log each item, record decisions, and document rationale for any rejected feedback. A \"need to know vs. nice to know\" filter was applied to every disputed item. A storyboard review with the sales manager revealed a timing problem: draft modules were running 28 minutes each against a 20-minute target. Two content sections were cut from the course and converted into the companion job aid instead — preserving the information without bloating the modules. A 3-rep review of Module 1 was conducted before full development of the remaining modules.",
+    "outcome": "The 3-rep review caught a scenario where the \"correct\" answer reflected an outdated pricing tier — a fix that took 20 minutes to address in the storyboard but would have required rebuilding 4 screens in the authoring tool post-production. The final course consisted of 4 modules averaging 19 minutes each, plus a 2-page quick-reference job aid. Piloting Module 1 early paid for itself immediately and became a standard practice the team built into every subsequent project."
+  }
 }

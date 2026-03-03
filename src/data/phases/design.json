@@ -73,5 +73,10 @@
       "body": "Dick & Carey's model prescribes more rigorous steps for objective writing and task analysis than standard ADDIE Design — particularly around subordinate skill identification and developing assessments before instructional materials. For high-stakes certification programs or when you need to prove instructional rigor to an accrediting body, consider adopting their approach for this phase.",
       "link": "/models"
     }
-  ]
+  ],
+  "caseStudy": {
+    "situation": "With Analysis complete, the Meridian team had a clear performance gap but needed to translate it into an instructional architecture before anyone opened an authoring tool.",
+    "approach": "The terminal objective was written as: \"Given a customer inquiry, sales reps will select the correct product configuration and explain its three key differentiators with 90% accuracy on a written scenario assessment.\" Targeting Bloom's Apply and Analyze levels — not just Remember — ruled out a simple quiz-based course. Content was sequenced from product families → individual specifications → competitive comparisons → customer application scenarios. The assessment strategy paired scenario-based multiple-choice questions with a manager observation checklist for the optional VILT component. The design document also included a traceability matrix mapping each objective to its content, assessment item, and evaluation measure.",
+    "outcome": "The design document surfaced a scope conflict: the sponsoring stakeholder originally wanted all 14 product families covered. The traceability matrix made it clear that only 4 families mapped directly to the terminal objective and the lost-deal data from Analysis. The remaining 10 were documented as deferred scope for a Phase 2 project — a decision that saved an estimated 6 weeks of development time and prevented the team from building content no one needed for the identified problem."
+  }
 }
