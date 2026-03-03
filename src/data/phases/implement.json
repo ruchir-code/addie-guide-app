@@ -73,5 +73,10 @@
       "body": "In Agile ID, Implementation is not a single phase — content is released in sprint cycles as each module is completed. Learners access training progressively rather than waiting for the entire program. This is ideal for large programs where a 100% completion gate before any release would delay learning by weeks or months.",
       "link": "/models"
     }
-  ]
+  ],
+  "caseStudy": {
+    "situation": "Rather than enrolling all 200 sales reps at once, the Meridian team planned a phased rollout with a structured pilot — a decision that turned out to catch two real problems before they hit the full audience.",
+    "approach": "The highest-performing region (42 reps) received access first as the pilot group. Managers across all regions received a one-page briefing two weeks before their cohort's launch date, explaining the training purpose, the completion deadline, and specific actions they should take before, during, and after training. LMS enrollment was staggered by region over 3 weeks. On the first morning of the pilot, 6 reps reported they couldn't access the course. Because the launch checklist included a documented technical support contact, the issue was escalated to IT within an hour — an SSO configuration mismatch was resolved within 24 hours.",
+    "outcome": "The pilot region hit an 82% completion rate at two weeks, above the 75% target. The most common learner support question — \"Where do I find the spec comparison tables?\" — revealed a navigation gap in the LMS course page. A resources tab was added before the next region went live, and that question never appeared in the support inbox again. The staggered rollout meant the fix reached 158 learners before they ever encountered the problem."
+  }
 }

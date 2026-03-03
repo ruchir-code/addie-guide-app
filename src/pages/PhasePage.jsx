@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useLevel } from '../context/LevelContext'
 import Checklist from '../components/checklist/Checklist'
 
@@ -61,6 +63,53 @@ function Section({ title, color, children }) {
       </div>
       {children}
     </section>
+  )
+}
+
+function CaseStudyCallout({ caseStudy }) {
+  const [open, setOpen] = useState(false)
+  if (!caseStudy) return null
+  return (
+    <div className="mb-8 rounded-xl border-2 overflow-hidden" style={{ borderColor: '#D97706' }}>
+      <button
+        onClick={() => setOpen((p) => !p)}
+        className="w-full flex items-center justify-between px-4 py-3 text-left"
+        style={{ backgroundColor: '#FFFBEB' }}
+        aria-expanded={open}
+      >
+        <div className="flex items-center gap-2">
+          <span
+            className="text-xs font-bold px-2 py-0.5 rounded whitespace-nowrap"
+            style={{ backgroundColor: '#FEF3C7', color: '#92400E' }}
+          >
+            See This in Practice
+          </span>
+          <span className="text-sm font-semibold" style={{ color: '#78350F' }}>
+            Meridian Manufacturing
+          </span>
+        </div>
+        {open
+          ? <ChevronUp size={15} style={{ color: '#D97706' }} className="shrink-0" />
+          : <ChevronDown size={15} style={{ color: '#D97706' }} className="shrink-0" />
+        }
+      </button>
+      {open && (
+        <div className="px-4 py-5 bg-white space-y-4" style={{ borderTop: '1px solid #FDE68A' }}>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: '#92400E' }}>Situation</p>
+            <p className="text-sm text-gray-700 leading-relaxed">{caseStudy.situation}</p>
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: '#92400E' }}>Approach</p>
+            <p className="text-sm text-gray-700 leading-relaxed">{caseStudy.approach}</p>
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: '#92400E' }}>Outcome</p>
+            <p className="text-sm text-gray-700 leading-relaxed">{caseStudy.outcome}</p>
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -156,6 +205,9 @@ export default function PhasePage() {
       <Section title="Why It Matters" color={data.color}>
         <p className="text-gray-700 leading-relaxed">{data.whyItMatters[contentLevel]}</p>
       </Section>
+
+      {/* ── Case Study ──────────────────────────────────────────────── */}
+      {data.caseStudy && <CaseStudyCallout caseStudy={data.caseStudy} />}
 
       {/* ── Key Questions ──────────────────────────────────────────── */}
       <Section title="Key Questions to Ask" color={data.color}>

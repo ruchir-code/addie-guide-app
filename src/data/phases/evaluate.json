@@ -73,5 +73,10 @@
       "body": "Kirkpatrick's model maps to ADDIE's Evaluate phase at Levels 1–4, but Phillips's ROI Model adds a fifth level: financial return on investment. If your sponsor is asking 'what is the ROI of this training?' you'll need to isolate the effect of training from other variables — a rigorous methodology that typically requires partnering with your HR analytics team and agreeing on a data collection approach in the Analysis phase, not after launch.",
       "link": "/models"
     }
-  ]
+  ],
+  "caseStudy": {
+    "situation": "Because the Meridian team had written their evaluation plan during Design — not scrambled to build one after launch — they were able to execute measurement at all four Kirkpatrick levels from day one.",
+    "approach": "Level 1 surveys embedded in the LMS returned a 76% response rate with a 4.3/5.0 average. The most common open-ended response was \"more real customer examples.\" Level 2 data showed an 84% first-attempt pass rate. At 30 days post-launch, a follow-up survey asked reps directly whether they had used the spec comparison technique in at least one real sales conversation — 71% confirmed yes. At 90 days, the VP of Sales pulled deal-stage loss data from Salesforce and compared it to the pre-training baseline established during Analysis.",
+    "outcome": "The technical deep-dive deal loss rate dropped from 30% to 19% in the first quarter post-launch. The evaluation report noted a limitation: a new competitive pricing adjustment launched in the same quarter complicated attribution — the training was not the only variable that changed. The report recommended a more isolated measurement design for Phase 2. The L1 feedback about examples was addressed in a content update 60 days post-launch, adding 3 new scenario variations. The evaluation data also became the primary evidence used to secure budget approval for Phase 2."
+  }
 }

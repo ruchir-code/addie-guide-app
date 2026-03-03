@@ -73,5 +73,10 @@
       "body": "SAM compresses Analysis into a brief Preparation phase, operating on the assumption that requirements will emerge through prototyping. This is a legitimate trade-off when the cost of extended analysis outweighs the cost of early iteration — but it requires experienced IDs who can make fast design decisions without a full data set.",
       "link": "/models"
     }
-  ]
+  ],
+  "caseStudy": {
+    "situation": "Meridian Manufacturing's VP of Sales flagged a problem: the sales team was losing roughly 30% of enterprise deals at the \"technical deep dive\" stage — the point in a sales call when buyers asked detailed questions about product specifications and configurations. The L&D team was asked to build a training solution.",
+    "approach": "The instructional designer conducted 8 SME interviews — 5 with top-performing sales reps and 3 with product engineers — and a survey of 40 reps. She also reviewed 6 months of lost-deal notes from the CRM. The pattern that emerged: reps knew the product line existed but couldn't confidently explain specifications, configurations, or competitive differentiators. The root cause was a knowledge gap, not motivation — reps were eager to sell but had never received formal product training. Analysis also revealed that just 3 of the company's 14 product families accounted for 80% of the lost deals.",
+    "outcome": "The team recommended a blended solution — e-learning for core product knowledge, a companion quick-reference job aid, and an optional VILT Q&A session — rather than a job aid alone (reps needed internalized knowledge, not just reference material they'd never open mid-call). Scoping the project to 3 product families instead of all 14 saved an estimated 8 weeks of development time and gave the team a defensible rationale when the stakeholder pushed for broader coverage."
+  }
 }
