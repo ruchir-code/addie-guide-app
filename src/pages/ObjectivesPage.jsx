@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import bloomVerbs from '../data/bloom-verbs.json'
 import CopyButton from '../components/ui/CopyButton'
 import {
   BookOpen, Target, Layers, Map, Plus, Trash2,
-  AlertTriangle, CheckCircle, ChevronRight,
+  AlertTriangle, CheckCircle, ChevronRight, Download,
 } from 'lucide-react'
 
 // ─── Constants ─────────────────────────────────────────────────────────────────
@@ -31,6 +31,24 @@ const TABS = [
 
 let _uid = 0
 function uid() { return String(++_uid) }
+
+// ─── LocalStorage persistence ───────────────────────────────────────────────
+
+const LS_KEY = 'addie_objectives_v1'
+
+const _initialData = (() => {
+  try {
+    const raw = localStorage.getItem(LS_KEY)
+    if (!raw) return null
+    const data = JSON.parse(raw)
+    if (!Array.isArray(data?.clos)) return null
+    const allIds = [...data.clos, ...(data.tlos || []), ...(data.elos || [])]
+      .map(o => parseInt(o.id, 10))
+      .filter(n => !isNaN(n))
+    if (allIds.length) _uid = Math.max(...allIds)
+    return data
+  } catch { return null }
+})()
 
 // ─── Factory functions ─────────────────────────────────────────────────────────
 
@@ -73,6 +91,58 @@ function buildELOText(elo) {
   const core = [elo.verb, elo.skillFocus].filter(Boolean).join(' ')
   if (!core) return ''
   return elo.standard ? `${core}, ${elo.standard}` : core
+}
+
+function buildMarkdownText(clos, tlos, elos) {
+  const lines = ['# Course Outcomes & Objectives', '']
+
+  clos.forEach((clo, ci) => {
+    lines.push(`## COURSE LEARNING OUTCOME ${ci + 1}`)
+    lines.push(buildCLOText(clo) || '*(incomplete)*')
+    lines.push('')
+    const cloTLOs = tlos.filter(t => t.cloId === clo.id)
+    if (cloTLOs.length === 0) {
+      lines.push('*No TLOs mapped to this CLO.*')
+      lines.push('')
+    } else {
+      cloTLOs.forEach((tlo, tli) => {
+        lines.push(`### Terminal Learning Objective ${ci + 1}.${tli + 1}`)
+        lines.push(buildTLOText(tlo) || '*(incomplete)*')
+        lines.push('')
+        const tloELOs = elos.filter(e => e.tloId === tlo.id)
+        if (tloELOs.length === 0) {
+          lines.push('*No ELOs mapped to this TLO.*')
+          lines.push('')
+        } else {
+          tloELOs.forEach((elo, eli) => {
+            lines.push(`#### Enabling Learning Objective ${ci + 1}.${tli + 1}.${eli + 1}`)
+            lines.push(buildELOText(elo) || '*(incomplete)*')
+            lines.push('')
+          })
+        }
+      })
+    }
+  })
+
+  const unmappedTLOs = tlos.filter(t => !t.cloId || !clos.find(c => c.id === t.cloId))
+  if (unmappedTLOs.length) {
+    lines.push('---', '## ⚠️ Unmapped TLOs')
+    unmappedTLOs.forEach(tlo => {
+      lines.push(`- TLO ${tlos.indexOf(tlo) + 1}: ${buildTLOText(tlo) || '*(incomplete)*'}`)
+    })
+    lines.push('')
+  }
+
+  const unmappedELOs = elos.filter(e => !e.tloId || !tlos.find(t => t.id === e.tloId))
+  if (unmappedELOs.length) {
+    lines.push('---', '## ⚠️ Unmapped ELOs')
+    unmappedELOs.forEach(elo => {
+      lines.push(`- ELO ${elos.indexOf(elo) + 1}: ${buildELOText(elo) || '*(incomplete)*'}`)
+    })
+    lines.push('')
+  }
+
+  return lines.join('\n')
 }
 
 function clip(text, max = 55) {
@@ -780,6 +850,30 @@ function ELOCard({ elo, index, tlos, onUpdate, onRemove, onAcknowledge }) {
   )
 }
 
+// ─── Export Markdown Button ────────────────────────────────────────────────────
+
+function ExportMDButton({ clos, tlos, elos }) {
+  function handleExport() {
+    const md = buildMarkdownText(clos, tlos, elos)
+    const blob = new Blob([md], { type: 'text/markdown' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = 'objectives.md'
+    a.click()
+    URL.revokeObjectURL(url)
+  }
+  return (
+    <button
+      onClick={handleExport}
+      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors"
+    >
+      <Download size={14} />
+      Export .md
+    </button>
+  )
+}
+
 // ─── Mapping Tab ───────────────────────────────────────────────────────────────
 
 function MappingTab({ clos, tlos, elos }) {
@@ -850,7 +944,10 @@ function MappingTab({ clos, tlos, elos }) {
             Full CLO → TLO → ELO hierarchy and coverage status. Copy the complete hierarchy for use in course documentation.
           </p>
         </div>
-        <CopyButton text={buildFullText()} />
+        <div className="flex items-center gap-2">
+          <CopyButton text={buildFullText()} />
+          <ExportMDButton clos={clos} tlos={tlos} elos={elos} />
+        </div>
       </div>
 
       {/* Stats */}
@@ -1045,9 +1142,13 @@ function MappingTab({ clos, tlos, elos }) {
 
 export default function ObjectivesPage() {
   const [activeTab, setActiveTab] = useState('clo')
-  const [clos, setClos] = useState([createCLO()])
-  const [tlos, setTlos] = useState([])
-  const [elos, setElos] = useState([])
+  const [clos, setClos] = useState(() => _initialData?.clos ?? [createCLO()])
+  const [tlos, setTlos] = useState(() => _initialData?.tlos ?? [])
+  const [elos, setElos] = useState(() => _initialData?.elos ?? [])
+
+  useEffect(() => {
+    localStorage.setItem(LS_KEY, JSON.stringify({ clos, tlos, elos }))
+  }, [clos, tlos, elos])
 
   // ── CLO operations ──────────────────────────────────────────────────────────
 
