@@ -558,5 +558,47 @@
     "definition": "A non-linear instructional design model developed by Jerrold Kemp that treats curriculum design as an ongoing, cyclical process rather than a sequential set of phases. Unlike ADDIE, the Kemp model has no required starting point — designers can enter the process at any of nine elements (goals, learner characteristics, objectives, content sequencing, instructional strategies, resources, evaluation, support services, summative evaluation) depending on project context. It is well-suited to experienced designers managing complex, multi-stakeholder programs.",
     "phaseLink": "/models",
     "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g81",
+    "term": "Classical Conditioning",
+    "definition": "A form of associative learning discovered by Ivan Pavlov, in which a neutral stimulus becomes associated with an unconditioned stimulus through repeated pairing — eventually eliciting a conditioned response on its own. In learning design, classical conditioning explains how learners develop emotional associations with training environments, feedback tones, and branded learning systems. Positive learning experiences condition favorable attitudes toward future training.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g82",
+    "term": "Operant Conditioning",
+    "definition": "B.F. Skinner's theory of learning through consequences: behaviors that are reinforced tend to increase in frequency; behaviors that are punished or ignored tend to decrease. In instructional design, operant conditioning underpins immediate feedback mechanisms, scenario branching with consequences, gamification elements, and mastery-based progression. The three-term contingency (antecedent → behavior → consequence) is a practical diagnostic tool for performance problems.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g83",
+    "term": "Information Processing Theory",
+    "definition": "A cognitive model that describes learning as the movement of information through a series of mental stages: sensory registers (brief, high-capacity) → working memory (limited capacity, active processing) → long-term memory (large capacity, relatively permanent). Learning is encoding information from working memory into long-term memory in a retrievable form. The model explains why chunking, spacing, retrieval practice, and reducing sensory overload improve retention.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g84",
+    "term": "Norm-Referenced Assessment",
+    "definition": "An assessment approach that interprets a learner's score by comparing it to the scores of a reference group (the norm). Grading on a curve is norm-referenced. In workplace instructional design, norm-referenced assessment is rarely appropriate — it ranks learners rather than verifying competence. Criterion-referenced assessment, which measures performance against a fixed standard, is almost always the correct approach for training programs with defined performance objectives.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g85",
+    "term": "Authentic Assessment",
+    "definition": "An assessment approach that asks learners to demonstrate competence through realistic, meaningful tasks that mirror real-world application — rather than through decontextualized recall or recognition tests. Examples: scenario-based role plays, case study analyses, performance simulations, on-the-job observations, and portfolio submissions. Authentic assessment produces stronger evidence of transfer than multiple-choice tests because it requires learners to apply knowledge under realistic conditions.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g86",
+    "term": "Rubric",
+    "definition": "A scoring guide that defines performance expectations across multiple criteria for an assessment task. Rubrics specify the levels of quality for each criterion (e.g., Exceeds / Meets / Approaching / Does Not Meet), making evaluation consistent, transparent, and defensible. Analytic rubrics score each criterion separately and provide detailed diagnostic feedback. Holistic rubrics give a single overall score based on a gestalt impression. Rubrics are essential for performance-based and authentic assessment in workplace training.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
   }
 ]

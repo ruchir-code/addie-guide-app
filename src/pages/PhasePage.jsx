@@ -168,6 +168,13 @@ export default function PhasePage() {
 
   return (
     <div>
+      {/* ── Breadcrumb ───────────────────────────────────────────────── */}
+      <nav className="flex items-center gap-1.5 text-sm mb-4">
+        <Link to="/" className="text-gray-400 hover:text-gray-600 transition-colors">Home</Link>
+        <span className="text-gray-300">/</span>
+        <span className="text-gray-600 font-medium">{data.label}</span>
+      </nav>
+
       {/* ── Full-width coloured phase header ───────────────────────── */}
       <div
         className="rounded-2xl px-6 py-8 mb-8 relative overflow-hidden"
