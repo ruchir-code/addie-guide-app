@@ -7,6 +7,7 @@ import PhasePage from './pages/PhasePage'
 import ObjectivesPage from './pages/ObjectivesPage'
 import TemplatesPage from './pages/TemplatesPage'
 import GlossaryPage from './pages/GlossaryPage'
+import TheoriesPage from './pages/TheoriesPage'
 
 function NotFound() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
               <Route path="objectives" element={<ObjectivesPage />} />
               <Route path="templates" element={<TemplatesPage />} />
               <Route path="glossary" element={<GlossaryPage />} />
+              <Route path="theories" element={<TheoriesPage />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

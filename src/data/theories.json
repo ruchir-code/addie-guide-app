@@ -1,0 +1,271 @@
+[
+  {
+    "id": "th1",
+    "slug": "behaviorism",
+    "number": "T1",
+    "name": "Behaviorism",
+    "theorists": ["B.F. Skinner", "Ivan Pavlov"],
+    "tagline": "Learning is observable behavior change driven by reinforcement and consequence.",
+    "whatItIs": "Behaviorism holds that learning is a change in observable behavior that results from environmental stimuli and their consequences. Behaviorists focus exclusively on what can be seen and measured — not on internal mental states. Skinner extended Pavlov's classical conditioning work to operant conditioning: behaviors that are reinforced tend to repeat; behaviors that are punished or ignored tend to stop. In a training context, this means what gets rewarded gets learned, and what gets corrected gets corrected.",
+    "whyItMattersForID": "Behaviorism underpins some of the most practical training mechanics: immediate feedback, mastery-based progression, practice with reinforcement, and structured repetition. Even if you never consciously think about Skinner, you're applying behaviorist principles every time you write corrective feedback for a wrong answer, design a quiz with multiple attempts, or build a branching scenario where each choice has a consequence. Understanding behaviorism helps you use reinforcement deliberately rather than accidentally.",
+    "corePrinciples": [
+      "Stimulus-Response: Learning is a link between an environmental trigger (stimulus) and a resulting action (response).",
+      "Positive Reinforcement: Adding something desirable after a correct behavior increases the likelihood that behavior will repeat.",
+      "Negative Reinforcement: Removing something unpleasant after a correct behavior also strengthens it. (Note: this is not punishment.)",
+      "Punishment: Adding something unpleasant — or removing something desirable — after an incorrect behavior decreases that behavior.",
+      "Shaping: Reinforcing successive approximations of a desired behavior, moving learners gradually toward mastery.",
+      "Extinction: Behaviors that are consistently ignored or no longer reinforced will eventually decrease and disappear.",
+      "Spaced Reinforcement: Intermittent reinforcement schedules (not rewarding every response) produce more durable learning than constant reinforcement."
+    ],
+    "howToApply": [
+      "Write clear, immediate feedback for every practice interaction — don't just say 'Incorrect.' Explain what the correct behavior is and why.",
+      "Use mastery thresholds: require a passing score before allowing learners to advance, so incorrect responses don't get 'completed' by rushing through.",
+      "Design knowledge checks with multiple attempts so learners get repeated opportunities to get it right — which itself is reinforcing.",
+      "Use scenario consequences that mirror real-world outcomes. If a learner chooses the wrong de-escalation response, show the customer getting angrier — make the consequence felt.",
+      "Space practice across time. Build review modules or spaced repetition checkpoints into longer curricula rather than front-loading all content and practice.",
+      "Celebrate milestones. Progress indicators, completion badges, and module unlocks all function as positive reinforcement — use them intentionally, not as decoration."
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Behaviorism is too simplistic for workplace training — it's only for teaching animals or children.",
+        "reality": "Behaviorism is the foundation of nearly all e-learning feedback design, LMS completion incentives, and performance management systems. The mechanisms don't care who the learner is. Understanding it prevents you from accidentally training wrong behaviors by reinforcing the wrong things."
+      },
+      {
+        "misconception": "Negative reinforcement means punishing learners for wrong answers.",
+        "reality": "Negative reinforcement is removing an unpleasant stimulus when the correct behavior occurs — it strengthens behavior, it doesn't punish it. Punishment is the addition of something unpleasant. Most instructional designers misuse this term. Getting it right matters when you're designing consequence-based scenarios."
+      }
+    ],
+    "bloomsConnection": "Behaviorism directly supports the Remember and Apply levels of Bloom's Taxonomy. Repetition with reinforced feedback helps encode facts (Remember) and builds procedural fluency through practice (Apply). It is less suited to higher-order levels like Evaluate or Create, where internal reasoning and judgment — not reinforced response patterns — drive learning.",
+    "relatedTerms": ["Reinforcement", "Mastery Learning", "Formative Assessment", "Knowledge Check"]
+  },
+  {
+    "id": "th2",
+    "slug": "cognitivism",
+    "number": "T2",
+    "name": "Cognitivism",
+    "theorists": ["Robert Gagné", "David Ausubel"],
+    "tagline": "Learning is internal mental processing — encoding, storing, and retrieving information.",
+    "whatItIs": "Cognitivism shifted the focus from external behavior to what happens inside the learner's mind. Cognitivists treat the brain as an information-processing system with limited working memory capacity and a virtually unlimited long-term memory. Learning occurs when new information is meaningfully encoded — connected to existing knowledge (schemas) — and stored in long-term memory in a way that makes it retrievable later. Gagné's Nine Events of Instruction are the most practical application of cognitivist principles in ID.",
+    "whyItMattersForID": "Cognitivism gives you the science behind why learners forget, why poorly organized training fails to transfer, and why worked examples outperform discovery for novices. It explains why reading the same slide twice rarely produces learning, while processing information through a problem or question does. Every time you chunk content, use advance organizers, or build in retrieval practice, you're applying cognitive science to improve encoding and retention.",
+    "corePrinciples": [
+      "Information Processing: The mind receives, processes, stores, and retrieves information in stages — from sensory input to working memory to long-term memory.",
+      "Working Memory Limits: Learners can only hold 5–9 chunks of new information in working memory at once. Exceeding this capacity causes cognitive overload and blocks learning.",
+      "Schema Theory: Long-term memory stores knowledge as interconnected networks (schemas). New learning is most effective when connected to existing schemas.",
+      "Meaningful Learning: Ausubel's principle — meaningful learning occurs when new information is linked to existing prior knowledge, not just memorized in isolation.",
+      "Advance Organizers: Previewing what learners will encounter (objectives, outlines, concept maps) activates relevant prior knowledge and prepares schemas to receive new content.",
+      "Gagné's Nine Events: A sequence for instruction — gain attention, state objectives, recall prior knowledge, present content, provide guidance, elicit performance, give feedback, assess, transfer — mirrors how cognition processes new information.",
+      "Retrieval Practice: Actively recalling information (not just re-reading) strengthens memory traces and improves long-term retention."
+    ],
+    "howToApply": [
+      "Lead with learning objectives — not as a legal compliance checkbox, but to activate the learner's relevant schemas before new content arrives.",
+      "Chunk content into 3–5 key ideas per module. If you have 12 things to teach, build three modules of four, not one module of twelve.",
+      "Use worked examples before asking learners to practice independently. Show the expert doing it first; then progressively fade the guidance.",
+      "Build in retrieval practice — short quizzes, reflection prompts, or summary activities — not just at the end of a course, but throughout.",
+      "Connect new content to what learners already know. 'You've already learned X. This builds on that by...' is one of the most powerful sentences in instructional design.",
+      "Use concept maps or diagrams to make abstract relationships visible. Schemas need structure; visual organization helps learners build it."
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "If learners read the content, they've processed it.",
+        "reality": "Reading and processing are not the same thing. Unless new information is actively connected to prior knowledge and encoded into long-term memory, it decays within minutes. Passive reading produces shallow encoding; active retrieval and application produce durable learning."
+      },
+      {
+        "misconception": "More detail equals better training.",
+        "reality": "More information overloads working memory and impairs learning. Cognitive science consistently shows that focused, well-sequenced content — with time for processing — outperforms comprehensive, exhaustive coverage. Teach less, better."
+      }
+    ],
+    "bloomsConnection": "Cognitivism is most closely aligned with the Understand, Apply, and Analyze levels. The emphasis on meaningful encoding (not rote memorization), schema building, and retrieving information in new contexts maps directly to these mid-range levels. Gagné's Nine Events also explicitly address how to sequence instruction to move learners from initial understanding to application.",
+    "relatedTerms": ["Schema Theory", "Cognitive Load Theory", "Bloom's Taxonomy", "Advance Organizer", "Knowledge Check", "Spaced Repetition"]
+  },
+  {
+    "id": "th3",
+    "slug": "constructivism",
+    "number": "T3",
+    "name": "Constructivism",
+    "theorists": ["Jean Piaget", "Lev Vygotsky"],
+    "tagline": "Learners build knowledge actively through experience, reflection, and social interaction.",
+    "whatItIs": "Constructivism proposes that learners don't receive knowledge passively — they construct it by interpreting new experiences through the lens of what they already know. Piaget focused on individual cognitive development (how the learner's own thinking evolves through experience), while Vygotsky emphasized social constructivism — that learning is fundamentally a social process, mediated by language and interaction with more capable others. Both agree: the learner is active, not passive.",
+    "whyItMattersForID": "Constructivism is the theoretical backbone of scenario-based learning, problem-based learning, case studies, and collaborative activities. When you design a branching scenario where the learner must make real decisions and live with consequences, you're building a constructivist environment. When you use a case study followed by group discussion, you're applying Vygotsky. It also explains why lecture-only training is ineffective: telling is not teaching unless the learner is actively constructing meaning from what they hear.",
+    "corePrinciples": [
+      "Active Knowledge Construction: Learners build understanding by actively engaging with content — not by passively receiving it. Doing, deciding, and reflecting are the mechanisms of learning.",
+      "Prior Knowledge as Foundation: New learning is always filtered through and connected to what the learner already knows. This is both an asset (prior knowledge aids comprehension) and a challenge (misconceptions are stubborn).",
+      "Zone of Proximal Development (ZPD): Vygotsky's concept — the gap between what a learner can do independently and what they can do with guidance. The most effective learning happens in this zone.",
+      "Scaffolding: Temporary support structures (worked examples, hints, expert coaching) help learners work within their ZPD, then fade as competence grows.",
+      "Social Learning: Knowledge is built and refined through interaction with others — discussion, debate, collaborative problem-solving, and observation of experts.",
+      "Authentic Context: Learning is most durable when it occurs in realistic contexts that mirror how the knowledge will be used on the job.",
+      "Reflection: Learners consolidate understanding by deliberately reflecting on their experience — what happened, why, and what they would do differently."
+    ],
+    "howToApply": [
+      "Use realistic scenarios with genuine decision points — not scenarios that are obviously right or wrong. Learners should have to think, not recognize.",
+      "Build in reflection prompts after practice activities. 'What would you do differently next time?' activates consolidation that raw experience alone doesn't produce.",
+      "Calibrate challenge to the ZPD. Too easy = boring. Too hard = overwhelming. The sweet spot is effortful but achievable with available guidance.",
+      "Fade scaffolding deliberately. Start with worked examples, move to partially completed problems, then independent practice — don't remove support all at once.",
+      "Incorporate social learning elements where possible: discussion boards, peer review, collaborative problem-solving, or expert interviews captured as video.",
+      "Surface and challenge prior misconceptions explicitly. Don't assume learners will abandon wrong mental models just because you presented correct information alongside them."
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Constructivism means just give learners an experience and they'll figure it out.",
+        "reality": "Pure discovery learning — without guidance, feedback, or structure — is ineffective, especially for novices. Research consistently shows that guided discovery outperforms unguided discovery. Constructivism supports active learning with appropriate scaffolding, not learning without structure."
+      },
+      {
+        "misconception": "Constructivism is incompatible with objectives and assessments.",
+        "reality": "Constructivist learning can and should have clear objectives and assessment. The difference is that assessments in constructivist designs tend to measure application and judgment in context, not just fact recall. Performance tasks and scenario-based assessments are constructivist in spirit."
+      }
+    ],
+    "bloomsConnection": "Constructivism aligns most strongly with the higher levels of Bloom's Taxonomy: Apply, Analyze, Evaluate, and Create. The emphasis on active problem-solving, judgment, reflection, and synthesis maps directly to these levels. Scenario-based learning — a constructivist design approach — is one of the most effective methods for reaching Apply and above.",
+    "relatedTerms": ["Zone of Proximal Development", "Scaffolding", "Scenario-Based Learning", "Discovery Learning", "Authentic Assessment"]
+  },
+  {
+    "id": "th4",
+    "slug": "andragogy",
+    "number": "T4",
+    "name": "Adult Learning Theory (Andragogy)",
+    "theorists": ["Malcolm Knowles"],
+    "tagline": "Adults learn differently from children — they are self-directed, experience-driven, and problem-centered.",
+    "whatItIs": "Andragogy — literally 'leading adults to learn' — is Knowles's theory describing how and why adult learning differs from pedagogy (child-directed instruction). Knowles identified five core assumptions about adult learners that distinguish them from children: they are increasingly self-directed, they bring substantial prior experience that serves as a learning resource, their readiness to learn is tied to their real-life roles, they are problem-centered rather than subject-centered, and their motivation is primarily internal. These assumptions have profound implications for how training should be designed, facilitated, and delivered.",
+    "whyItMattersForID": "Andragogy is arguably the single most important theory for workplace instructional designers, because all of your learners are adults. It tells you why compliance training that treats employees like passive recipients fails. It explains why learners resist content that doesn't feel relevant to their actual job. It guides decisions about learner control, tone, context-setting, and how you frame content. When learners push back on training, they're often responding to a violation of andragogical principles.",
+    "corePrinciples": [
+      "Self-Concept: As people mature, they move from dependency to self-direction. Adult learners want to drive their own learning and resent being treated as passive recipients.",
+      "Experience as Resource: Adults bring rich prior experience to any learning situation. This experience is both a resource (connect new learning to what they know) and a filter (they'll reject information that contradicts strongly held beliefs).",
+      "Readiness to Learn: Adults are most ready to learn when the content is directly relevant to their current life roles, challenges, and responsibilities.",
+      "Problem-Centered Orientation: Adults want to learn things that solve real problems they face — not academic subjects for their own sake. The 'why does this matter?' question is always present.",
+      "Internal Motivation: The most powerful motivators for adult learners are internal: professional growth, mastery, curiosity, and relevance. External motivators (compliance checkboxes) produce minimal engagement.",
+      "Need to Know: Before adults will invest effort in learning, they need to understand why learning this matters — what's the gap, and what's the consequence of not addressing it."
+    ],
+    "howToApply": [
+      "Always answer 'WIIFM' (What's In It For Me) explicitly at the start of every training. Don't bury the relevance — lead with it.",
+      "Connect content to real job problems the learner faces today, not hypothetical scenarios from textbooks. The closer to their actual work, the better.",
+      "Give learners choices where possible: module sequence, learning path, depth level. Adults learn better when they feel a sense of control.",
+      "Treat learner experience as a resource: build in reflection on prior experience, peer sharing, and moments where learners apply new concepts to situations they've actually encountered.",
+      "Cut content that doesn't connect to performance. Andragogy supports ruthless scoping — if it doesn't help adults do their job better, it shouldn't be in the course.",
+      "Avoid a condescending or lecture-heavy tone. Address learners as capable professionals who need information, not students who need to be taught. The framing matters."
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Andragogy means adult learners should figure everything out themselves — just give them resources and get out of the way.",
+        "reality": "Knowles's framework supports self-direction, not abandonment. Adults still need structure, clear objectives, and expert guidance — especially for complex or high-stakes content. Self-direction means having input into the process, not navigating without a map."
+      },
+      {
+        "misconception": "All adult learners are the same — just make content 'adult-friendly' and you're done.",
+        "reality": "Andragogy describes tendencies, not universal laws. Adults vary by experience level, motivation, literacy, and context. A 25-year-old new hire and a 50-year-old veteran have very different experience bases and very different readiness profiles. Pair andragogy with a thorough learner analysis."
+      }
+    ],
+    "bloomsConnection": "Andragogy is less a Bloom's-level prescription and more a design philosophy. However, its emphasis on problem-centeredness and relevance naturally steers design toward Apply, Analyze, and Evaluate levels — levels where learners actively use knowledge to solve real problems rather than simply recalling facts. Andragogy-informed design rarely produces Remember-level training as the endpoint.",
+    "relatedTerms": ["Andragogy", "Self-Directed Learning", "Learner Analysis", "Motivation", "Performance Gap"]
+  },
+  {
+    "id": "th5",
+    "slug": "social-learning",
+    "number": "T5",
+    "name": "Social Learning Theory",
+    "theorists": ["Albert Bandura"],
+    "tagline": "People learn by observing others, modeling behavior, and building belief in their own capability.",
+    "whatItIs": "Bandura's Social Learning Theory (later expanded into Social Cognitive Theory) proposes that learning is not just a product of direct experience — it also occurs through observation of others. Learners watch models perform behaviors, observe the consequences those models face, and use that information to guide their own actions. Bandura's most significant contribution beyond modeling was the concept of self-efficacy: a learner's belief in their own ability to successfully perform a specific task. Self-efficacy is one of the strongest predictors of whether learners will apply new skills on the job.",
+    "whyItMattersForID": "Social Learning Theory justifies expert demonstration videos, peer coaching programs, mentorship models, and worked example design. It also explains a common training failure: learners may know what to do and even understand why, but lack the confidence that they can do it. A technically perfect course that fails to build self-efficacy produces learners who don't apply. Understanding self-efficacy gives you a design lever you'd otherwise miss.",
+    "corePrinciples": [
+      "Observational Learning: People learn by watching others — the model doesn't need to be present in person. Video demonstrations, case studies, and expert walkthroughs all leverage this mechanism.",
+      "Vicarious Reinforcement: Observing a model receive a positive outcome for a behavior increases the likelihood that the observer will perform that behavior. Negative outcomes for the model decrease it.",
+      "Modeling: Effective models are perceived as credible, similar to the learner, and competent. A peer model (someone like the learner) is often more powerful than an expert model for self-efficacy.",
+      "Self-Efficacy: Belief in one's ability to perform a specific task. High self-efficacy increases effort, persistence, and transfer. Low self-efficacy causes avoidance even when the learner has the knowledge.",
+      "Sources of Self-Efficacy: Mastery experiences (successes build efficacy), vicarious experiences (seeing similar others succeed), social persuasion (encouragement), and physiological states (managing anxiety).",
+      "Reciprocal Determinism: Behavior, personal factors (beliefs, cognition), and environment all influence each other in a continuous loop. Training doesn't happen in isolation — the work environment reinforces or undermines what training builds."
+    ],
+    "howToApply": [
+      "Use expert demonstration before practice. Show the correct behavior in context before asking learners to attempt it — this is the 'I do' phase of the I Do / We Do / You Do model.",
+      "Use peer models, not just expert models. A video of a peer (someone in the same role, at the same level) successfully applying a skill is often more motivating than watching a polished expert.",
+      "Design for mastery experiences in your practice activities. Early wins matter — structure practice so learners succeed at manageable challenges before tackling harder ones.",
+      "Acknowledge that self-efficacy matters. Include language in your design that validates that the task is learnable and that others in the same role have succeeded.",
+      "Address the transfer environment. If you know managers don't reinforce the target behaviors post-training, that's a design problem. Build a manager briefing into your implementation plan.",
+      "Build in social elements where possible: peer coaching pairs, discussion boards where learners share wins, or communities of practice to sustain learning past the course."
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Social learning only works in group or classroom settings.",
+        "reality": "Observational learning is just as powerful in asynchronous formats. A video demonstration, a case study narrated from a peer's perspective, or an expert interview in an e-learning module all leverage social learning mechanisms. The observer doesn't need to be in the room with the model."
+      },
+      {
+        "misconception": "If a learner knows the content, self-efficacy doesn't matter — they'll apply it.",
+        "reality": "Self-efficacy is one of the strongest predictors of transfer independent of knowledge. A learner who scores 90% on a knowledge check but believes they can't do the job will not apply the skills. Design explicitly for confidence-building, not just competence-building."
+      }
+    ],
+    "bloomsConnection": "Social Learning Theory is especially relevant at the Apply level — modeling and vicarious reinforcement are most powerful when the goal is getting learners to perform a specific behavior. It also supports higher levels: seeing a peer model analyze a complex situation or make a judgment call provides a template learners can use when they face similar situations.",
+    "relatedTerms": ["Self-Efficacy", "Modeling", "Vicarious Reinforcement", "Transfer of Learning", "Communities of Practice"]
+  },
+  {
+    "id": "th6",
+    "slug": "cognitive-load",
+    "number": "T6",
+    "name": "Cognitive Load Theory",
+    "theorists": ["John Sweller"],
+    "tagline": "Working memory has a strict capacity limit — exceed it and learning stops.",
+    "whatItIs": "Cognitive Load Theory (CLT) explains why so much training fails despite good intentions. Sweller's research established that the human working memory — where all active thinking happens — can only process a small number of elements at once (roughly 4–7). When the total cognitive demand on working memory exceeds that capacity, learners become overwhelmed, make errors, and fail to encode information into long-term memory. CLT distinguishes three types of cognitive load that instructional designers must manage simultaneously.",
+    "whyItMattersForID": "CLT is the most directly actionable cognitive science theory for instructional designers. It gives you specific, testable principles for every design decision: how many bullets per slide, whether to use narration with text, when to use worked examples, how to sequence content for novices versus experts. Violations of CLT principles are the single most common cause of poor e-learning design — not bad content, but bad presentation of content.",
+    "corePrinciples": [
+      "Intrinsic Load: The inherent difficulty of the content itself, determined by the number of interacting elements learners must hold in mind simultaneously. High intrinsic load (e.g., complex surgery procedures) is a fixed property of the material — you can't eliminate it, only manage it through sequencing and prerequisite scaffolding.",
+      "Extraneous Load: Cognitive effort caused by poor instructional design — unnecessary complexity, unclear explanations, redundant information, confusing visuals. Extraneous load adds burden without contributing to learning. This is fully within the designer's control to reduce.",
+      "Germane Load: The mental effort invested in schema construction and automation — the 'useful' cognitive work of building long-term knowledge. Good design redirects working memory resources from extraneous to germane load.",
+      "The Redundancy Effect: Presenting the same information in multiple formats simultaneously (e.g., narration + on-screen text saying the same thing) increases extraneous load rather than reinforcing learning. Choose one format or ensure they complement rather than duplicate.",
+      "The Split-Attention Effect: When learners must mentally integrate information from physically separated sources (e.g., a diagram and its explanation in different locations), working memory is taxed by the search itself. Integrate related information physically or temporally.",
+      "The Expertise Reversal Effect: Instructional supports that reduce load for novices (worked examples, step-by-step guidance) become unnecessary and actually increase load for experts. Calibrate scaffolding to the learner's actual level."
+    ],
+    "howToApply": [
+      "Reduce on-screen text to key ideas only. Never put a paragraph on a slide and then narrate the same paragraph — this is the redundancy effect, and it impairs learning.",
+      "Integrate related information spatially. If a diagram needs a label, put the label on the diagram — not in a separate legend that learners must cross-reference.",
+      "Sequence content by complexity. Start with the simplest case (fewest interacting elements), achieve fluency there, then introduce complexity. Don't throw novices into the hardest scenario first.",
+      "Use worked examples extensively with novice learners. Step-by-step expert demonstrations lower intrinsic load by showing the path, freeing working memory to focus on the 'why' of each step.",
+      "Eliminate visual clutter: decorative images, complex backgrounds, and animations that don't carry information all consume working memory without contributing to learning.",
+      "Test your designs for cognitive load. If a learner has to hold more than 5–7 new concepts in mind at once to process your content, it needs to be chunked, resequenced, or scaffolded differently."
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "More information is better — comprehensive coverage ensures learners get everything they need.",
+        "reality": "More information means more cognitive load. When working memory is overloaded, no learning occurs — regardless of the quality of the content. The most effective training teaches fewer things more deeply, not everything at once. Coverage is not the same as learning."
+      },
+      {
+        "misconception": "Adding visuals always makes content easier to understand.",
+        "reality": "Irrelevant visuals (stock photos of smiling people, decorative icons) increase extraneous load without contributing to understanding. Visuals that must be integrated with text but aren't aligned with it cause split-attention effects. Visuals help when they carry genuine instructional information and are properly integrated with related content."
+      }
+    ],
+    "bloomsConnection": "Cognitive Load Theory is relevant at every level of Bloom's Taxonomy because cognitive overload impairs learning at any level of complexity. However, its most direct application is at the Apply level and above, where learners must simultaneously hold multiple concepts in mind and integrate them. Worked examples (a CLT tool) are particularly powerful for bridging Understand to Apply for complex procedural tasks.",
+    "relatedTerms": ["Intrinsic Cognitive Load", "Extraneous Cognitive Load", "Germane Cognitive Load", "Chunking", "Working Memory", "Schema Theory"]
+  },
+  {
+    "id": "th7",
+    "slug": "connectivism",
+    "number": "T7",
+    "name": "Connectivism",
+    "theorists": ["George Siemens"],
+    "tagline": "In the digital age, learning is the ability to form connections across networks of knowledge — not just store information internally.",
+    "whatItIs": "Connectivism, proposed by Siemens in 2005, argues that classical learning theories were developed before the internet and don't account for how learning actually works in a networked, information-saturated world. In connectivism, knowledge doesn't just reside inside the individual's head — it lives in the connections between people, databases, and digital tools. Learning is the ability to find, filter, and navigate relevant information across these networks when needed, not to memorize everything in advance.",
+    "whyItMattersForID": "Connectivism challenges the assumption that training should transfer all knowledge into the learner before they need it. In fast-changing fields, that model fails — content is outdated before learners need it. Connectivism points instructional designers toward performance support design, curation, and community-building as complements (and sometimes replacements) to traditional course design. It also frames the designer's role differently: sometimes you're not building a course, you're building a network.",
+    "corePrinciples": [
+      "Learning as Network Formation: Learning occurs when new nodes (people, resources, ideas) are connected to an existing network. The ability to form and traverse connections is the skill — not just the content stored at any single node.",
+      "Diversity of Viewpoints: Exposure to diverse perspectives strengthens a knowledge network. Homogeneous sources create brittle, fragile understanding.",
+      "Currency of Knowledge: In rapidly evolving fields, staying current — keeping connections alive and adding new ones — is as important as the initial learning.",
+      "Nurturing Connections: The capacity to know where to find information (know-where) is as important as knowing the information itself (know-what).",
+      "Decision-Making as Learning: Choosing what to learn and what to ignore is a learning act in itself. Information overload is a real obstacle — curation is a competency.",
+      "Learning Lives Outside the Individual: A meaningful portion of learning, knowledge, and expertise now resides in tools, databases, and other people in an individual's network — not inside a single person's head."
+    ],
+    "howToApply": [
+      "Design for 'knowing where' as well as 'knowing what.' Curate resource libraries, link to expert communities, and teach learners how to find authoritative answers — not just what the answers are today.",
+      "Build communities of practice where ongoing professional learning can happen after a formal course ends. A Slack channel, internal wiki, or monthly peer discussion group can carry more long-term value than the course itself.",
+      "Use performance support tools (job aids, searchable knowledge bases, in-app guidance) for content that changes frequently or is needed at the moment of performance, not in advance.",
+      "Consider whether a course is actually the right solution. For rapidly changing content or rare-but-critical tasks, a searchable reference resource may serve learners better than a course they'll forget before they need it.",
+      "Design for connection across your organization: expert directories, peer review panels, and mentorship matching are all connectivist learning designs.",
+      "Teach learners to filter, evaluate, and curate — not just consume. Information literacy is a transferable skill that extends beyond any single training."
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Connectivism replaces all traditional learning theories — courses and structured training are obsolete.",
+        "reality": "Connectivism is most powerful as a complement to other theories, not a replacement. For foundational skills — procedures, safety protocols, clinical skills — behaviorist and cognitivist approaches remain essential. Connectivism describes how people continue learning in a networked world, not how they first develop core competencies."
+      },
+      {
+        "misconception": "Connectivism just means 'use social media for learning.'",
+        "reality": "Social media is one possible network node, not the theory itself. Connectivism addresses the structural change in where knowledge lives and how it moves — which includes databases, AI tools, expert networks, and organizational knowledge management systems, not just LinkedIn or X."
+      }
+    ],
+    "bloomsConnection": "Connectivism most directly informs the Evaluate and Create levels — learners must evaluate sources, curate connections, and synthesize knowledge from across their network. It is also relevant as a meta-competency: the ability to learn how to learn in a networked environment. Connectivism is less concerned with helping learners Remember or Understand specific content and more concerned with building the capacity to navigate knowledge continuously.",
+    "relatedTerms": ["Connectivism", "Personal Learning Network", "Performance Support", "Knowledge Management", "Communities of Practice"]
+  }
+]

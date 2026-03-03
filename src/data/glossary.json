@@ -439,5 +439,110 @@
     "definition": "The limited cognitive system that holds and processes information in the short term. Working memory can handle roughly 4–7 items at once. Instructional designers manage working memory load by chunking content, removing extraneous information, using visuals to reduce text, and sequencing from simple to complex.",
     "phaseLink": "/design",
     "phaseLabel": "Design"
+  },
+  {
+    "id": "g64",
+    "term": "Behaviorism",
+    "definition": "A learning theory that defines learning as a change in observable behavior resulting from stimulus-response pairings and reinforcement. Associated with Skinner and Pavlov. In ID, behaviorism informs drill-and-practice design, immediate corrective feedback, mastery thresholds, and consequence-based scenarios. The mechanisms don't require internal mental states to be effective.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g65",
+    "term": "Reinforcement",
+    "definition": "In behaviorist learning theory, a consequence that strengthens a behavior. Positive reinforcement adds something desirable (praise, progress indicators, scenario success) after a correct response. Negative reinforcement removes something unpleasant after a correct response. Both strengthen the behavior — they are not the same as reward and punishment.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g66",
+    "term": "Cognitivism",
+    "definition": "A learning theory that treats learning as an internal mental process — encoding, storing, and retrieving information. Associated with Gagné and Ausubel. Cognitivism informs chunking, advance organizers, worked examples, retrieval practice, and schema-building in instructional design. The key insight: new knowledge must be meaningfully connected to existing knowledge to be retained.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g67",
+    "term": "Schema Theory",
+    "definition": "A cognitive theory proposing that long-term memory organizes knowledge as interconnected networks called schemas. New information is learned most effectively when connected to an existing schema. Implications for ID: activate prior knowledge before presenting new content, use analogies and concept maps, and sequence content to build schemas incrementally.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g68",
+    "term": "Zone of Proximal Development (ZPD)",
+    "definition": "Vygotsky's concept describing the gap between what a learner can do independently and what they can do with guidance from a more capable person. The ZPD is the most productive space for learning — too easy produces no growth, too hard produces frustration. In ID, ZPD informs how challenging to make practice activities and how much scaffolding to provide.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g69",
+    "term": "Scaffolding",
+    "definition": "Temporary support structures that help learners accomplish tasks they cannot yet do independently. In ID, scaffolding includes worked examples, hints, job aids, partial solutions, and expert guidance that fades as learner competence grows. Named after the construction scaffolding that supports a building under construction and is removed when the structure can stand on its own.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g70",
+    "term": "Andragogy",
+    "definition": "Malcolm Knowles's theory of adult learning, contrasted with pedagogy (child-directed learning). Andragogy holds that adults are self-directed, bring prior experience that serves as a learning resource, learn in response to real-life roles and problems, and are primarily internally motivated. These assumptions directly inform ID decisions about tone, relevance framing, learner control, and content selection.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g71",
+    "term": "Self-Directed Learning",
+    "definition": "A learning process in which the individual takes initiative in diagnosing their learning needs, setting goals, identifying resources, and evaluating their progress — with or without assistance from others. Associated with Knowles's andragogy. In ID, designing for self-directed learning means offering learner control, clear pathways, and resources for independent exploration beyond the course.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g72",
+    "term": "Self-Efficacy",
+    "definition": "Bandura's term for an individual's belief in their own ability to successfully perform a specific task. Self-efficacy is one of the strongest predictors of whether a learner will attempt, persist at, and transfer a new skill. High self-efficacy increases effort and resilience; low self-efficacy produces avoidance. ID strategies for building self-efficacy include mastery experiences, peer modeling, and explicit encouragement.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g73",
+    "term": "Vicarious Reinforcement",
+    "definition": "Learning that occurs by observing the consequences experienced by others rather than experiencing those consequences directly. If a learner sees a peer model succeed (or fail) as a result of a behavior, this observation influences the learner's own likelihood of performing that behavior. Central to Bandura's Social Learning Theory and a key justification for case studies, expert interviews, and demonstration videos.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g74",
+    "term": "Intrinsic Cognitive Load",
+    "definition": "In Sweller's Cognitive Load Theory, the inherent mental effort required to process the content itself — determined by the number of interacting elements the learner must hold in mind simultaneously. Intrinsic load is fixed by the nature of the content. IDs manage it by sequencing content from simple to complex and ensuring prerequisite knowledge is solid before introducing new complexity.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g75",
+    "term": "Extraneous Cognitive Load",
+    "definition": "In Sweller's Cognitive Load Theory, cognitive effort caused by poor instructional design rather than the content itself. Extraneous load is produced by unclear explanations, cluttered visuals, redundant information, and split-attention effects. Unlike intrinsic load, extraneous load is fully within the instructional designer's control — and reducing it is one of the highest-leverage improvements you can make to any training.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g76",
+    "term": "Germane Cognitive Load",
+    "definition": "In Sweller's Cognitive Load Theory, the mental effort invested in constructing and automating schemas — the 'productive' cognitive work that leads to long-term learning. Good instructional design reduces extraneous load to free up cognitive resources for germane load. Deliberately challenging practice, reflection prompts, and retrieval activities all promote germane processing.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g77",
+    "term": "Connectivism",
+    "definition": "George Siemens's theory that learning in the digital age is the ability to form and traverse connections across networks of people, tools, and information — not just store knowledge internally. Connectivism challenges traditional course-based instruction by arguing that 'knowing where to find' information is as important as 'knowing' it. It informs performance support design, personal learning networks, and curation as a learning strategy.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g78",
+    "term": "Personal Learning Network (PLN)",
+    "definition": "A self-curated network of people, communities, tools, and resources that an individual uses for ongoing professional learning and development. A PLN typically includes mentors, peers, social media follows, podcasts, newsletters, and communities of practice. Associated with connectivism. Helping learners build PLNs is an increasingly recognized instructional goal for professional development programs.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
   }
 ]

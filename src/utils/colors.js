@@ -52,6 +52,14 @@ export const PHASES = [
   },
 ]
 
+// Theories / Foundations section (teal)
+export const THEORIES_COLOR = {
+  color:  '#0D9488',
+  light:  '#F0FDFA',
+  border: '#99F6E4',
+  dark:   '#0F766E',
+}
+
 // UI accent (violet)
 export const ACCENT = {
   primary:  '#7C3AED',

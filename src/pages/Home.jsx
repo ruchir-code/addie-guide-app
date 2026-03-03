@@ -10,6 +10,7 @@ import {
   Target,
   FileText,
   BookOpen,
+  Brain,
 } from 'lucide-react'
 import { PHASES as PHASE_DATA } from '../utils/colors'
 
@@ -47,6 +48,17 @@ const TOOLS = [
     icon: BookOpen,
     style: { backgroundColor: '#ECFDF5', borderColor: '#059669', color: '#065F46' },
     iconBg: '#059669',
+  },
+]
+
+const FOUNDATIONS = [
+  {
+    to: '/theories',
+    label: 'Learning Theories',
+    desc: 'Behaviorism, Cognitivism, Constructivism, Andragogy, CLT, and more — the science behind design decisions',
+    icon: Brain,
+    style: { backgroundColor: '#F0FDFA', borderColor: '#5EEAD4', color: '#0F766E' },
+    iconBg: '#0D9488',
   },
 ]
 
@@ -180,8 +192,37 @@ export default function Home() {
       <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1">
         Tools
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
         {TOOLS.map(({ to, label, desc, icon: Icon, style, iconBg }) => (
+          <Link
+            key={to}
+            to={to}
+            className="group p-4 rounded-xl border transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+            style={style}
+          >
+            <div className="flex items-center gap-2 mb-2">
+              <div
+                className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+                style={{ backgroundColor: iconBg }}
+              >
+                <Icon size={14} className="text-white" />
+              </div>
+              <span className="font-bold text-sm">{label}</span>
+            </div>
+            <p className="text-xs opacity-70 leading-relaxed">{desc}</p>
+            <div className="mt-2 flex items-center gap-1 text-xs font-semibold opacity-60 group-hover:opacity-100 transition-opacity">
+              Open <ChevronRight size={12} />
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* ── Foundations ─────────────────────────────────────────────── */}
+      <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1">
+        Foundations
+      </h2>
+      <div className="grid grid-cols-1 gap-3">
+        {FOUNDATIONS.map(({ to, label, desc, icon: Icon, style, iconBg }) => (
           <Link
             key={to}
             to={to}

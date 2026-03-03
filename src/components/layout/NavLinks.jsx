@@ -9,6 +9,7 @@ import {
   Target,
   FileText,
   BookOpen,
+  Brain,
 } from 'lucide-react'
 import { PHASES } from '../../utils/colors'
 
@@ -21,8 +22,12 @@ const PHASE_LINKS = PHASES.map((p) => ({
 
 const TOOL_LINKS = [
   { to: '/objectives', label: 'Outcomes & Objectives', icon: Target },
-  { to: '/templates',  label: 'Template Library',   icon: FileText },
-  { to: '/glossary',   label: 'Glossary',           icon: BookOpen },
+  { to: '/templates',  label: 'Template Library',      icon: FileText },
+  { to: '/glossary',   label: 'Glossary',              icon: BookOpen },
+]
+
+const FOUNDATION_LINKS = [
+  { to: '/theories', label: 'Learning Theories', icon: Brain, color: '#0D9488' },
 ]
 
 export default function NavLinks({ onNavigate }) {
@@ -90,6 +95,26 @@ export default function NavLinks({ onNavigate }) {
           onClick={onNavigate}
         >
           <Icon size={18} className="shrink-0" style={{ color: '#64748B' }} />
+          <span>{label}</span>
+        </NavLink>
+      ))}
+
+      <p
+        className="px-3 pt-4 pb-1 text-xs font-semibold uppercase tracking-wider"
+        style={{ color: '#475569' }}
+      >
+        Foundations
+      </p>
+
+      {FOUNDATION_LINKS.map(({ to, label, icon: Icon, color }) => (
+        <NavLink
+          key={to}
+          to={to}
+          className={navClass}
+          style={navStyle}
+          onClick={onNavigate}
+        >
+          <Icon size={18} className="shrink-0" style={{ color }} />
           <span>{label}</span>
         </NavLink>
       ))}
