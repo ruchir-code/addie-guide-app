@@ -11,6 +11,7 @@ import {
   FileText,
   BookOpen,
   Brain,
+  GraduationCap,
 } from 'lucide-react'
 import { PHASES as PHASE_DATA } from '../utils/colors'
 
@@ -57,6 +58,14 @@ const FOUNDATIONS = [
     label: 'Learning Theories',
     desc: 'Behaviorism, Cognitivism, Constructivism, Andragogy, CLT, and more — the science behind design decisions',
     icon: Brain,
+    style: { backgroundColor: '#F0FDFA', borderColor: '#5EEAD4', color: '#0F766E' },
+    iconBg: '#0D9488',
+  },
+  {
+    to: '/bloom',
+    label: "Bloom's Taxonomy",
+    desc: 'All six cognitive levels with verbs, example objectives, assessments, and activities — plus a copyable quick-reference table',
+    icon: GraduationCap,
     style: { backgroundColor: '#F0FDFA', borderColor: '#5EEAD4', color: '#0F766E' },
     iconBg: '#0D9488',
   },

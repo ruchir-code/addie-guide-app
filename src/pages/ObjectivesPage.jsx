@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import bloomVerbs from '../data/bloom-verbs.json'
 import CopyButton from '../components/ui/CopyButton'
 import {
@@ -83,9 +84,18 @@ function clip(text, max = 55) {
 function BloomPicker({ value, onChange }) {
   return (
     <div>
-      <label className="block text-sm font-semibold text-gray-700 mb-2">
-        Bloom's Taxonomy Level
-      </label>
+      <div className="flex items-center justify-between mb-2">
+        <label className="block text-sm font-semibold text-gray-700">
+          Bloom's Taxonomy Level
+        </label>
+        <Link
+          to="/bloom"
+          className="text-xs font-medium text-teal-700 hover:text-teal-900 hover:underline transition-colors"
+          style={{ color: '#0D9488' }}
+        >
+          Learn more →
+        </Link>
+      </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
         {BLOOM_LEVELS.map(({ key, label, description }) => {
           const c = BLOOM_COLORS[key] || {}

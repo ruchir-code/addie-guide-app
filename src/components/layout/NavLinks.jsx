@@ -10,6 +10,7 @@ import {
   FileText,
   BookOpen,
   Brain,
+  GraduationCap,
 } from 'lucide-react'
 import { PHASES } from '../../utils/colors'
 
@@ -27,7 +28,8 @@ const TOOL_LINKS = [
 ]
 
 const FOUNDATION_LINKS = [
-  { to: '/theories', label: 'Learning Theories', icon: Brain, color: '#0D9488' },
+  { to: '/theories', label: 'Learning Theories',  icon: Brain,          color: '#0D9488' },
+  { to: '/bloom',    label: "Bloom's Taxonomy",   icon: GraduationCap,  color: '#0D9488' },
 ]
 
 export default function NavLinks({ onNavigate }) {
