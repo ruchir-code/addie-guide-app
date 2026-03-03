@@ -12,6 +12,7 @@ import {
   BookOpen,
   Brain,
   GraduationCap,
+  Monitor,
 } from 'lucide-react'
 import { PHASES as PHASE_DATA } from '../utils/colors'
 
@@ -49,6 +50,14 @@ const TOOLS = [
     icon: BookOpen,
     style: { backgroundColor: '#ECFDF5', borderColor: '#059669', color: '#065F46' },
     iconBg: '#059669',
+  },
+  {
+    to: '/media-guide',
+    label: 'Media & Format Guide',
+    desc: 'Eight delivery formats with a decision guide — e-learning, ILT, VILT, job aids, and more',
+    icon: Monitor,
+    style: { backgroundColor: '#FFFBEB', borderColor: '#D97706', color: '#78350F' },
+    iconBg: '#D97706',
   },
 ]
 
@@ -201,7 +210,7 @@ export default function Home() {
       <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1">
         Tools
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
         {TOOLS.map(({ to, label, desc, icon: Icon, style, iconBg }) => (
           <Link
             key={to}

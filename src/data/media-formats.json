@@ -1,0 +1,272 @@
+[
+  {
+    "id": "mf1",
+    "slug": "elearning",
+    "name": "E-Learning (Self-Paced)",
+    "tagline": "Asynchronous digital courseware that learners complete independently, on their own schedule.",
+    "icon": "Monitor",
+    "whenToUse": [
+      "Content is consistent and unlikely to change frequently",
+      "You need to reach a large, geographically distributed audience",
+      "The skill involves procedural steps that can be practiced in a simulation",
+      "Compliance or certification tracking is required",
+      "Learners have different start schedules or time zones"
+    ],
+    "whenNotToUse": [
+      "The task requires real-time coaching, mentoring, or nuanced judgment",
+      "Content changes faster than you can update the course",
+      "Learners have no reliable access to devices or internet",
+      "The primary goal is relationship-building or team alignment"
+    ],
+    "bloomsLevels": ["remember", "understand", "apply", "analyze"],
+    "strengths": [
+      "Highly scalable — the same course serves hundreds or thousands",
+      "Consistent delivery — every learner receives identical content",
+      "Trackable completion and scores via an LMS",
+      "On-demand — learners can revisit content at any time"
+    ],
+    "limitations": [
+      "High upfront design and development cost",
+      "Poor fit for complex judgment tasks that require human feedback",
+      "Maintenance cost grows with content change frequency"
+    ],
+    "designerNote": "Self-paced e-learning shines when consistency matters more than conversation. If the task can be reduced to a set of decisions a learner can practice in a branching scenario, e-learning is often your most cost-effective long-term solution. The mistake is using it for 'soft skills' that require human modeling and live feedback — those need a live format.",
+    "typicalTools": ["Articulate Storyline", "Articulate Rise", "Adobe Captivate", "iSpring", "Lectora"]
+  },
+  {
+    "id": "mf2",
+    "slug": "ilt",
+    "name": "ILT (Instructor-Led Training)",
+    "tagline": "Live, in-person training with a facilitator — the original classroom format.",
+    "icon": "Users",
+    "whenToUse": [
+      "The content is complex, nuanced, or requires real-time coaching",
+      "Relationship-building between participants is part of the outcome",
+      "Immediate feedback on judgment and performance is essential",
+      "The audience is co-located and available at the same time",
+      "High-stakes skills where human accountability matters"
+    ],
+    "whenNotToUse": [
+      "The audience is geographically distributed across locations",
+      "Budget does not support travel, facilities, or facilitator costs",
+      "Content is purely informational and does not benefit from discussion",
+      "Learners need to revisit content on their own schedule"
+    ],
+    "bloomsLevels": ["apply", "analyze", "evaluate", "create"],
+    "strengths": [
+      "Highest fidelity for judgment-based and interpersonal skills",
+      "Enables real-time discussion, Q&A, and in-the-moment adjustment",
+      "Builds cohort relationships and shared context among participants",
+      "Facilitator can adapt pacing and depth to the room's response"
+    ],
+    "limitations": [
+      "Not scalable — cost and logistics multiply with audience size",
+      "No guarantee of consistency between facilitators or sessions",
+      "Travel, venue, and scheduling add significant overhead"
+    ],
+    "designerNote": "ILT is often over-used for content that e-learning could handle just as effectively. Reserve it for what only live interaction can deliver: real-time practice with a human observer, coaching on nuanced judgment, and situations where the relationship between participants IS the learning. If you can achieve the same outcome asynchronously, you probably should.",
+    "typicalTools": ["PowerPoint / Google Slides", "Miro / MURAL", "Mentimeter", "Kahoot", "Printed participant guides"]
+  },
+  {
+    "id": "mf3",
+    "slug": "vilt",
+    "name": "VILT (Virtual Instructor-Led Training)",
+    "tagline": "Live, synchronous training delivered online — ILT-level interaction for distributed teams.",
+    "icon": "Video",
+    "whenToUse": [
+      "Your audience is remote or distributed across locations",
+      "You need ILT-level interaction but cannot justify travel costs",
+      "Content benefits from real-time discussion, breakouts, and Q&A",
+      "Sessions are 60–120 minutes (shorter than full-day ILT)",
+      "Learners are comfortable with digital collaboration tools"
+    ],
+    "whenNotToUse": [
+      "Learners have unreliable internet or low bandwidth",
+      "The session is purely informational — a pre-recorded video works better",
+      "Groups are very large (50+) where interaction becomes impractical",
+      "Hands-on practice requires physical materials or environments"
+    ],
+    "bloomsLevels": ["understand", "apply", "analyze", "evaluate"],
+    "strengths": [
+      "Reaches distributed audiences at a fraction of ILT travel cost",
+      "Supports real-time interaction, polling, breakout rooms, and Q&A",
+      "Sessions can be recorded and made available asynchronously",
+      "More time-flexible than scheduling physical classroom days"
+    ],
+    "limitations": [
+      "Screen fatigue and digital cognitive load add friction",
+      "Harder to read the room and lose the energy of in-person delivery",
+      "Technical issues (connectivity, audio) disrupt the learner experience"
+    ],
+    "designerNote": "VILT is not just ILT on Zoom — it requires a deliberate redesign for the medium. Break content into segments of no more than 20 minutes before adding interaction. Use breakout rooms for every practice activity. Build in more explicit check-ins than you would in a physical room, and always designate a producer to manage the platform while you focus on facilitation.",
+    "typicalTools": ["Zoom", "Microsoft Teams", "Webex", "Adobe Connect", "Miro / MURAL"]
+  },
+  {
+    "id": "mf4",
+    "slug": "microlearning",
+    "name": "Microlearning",
+    "tagline": "Short, focused assets (2–7 minutes) designed to address a single performance need.",
+    "icon": "Zap",
+    "whenToUse": [
+      "Reinforcing or refreshing a skill already introduced elsewhere",
+      "Performance support at or near the moment of need",
+      "Spaced repetition as part of a longer learning campaign",
+      "Mobile-first or time-constrained learner populations",
+      "Just-in-time reference for specific steps or decisions"
+    ],
+    "whenNotToUse": [
+      "The learner needs to build a foundational skill from scratch",
+      "The topic requires extended practice, coaching, or context",
+      "You are trying to cover a complex, multi-step domain comprehensively",
+      "The content does not stand alone — full course context is required"
+    ],
+    "bloomsLevels": ["remember", "understand", "apply"],
+    "strengths": [
+      "Fast to produce and easy to update compared to full courses",
+      "High completion rates due to the short format",
+      "Effective for spaced repetition and recall reinforcement",
+      "Works well on mobile devices and low-attention environments"
+    ],
+    "limitations": [
+      "Cannot stand alone for complex skill development",
+      "Risk of fragmenting learning that requires continuity",
+      "Can create a 'check the box' perception if used as a substitute for real training"
+    ],
+    "designerNote": "Microlearning is most powerful as the 'after' — reinforce what was taught in a full course with short weekly touchpoints. The mistake is using it to replace foundational training. A 3-minute video cannot build a complex skill; it can only refresh or support one that already exists. Use it as part of a campaign, not as the primary solution.",
+    "typicalTools": ["Articulate Rise", "Axonify", "EdApp", "TikTok-style internal tools", "Short videos + LMS push notifications"]
+  },
+  {
+    "id": "mf5",
+    "slug": "video",
+    "name": "Video (Non-Interactive)",
+    "tagline": "Recorded visual content — demonstrations, expert interviews, animations — without branching or interaction.",
+    "icon": "Film",
+    "whenToUse": [
+      "Demonstrating a physical process, software workflow, or equipment operation",
+      "Sharing expertise from an SME or leader at scale",
+      "Storytelling or case study walkthrough to create emotional connection",
+      "Supplemental content in a blended program",
+      "Pre-work or post-work in a flipped classroom approach"
+    ],
+    "whenNotToUse": [
+      "The learner needs to practice, not just observe",
+      "You need to verify comprehension or track meaningful progress",
+      "Content changes frequently — video is expensive and slow to update",
+      "The audience needs to ask questions or clarify in real time"
+    ],
+    "bloomsLevels": ["remember", "understand"],
+    "strengths": [
+      "High engagement when well-produced",
+      "Excellent for modeling behavior and demonstrating complex processes visually",
+      "Easy to distribute and consume asynchronously",
+      "Effective as part of a larger blended curriculum"
+    ],
+    "limitations": [
+      "Passive consumption — no built-in mechanism for practice or feedback",
+      "Production quality expectations are high and growing",
+      "Expensive and time-consuming to update when content changes"
+    ],
+    "designerNote": "Video is a delivery medium, not an instructional strategy. A 20-minute talking-head video has the same cognitive impact as a 20-minute lecture — which is to say, limited. Use video for what it does uniquely well: showing a physical demonstration, creating emotional connection through story, or delivering a message from leadership. Always pair video with a practice activity or reflection prompt.",
+    "typicalTools": ["Camtasia", "Loom", "Adobe Premiere", "Vyond", "Synthesia"]
+  },
+  {
+    "id": "mf6",
+    "slug": "job-aid",
+    "name": "Job Aid / Reference Card",
+    "tagline": "A quick-reference tool used at the moment of performance — not a training format, but a performance support tool.",
+    "icon": "FileText",
+    "whenToUse": [
+      "The task is infrequent enough that learners cannot be expected to memorize it",
+      "The stakes of error are high and a reference check is accepted practice",
+      "The task has predictable steps that fit on a checklist or flowchart",
+      "The learner already has the underlying skill — they just need a prompt",
+      "Digital or physical access to the aid is available at the point of need"
+    ],
+    "whenNotToUse": [
+      "The task requires understanding and making nuanced judgment calls",
+      "There is no reliable access to the aid during the actual task",
+      "The root cause is a skill gap, not a memory or recall gap"
+    ],
+    "bloomsLevels": ["remember", "apply"],
+    "strengths": [
+      "Fastest to produce of any format — hours, not weeks",
+      "Zero cognitive overhead at the time of use when well-designed",
+      "Reduces errors on procedural tasks better than training alone",
+      "Easy to update as processes change without a full redesign"
+    ],
+    "limitations": [
+      "Only effective when the user can access it at the moment of need",
+      "Cannot substitute for training when the skill itself is missing",
+      "Poorly designed aids add confusion rather than reduce it"
+    ],
+    "designerNote": "Before building a course, ask whether a job aid would actually solve the performance problem. If the gap is 'I forget what to do' or 'I need the steps in front of me,' a well-designed checklist or reference card often outperforms a 30-minute e-learning module — at a fraction of the cost. Job aids are systematically underused by IDs who default to courses for every request.",
+    "typicalTools": ["Google Docs / Word", "Canva", "Notion", "Laminated cards", "QR-coded digital references"]
+  },
+  {
+    "id": "mf7",
+    "slug": "blended",
+    "name": "Blended Learning",
+    "tagline": "A deliberate combination of formats — typically async pre-work plus live practice — designed to build complex skills over time.",
+    "icon": "Layers",
+    "whenToUse": [
+      "The skill requires both foundational knowledge AND practiced application",
+      "The audience is distributed but the content is too complex for pure e-learning",
+      "Pre-work would make live sessions significantly more efficient",
+      "A sustained learning campaign matters more than a one-time event",
+      "You have the budget and timeline to coordinate multiple modalities"
+    ],
+    "whenNotToUse": [
+      "The content is one-time informational — a single format would suffice",
+      "Learners cannot commit to multiple touchpoints over time",
+      "The organization lacks the infrastructure to coordinate async and live components"
+    ],
+    "bloomsLevels": ["apply", "analyze", "evaluate", "create"],
+    "strengths": [
+      "Best of both worlds: scalable async pre-work with live coaching and practice",
+      "Learners arrive at live sessions already prepared — maximizing live time",
+      "Spaced repetition is built into a multi-touchpoint design",
+      "Highest overall effectiveness for complex, sustained skill development"
+    ],
+    "limitations": [
+      "Most complex to design, coordinate, and manage over time",
+      "Requires organizational buy-in and learner commitment across multiple sessions",
+      "Alignment between async and live components must be deliberate — gaps are costly"
+    ],
+    "designerNote": "Blended learning is the right answer for most complex skill development — but it is often used as a default rather than a deliberate decision. When designing a blended program, work backwards from the live session: what do learners need to have done, read, or practiced before they arrive? That pre-work is your async component. Do not design the e-learning first and then ask what to add live.",
+    "typicalTools": ["Articulate 360", "LMS (Docebo, Cornerstone, Moodle)", "Zoom / Teams", "Learning portals", "Slack / Teams communities"]
+  },
+  {
+    "id": "mf8",
+    "slug": "podcast",
+    "name": "Podcast / Audio",
+    "tagline": "On-demand audio content — expert discussions, interviews, or narrated learning — consumed during commutes and downtime.",
+    "icon": "Headphones",
+    "whenToUse": [
+      "The content is supplemental — reinforcing or expanding on other formal training",
+      "Learners have regular commute or travel time to fill",
+      "Expert interviews or thought leadership conversations add credibility",
+      "You want to support an informal, self-directed learning culture",
+      "The audience is already a podcast-listening, self-motivated population"
+    ],
+    "whenNotToUse": [
+      "The content is procedural and requires visual or tactile reference",
+      "You need to verify comprehension or track meaningful completion",
+      "The primary skill requires practice and feedback — not passive listening",
+      "Learners are in noisy environments or lack reliable audio access"
+    ],
+    "bloomsLevels": ["remember", "understand"],
+    "strengths": [
+      "Extremely low production cost relative to video or e-learning",
+      "Consumed during time that would otherwise be unproductive",
+      "Expert voices add credibility and authenticity",
+      "Supports informal learning culture and self-directed development"
+    ],
+    "limitations": [
+      "No mechanism for practice, interaction, or comprehension verification",
+      "Hard for learners to reference specific content later",
+      "Passive format — retention without a follow-up activity is low"
+    ],
+    "designerNote": "Podcasts work best inside a broader learning ecosystem, not as standalone training. If your organization has a culture of self-directed learning, a podcast series can supplement formal programs and keep topics alive between courses. Pair each episode with a one-page summary or a single discussion question to increase the chance that listening translates to action.",
+    "typicalTools": ["Riverside.fm", "Buzzsprout", "Spotify for Podcasters", "Podbean", "Degreed / EdCast"]
+  }
+]

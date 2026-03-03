@@ -9,6 +9,7 @@ import TemplatesPage from './pages/TemplatesPage'
 import GlossaryPage from './pages/GlossaryPage'
 import TheoriesPage from './pages/TheoriesPage'
 import BloomPage from './pages/BloomPage'
+import MediaGuidePage from './pages/MediaGuidePage'
 
 function NotFound() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
               <Route path="glossary" element={<GlossaryPage />} />
               <Route path="theories" element={<TheoriesPage />} />
               <Route path="bloom" element={<BloomPage />} />
+              <Route path="media-guide" element={<MediaGuidePage />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
