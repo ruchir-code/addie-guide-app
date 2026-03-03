@@ -1,4 +1,4 @@
-export default function ChecklistItem({ id, text, checked, onToggle }) {
+export default function ChecklistItem({ id, text, checked, onToggle, isAdvanced = false }) {
   return (
     <label
       htmlFor={id}
@@ -19,6 +19,14 @@ export default function ChecklistItem({ id, text, checked, onToggle }) {
       >
         {text}
       </span>
+      {isAdvanced && !checked && (
+        <span
+          className="shrink-0 mt-0.5 text-xs font-bold px-1.5 py-0.5 rounded"
+          style={{ backgroundColor: '#EDE9FE', color: '#5B21B6' }}
+        >
+          +
+        </span>
+      )}
     </label>
   )
 }

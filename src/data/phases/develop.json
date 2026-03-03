@@ -51,5 +51,28 @@
       "mistake": "Not testing in the actual LMS before launch",
       "fix": "SCORM behaves differently across LMS platforms. Always do a full functional test in the target environment."
     }
+  ],
+  "advancedInsights": [
+    {
+      "type": "rule-breaker",
+      "heading": "When to skip the storyboard",
+      "body": "For rapid-cycle content like software simulations or short video demos, a detailed script plus direct authoring can be faster than a full storyboard — provided you have an established visual template, a trusted SME embedded in your workflow, and a very narrow scope. The storyboard still pays for itself on anything over 10 minutes of content, any project with multiple reviewers, or any scenario with branching logic."
+    },
+    {
+      "type": "tool-tip",
+      "heading": "In Articulate Storyline: states, variables, and masters",
+      "body": "Use states and variables for quiz feedback instead of building separate feedback slides — this keeps your slide count manageable and makes global text updates faster. Apply master slides aggressively for any repeated visual element (header bars, nav buttons, background). Set up your slide master before building a single content slide; retrofitting masters in a 60-slide project is painful."
+    },
+    {
+      "type": "edge-case",
+      "heading": "Section 508 and federally-funded programs",
+      "body": "For federally-funded or government-contracted programs, Section 508 / WCAG 2.1 AA compliance is a contractual deliverable, not an optional quality check. Tab order, keyboard navigation, and screen reader testing (NVDA, JAWS, VoiceOver) must be completed and documented before delivery. Build accessibility into your development process from slide 1 — retrofitting a 40-slide course for accessibility adds days of rework."
+    },
+    {
+      "type": "model-link",
+      "heading": "See also: Agile ID",
+      "body": "Agile ID moves Develop into repeating sprints rather than a single linear phase. If your content is modular and learners would benefit from early access to finished modules while others are still in development, consider sprint-based delivery. This requires modular course architecture and a stakeholder willing to review in iterations rather than waiting for a complete course.",
+      "link": "/models"
+    }
   ]
 }

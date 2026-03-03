@@ -50,5 +50,28 @@
       "mistake": "Skipping Level 3 because it feels hard",
       "fix": "Use manager observation checklists or a simple 30-day follow-up survey. Imperfect Level 3 data beats no Level 3 data."
     }
+  ],
+  "advancedInsights": [
+    {
+      "type": "rule-breaker",
+      "heading": "When Level 3 and 4 data are politically difficult to collect",
+      "body": "If your organization lacks a manager observation infrastructure or if L&D doesn't own performance metrics, start small: a 30-day email survey to learners asking three specific questions about what they've applied is better than skipping Level 3 entirely. One concrete data point beats zero. Document your methodology so stakeholders understand the limitations — partial evidence is still evidence."
+    },
+    {
+      "type": "tool-tip",
+      "heading": "Tools for each Kirkpatrick level",
+      "body": "Level 1: SurveyMonkey, Qualtrics, or Google Forms. Level 2: Your LMS quiz reporting — export raw score data, not just pass/fail rates. Level 3: A structured manager observation checklist or a 30/60/90-day follow-up survey (5 questions max). Level 4: Work with your HR analytics or operations team to access the business metrics tied to the original performance gap. Export everything to Excel or Power BI before presenting — executives respond to visualizations."
+    },
+    {
+      "type": "edge-case",
+      "heading": "Compliance training: data retention requirements",
+      "body": "For regulatory compliance training (food safety certification, financial advisor CE, healthcare credentialing), Level 2 assessment scores may be legally significant — required for audit purposes with specific retention periods. Before the course goes live, confirm with legal or compliance exactly what data must be retained, in what format, and for how long. LMS auto-deletion policies can create compliance gaps if not configured correctly."
+    },
+    {
+      "type": "model-link",
+      "heading": "See also: Phillips ROI Model",
+      "body": "Kirkpatrick's model maps to ADDIE's Evaluate phase at Levels 1–4, but Phillips's ROI Model adds a fifth level: financial return on investment. If your sponsor is asking 'what is the ROI of this training?' you'll need to isolate the effect of training from other variables — a rigorous methodology that typically requires partnering with your HR analytics team and agreeing on a data collection approach in the Analysis phase, not after launch.",
+      "link": "/models"
+    }
   ]
 }

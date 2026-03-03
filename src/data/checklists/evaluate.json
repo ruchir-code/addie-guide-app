@@ -10,5 +10,8 @@
   { "id": "e9",  "text": "Identified root causes for any transfer gaps (environment, manager support, content)" },
   { "id": "e10", "text": "Compiled findings into an evaluation report or executive summary" },
   { "id": "e11", "text": "Presented findings and recommendations to the project sponsor" },
-  { "id": "e12", "text": "Planned and scheduled course revisions based on evaluation findings" }
+  { "id": "e12", "text": "Planned and scheduled course revisions based on evaluation findings" },
+  { "id": "e13", "text": "Checked the chain of evidence: correlated Level 1 dissatisfaction items with specific Level 2 and Level 3 gaps to identify content that needs revision", "level": "advanced" },
+  { "id": "e14", "text": "Documented the methodology used to isolate training's effect from other performance variables (other initiatives, process changes, seasonal factors)", "level": "advanced" },
+  { "id": "e15", "text": "Confirmed evaluation data retention requirements with legal or compliance for any regulatory training programs", "level": "advanced" }
 ]

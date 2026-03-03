@@ -50,5 +50,28 @@
       "mistake": "Letting SMEs dictate content quantity instead of objectives",
       "fix": "Anchor every content decision to an objective. If content doesn't support an objective, cut it."
     }
+  ],
+  "advancedInsights": [
+    {
+      "type": "rule-breaker",
+      "heading": "When a full design document is overkill",
+      "body": "For small, urgent one-off requests, replace the full design document with a one-page 'design decision memo': objectives, assessment approach, delivery format, and estimated scope — bullet format, reviewed in a 15-minute call. This gets stakeholder alignment without the overhead of a formal blueprint. Reserve full design documents for programs over 30 minutes of content or any project with multiple stakeholders who need traceability."
+    },
+    {
+      "type": "tool-tip",
+      "heading": "Sequencing in Articulate Rise vs. Storyline",
+      "body": "In Articulate Rise, your content structure must be fully planned before you open the tool — Rise's linear section structure is difficult to restructure mid-build. Map your sequence in Airtable, Notion, or even a Word outline before authoring. In Storyline, slide order is more flexible, but scene organization done upfront prevents variable and trigger naming conflicts that compound across large projects."
+    },
+    {
+      "type": "edge-case",
+      "heading": "Regulatory training: the traceability matrix",
+      "body": "For regulatory or compliance training (financial services, healthcare, food safety), your design document may need a traceability matrix — a table mapping each policy citation or regulatory requirement to the objective that covers it, the content that teaches it, and the assessment item that tests it. This gives auditors proof that every requirement is addressed, and gives SMEs a structured way to verify coverage during review."
+    },
+    {
+      "type": "model-link",
+      "heading": "See also: Dick & Carey Systems Approach",
+      "body": "Dick & Carey's model prescribes more rigorous steps for objective writing and task analysis than standard ADDIE Design — particularly around subordinate skill identification and developing assessments before instructional materials. For high-stakes certification programs or when you need to prove instructional rigor to an accrediting body, consider adopting their approach for this phase.",
+      "link": "/models"
+    }
   ]
 }

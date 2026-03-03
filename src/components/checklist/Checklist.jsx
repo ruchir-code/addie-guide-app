@@ -1,15 +1,17 @@
 import { RotateCcw, ClipboardList } from 'lucide-react'
 import { useChecklist } from '../../context/ChecklistContext'
-import { copyToClipboard } from '../../utils/clipboard'
 import ChecklistItem from './ChecklistItem'
 import CopyButton from '../ui/CopyButton'
 
-export default function Checklist({ phase, items, color }) {
+export default function Checklist({ phase, items, color, level = 'beginner' }) {
   const { getChecklist, toggleItem, resetPhase } = useChecklist()
   const checked = getChecklist(phase)
-  const completedCount = Object.values(checked).filter(Boolean).length
 
-  const copyText = items
+  // Show items with no level tag (always) + items tagged for the current level
+  const visibleItems = items.filter((item) => !item.level || item.level === level)
+  const completedCount = visibleItems.filter((item) => !!checked[item.id]).length
+
+  const copyText = visibleItems
     .map((item) => `[${checked[item.id] ? 'x' : ' '}] ${item.text}`)
     .join('\n')
 
@@ -26,7 +28,7 @@ export default function Checklist({ phase, items, color }) {
             Phase Checklist
           </span>
           <span className="text-xs text-gray-500">
-            {completedCount}/{items.length} complete
+            {completedCount}/{visibleItems.length} complete
           </span>
         </div>
 
@@ -48,7 +50,7 @@ export default function Checklist({ phase, items, color }) {
         <div
           className="h-1 transition-all duration-300"
           style={{
-            width: `${items.length > 0 ? (completedCount / items.length) * 100 : 0}%`,
+            width: `${visibleItems.length > 0 ? (completedCount / visibleItems.length) * 100 : 0}%`,
             backgroundColor: color,
           }}
         />
@@ -56,13 +58,14 @@ export default function Checklist({ phase, items, color }) {
 
       {/* Items */}
       <div className="divide-y divide-gray-50 px-1 py-1">
-        {items.map((item) => (
+        {visibleItems.map((item) => (
           <ChecklistItem
             key={item.id}
             id={item.id}
             text={item.text}
             checked={!!checked[item.id]}
             onToggle={(id) => toggleItem(phase, id)}
+            isAdvanced={!!item.level}
           />
         ))}
       </div>

@@ -50,5 +50,28 @@
       "mistake": "Writing vague problem statements",
       "fix": "Quantify the gap where possible. \"Sales reps close 12% fewer deals than peers\" is more useful than \"sales reps need training.\""
     }
+  ],
+  "advancedInsights": [
+    {
+      "type": "rule-breaker",
+      "heading": "When to compress or skip formal needs analysis",
+      "body": "Urgent compliance deadlines, regulatory mandates, or situations where the problem is already thoroughly documented by the business can justify a compressed analysis. In those cases, replace a full needs assessment with a one-hour discovery meeting and a written scope agreement that documents what you know and what you're assuming. You're not skipping analysis — you're recording it faster. If you proceed without any analysis, you own the misalignment risk."
+    },
+    {
+      "type": "tool-tip",
+      "heading": "Running async analysis with distributed SMEs",
+      "body": "For geographically distributed teams, tools like Miro, MURAL, or Microsoft Whiteboard let SMEs and learner reps contribute to a needs analysis asynchronously. Use pre-structured templates: a 'current state / desired state / root cause' board that participants populate over 48 hours beats a single 90-minute meeting where the loudest voice dominates."
+    },
+    {
+      "type": "edge-case",
+      "heading": "Government and DoD contexts",
+      "body": "In government and DoD environments, Analysis often includes a formal Training Needs Analysis (TNA) or Front-End Analysis (FEA) report that follows a specified format — such as TRADOC Regulation 350-70 — and requires command approval before Design can begin. Skipping or abbreviating this step is a contract compliance issue, not just an ID judgment call."
+    },
+    {
+      "type": "model-link",
+      "heading": "See also: SAM and Rapid Prototyping",
+      "body": "SAM compresses Analysis into a brief Preparation phase, operating on the assumption that requirements will emerge through prototyping. This is a legitimate trade-off when the cost of extended analysis outweighs the cost of early iteration — but it requires experienced IDs who can make fast design decisions without a full data set.",
+      "link": "/models"
+    }
   ]
 }
