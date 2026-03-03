@@ -20,12 +20,12 @@ import CopyButton from '../components/ui/CopyButton'
 const CYAN = { color: '#0891B2', light: '#ECFEFF', border: '#A5F3FC', dark: '#164E63' }
 
 const BLOOM_LEVELS = [
-  { id: 'remember',   label: 'Remember',   color: '#DC2626', num: 1 },
+  { id: 'remember',   label: 'Remember',   color: '#D97706', num: 1 },
   { id: 'understand', label: 'Understand',  color: '#EA580C', num: 2 },
-  { id: 'apply',      label: 'Apply',       color: '#CA8A04', num: 3 },
-  { id: 'analyze',    label: 'Analyze',     color: '#059669', num: 4 },
-  { id: 'evaluate',   label: 'Evaluate',    color: '#0891B2', num: 5 },
-  { id: 'create',     label: 'Create',      color: '#7C3AED', num: 6 },
+  { id: 'apply',      label: 'Apply',       color: '#059669', num: 3 },
+  { id: 'analyze',    label: 'Analyze',     color: '#2563EB', num: 4 },
+  { id: 'evaluate',   label: 'Evaluate',    color: '#7C3AED', num: 5 },
+  { id: 'create',     label: 'Create',      color: '#E11D48', num: 6 },
 ]
 
 const PURPOSES = [
