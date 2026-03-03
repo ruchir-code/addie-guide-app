@@ -14,6 +14,7 @@ import {
   GraduationCap,
   Monitor,
   Network,
+  ClipboardCheck,
 } from 'lucide-react'
 import { PHASES as PHASE_DATA } from '../utils/colors'
 
@@ -59,6 +60,14 @@ const TOOLS = [
     icon: Monitor,
     style: { backgroundColor: '#FFFBEB', borderColor: '#D97706', color: '#78350F' },
     iconBg: '#D97706',
+  },
+  {
+    to: '/assessment-builder',
+    label: 'Assessment Builder',
+    desc: 'Paste an objective, select Bloom\'s level and format, generate a pre-populated assessment template',
+    icon: ClipboardCheck,
+    style: { backgroundColor: '#ECFEFF', borderColor: '#0891B2', color: '#164E63' },
+    iconBg: '#0891B2',
   },
 ]
 
