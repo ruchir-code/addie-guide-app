@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { X } from 'lucide-react'
 import NavLinks from './NavLinks'
-import LevelToggle from '../ui/LevelToggle'
 
 export default function MobileDrawer({ isOpen, onClose }) {
   useEffect(() => {
@@ -50,8 +49,6 @@ export default function MobileDrawer({ isOpen, onClose }) {
         <div className="flex-1 px-2 py-4 overflow-y-auto">
           <NavLinks onNavigate={onClose} />
         </div>
-
-        <LevelToggle />
       </div>
     </div>
   )

@@ -4,6 +4,33 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useLevel } from '../context/LevelContext'
 import Checklist from '../components/checklist/Checklist'
 
+function InlineLevelToggle() {
+  const { level, toggle } = useLevel()
+  const isAdvanced = level === 'advanced'
+  return (
+    <button
+      onClick={toggle}
+      className="flex items-center gap-2 px-3 py-1.5 rounded-lg transition-colors"
+      style={{ backgroundColor: 'rgba(255,255,255,0.15)' }}
+      aria-label={`Switch to ${isAdvanced ? 'Beginner' : 'Intermediate'} mode`}
+    >
+      <div
+        className="relative inline-flex h-4 w-8 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200"
+        style={{ backgroundColor: isAdvanced ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.35)' }}
+      >
+        <span
+          className={`inline-block h-3 w-3 transform rounded-full shadow transition duration-200 ${
+            isAdvanced ? 'translate-x-4 bg-violet-600' : 'translate-x-0 bg-white'
+          }`}
+        />
+      </div>
+      <span className="text-xs font-semibold text-white/90 whitespace-nowrap">
+        {isAdvanced ? 'Intermediate' : 'Beginner'}
+      </span>
+    </button>
+  )
+}
+
 // Static imports so Vite bundles them at build time
 import analysisData from '../data/phases/analysis.json'
 import designData from '../data/phases/design.json'
@@ -191,15 +218,25 @@ export default function PhasePage() {
         />
 
         <div className="relative z-10">
-          <span className="text-5xl font-black text-white/20 leading-none block mb-1">
-            {number}
-          </span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-2 leading-tight">
-            {data.label}
-          </h1>
-          <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.75)' }}>
-            {data.tagline}
-          </p>
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <span className="text-5xl font-black text-white/20 leading-none block mb-1">
+                {number}
+              </span>
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-2 leading-tight">
+                {data.label}
+              </h1>
+              <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                {data.tagline}
+              </p>
+            </div>
+            <div className="shrink-0 flex flex-col items-end gap-1 pt-1">
+              <span className="text-xs font-semibold uppercase tracking-wider text-white/50">
+                Content Level
+              </span>
+              <InlineLevelToggle />
+            </div>
+          </div>
         </div>
       </div>
 
