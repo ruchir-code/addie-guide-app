@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import NavLinks from './NavLinks'
-import LevelToggle from '../ui/LevelToggle'
 
 export default function Sidebar() {
   return (
@@ -22,8 +21,6 @@ export default function Sidebar() {
       <div className="flex-1 px-2 py-4">
         <NavLinks />
       </div>
-
-      <LevelToggle />
     </aside>
   )
 }
