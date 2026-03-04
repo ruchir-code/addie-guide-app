@@ -14,6 +14,9 @@ import {
   Monitor,
   Network,
   ClipboardCheck,
+  TrendingUp,
+  Briefcase,
+  Zap,
 } from 'lucide-react'
 import { PHASES } from '../../utils/colors'
 
@@ -33,9 +36,12 @@ const TOOL_LINKS = [
 ]
 
 const FOUNDATION_LINKS = [
-  { to: '/theories', label: 'Learning Theories',    icon: Brain,         color: '#0D9488' },
-  { to: '/bloom',    label: "Bloom's Taxonomy",     icon: GraduationCap, color: '#0D9488' },
-  { to: '/models',   label: 'Instructional Models', icon: Network,       color: '#4338CA' },
+  { to: '/theories',                label: 'Learning Theories',        icon: Brain,         color: '#0D9488' },
+  { to: '/bloom',                   label: "Bloom's Taxonomy",         icon: GraduationCap, color: '#0D9488' },
+  { to: '/models',                  label: 'Instructional Models',     icon: Network,       color: '#4338CA' },
+  { to: '/evaluation-frameworks',   label: 'Evaluation Frameworks',    icon: TrendingUp,    color: '#0369A1' },
+  { to: '/performance-consulting',  label: 'Performance Consulting',   icon: Briefcase,     color: '#C2410C' },
+  { to: '/transfer',                label: 'Transfer of Learning',     icon: Zap,           color: '#7C3AED' },
 ]
 
 export default function NavLinks({ onNavigate }) {
