@@ -29,6 +29,13 @@ const HERO_LETTERS = [
   { letter: 'E', color: '#2563EB' },
 ]
 
+const HERO_STATS = [
+  { value: '5',   label: 'Full Phases',     sub: 'Checklists, deep-dives & case studies' },
+  { value: '86+', label: 'Glossary Terms',  sub: 'Plain-English ID definitions' },
+  { value: '14',  label: 'Templates',       sub: 'Copy-ready, zero formatting needed' },
+  { value: '5',   label: 'Built-in Tools',  sub: 'Objectives, assessment, media guide' },
+]
+
 const ICON_MAP = {
   analysis: Search,
   design: Layers,
@@ -117,8 +124,7 @@ export default function Home() {
         className="rounded-2xl mb-8 relative overflow-hidden flex flex-col"
         style={{
           background: 'linear-gradient(140deg, #080D1A 0%, #0F172A 25%, #1A1040 55%, #1E1B4B 80%, #0D1324 100%)',
-          minHeight: '62vh',
-          padding: '3rem 2.5rem 2.5rem',
+          padding: '3rem 2.5rem 2.75rem',
         }}
       >
         {/* Decorative blobs */}
@@ -210,6 +216,24 @@ export default function Home() {
                 </Fragment>
               )
             })}
+          </div>
+
+          {/* Stats / benefits */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {HERO_STATS.map(({ value, label, sub }) => (
+              <div
+                key={label}
+                className="rounded-xl p-3"
+                style={{
+                  backgroundColor: 'rgba(255,255,255,0.05)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                }}
+              >
+                <p className="text-2xl font-black text-white leading-none mb-1">{value}</p>
+                <p className="text-xs font-bold" style={{ color: 'rgba(255,255,255,0.7)' }}>{label}</p>
+                <p className="text-xs mt-0.5 leading-snug" style={{ color: 'rgba(255,255,255,0.35)' }}>{sub}</p>
+              </div>
+            ))}
           </div>
 
           {/* CTAs */}
