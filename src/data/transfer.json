@@ -1,0 +1,222 @@
+[
+  {
+    "id": "tl1",
+    "slug": "near-far-transfer",
+    "number": "01",
+    "name": "Near vs. Far Transfer",
+    "theorists": ["Edward Thorndike", "Charles Judd"],
+    "tagline": "Understanding the transfer spectrum helps you choose the right instructional strategy from the start",
+    "whatItIs": "Transfer of learning refers to the application of knowledge or skills learned in one context to a new situation. Near transfer applies learning in contexts nearly identical to training; far transfer applies principles to novel situations that differ significantly from training conditions. Both require deliberate design — neither happens automatically. Research estimates that without intentional transfer design, only 10–40% of training content is applied on the job.",
+    "types": [
+      {
+        "type": "Near Transfer",
+        "color": "#0369A1",
+        "description": "Applying skills in situations nearly identical to those practiced in training. The task, environment, and conditions are highly similar to the training context.",
+        "examples": [
+          "Following the exact procedure demonstrated in training when the same situation occurs on the job",
+          "Using a software function in precisely the way it was shown in an e-learning module",
+          "Replicating a safety protocol in the same equipment setup as the training simulation"
+        ],
+        "designStrategies": [
+          "High-fidelity simulations that closely match the actual work environment",
+          "Step-by-step job aids available at the moment of performance",
+          "Practice in realistic, job-contextual scenarios with minimal variation",
+          "Worked examples using real tasks from the target job"
+        ],
+        "whenItFails": "When the work environment differs meaningfully from training — different tools, different people, unexpected variation. Skills built on procedural memorization without understanding become brittle outside their exact practice context."
+      },
+      {
+        "type": "Far Transfer",
+        "color": "#7C3AED",
+        "description": "Applying underlying principles or strategies to situations significantly different from those practiced in training. Requires abstraction, generalization, and flexible thinking.",
+        "examples": [
+          "Applying negotiation principles to a client situation never covered in training",
+          "Using a problem-solving framework to address an unfamiliar technical issue",
+          "Adapting a change management approach to a new business unit with different constraints"
+        ],
+        "designStrategies": [
+          "Varied practice across multiple contexts and scenario types",
+          "Explicit teaching of underlying principles, not just procedures",
+          "Case studies and analogies that build abstract mental models",
+          "Reflective activities: 'How does this principle apply in your own context?'",
+          "Elaborative interrogation: 'Why does this approach work?'"
+        ],
+        "whenItFails": "When training only covers specific procedures without teaching the principles behind them. Learners who can replicate a process can't adapt when conditions change — because they learned the steps, not the logic."
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Training automatically transfers to the job",
+        "reality": "Research estimates only 10–40% of training content is applied on the job without intentional transfer design. Transfer requires deliberate instructional strategies, manager support, and a work environment that enables application."
+      },
+      {
+        "misconception": "More realistic (high-fidelity) training always produces better transfer",
+        "reality": "High fidelity is critical for near transfer. For far transfer, varied and abstract practice often outperforms high-fidelity simulation because it builds flexible, generalized thinking rather than context-specific procedures."
+      }
+    ],
+    "whenToUse": [
+      "When designing practice activities — match fidelity and variety to the transfer type needed",
+      "When choosing between simulation-based and case-based learning approaches",
+      "When Kirkpatrick Level 3 data shows on-the-job performance doesn't match training performance",
+      "When designing any program where the target behavior must be applied in varied real-world conditions"
+    ],
+    "relatedTerms": ["Transfer of Learning", "Spaced Practice", "Cognitive Load Theory", "Constructivism", "Kirkpatrick Level 3"]
+  },
+  {
+    "id": "tl2",
+    "slug": "conditions-for-transfer",
+    "number": "02",
+    "name": "Conditions That Support Transfer",
+    "theorists": ["David Perkins", "Gavriel Salomon", "Robert Bjork"],
+    "tagline": "Transfer is not an accident — it depends on specific learning conditions that must be deliberately designed in",
+    "whatItIs": "Cognitive psychology research identifies specific learning conditions that dramatically increase the probability of transfer. Bjork's work on 'desirable difficulties' and Perkins and Salomon's hugging-and-bridging framework provide the most actionable guidance. A counterintuitive finding runs through all of this research: conditions that make learning feel harder in the moment tend to produce better long-term transfer.",
+    "conditions": [
+      {
+        "name": "Spaced Practice",
+        "color": "#047857",
+        "description": "Distributing practice over time rather than concentrating it in a single session. Spacing produces slower initial learning but dramatically better long-term retention and transfer.",
+        "designApplication": "Replace single long training events with shorter sessions spread over days or weeks. Build in brief retrieval activities (quizzes, recall exercises) at spaced intervals — Day 7, Day 21, Day 45.",
+        "evidence": "Cepeda et al. (2006) meta-analysis: spaced practice produces 10–30% better retention than massed practice with equal total study time."
+      },
+      {
+        "name": "Retrieval Practice",
+        "color": "#B45309",
+        "description": "Actively recalling information from memory — rather than re-reading or reviewing — strengthens the memory trace and promotes transfer. Also called the 'testing effect.' Low-stakes quizzes are more effective learning tools than review slides.",
+        "designApplication": "Build in low-stakes recall challenges, scenario-based practice tests, and reflection prompts at regular intervals. 'Without looking at your notes, list the three key steps and explain why each matters.'",
+        "evidence": "Roediger & Karpicke (2006): students who practiced retrieval outperformed re-study groups by 50% on delayed retention tests — even when both groups had equal initial study time."
+      },
+      {
+        "name": "Varied Practice",
+        "color": "#6D28D9",
+        "description": "Practicing across different contexts, formats, and variations of a problem. Variability creates more flexible mental models that can adapt to novel situations — the foundation of far transfer.",
+        "designApplication": "Don't repeat the same scenario type in practice. Vary the context, people involved, constraints, emotional tone, and format. Include examples from different industries or departments.",
+        "evidence": "Schmidt & Bjork (1992): variable practice produces worse immediate performance but measurably better transfer than constant practice — a classic 'desirable difficulty.'"
+      },
+      {
+        "name": "Elaborative Interrogation",
+        "color": "#0369A1",
+        "description": "Prompting learners to generate explanations for why something is true — connecting new information to existing knowledge rather than simply memorizing it.",
+        "designApplication": "Include 'Why does this work?' and 'How does this connect to what you already know?' prompts throughout activities. Ask learners to justify their answers, not just select them.",
+        "evidence": "Pressley et al. (1992): elaborative interrogation improved recall by 70% compared to reading alone across multiple studies."
+      },
+      {
+        "name": "Interleaved Practice",
+        "color": "#C2410C",
+        "description": "Mixing different skills or problem types within a practice session rather than completing all practice on one topic before moving to the next. Interleaving is harder in the moment but produces better transfer.",
+        "designApplication": "Mix practice problems across skill types in your activity banks. Build scenario libraries that combine multiple objectives rather than topic-specific question sets.",
+        "evidence": "Blocked practice produces better performance during training; interleaved practice produces better transfer test performance — another desirable difficulty with strong empirical support."
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "If learners are struggling during practice, the training design is wrong",
+        "reality": "Desirable difficulties — spaced, varied, and interleaved practice — intentionally make learning harder in the moment to produce better long-term transfer. Productive struggle is a feature, not a bug."
+      },
+      {
+        "misconception": "Learners know what learning strategies work best for them",
+        "reality": "Learners consistently prefer — and feel they benefit more from — massed practice, re-reading, and blocked repetition. Research consistently shows these preferences are wrong. Fluency during training is not the same as transfer."
+      }
+    ],
+    "whenToUse": [
+      "When designing any practice or application activity — choose conditions deliberately",
+      "When selecting between spaced and single-event delivery formats",
+      "When evaluating why a previous program produced high post-test scores but poor on-the-job results",
+      "When designing post-training reinforcement or follow-up activities"
+    ],
+    "relatedTerms": ["Near vs. Far Transfer", "Spaced Practice", "Cognitive Load Theory", "Retrieval Practice", "Formative Evaluation"]
+  },
+  {
+    "id": "tl3",
+    "slug": "design-for-transfer",
+    "number": "03",
+    "name": "Designing for Transfer",
+    "theorists": ["Mary Broad", "John Newstrom", "Calhoun Wick"],
+    "tagline": "Practical before/during/after strategies that extend learning beyond the training event into lasting performance",
+    "whatItIs": "Transfer design goes beyond instructional strategies. It encompasses the full ecosystem around training: what happens before, during, and after the formal learning event. Broad and Newstrom's landmark research (1992) found that manager support and work environment account for more transfer variance than training content quality — meaning the biggest transfer levers are often outside the course itself.",
+    "phases": [
+      {
+        "phase": "Before Training",
+        "color": "#DC2626",
+        "rationale": "Priming learners for application and engaging managers before training begins dramatically increases follow-through. Learners who enter training with a real application goal retain more and transfer more.",
+        "actions": [
+          {
+            "action": "Manager Briefing",
+            "description": "Brief managers on what their team will learn and how to support application. Managers who know what's coming are significantly more likely to coach for transfer.",
+            "howTo": "Send a one-page manager guide 1 week before: what learners will practice, 3 coaching questions to ask afterward, and what environmental barriers to look for."
+          },
+          {
+            "action": "Pre-Work & Priming",
+            "description": "Activate prior knowledge with a reflection prompt or scenario before training begins. Learners who anticipate real application retain more during the training event.",
+            "howTo": "Pre-training prompt: 'Think of a recent situation where you struggled with [topic]. What happened? What would you do differently?' Submitted or discussed at the start of session 1."
+          },
+          {
+            "action": "Goal Setting",
+            "description": "Have learners set a specific application goal before training starts. Specificity — what, when, and how — dramatically increases follow-through compared to vague intentions.",
+            "howTo": "Ask learners to complete: 'After this training, I will [specific behavior] when [situation] within [timeframe]. My manager knows about this goal.'"
+          }
+        ]
+      },
+      {
+        "phase": "During Training",
+        "color": "#EA580C",
+        "rationale": "The training event itself is where transfer design choices are made — realistic practice, distributed action planning, and retrieval over review.",
+        "actions": [
+          {
+            "action": "Job-Contextual Practice",
+            "description": "Design all practice activities using real scenarios from learners' actual jobs — not generic, simplified, or fictionalized versions.",
+            "howTo": "Collect 3–5 real work scenarios from SMEs and managers during design. Use these as the basis for every practice activity, with real job constraints intact."
+          },
+          {
+            "action": "Distributed Action Planning",
+            "description": "Build a structured action plan into the training as a thread throughout — not a final exercise that gets skipped when time is tight.",
+            "howTo": "After each module, learners add one specific action: 'In the next 30 days, I will [specific behavior] when [trigger situation].' Completed plans are shared with managers."
+          },
+          {
+            "action": "Retrieval Over Review",
+            "description": "End each session with a brief retrieval exercise, not a review slide. Recalling from memory — not reviewing content — is what builds durable learning.",
+            "howTo": "Exit ticket: 'Without looking at your notes — what are the 3 key things you learned today? For each one, write one specific way you'll apply it this week.'"
+          }
+        ]
+      },
+      {
+        "phase": "After Training",
+        "color": "#059669",
+        "rationale": "The post-training period is where most transfer either happens or doesn't. Without deliberate follow-up, the forgetting curve takes over and behavior reverts within days.",
+        "actions": [
+          {
+            "action": "Spaced Reinforcement",
+            "description": "Schedule brief retrieval activities at 2 weeks, 30 days, and 60 days post-training. Even 5-minute recall activities significantly boost retention and transfer.",
+            "howTo": "Email or LMS nudge series: Day 14 (3-question recall quiz), Day 30 (action plan check-in: what worked, what didn't), Day 60 (peer success share: one thing you applied and its result)."
+          },
+          {
+            "action": "Performance Support at Point of Need",
+            "description": "Provide job aids, reference guides, or decision tools where learners actually work — reducing dependence on memory for complex or infrequent tasks.",
+            "howTo": "One-page decision flowchart, laminated quick-reference card, embedded system tooltip, or QR-code-accessible guide available at the physical or digital point of performance."
+          },
+          {
+            "action": "Manager Accountability Touchpoint",
+            "description": "Prompt managers to hold a structured 15-minute conversation with each learner 3–4 weeks after training to discuss application and remove barriers.",
+            "howTo": "Manager prompt email with 3 questions: 'What have you tried from the training? What worked? What's still getting in the way — and what can I do to remove that barrier?'"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Good training content is enough to produce transfer",
+        "reality": "The training event is necessary but not sufficient. Broad and Newstrom found that management support and work environment explain more transfer variance than content quality. Training without ecosystem support rarely produces lasting behavior change."
+      },
+      {
+        "misconception": "Follow-up activities are optional add-ons to the 'real' training",
+        "reality": "Post-training reinforcement is where most transfer either happens or doesn't. Treating follow-up as optional — or leaving it to chance — makes the training event largely irrelevant to long-term performance."
+      }
+    ],
+    "whenToUse": [
+      "For any program where on-the-job behavior change is the actual goal",
+      "When designing toward Kirkpatrick Level 3 or 4 outcomes",
+      "When previous training produced high test scores but poor on-the-job impact",
+      "When building a learning solution, not just a training event"
+    ],
+    "relatedTerms": ["Near vs. Far Transfer", "Conditions for Transfer", "Spaced Practice", "Kirkpatrick", "Performance Support"]
+  }
+]

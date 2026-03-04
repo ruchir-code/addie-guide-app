@@ -1,0 +1,224 @@
+[
+  {
+    "id": "ef1",
+    "slug": "kirkpatrick",
+    "number": "01",
+    "name": "Kirkpatrick Four-Level Model",
+    "theorists": ["Donald Kirkpatrick", "Jim Kirkpatrick"],
+    "tagline": "The industry standard for measuring training effectiveness across four progressive levels",
+    "whatItIs": "Developed by Donald Kirkpatrick in 1959 and updated with his son Jim in 2016, the Kirkpatrick Model evaluates training programs across four hierarchical levels — from immediate learner reactions to organizational results. Each level provides different evidence of training value, with Level 4 being the most meaningful to business stakeholders and the hardest to collect.",
+    "levels": [
+      {
+        "number": 1,
+        "name": "Reaction",
+        "color": "#6D28D9",
+        "question": "Did learners find the training valuable, engaging, and relevant?",
+        "description": "Measures learner satisfaction and perceived relevance immediately after training. Often called the 'smile sheet' level. Useful for spotting major design or delivery problems, but poor at predicting actual learning or behavior change.",
+        "methods": ["Post-training surveys", "Net Promoter Score (NPS)", "Star ratings", "Open-ended feedback forms"],
+        "designImplication": "Design for relevance, not entertainment. A learner who sees direct applicability to their job will rate it highly — not just one who was entertained. Ask about perceived relevance, not just enjoyment.",
+        "pitfall": "High reaction scores don't predict learning or behavior change. This is the most commonly over-relied-upon level."
+      },
+      {
+        "number": 2,
+        "name": "Learning",
+        "color": "#0369A1",
+        "question": "Did learners acquire the intended knowledge, skills, attitudes, or confidence?",
+        "description": "Measures what learners actually gained from the training — knowledge, skill, attitude shifts, or confidence — before they leave the program. More meaningful than Reaction but still only measures what happened in training, not on the job.",
+        "methods": ["Pre/post tests", "Skill demonstrations", "Role plays", "Simulations", "Scenario-based assessments"],
+        "designImplication": "Build assessments before content. If you can't test it, you can't confirm learning occurred. Align every assessment item directly to a stated objective at the correct Bloom's level.",
+        "pitfall": "Tests that only measure recall won't tell you if learners can actually apply skills. That's a Level 3 question."
+      },
+      {
+        "number": 3,
+        "name": "Behavior",
+        "color": "#047857",
+        "question": "Are learners applying what they learned back on the job?",
+        "description": "Measures on-the-job transfer — whether training has actually changed how people perform in their real work environment. Requires time (30–90+ days post-training) and manager involvement to collect meaningfully.",
+        "methods": ["Manager observation checklists", "360-degree feedback", "Performance reviews", "Follow-up surveys at 30/60/90 days", "Behavioral KPIs"],
+        "designImplication": "Design for transfer from day one. Include manager briefings, job aids, post-training action plans, and follow-up check-ins as part of the learning solution — not afterthoughts.",
+        "pitfall": "Most programs never measure this level. Without environmental support from managers, even strong Level 2 results won't transfer."
+      },
+      {
+        "number": 4,
+        "name": "Results",
+        "color": "#B45309",
+        "question": "Did the training contribute to the desired business outcomes?",
+        "description": "Measures impact on organizational metrics: productivity, quality, sales, safety incidents, retention, customer satisfaction. This is the level business stakeholders actually care about — and the hardest to attribute to training alone.",
+        "methods": ["KPI tracking (before/after)", "Quality metrics", "Sales data", "Safety incident reports", "Cost savings analysis"],
+        "designImplication": "Identify the target Level 4 outcome before designing anything. Work backwards: What business result is needed? → What behavior change drives it? → What learning enables it?",
+        "pitfall": "Correlation is not causation. Many factors affect business results. Use control groups or isolation techniques to attribute change to training rather than other variables."
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "You need to evaluate all four levels for every program",
+        "reality": "Levels 1 and 2 for most programs. Levels 3 and 4 only for high-stakes, high-investment programs. Match evaluation depth to program impact and cost."
+      },
+      {
+        "misconception": "High Level 1 scores mean the training was effective",
+        "reality": "Learners can love a program and learn nothing. Reaction scores measure perceived value, not actual skill acquisition or behavior change."
+      },
+      {
+        "misconception": "The model requires evaluating levels in order, starting at Level 1",
+        "reality": "In practice, start with Level 4 (define the business result you need) and work backwards to design training that leads to it. Backwards design produces better outcomes."
+      }
+    ],
+    "whenToUse": [
+      "Any formal training program where stakeholders need evidence of impact",
+      "Compliance training where behavior change (Level 3) is the legal requirement",
+      "High-investment programs where leadership asks 'Was it worth it?'",
+      "Programs tied to measurable business outcomes like sales, safety, or quality"
+    ],
+    "relatedTerms": ["ROI", "Summative Evaluation", "Transfer of Learning", "Formative Evaluation", "Behavior Change"]
+  },
+  {
+    "id": "ef2",
+    "slug": "phillips",
+    "number": "02",
+    "name": "Phillips ROI Methodology",
+    "theorists": ["Jack Phillips", "Patti Phillips"],
+    "tagline": "Extends Kirkpatrick with a fifth level — financial return on investment — and rigorous data isolation techniques",
+    "whatItIs": "Developed by Jack Phillips in the 1990s, the ROI Methodology adds a fifth level to Kirkpatrick (Return on Investment) and introduces a systematic process for isolating training's contribution from other business variables. It is the most rigorous — and most resource-intensive — evaluation framework in L&D. Phillips recommends it for the top 5–10% of programs by cost and strategic importance.",
+    "levels": [
+      {
+        "number": 1,
+        "name": "Reaction & Planned Action",
+        "color": "#6D28D9",
+        "question": "Did participants react favorably and plan to apply the learning?",
+        "description": "Similar to Kirkpatrick Level 1 but adds a critical component: planned action. Participants indicate specifically what they intend to do differently on the job. This converts a satisfaction survey into an application commitment tool.",
+        "methods": ["Post-training surveys with action planning section", "Relevance and applicability ratings", "Intention-to-apply questions"],
+        "designImplication": "Include a structured action planning section at the end of every program: 'What will you do differently in the next 30 days as a result of this training?'",
+        "pitfall": "Planned action is not behavior change — it's an intention. Follow-up at Level 3 is still required."
+      },
+      {
+        "number": 2,
+        "name": "Learning",
+        "color": "#0369A1",
+        "question": "Did participants acquire the intended knowledge, skills, and attitudes?",
+        "description": "Identical to Kirkpatrick Level 2. Measures knowledge, skill, and attitude acquisition through formal or informal assessment before participants leave the program.",
+        "methods": ["Pre/post tests", "Skill demonstrations", "Simulations", "Structured role plays"],
+        "designImplication": "Align every assessment item directly to a stated objective at the correct Bloom's level. Completion does not equal learning.",
+        "pitfall": "Don't confuse assessment completion with demonstrated learning."
+      },
+      {
+        "number": 3,
+        "name": "Application & Implementation",
+        "color": "#047857",
+        "question": "Are participants applying what they learned on the job?",
+        "description": "Similar to Kirkpatrick Level 3 but with a Phillips emphasis on identifying and removing barriers to application. Follow-up at 90 days is standard. Phillips also tracks barriers — what's stopping application — as actionable program improvement data.",
+        "methods": ["Follow-up surveys (30/60/90 days)", "Manager interviews", "Observation checklists", "Action plan completion audits", "Barrier identification surveys"],
+        "designImplication": "Include structured 90-day follow-up as part of the program design, not an afterthought. Identify and actively work to remove environmental barriers.",
+        "pitfall": "If participants aren't applying learning, it may not be a training failure — it could be a management or environment failure. Investigate before redesigning."
+      },
+      {
+        "number": 4,
+        "name": "Business Impact",
+        "color": "#B45309",
+        "question": "What measurable business impact resulted from the training?",
+        "description": "Similar to Kirkpatrick Level 4, with a critical addition: isolating training's contribution. Phillips requires demonstrating that the measured business improvement was caused by training — not by market changes, new management, or other simultaneous initiatives.",
+        "methods": ["Control group comparison", "Trend analysis (pre/post with extrapolation)", "Expert estimates with confidence factors", "Participant estimation of training's contribution"],
+        "designImplication": "Plan your isolation strategy before training launches — you'll need a pre-training baseline. Identify 2–3 business metrics that training is specifically expected to move.",
+        "pitfall": "Skipping isolation makes Level 4 data meaningless — you can't attribute KPI changes to training without controlling for other variables."
+      },
+      {
+        "number": 5,
+        "name": "Return on Investment (ROI)",
+        "color": "#C2410C",
+        "question": "Do the monetary benefits of the training outweigh its fully-loaded costs?",
+        "description": "The unique Phillips addition. Converts business impact data to monetary value, subtracts all program costs (design, development, delivery, participant time, overhead), and calculates ROI as a percentage. Formula: ROI% = ((Monetary Benefits − Program Costs) / Program Costs) × 100.",
+        "methods": ["Fully-loaded cost analysis", "Benefit conversion using standard values or historical data", "ROI formula calculation", "Intangibles reporting (benefits that can't be monetized)"],
+        "designImplication": "Only calculate ROI for programs where business impact can be credibly converted to monetary value. A 25% ROI target is a common L&D benchmark — meaning $1.25 returned for every $1.00 invested.",
+        "pitfall": "Intangible benefits (engagement, confidence, morale) cannot be reliably monetized — report them separately rather than forcing a conversion that undermines credibility."
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "You should calculate ROI for every training program",
+        "reality": "Phillips recommends ROI only for the top 5–10% of programs by budget and strategic importance. A full ROI study is expensive and time-consuming to do with integrity."
+      },
+      {
+        "misconception": "A positive ROI means the program paid for itself",
+        "reality": "ROI is a ratio: for every dollar spent, how many dollars of benefit were returned. A 150% ROI means $1.50 returned for every $1.00 invested — the program costs are not recovered from Level 5 data, they're included in the calculation."
+      },
+      {
+        "misconception": "Isolating training effects requires a randomized control group",
+        "reality": "Control groups are ideal but not always feasible. Expert estimation with confidence adjustments, trend analysis, and participant self-reporting are all accepted isolation methods in the Phillips methodology."
+      }
+    ],
+    "whenToUse": [
+      "Executive or board presentations requiring financial justification for L&D investment",
+      "High-cost programs (leadership development, large-scale onboarding rollouts)",
+      "Programs facing budget scrutiny or reduction",
+      "Organizations with a formal requirement to demonstrate L&D financial return"
+    ],
+    "relatedTerms": ["Kirkpatrick", "ROI", "Cost-Benefit Analysis", "Business Impact", "Summative Evaluation"]
+  },
+  {
+    "id": "ef3",
+    "slug": "cipp",
+    "number": "03",
+    "name": "CIPP Evaluation Model",
+    "theorists": ["Daniel Stufflebeam"],
+    "tagline": "A comprehensive model evaluating programs across their entire lifecycle — from needs analysis through long-term impact",
+    "whatItIs": "Developed by Daniel Stufflebeam in 1966, CIPP stands for Context, Input, Process, and Product. Unlike Kirkpatrick (which evaluates after training), CIPP evaluates throughout the entire program lifecycle. It's as much a program improvement framework as a measurement tool — helping decision-makers at every stage, not just at the end.",
+    "levels": [
+      {
+        "number": 1,
+        "name": "Context Evaluation",
+        "color": "#DC2626",
+        "question": "What needs to be done? Are goals aligned with real organizational needs?",
+        "description": "Evaluates the environment, identifies unmet needs, diagnoses problems, and sets program goals. Answers: 'Should we do this program at all?' This is the most overlooked level — and the most important.",
+        "methods": ["Needs assessments", "Gap analysis", "Stakeholder interviews", "Environmental scans", "Document reviews"],
+        "designImplication": "Context evaluation IS your Analysis phase in ADDIE. Rigorous context evaluation prevents building training for problems that aren't really training problems — saving significant time and budget.",
+        "pitfall": "Skipping context evaluation leads to programs that solve the wrong problem or serve the wrong audience."
+      },
+      {
+        "number": 2,
+        "name": "Input Evaluation",
+        "color": "#EA580C",
+        "question": "How should we do it? Are proposed strategies and resources appropriate?",
+        "description": "Assesses available resources, alternative program designs, and strategic plans to determine the most cost-effective approach. Answers: 'What's the best way to achieve the goal?' Maps to the Design phase of ADDIE.",
+        "methods": ["Resource audits", "Delivery format analysis", "Cost estimation", "SME and stakeholder consultation", "Benchmarking against alternatives"],
+        "designImplication": "Evaluate whether your instructional strategy (e-learning, ILT, blended, job aids) is the right choice for this context before building anything. Input evaluation prevents costly format mismatches.",
+        "pitfall": "Most organizations skip input evaluation and default to familiar formats — missing opportunities for more effective or cost-efficient approaches."
+      },
+      {
+        "number": 3,
+        "name": "Process Evaluation",
+        "color": "#059669",
+        "question": "Is it being implemented as designed? What's working and what isn't?",
+        "description": "Monitors implementation quality in real time — identifying procedural problems, barriers, and opportunities for mid-course correction. This is formative evaluation in action, running throughout delivery.",
+        "methods": ["Pilot observation notes", "Facilitator feedback logs", "Learner check-ins during program", "LMS completion and engagement data", "Mid-course surveys"],
+        "designImplication": "Process evaluation during pilots is non-negotiable for large programs. Catch problems before full rollout — a pilot with deliberate process evaluation typically surfaces 60–80% of avoidable issues.",
+        "pitfall": "Treating launch as the finish line. Process evaluation requires someone actively monitoring implementation and acting on findings — not just collecting data."
+      },
+      {
+        "number": 4,
+        "name": "Product Evaluation",
+        "color": "#7C3AED",
+        "question": "Did it achieve its goals? What were the intended and unintended outcomes?",
+        "description": "Measures outcomes — both intended and unintended — against the goals established in Context evaluation. Unlike Kirkpatrick, CIPP product evaluation explicitly looks for long-term impact and unintended consequences, not just immediate post-training outcomes.",
+        "methods": ["Post-program outcome assessments", "Longitudinal follow-up studies", "Stakeholder impact interviews", "Organizational metric tracking", "Unintended consequence review"],
+        "designImplication": "Define 'product success' criteria before the program launches. Measure both what you expected to find and what you didn't expect — unintended effects can be positive or negative.",
+        "pitfall": "Only measuring intended outcomes. Unintended negative consequences (increased workload, skill atrophy elsewhere, learner resentment) can undermine program value."
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "CIPP is just a more complicated version of Kirkpatrick",
+        "reality": "CIPP is a program improvement model used across the entire lifecycle, not just post-training. It evaluates design quality (Input) and implementation quality (Process) — areas Kirkpatrick doesn't address."
+      },
+      {
+        "misconception": "CIPP is only for academic or government contexts",
+        "reality": "CIPP is highly effective for any complex, multi-phase program running over an extended period — including large-scale corporate onboarding, culture change programs, and leadership development initiatives."
+      }
+    ],
+    "whenToUse": [
+      "Large, multi-phase programs running over several months or years",
+      "Programs with significant organizational change components",
+      "When you need to evaluate both program design quality AND outcomes",
+      "When program accountability is required across all phases, not just at completion"
+    ],
+    "relatedTerms": ["Formative Evaluation", "Summative Evaluation", "Needs Assessment", "Gap Analysis", "Kirkpatrick"]
+  }
+]

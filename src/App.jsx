@@ -12,6 +12,9 @@ import BloomPage from './pages/BloomPage'
 import MediaGuidePage from './pages/MediaGuidePage'
 import ModelsPage from './pages/ModelsPage'
 import AssessmentBuilderPage from './pages/AssessmentBuilderPage'
+import EvaluationFrameworksPage from './pages/EvaluationFrameworksPage'
+import PerformanceConsultingPage from './pages/PerformanceConsultingPage'
+import TransferPage from './pages/TransferPage'
 
 function NotFound() {
   return (
@@ -42,6 +45,9 @@ export default function App() {
               <Route path="media-guide" element={<MediaGuidePage />} />
               <Route path="models" element={<ModelsPage />} />
               <Route path="assessment-builder" element={<AssessmentBuilderPage />} />
+              <Route path="evaluation-frameworks" element={<EvaluationFrameworksPage />} />
+              <Route path="performance-consulting" element={<PerformanceConsultingPage />} />
+              <Route path="transfer" element={<TransferPage />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

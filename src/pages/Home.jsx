@@ -17,6 +17,9 @@ import {
   Monitor,
   Network,
   ClipboardCheck,
+  TrendingUp,
+  Briefcase,
+  Zap,
 } from 'lucide-react'
 import { PHASES as PHASE_DATA } from '../utils/colors'
 
@@ -58,7 +61,7 @@ const TOOLS = [
   {
     to: '/templates',
     label: 'Template Library',
-    desc: '8 copy-ready ID templates organised by ADDIE phase',
+    desc: '14 copy-ready ID templates organised by ADDIE phase',
     icon: FileText,
     style: { backgroundColor: '#FFF7ED', borderColor: '#EA580C', color: '#9A3412' },
     iconBg: '#EA580C',
@@ -66,7 +69,7 @@ const TOOLS = [
   {
     to: '/glossary',
     label: 'Glossary',
-    desc: '60+ plain-English definitions for ID terms',
+    desc: '86+ plain-English definitions for ID terms',
     icon: BookOpen,
     style: { backgroundColor: '#ECFDF5', borderColor: '#059669', color: '#065F46' },
     iconBg: '#059669',
@@ -113,6 +116,30 @@ const FOUNDATIONS = [
     icon: Network,
     style: { backgroundColor: '#EEF2FF', borderColor: '#C7D2FE', color: '#312E81' },
     iconBg: '#4338CA',
+  },
+  {
+    to: '/evaluation-frameworks',
+    label: 'Evaluation Frameworks',
+    desc: 'Kirkpatrick, Phillips ROI, and CIPP — the frameworks for measuring training effectiveness and business impact',
+    icon: TrendingUp,
+    style: { backgroundColor: '#F0F9FF', borderColor: '#BAE6FD', color: '#075985' },
+    iconBg: '#0369A1',
+  },
+  {
+    to: '/performance-consulting',
+    label: 'Performance Consulting',
+    desc: 'Training vs. non-training solutions, root cause analysis, and Gilbert\'s Behavior Engineering Model',
+    icon: Briefcase,
+    style: { backgroundColor: '#FFF7ED', borderColor: '#FED7AA', color: '#9A3412' },
+    iconBg: '#C2410C',
+  },
+  {
+    to: '/transfer',
+    label: 'Transfer of Learning',
+    desc: 'Near/far transfer, conditions for transfer, and before/during/after design strategies for lasting on-the-job performance',
+    icon: Zap,
+    style: { backgroundColor: '#F5F3FF', borderColor: '#DDD6FE', color: '#5B21B6' },
+    iconBg: '#7C3AED',
   },
 ]
 

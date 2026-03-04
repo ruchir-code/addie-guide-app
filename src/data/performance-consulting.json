@@ -1,0 +1,223 @@
+[
+  {
+    "id": "pc1",
+    "slug": "training-vs-nontraining",
+    "number": "01",
+    "name": "Training vs. Non-Training Solutions",
+    "theorists": ["Robert Mager", "Peter Pipe"],
+    "tagline": "The most critical analysis an ID does: determining whether training is actually the right solution",
+    "whatItIs": "Performance consulting begins with a fundamental question: is this actually a training problem? Mager and Pipe's classic framework asks 'Could they do it if their life depended on it?' If yes — if capability is there but performance isn't — training won't help. The problem lies in the environment, incentives, feedback, or tools. Most performance gaps fall into this category, which is why training alone fails to produce lasting change so often.",
+    "decisionQuestions": [
+      {
+        "question": "Could they do it if their life depended on it?",
+        "yesPath": "It's not a skill problem. Look at motivation, feedback, expectations, or environmental barriers.",
+        "noPath": "There may be a genuine knowledge or skill gap. Training could be part of the solution."
+      },
+      {
+        "question": "Have they ever been able to perform correctly?",
+        "yesPath": "Skill atrophy — refreshers, job aids, or supervised practice may be enough. Full retraining is probably overkill.",
+        "noPath": "New skill — more structured learning may be needed."
+      },
+      {
+        "question": "Do they receive clear, timely feedback on their performance?",
+        "yesPath": "Feedback exists — look at other factors like tools, incentives, or expectations.",
+        "noPath": "Feedback gap — fix the feedback system first. Training won't compensate for absent feedback."
+      },
+      {
+        "question": "Are there meaningful consequences for not performing?",
+        "yesPath": "Consequences exist — investigate clarity of expectations and available tools.",
+        "noPath": "No consequences — behavior won't change through training alone. This is a management and culture issue."
+      }
+    ],
+    "nonTrainingSolutions": [
+      {
+        "cause": "Unclear expectations",
+        "solution": "Clarify performance standards, provide job aids with explicit criteria, define observable behaviors in writing"
+      },
+      {
+        "cause": "No or delayed feedback",
+        "solution": "Implement performance dashboards, manager feedback cadences, or self-monitoring tools at point of performance"
+      },
+      {
+        "cause": "Missing or misaligned consequences",
+        "solution": "Redesign recognition and accountability structures; ensure consequences are consistent and timely"
+      },
+      {
+        "cause": "Wrong or missing tools",
+        "solution": "Fix the environment — update systems, processes, equipment, or access before considering training"
+      },
+      {
+        "cause": "Motivation or engagement issues",
+        "solution": "Address management quality, role fit, or organizational culture — these are not trainable through a course"
+      },
+      {
+        "cause": "Process or workflow problems",
+        "solution": "Redesign the process, eliminate unnecessary steps, or change the sequence — a workflow fix, not a learning fix"
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "If performance is poor, training is the answer",
+        "reality": "Research consistently shows that training accounts for roughly 10–20% of performance causes. Environment, feedback, incentives, and tools account for the rest — and are often faster and cheaper to fix."
+      },
+      {
+        "misconception": "Stakeholders requesting training means a training problem exists",
+        "reality": "Stakeholders request training because it's visible and familiar, not because it's always appropriate. An ID's job is to validate the diagnosis before prescribing the solution."
+      }
+    ],
+    "whenToUse": [
+      "Before starting any new training design project — as a standard gate",
+      "When stakeholders request training as a reaction to a performance event or complaint",
+      "When training has been delivered before with no measurable behavior change",
+      "During the Analysis phase of any ADDIE or SAM project"
+    ],
+    "relatedTerms": ["Gap Analysis", "Needs Assessment", "Root Cause Analysis", "Performance Support", "Job Aid"]
+  },
+  {
+    "id": "pc2",
+    "slug": "root-cause-analysis",
+    "number": "02",
+    "name": "Root Cause Analysis",
+    "theorists": ["Kaoru Ishikawa", "Sakichi Toyoda"],
+    "tagline": "Structured techniques for identifying why a performance gap exists before any solution is designed",
+    "whatItIs": "Root cause analysis (RCA) identifies the underlying cause of a performance problem rather than its symptoms. In instructional design, RCA is what separates a reactive 'build a course' response from a strategic performance intervention. Two techniques — the Five Whys and the Fishbone Diagram — are the most commonly used and accessible for ID practitioners.",
+    "techniques": [
+      {
+        "name": "Five Whys",
+        "description": "Ask 'Why?' five times in sequence, using each answer as the basis for the next question. Continue until you reach a cause you can actually address — not just another symptom.",
+        "example": {
+          "problem": "Sales reps are not completing CRM entries accurately",
+          "steps": [
+            "Why? → They say the CRM is too slow to use between calls",
+            "Why? → CRM takes 4–6 minutes to load on their hardware",
+            "Why? → Field laptops haven't been updated in 4 years",
+            "Why? → Hardware budget was cut in the last fiscal year",
+            "Root cause: IT budget and equipment refresh process — training on CRM will not fix this"
+          ]
+        },
+        "tip": "The Five Whys often reveals that the real problem is a process, tool, management, or budget issue — not a knowledge or skill gap. If you reach a root cause that training can fix, you've confirmed a training need."
+      },
+      {
+        "name": "Fishbone Diagram (Ishikawa)",
+        "description": "Maps potential causes of a problem across six categories. Best used with a small group of stakeholders to surface causes that no single person would identify alone.",
+        "categories": [
+          "People — skills, knowledge, attitudes, experience",
+          "Process — unclear steps, broken workflow, missing procedures",
+          "Environment — workspace design, culture, distractions",
+          "Equipment — technology, hardware, tools, software",
+          "Management — unclear expectations, missing feedback, inconsistent consequences",
+          "Materials — job aids, documentation, reference resources"
+        ],
+        "tip": "Use a whiteboard or digital collaboration tool with a mixed group — SMEs, managers, and front-line performers. Different roles surface different causes. The goal is to populate all six branches before prioritizing."
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "The first cause you identify is the root cause",
+        "reality": "The presenting problem is almost never the root cause. 'Poor sales performance' is a symptom. Keep asking why until you reach something actionable that a specific person or team can change."
+      },
+      {
+        "misconception": "RCA is only for operational or quality problems, not L&D",
+        "reality": "RCA is essential in the Analysis phase of any ID project. Skipping it leads to training that addresses symptoms while root causes persist — and performance doesn't improve despite completed courses."
+      }
+    ],
+    "whenToUse": [
+      "During needs assessment and Analysis phase — before any solution is designed",
+      "When a performance problem recurs despite previous training interventions",
+      "When the cause of a performance gap is unclear, disputed, or assumed",
+      "When multiple stakeholders have conflicting explanations for the same problem"
+    ],
+    "relatedTerms": ["Needs Assessment", "Gap Analysis", "Training vs. Non-Training Solutions", "Performance Consulting", "Analysis Phase"]
+  },
+  {
+    "id": "pc3",
+    "slug": "gilbert-bem",
+    "number": "03",
+    "name": "Gilbert's Behavior Engineering Model",
+    "theorists": ["Thomas F. Gilbert"],
+    "tagline": "A diagnostic matrix showing that most performance problems are environmental — not individual failures",
+    "whatItIs": "Thomas Gilbert's Behavior Engineering Model (1978) provides a structured matrix for diagnosing performance problems across six factors organized into two dimensions: Environmental (outside the person) and Individual (inside the person). Gilbert's key finding: environmental factors account for 75%+ of performance problems and are typically cheaper to fix than training. Training only addresses one of six cells.",
+    "matrixEnvironmental": [
+      {
+        "factor": "Data & Information",
+        "question": "Do performers have clear expectations, feedback, and guidance?",
+        "examples": [
+          "Performance standards are undefined or inconsistently communicated",
+          "No feedback on quality, speed, or accuracy",
+          "No job aids, reference guides, or decision tools available"
+        ],
+        "solution": "Clarify expectations in writing, create feedback mechanisms, provide job aids at point of performance"
+      },
+      {
+        "factor": "Resources & Tools",
+        "question": "Do performers have the time, tools, and materials needed to perform?",
+        "examples": [
+          "Outdated or malfunctioning software and equipment",
+          "Insufficient time allocated to complete the task correctly",
+          "Required materials are unavailable or hard to find"
+        ],
+        "solution": "Provide adequate tools, fix broken processes, adjust workload to match available time"
+      },
+      {
+        "factor": "Incentives & Consequences",
+        "question": "Are there meaningful positive consequences for performing and negative ones for not?",
+        "examples": [
+          "Good performance goes unrecognized or unrewarded",
+          "Poor performance has no meaningful consequences",
+          "Incorrect behaviors are inadvertently rewarded"
+        ],
+        "solution": "Redesign recognition, accountability, and incentive structures to reinforce desired behavior"
+      }
+    ],
+    "matrixIndividual": [
+      {
+        "factor": "Knowledge & Skills",
+        "question": "Do performers have the knowledge and skill to do the job?",
+        "examples": [
+          "Lack of training on a new system or process",
+          "Insufficient practice with a newly required skill",
+          "Knowledge is outdated relative to current job requirements"
+        ],
+        "solution": "Training, coaching, or mentoring — this is the one cell where L&D plays a primary role"
+      },
+      {
+        "factor": "Capacity",
+        "question": "Do performers have the physical and cognitive capacity for the job requirements?",
+        "examples": [
+          "Role requires language fluency the performer lacks",
+          "Physical demands exceed the performer's capability",
+          "Cognitive load of the role is unsustainably high"
+        ],
+        "solution": "Job redesign, reasonable accommodation, or selection process review — not a training fix"
+      },
+      {
+        "factor": "Motives & Values",
+        "question": "Are performers motivated to perform and do they value the expected behavior?",
+        "examples": [
+          "No intrinsic desire to perform the task correctly",
+          "Personal values conflict with expected organizational behavior",
+          "Disengagement, burnout, or values mismatch with the role"
+        ],
+        "solution": "Management intervention, cultural change, or separation — training cannot create motivation where none exists"
+      }
+    ],
+    "keyInsight": "Gilbert argued that environmental factors (information, resources, incentives) account for 75%+ of performance problems and yield the highest 'performance leverage' per dollar invested. Training addresses Individual > Knowledge & Skills — just one of six factors in the matrix. When performance improvement spending focuses primarily on training, it addresses the smallest share of the actual problem.",
+    "commonMisconceptions": [
+      {
+        "misconception": "Training is the primary lever for improving performance",
+        "reality": "Training addresses one of six performance factors. Gilbert's research showed environmental interventions (feedback systems, tools, incentives) have far greater impact per dollar than most training programs."
+      },
+      {
+        "misconception": "When someone isn't performing, it must be a motivation problem",
+        "reality": "Motivation is the last factor to investigate. Most performance failures trace back to missing information, unclear expectations, broken tools, or absent consequences — none of which training can fix."
+      }
+    ],
+    "whenToUse": [
+      "During any performance gap analysis — use it as a diagnostic checklist",
+      "When managers or stakeholders attribute poor performance to 'the people'",
+      "To build a strategic case for non-training interventions",
+      "In L&D conversations about performance improvement vs. learning solutions"
+    ],
+    "relatedTerms": ["Performance Consulting", "Root Cause Analysis", "Training vs. Non-Training Solutions", "Needs Assessment", "Job Aid"]
+  }
+]

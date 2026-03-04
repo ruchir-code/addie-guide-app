@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import {
   Search, X,
   BookOpen, FileText, GraduationCap, Brain, Monitor, Network, ClipboardCheck, Target,
+  TrendingUp, Briefcase, Zap,
 } from 'lucide-react'
 
 import analysisData  from '../../data/phases/analysis.json'
@@ -45,8 +46,11 @@ const TOOLS = [
   { title: "Bloom's Taxonomy",       desc: 'All six cognitive levels with verbs, objectives, and activities', path: '/bloom',              icon: GraduationCap },
   { title: 'Learning Theories',      desc: 'Behaviorism, Cognitivism, Constructivism, Andragogy, CLT',        path: '/theories',           icon: Brain },
   { title: 'Instructional Models',   desc: 'ADDIE, SAM, Dick & Carey, Agile ID — compared side by side',     path: '/models',             icon: Network },
-  { title: 'Template Library',       desc: '14 copy-ready ID templates organised by ADDIE phase',             path: '/templates',          icon: FileText },
-  { title: 'Glossary',               desc: '86+ plain-English definitions for ID terms',                      path: '/glossary',           icon: BookOpen },
+  { title: 'Template Library',        desc: '14 copy-ready ID templates organised by ADDIE phase',                        path: '/templates',              icon: FileText },
+  { title: 'Glossary',               desc: '86+ plain-English definitions for ID terms',                                  path: '/glossary',               icon: BookOpen },
+  { title: 'Evaluation Frameworks',  desc: 'Kirkpatrick, Phillips ROI, CIPP — measuring training effectiveness and impact', path: '/evaluation-frameworks',  icon: TrendingUp },
+  { title: 'Performance Consulting', desc: 'Training vs. non-training solutions, root cause analysis, Gilbert\'s BEM',     path: '/performance-consulting', icon: Briefcase },
+  { title: 'Transfer of Learning',   desc: 'Near/far transfer, conditions for transfer, before/during/after strategies',   path: '/transfer',               icon: Zap },
 ]
 
 // ─── Search ──────────────────────────────────────────────────────────────────
