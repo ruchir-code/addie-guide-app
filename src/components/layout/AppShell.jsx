@@ -27,7 +27,7 @@ export default function AppShell() {
 
   return (
     <div className="flex min-h-screen bg-gray-50">
-      <Sidebar onOpenSearch={() => setSearchOpen(true)} />
+      <Sidebar />
       <MobileDrawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
       <GlobalSearch isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 

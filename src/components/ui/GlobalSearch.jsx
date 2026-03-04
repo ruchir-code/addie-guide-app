@@ -1,39 +1,80 @@
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Search, X } from 'lucide-react'
+import {
+  Search, X,
+  BookOpen, FileText, GraduationCap, Brain, Monitor, Network, ClipboardCheck, Target,
+} from 'lucide-react'
 
-import analysisData from '../../data/phases/analysis.json'
-import designData from '../../data/phases/design.json'
-import developData from '../../data/phases/develop.json'
+import analysisData  from '../../data/phases/analysis.json'
+import designData    from '../../data/phases/design.json'
+import developData   from '../../data/phases/develop.json'
 import implementData from '../../data/phases/implement.json'
-import evaluateData from '../../data/phases/evaluate.json'
-import glossaryData from '../../data/glossary.json'
+import evaluateData  from '../../data/phases/evaluate.json'
+import glossaryData  from '../../data/glossary.json'
 import templatesData from '../../data/templates.json'
 
+// ─── Build a deep searchable text block per phase ────────────────────────────
+function buildPhase(data, slug, color) {
+  const text = [
+    data.tagline,
+    data.whatItIs?.beginner,
+    data.whatItIs?.advanced,
+    data.whyItMatters?.beginner,
+    data.whyItMatters?.advanced,
+    ...(data.keyQuestions  || []),
+    ...(data.outputs       || []),
+    ...(data.commonMistakes || []).flatMap((m) => [m.mistake, m.fix]),
+    ...(data.advancedInsights || []).map((i) => i.body),
+  ].filter(Boolean).join(' ').toLowerCase()
+  return { slug, label: data.label, tagline: data.tagline ?? '', color, text }
+}
+
 const PHASES = [
-  { slug: 'analysis',  label: analysisData.label,  tagline: analysisData.tagline,  color: analysisData.color },
-  { slug: 'design',    label: designData.label,    tagline: designData.tagline,    color: designData.color },
-  { slug: 'develop',   label: developData.label,   tagline: developData.tagline,   color: developData.color },
-  { slug: 'implement', label: implementData.label, tagline: implementData.tagline, color: implementData.color },
-  { slug: 'evaluate',  label: evaluateData.label,  tagline: evaluateData.tagline,  color: evaluateData.color },
+  buildPhase(analysisData,  'analysis',  '#DC2626'),
+  buildPhase(designData,    'design',    '#EA580C'),
+  buildPhase(developData,   'develop',   '#059669'),
+  buildPhase(implementData, 'implement', '#9333EA'),
+  buildPhase(evaluateData,  'evaluate',  '#2563EB'),
 ]
 
+// ─── All navigable tool / foundation pages ───────────────────────────────────
+const TOOLS = [
+  { title: 'Outcomes & Objectives',  desc: "Build your CLO → TLO → ELO hierarchy with Bloom's verbs",        path: '/objectives',        icon: Target },
+  { title: 'Assessment Builder',     desc: "Generate assessment templates aligned to Bloom's levels",         path: '/assessment-builder',icon: ClipboardCheck },
+  { title: 'Media & Format Guide',   desc: 'Decision guide for e-learning, ILT, VILT, job aids, and more',   path: '/media-guide',        icon: Monitor },
+  { title: "Bloom's Taxonomy",       desc: 'All six cognitive levels with verbs, objectives, and activities', path: '/bloom',              icon: GraduationCap },
+  { title: 'Learning Theories',      desc: 'Behaviorism, Cognitivism, Constructivism, Andragogy, CLT',        path: '/theories',           icon: Brain },
+  { title: 'Instructional Models',   desc: 'ADDIE, SAM, Dick & Carey, Agile ID — compared side by side',     path: '/models',             icon: Network },
+  { title: 'Template Library',       desc: '14 copy-ready ID templates organised by ADDIE phase',             path: '/templates',          icon: FileText },
+  { title: 'Glossary',               desc: '86+ plain-English definitions for ID terms',                      path: '/glossary',           icon: BookOpen },
+]
+
+// ─── Search ──────────────────────────────────────────────────────────────────
 function runSearch(query) {
-  if (!query.trim()) return { phases: [], glossary: [], templates: [] }
+  if (!query.trim()) return { phases: [], tools: [], glossary: [], templates: [] }
   const q = query.toLowerCase()
   return {
     phases: PHASES.filter(
-      (p) => p.label.toLowerCase().includes(q) || p.tagline.toLowerCase().includes(q)
+      (p) => p.label.toLowerCase().includes(q) || p.tagline.toLowerCase().includes(q) || p.text.includes(q)
+    ),
+    tools: TOOLS.filter(
+      (t) => t.title.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q)
     ),
     glossary: glossaryData
       .filter((g) => g.term.toLowerCase().includes(q) || g.definition.toLowerCase().includes(q))
-      .slice(0, 6),
-    templates: templatesData
-      .filter((t) => t.title.toLowerCase().includes(q) || t.description.toLowerCase().includes(q))
       .slice(0, 5),
+    templates: templatesData
+      .filter(
+        (t) =>
+          t.title.toLowerCase().includes(q) ||
+          t.description.toLowerCase().includes(q) ||
+          t.content?.toLowerCase().includes(q)
+      )
+      .slice(0, 4),
   }
 }
 
+// ─── Sub-components ──────────────────────────────────────────────────────────
 function ResultGroup({ label, children }) {
   return (
     <div>
@@ -56,6 +97,7 @@ function ResultItem({ onClick, children }) {
   )
 }
 
+// ─── Main component ───────────────────────────────────────────────────────────
 export default function GlobalSearch({ isOpen, onClose }) {
   const [query, setQuery] = useState('')
   const inputRef = useRef(null)
@@ -63,31 +105,25 @@ export default function GlobalSearch({ isOpen, onClose }) {
 
   const results = runSearch(query)
   const hasResults =
-    results.phases.length + results.glossary.length + results.templates.length > 0
+    results.phases.length + results.tools.length + results.glossary.length + results.templates.length > 0
 
   useEffect(() => {
     if (isOpen) {
       setQuery('')
-      // Small delay to ensure the element is visible before focusing
       const t = setTimeout(() => inputRef.current?.focus(), 50)
       return () => clearTimeout(t)
     }
   }, [isOpen])
 
   useEffect(() => {
-    const handler = (e) => {
-      if (e.key === 'Escape' && isOpen) onClose()
-    }
+    const handler = (e) => { if (e.key === 'Escape' && isOpen) onClose() }
     document.addEventListener('keydown', handler)
     return () => document.removeEventListener('keydown', handler)
   }, [isOpen, onClose])
 
   if (!isOpen) return null
 
-  const go = (path) => {
-    navigate(path)
-    onClose()
-  }
+  const go = (path) => { navigate(path); onClose() }
 
   return (
     <div
@@ -96,14 +132,14 @@ export default function GlobalSearch({ isOpen, onClose }) {
       onClick={(e) => { if (e.target === e.currentTarget) onClose() }}
     >
       <div className="w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden">
-        {/* Input row */}
+        {/* Input */}
         <div className="flex items-center gap-3 px-4 py-3 border-b border-gray-100">
           <Search size={18} className="text-gray-400 shrink-0" />
           <input
             ref={inputRef}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search phases, glossary, templates…"
+            placeholder="Search phases, tools, glossary, templates…"
             className="flex-1 text-sm outline-none placeholder:text-gray-400"
           />
           <button
@@ -116,10 +152,10 @@ export default function GlobalSearch({ isOpen, onClose }) {
         </div>
 
         {/* Results */}
-        <div className="max-h-96 overflow-y-auto">
+        <div className="max-h-[26rem] overflow-y-auto">
           {!query.trim() && (
             <p className="text-xs text-gray-400 text-center py-10">
-              Type to search across phases, glossary, and templates
+              Type to search across phases, tools, glossary, and templates
             </p>
           )}
           {query.trim() && !hasResults && (
@@ -132,16 +168,30 @@ export default function GlobalSearch({ isOpen, onClose }) {
             <ResultGroup label="Phases">
               {results.phases.map((p) => (
                 <ResultItem key={p.slug} onClick={() => go(`/${p.slug}`)}>
-                  <span
-                    className="w-2 h-2 rounded-full shrink-0"
-                    style={{ backgroundColor: p.color }}
-                  />
+                  <span className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: p.color }} />
                   <div>
                     <p className="text-sm font-semibold text-gray-800">{p.label}</p>
                     <p className="text-xs text-gray-500">{p.tagline}</p>
                   </div>
                 </ResultItem>
               ))}
+            </ResultGroup>
+          )}
+
+          {results.tools.length > 0 && (
+            <ResultGroup label="Tools & Guides">
+              {results.tools.map((t) => {
+                const Icon = t.icon
+                return (
+                  <ResultItem key={t.path} onClick={() => go(t.path)}>
+                    <Icon size={14} className="text-gray-400 shrink-0" />
+                    <div>
+                      <p className="text-sm font-semibold text-gray-800">{t.title}</p>
+                      <p className="text-xs text-gray-500 truncate">{t.desc}</p>
+                    </div>
+                  </ResultItem>
+                )
+              })}
             </ResultGroup>
           )}
 
@@ -180,7 +230,7 @@ export default function GlobalSearch({ isOpen, onClose }) {
           <span className="text-xs text-gray-400">to close</span>
           <span className="text-gray-200 mx-1">·</span>
           <kbd className="font-mono bg-gray-100 px-1.5 py-0.5 rounded text-xs text-gray-500">⌘K</kbd>
-          <span className="text-xs text-gray-400">to open</span>
+          <span className="text-xs text-gray-400">to open anywhere</span>
         </div>
       </div>
     </div>
