@@ -131,7 +131,7 @@ export default function GlobalSearch({ isOpen, onClose }) {
           {results.phases.length > 0 && (
             <ResultGroup label="Phases">
               {results.phases.map((p) => (
-                <ResultItem key={p.slug} onClick={() => go(`/phase/${p.slug}`)}>
+                <ResultItem key={p.slug} onClick={() => go(`/${p.slug}`)}>
                   <span
                     className="w-2 h-2 rounded-full shrink-0"
                     style={{ backgroundColor: p.color }}

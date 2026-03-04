@@ -10,14 +10,19 @@ export default function AppShell() {
   const [searchOpen, setSearchOpen] = useState(false)
 
   useEffect(() => {
-    const handler = (e) => {
+    const keyHandler = (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault()
         setSearchOpen(true)
       }
     }
-    document.addEventListener('keydown', handler)
-    return () => document.removeEventListener('keydown', handler)
+    const searchHandler = () => setSearchOpen(true)
+    document.addEventListener('keydown', keyHandler)
+    document.addEventListener('addie:open-search', searchHandler)
+    return () => {
+      document.removeEventListener('keydown', keyHandler)
+      document.removeEventListener('addie:open-search', searchHandler)
+    }
   }, [])
 
   return (

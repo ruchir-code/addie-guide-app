@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Search,
@@ -6,6 +7,7 @@ import {
   PlayCircle,
   BarChart2,
   ChevronRight,
+  ChevronDown,
   ArrowRight,
   Target,
   FileText,
@@ -17,6 +19,15 @@ import {
   ClipboardCheck,
 } from 'lucide-react'
 import { PHASES as PHASE_DATA } from '../utils/colors'
+
+// Each ADDIE letter maps to its phase colour
+const HERO_LETTERS = [
+  { letter: 'A', color: '#DC2626' },
+  { letter: 'D', color: '#EA580C' },
+  { letter: 'D', color: '#059669' },
+  { letter: 'I', color: '#9333EA' },
+  { letter: 'E', color: '#2563EB' },
+]
 
 const ICON_MAP = {
   analysis: Search,
@@ -101,53 +112,138 @@ const FOUNDATIONS = [
 export default function Home() {
   return (
     <div>
-      {/* ── Hero banner ─────────────────────────────────────────────── */}
+      {/* ── Hero ─────────────────────────────────────────────────────── */}
       <div
-        className="rounded-2xl px-6 py-8 mb-8 relative overflow-hidden"
+        className="rounded-2xl mb-8 relative overflow-hidden flex flex-col"
         style={{
-          background: 'linear-gradient(135deg, #0F172A 0%, #1E1B4B 60%, #2D1B69 100%)',
+          background: 'linear-gradient(140deg, #080D1A 0%, #0F172A 25%, #1A1040 55%, #1E1B4B 80%, #0D1324 100%)',
+          minHeight: '62vh',
+          padding: '3rem 2.5rem 2.5rem',
         }}
       >
         {/* Decorative blobs */}
         <div
-          className="absolute -top-10 -right-10 w-48 h-48 rounded-full opacity-20 blur-2xl"
+          className="absolute -top-24 -right-24 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none"
           style={{ backgroundColor: '#7C3AED' }}
         />
         <div
-          className="absolute -bottom-8 -left-8 w-40 h-40 rounded-full opacity-15 blur-2xl"
+          className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full opacity-15 blur-3xl pointer-events-none"
           style={{ backgroundColor: '#2563EB' }}
         />
+        <div
+          className="absolute top-1/2 right-1/3 w-56 h-56 rounded-full opacity-10 blur-3xl pointer-events-none"
+          style={{ backgroundColor: '#059669' }}
+        />
 
-        <div className="relative z-10">
-          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#7C3AED' }}>
+        <div className="relative z-10 flex flex-col gap-8">
+          {/* Overline */}
+          <p className="text-xs font-bold uppercase tracking-widest" style={{ color: '#7C3AED' }}>
             Instructional Design Reference
           </p>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3 leading-tight">
-            ADDIE Guide
-          </h1>
-          <p className="text-base mb-6 max-w-lg" style={{ color: '#94A3B8' }}>
-            Your practical, practitioner-first reference for all five phases of
-            the ADDIE instructional design model.
-          </p>
 
-          {/* Phase chips */}
-          <div className="flex flex-wrap gap-2">
-            {PHASES.map((p) => (
-              <Link
-                key={p.slug}
-                to={`/${p.slug}`}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all hover:scale-105"
-                style={{ backgroundColor: `${p.color}25`, color: p.color, border: `1px solid ${p.color}50` }}
+          {/* ADDIE wordmark + subtitle */}
+          <div>
+            <div className="flex items-baseline">
+              {HERO_LETTERS.map(({ letter, color }, i) => (
+                <span
+                  key={i}
+                  className="font-black leading-none"
+                  style={{ color, fontSize: 'clamp(3.25rem, 8.5vw, 5.75rem)' }}
+                >
+                  {letter}
+                </span>
+              ))}
+              <span
+                className="font-black leading-none"
+                style={{ color: '#7C3AED', fontSize: 'clamp(3.25rem, 8.5vw, 5.75rem)' }}
               >
-                <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: p.color }} />
-                {p.label}
-              </Link>
-            ))}
+                .
+              </span>
+              <span
+                className="font-bold self-end mb-1.5 ml-3"
+                style={{ color: 'rgba(255,255,255,0.45)', fontSize: 'clamp(1rem, 2.2vw, 1.5rem)' }}
+              >
+                Guide
+              </span>
+            </div>
+            <p
+              className="mt-4 text-sm sm:text-base leading-relaxed max-w-lg"
+              style={{ color: '#64748B' }}
+            >
+              Your complete, practitioner-first reference for every phase of
+              instructional design — from needs assessment to evaluation.
+            </p>
+          </div>
+
+          {/* Phase flow — connected nodes */}
+          <div className="flex items-start">
+            {PHASES.map((phase, idx) => {
+              const Icon = phase.icon
+              return (
+                <Fragment key={phase.slug}>
+                  <Link
+                    to={`/${phase.slug}`}
+                    className="flex flex-col items-center gap-2 group shrink-0"
+                  >
+                    <div
+                      className="w-11 h-11 rounded-full flex items-center justify-center transition-all duration-200 group-hover:scale-110 group-hover:brightness-110"
+                      style={{
+                        backgroundColor: phase.color,
+                        boxShadow: `0 0 0 3px ${phase.color}25, 0 4px 18px ${phase.color}35`,
+                      }}
+                    >
+                      <Icon size={17} className="text-white" />
+                    </div>
+                    <span
+                      className="text-xs font-bold hidden sm:block text-center"
+                      style={{ color: `${phase.color}BB` }}
+                    >
+                      {phase.label}
+                    </span>
+                  </Link>
+                  {idx < PHASES.length - 1 && (
+                    <div
+                      className="flex-1 h-px mt-[22px] mx-2"
+                      style={{ background: 'rgba(255,255,255,0.1)' }}
+                    />
+                  )}
+                </Fragment>
+              )
+            })}
+          </div>
+
+          {/* CTAs */}
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              onClick={() =>
+                document.getElementById('guide-content')?.scrollIntoView({ behavior: 'smooth' })
+              }
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:bg-white/10 active:scale-95"
+              style={{ border: '1px solid rgba(255,255,255,0.18)' }}
+            >
+              Explore the Guide
+              <ChevronDown size={15} />
+            </button>
+            <button
+              onClick={() => document.dispatchEvent(new CustomEvent('addie:open-search'))}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90 active:scale-95"
+              style={{ backgroundColor: '#7C3AED' }}
+            >
+              <Search size={15} />
+              Search anything
+              <kbd
+                className="ml-1 font-mono text-xs px-1.5 py-0.5 rounded"
+                style={{ backgroundColor: 'rgba(255,255,255,0.2)' }}
+              >
+                ⌘K
+              </kbd>
+            </button>
           </div>
         </div>
       </div>
 
       {/* ── Phase Cards ─────────────────────────────────────────────── */}
+      <div id="guide-content" />
       <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1">
         Phases
       </h2>
