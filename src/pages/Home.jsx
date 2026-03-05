@@ -20,6 +20,7 @@ import {
   ClipboardCheck,
   ListChecks,
   GitBranch,
+  Users2,
   TrendingUp,
   Briefcase,
   Zap,
@@ -40,7 +41,7 @@ const HERO_STATS = [
   { value: '5',   label: 'Full Phases',     sub: 'Checklists, deep-dives & case studies' },
   { value: '86+', label: 'Glossary Terms',  sub: 'Plain-English ID definitions' },
   { value: '14',  label: 'Templates',       sub: 'Copy-ready, zero formatting needed' },
-  { value: '7',   label: 'Tools & Guides',   sub: 'Objectives, quizzes, scenario guide & more' },
+  { value: '8',   label: 'Tools & Guides',   sub: 'Objectives, quizzes, scenario guide & more' },
 ]
 
 const ICON_MAP = {
@@ -109,6 +110,14 @@ const TOOLS = [
     icon: ListChecks,
     style: { backgroundColor: '#F5F3FF', borderColor: '#C4B5FD', color: '#4C1D95' },
     iconBg: '#7C3AED',
+  },
+  {
+    to: '/sme-guide',
+    label: 'SME Management Guide',
+    desc: 'Discovery interviews, extracting tacit knowledge, review cycles, scope creep, and navigating difficult SMEs',
+    icon: Users2,
+    style: { backgroundColor: '#FFF1F2', borderColor: '#FECDD3', color: '#881337' },
+    iconBg: '#BE185D',
   },
 ]
 

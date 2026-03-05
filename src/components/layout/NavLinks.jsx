@@ -15,6 +15,7 @@ import {
   Network,
   ClipboardCheck,
   ListChecks,
+  Users2,
   TrendingUp,
   Briefcase,
   Zap,
@@ -39,6 +40,7 @@ const TOOL_LINKS = [
   { to: '/assessment-builder',  label: 'Assessment Builder',      icon: ClipboardCheck },
   { to: '/scenario-guide',      label: 'Scenario Writing',        icon: GitBranch },
   { to: '/quiz',                label: 'ID Self-Assessment',      icon: ListChecks },
+  { to: '/sme-guide',          label: 'SME Management',          icon: Users2 },
 ]
 
 const FOUNDATION_LINKS = [
