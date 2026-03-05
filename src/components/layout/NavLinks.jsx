@@ -17,6 +17,7 @@ import {
   TrendingUp,
   Briefcase,
   Zap,
+  BarChart3,
 } from 'lucide-react'
 import { PHASES } from '../../utils/colors'
 
@@ -33,6 +34,7 @@ const TOOL_LINKS = [
   { to: '/glossary',            label: 'Glossary',                icon: BookOpen },
   { to: '/media-guide',         label: 'Media & Format Guide',    icon: Monitor },
   { to: '/assessment-builder',  label: 'Assessment Builder',      icon: ClipboardCheck },
+  { to: '/vercel-analytics',    label: 'Vercel Analytics Guide',  icon: BarChart3 },
 ]
 
 const FOUNDATION_LINKS = [
