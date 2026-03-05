@@ -140,6 +140,228 @@ WHAT IS OUT OF SCOPE?
 □ Post-launch maintenance or version updates
 □ LMS administration or upload`
 
+// ─── Chapman Development Time Calculator ──────────────────────────────────────
+
+function ChapmanCalculator() {
+  const [format, setFormat] = useState('l2')
+  const [seatMinutes, setSeatMinutes] = useState(30)
+  const [adjustments, setAdjustments] = useState({
+    newContent: false, highReview: false, customMedia: false,
+    branching: false, soloID: false,
+  })
+
+  const CALC_FORMATS = [
+    { id: 'ilt', label: 'Instructor-Led Training (ILT)',      desc: 'Classroom or virtual; slides, handouts, facilitator guide',         low: 22,  avg: 43,  high: 82,  color: '#0369A1', bg: '#EFF6FF' },
+    { id: 'l1',  label: 'Level 1 eLearning — Basic',          desc: 'Text, graphics, simple assessments; PowerPoint-to-eLearning',       low: 49,  avg: 79,  high: 125, color: '#0891B2', bg: '#ECFEFF' },
+    { id: 'l2',  label: 'Level 2 eLearning — Interactive',    desc: 'Interactive exercises, multimedia, audio/video, animations',        low: 127, avg: 184, high: 267, color: '#059669', bg: '#ECFDF5' },
+    { id: 'l3',  label: 'Level 3 eLearning — Advanced',       desc: 'Simulations, branching scenarios, custom interactions, games',      low: 217, avg: 490, high: 716, color: '#7C3AED', bg: '#F5F3FF' },
+  ]
+
+  const CALC_ADJUSTMENTS = [
+    { key: 'newContent',  label: 'New content area',        pct: 25, desc: 'No existing source material; SME relationship is new' },
+    { key: 'highReview',  label: 'High-friction reviews',   pct: 20, desc: 'Legal, compliance, or accessibility certification required' },
+    { key: 'customMedia', label: 'Custom media production', pct: 30, desc: 'Original video, voiceover recording, or custom illustration' },
+    { key: 'branching',   label: 'Non-linear / branching',  pct: 25, desc: 'Multiple pathways, decision branches, or scenario trees' },
+    { key: 'soloID',      label: 'Solo ID (no team)',        pct: 18, desc: 'One person handling design, development, and coordination' },
+  ]
+
+  const sel       = CALC_FORMATS.find(f => f.id === format)
+  const seatHours = seatMinutes / 60
+  const activeAdj = CALC_ADJUSTMENTS.filter(a => adjustments[a.key])
+  const totalPct  = activeAdj.reduce((s, a) => s + a.pct, 0)
+  const mult      = 1 + totalPct / 100
+
+  const calcHrs = (ratio) => Math.round(seatHours * ratio * mult)
+  const toWks   = (h) => h / 30 < 1 ? '< 1 wk' : `~${(h / 30).toFixed(1)} wks`
+
+  const PRESETS = [15, 30, 45, 60, 90, 120]
+
+  return (
+    <div className="space-y-5">
+
+      {/* ── 1. Format ── */}
+      <div>
+        <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
+          1 &mdash; Select content format
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          {CALC_FORMATS.map(f => {
+            const on = format === f.id
+            return (
+              <button
+                key={f.id}
+                onClick={() => setFormat(f.id)}
+                className="text-left p-3 rounded-xl border-2 transition-all"
+                style={{ borderColor: on ? f.color : '#E2E8F0', backgroundColor: on ? f.bg : '#FAFAFA' }}
+              >
+                <div className="flex items-start justify-between gap-2 mb-0.5">
+                  <p className="text-sm font-bold text-gray-900 leading-tight">{f.label}</p>
+                  <span
+                    className="shrink-0 text-xs font-mono font-semibold px-1.5 py-0.5 rounded"
+                    style={{ backgroundColor: on ? f.color + '22' : '#F1F5F9', color: on ? f.color : '#64748B' }}
+                  >
+                    {f.low}–{f.high}:1
+                  </span>
+                </div>
+                <p className="text-xs text-gray-500">{f.desc}</p>
+              </button>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* ── 2. Seat time ── */}
+      <div>
+        <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
+          2 &mdash; Finished seat time
+        </p>
+        <div className="p-4 rounded-xl border border-gray-200 bg-gray-50 space-y-3">
+          <div className="flex flex-wrap gap-1.5">
+            {PRESETS.map(m => (
+              <button
+                key={m}
+                onClick={() => setSeatMinutes(m)}
+                className="px-2.5 py-1 text-xs font-semibold rounded-full border transition-all"
+                style={{
+                  borderColor: seatMinutes === m ? sel.color : '#E2E8F0',
+                  backgroundColor: seatMinutes === m ? sel.color + '18' : 'white',
+                  color: seatMinutes === m ? sel.color : '#64748B',
+                }}
+              >
+                {m < 60 ? `${m} min` : `${m / 60} hr`}
+              </button>
+            ))}
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="flex-1">
+              <input
+                type="range" min="5" max="240" step="5"
+                value={Math.min(seatMinutes, 240)}
+                onChange={e => setSeatMinutes(Number(e.target.value))}
+                className="w-full cursor-pointer"
+                style={{ accentColor: sel.color }}
+              />
+              <div className="flex justify-between text-xs text-gray-400 mt-0.5 px-0.5">
+                <span>5 min</span><span>1 hr</span><span>2 hr</span><span>3 hr</span><span>4 hr</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-1.5 shrink-0">
+              <input
+                type="number" min="1" max="600" value={seatMinutes}
+                onChange={e => setSeatMinutes(Math.max(1, Math.min(600, Number(e.target.value) || 1)))}
+                className="w-16 border border-gray-300 rounded-lg px-2 py-1.5 text-sm font-semibold text-center text-gray-900 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+              <span className="text-xs text-gray-500 font-medium">min</span>
+            </div>
+          </div>
+          {seatMinutes > 240 && (
+            <p className="text-xs text-amber-600 text-center">Slider capped at 4 hr — value set via number input above</p>
+          )}
+        </div>
+      </div>
+
+      {/* ── 3. Complexity adjustments ── */}
+      <div>
+        <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">
+          3 &mdash; Complexity adjustments{' '}
+          <span className="normal-case font-normal text-gray-400">(select all that apply)</span>
+        </p>
+        <div className="space-y-1.5">
+          {CALC_ADJUSTMENTS.map(adj => {
+            const on = adjustments[adj.key]
+            return (
+              <button
+                key={adj.key}
+                onClick={() => setAdjustments(prev => ({ ...prev, [adj.key]: !prev[adj.key] }))}
+                className="w-full flex items-center gap-3 p-3 rounded-xl border transition-all text-left"
+                style={{ borderColor: on ? ACCENT_BORDER : '#E2E8F0', backgroundColor: on ? ACCENT_LIGHT : '#FAFAFA' }}
+              >
+                <div
+                  className="shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center"
+                  style={{ borderColor: on ? ACCENT : '#CBD5E1', backgroundColor: on ? ACCENT : 'transparent' }}
+                >
+                  {on && (
+                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                      <path d="M1 4l2.5 2.5L9 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  )}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2">
+                    <p className="text-sm font-semibold text-gray-800">{adj.label}</p>
+                    <span
+                      className="shrink-0 text-xs font-bold px-2 py-0.5 rounded-full"
+                      style={{ backgroundColor: on ? ACCENT : '#F1F5F9', color: on ? 'white' : '#64748B' }}
+                    >
+                      +{adj.pct}%
+                    </span>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-0.5 leading-snug">{adj.desc}</p>
+                </div>
+              </button>
+            )
+          })}
+        </div>
+        {totalPct > 0 && (
+          <p className="text-xs text-right mt-1.5 font-semibold" style={{ color: ACCENT }}>
+            Total adjustment: +{totalPct}%&nbsp;&nbsp;({mult.toFixed(2)}× multiplier applied)
+          </p>
+        )}
+      </div>
+
+      {/* ── Results ── */}
+      <div className="rounded-xl border-2 overflow-hidden" style={{ borderColor: ACCENT_BORDER }}>
+        <div className="px-4 py-2.5" style={{ backgroundColor: ACCENT }}>
+          <p className="text-xs font-bold uppercase tracking-wider text-white/90">Estimated Development Hours</p>
+        </div>
+        <div className="p-4 space-y-4" style={{ backgroundColor: ACCENT_LIGHT }}>
+          <div className="grid grid-cols-3 gap-2 sm:gap-3">
+            {[
+              { label: 'Optimistic',   h: calcHrs(sel.low),  featured: false },
+              { label: 'Typical',      h: calcHrs(sel.avg),  featured: true  },
+              { label: 'Conservative', h: calcHrs(sel.high), featured: false },
+            ].map(({ label, h, featured }) => (
+              <div
+                key={label}
+                className="rounded-xl p-3 text-center"
+                style={{
+                  backgroundColor: featured ? ACCENT : 'white',
+                  boxShadow: featured ? '0 2px 8px rgba(5,150,105,0.2)' : undefined,
+                }}
+              >
+                <p className={`text-xs font-semibold mb-1 ${featured ? 'text-white/80' : 'text-gray-500'}`}>{label}</p>
+                <p className={`text-2xl sm:text-3xl font-black leading-none mb-0.5 ${featured ? 'text-white' : 'text-gray-900'}`}>{h}</p>
+                <p className={`text-xs ${featured ? 'text-white/70' : 'text-gray-400'}`}>dev hrs</p>
+                <div className="mt-2 pt-2" style={{ borderTop: `1px solid ${featured ? 'rgba(255,255,255,0.2)' : '#E2E8F0'}` }}>
+                  <p className={`text-xs font-bold ${featured ? 'text-white' : 'text-gray-700'}`}>{toWks(h)}</p>
+                  <p className={`text-xs ${featured ? 'text-white/70' : 'text-gray-400'}`}>at 30 hrs/wk</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-xs text-gray-600 space-y-1 leading-relaxed border-t pt-3" style={{ borderColor: ACCENT_BORDER }}>
+            <p>
+              <span className="font-semibold">Formula:</span>{' '}
+              {seatMinutes} min ({+seatHours.toFixed(2)} hr) × {sel.label} ratios
+              {mult > 1 && ` × ${mult.toFixed(2)} complexity`}
+            </p>
+            {activeAdj.length > 0 && (
+              <p>
+                <span className="font-semibold">Adjustments applied:</span>{' '}
+                {activeAdj.map(a => `${a.label} (+${a.pct}%)`).join(' · ')}
+              </p>
+            )}
+            <p className="text-gray-500 pt-0.5">
+              ⚠ Add 2–4 weeks of calendar buffer for SME review cycles, regardless of development hours.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  )
+}
+
 export default function ProjectManagementPage() {
   return (
     <div>
@@ -356,6 +578,10 @@ export default function ProjectManagementPage() {
             development. Translate to a calendar timeline by accounting for SME review cycles, which often
             add 2–4 weeks regardless of development hours.
           </Callout>
+        </AccordionSection>
+
+        <AccordionSection title="Development time calculator" defaultOpen={true}>
+          <ChapmanCalculator />
         </AccordionSection>
 
         <AccordionSection title="When the ratios break down — and what to do">
