@@ -176,8 +176,7 @@ export default function AboutPage() {
           </p>
           <p>
             Right now I support a three-person team at CDSE managing 22 active courses and five
-            Post-Baccalaureate Certificate programs. Everything is tuition-free and virtual
-            instructor-led, and nothing is ever fully done: courses are always in some stage of
+            Post-Baccalaureate Certificate programs. Courses are always in some stage of
             development, update, or accreditation maintenance.
           </p>
 
@@ -233,9 +232,6 @@ export default function AboutPage() {
             a Hindustani classical music YouTube channel (17.7K subscribers as of the writing of this page). I write on Substack about Hindu and
             Indian American identity and veteran advocacy.
           </p>
-          <p className="text-gray-500 text-xs">
-            Army veteran. Legal immigrant from India. Based in Columbia, Maryland.
-          </p>
         </div>
       </div>
 
@@ -250,7 +246,7 @@ export default function AboutPage() {
             <div
               key={i}
               className="flex items-start gap-3 px-4 py-3 rounded-lg border"
-              style={{ backgroundColor: '#F8FAFC', borderColor: '#E2E8F0' }}
+              style={{ backgroundColor: '#F5F3FF', borderColor: '#DDD6FE' }}
             >
               <span
                 className="mt-0.5 w-1.5 h-1.5 rounded-full shrink-0"
