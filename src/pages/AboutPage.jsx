@@ -48,6 +48,7 @@ const CIVILIAN_HONORS = [
 
 // ── Content changelog ─────────────────────────────────────────────────────────
 const CHANGELOG = [
+  { section: 'Project Management for IDs',          updated: 'March 2026' },
   { section: 'Federal & Government ID Guide',       updated: 'March 2026' },
   { section: 'SME Management Guide',                updated: 'March 2026' },
   { section: 'ID Self-Assessment Quiz',             updated: 'March 2026' },

@@ -23,6 +23,7 @@ import {
   GitBranch,
   User,
   Building2,
+  GanttChart,
 } from 'lucide-react'
 import { PHASES } from '../../utils/colors'
 
@@ -41,7 +42,8 @@ const TOOL_LINKS = [
   { to: '/assessment-builder',  label: 'Assessment Builder',      icon: ClipboardCheck },
   { to: '/scenario-guide',      label: 'Scenario Writing',        icon: GitBranch },
   { to: '/quiz',                label: 'ID Self-Assessment',      icon: ListChecks },
-  { to: '/sme-guide',          label: 'SME Management',          icon: Users2 },
+  { to: '/sme-guide',           label: 'SME Management',          icon: Users2 },
+  { to: '/project-management', label: 'Project Management',      icon: GanttChart },
 ]
 
 const CONTEXT_LINKS = [

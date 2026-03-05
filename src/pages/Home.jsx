@@ -22,6 +22,7 @@ import {
   GitBranch,
   Users2,
   Building2,
+  GanttChart,
   TrendingUp,
   Briefcase,
   Zap,
@@ -42,7 +43,7 @@ const HERO_STATS = [
   { value: '5',   label: 'Full Phases',     sub: 'Checklists, deep-dives & case studies' },
   { value: '86+', label: 'Glossary Terms',  sub: 'Plain-English ID definitions' },
   { value: '14',  label: 'Templates',       sub: 'Copy-ready, zero formatting needed' },
-  { value: '8',   label: 'Tools & Guides',   sub: 'Objectives, quizzes, scenario guide & more' },
+  { value: '9',   label: 'Tools & Guides',   sub: 'Objectives, quizzes, scenario guide & more' },
 ]
 
 const ICON_MAP = {
@@ -119,6 +120,14 @@ const TOOLS = [
     icon: Users2,
     style: { backgroundColor: '#FFF1F2', borderColor: '#FECDD3', color: '#881337' },
     iconBg: '#BE185D',
+  },
+  {
+    to: '/project-management',
+    label: 'Project Management for IDs',
+    desc: 'Scoping, estimating with Chapman Alliance ratios, kickoff meetings, version control, and when to say no',
+    icon: GanttChart,
+    style: { backgroundColor: '#ECFDF5', borderColor: '#6EE7B7', color: '#064E3B' },
+    iconBg: '#059669',
   },
 ]
 

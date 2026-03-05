@@ -20,6 +20,7 @@ import ScenarioGuidePage from './pages/ScenarioGuidePage'
 import QuizPage from './pages/QuizPage'
 import SMEGuidePage from './pages/SMEGuidePage'
 import FederalIDPage from './pages/FederalIDPage'
+import ProjectManagementPage from './pages/ProjectManagementPage'
 import AboutPage from './pages/AboutPage'
 
 function NotFound() {
@@ -59,6 +60,7 @@ export default function App() {
               <Route path="quiz" element={<QuizPage />} />
               <Route path="sme-guide" element={<SMEGuidePage />} />
               <Route path="federal-id" element={<FederalIDPage />} />
+              <Route path="project-management" element={<ProjectManagementPage />} />
               <Route path="about" element={<AboutPage />} />
               <Route path="*" element={<NotFound />} />
             </Route>
