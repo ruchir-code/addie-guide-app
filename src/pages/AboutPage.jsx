@@ -36,39 +36,31 @@ const CREDENTIALS = [
 ]
 
 const MILITARY_HONORS = [
-  { label: 'Joint Service Achievement Medal',              sub: 'U.S. Army · Feb 2004' },
-  { label: 'Joint Service Commendation Medal',             sub: 'U.S. Army · Dec 2002' },
-  { label: 'Meritorious Unit Commendation',                sub: 'U.S. Army · Dec 2002' },
-  { label: 'Army Commendation Medal',                      sub: 'U.S. Army · Jun 2002' },
-  { label: 'Army Achievement Medal',                       sub: 'U.S. Army' },
-  { label: 'Army Good Conduct Medal',                      sub: 'U.S. Army Reserves' },
-  { label: 'Army Reserves Components Overseas Training Medal', sub: 'U.S. Army Reserves' },
-  { label: 'Operation Enduring Freedom Campaign Medal',    sub: 'U.S. Army' },
-  { label: 'Operation Iraqi Freedom Campaign Medal',       sub: 'U.S. Army' },
+  {
+    label: 'U.S. Army service awards and campaign medals',
+    sub: 'Multiple decorations for service, including campaigns in Operation Enduring Freedom and Operation Iraqi Freedom',
+  },
 ]
 
 const CIVILIAN_HONORS = [
   { label: 'Achievement Medal for Civilian Service', sub: 'Department of the Army · Feb 2013' },
 ]
 
-const ACADEMIC_HONORS = [
-  { label: 'Pi Delta Phi', sub: 'National French Honor Society' },
-]
-
 // ── Content changelog ─────────────────────────────────────────────────────────
 const CHANGELOG = [
-  { section: 'Evaluation Frameworks',         updated: 'March 2026' },
-  { section: 'Performance Consulting',         updated: 'March 2026' },
-  { section: 'Transfer of Learning',           updated: 'March 2026' },
-  { section: 'ADDIE Phase Pages (all 5)',      updated: 'February 2026' },
-  { section: 'Instructional Models',           updated: 'February 2026' },
-  { section: 'Learning Theories',              updated: 'February 2026' },
-  { section: "Bloom's Taxonomy",               updated: 'February 2026' },
-  { section: 'Template Library (14 templates)',updated: 'February 2026' },
-  { section: 'Glossary (86+ terms)',           updated: 'February 2026' },
-  { section: 'Assessment Builder',             updated: 'February 2026' },
-  { section: 'Media & Format Guide',           updated: 'January 2026' },
-  { section: 'Objectives Builder',             updated: 'January 2026' },
+  { section: 'AI in Instructional Design',         updated: 'March 2026' },
+  { section: 'Evaluation Frameworks',              updated: 'March 2026' },
+  { section: 'Performance Consulting',             updated: 'March 2026' },
+  { section: 'Transfer of Learning',               updated: 'March 2026' },
+  { section: 'ADDIE Phase Pages (all 5)',          updated: 'February 2026' },
+  { section: 'Instructional Models',               updated: 'February 2026' },
+  { section: 'Learning Theories',                  updated: 'February 2026' },
+  { section: "Bloom's Taxonomy",                   updated: 'February 2026' },
+  { section: 'Template Library (14 templates)',    updated: 'February 2026' },
+  { section: 'Glossary (86+ terms)',               updated: 'February 2026' },
+  { section: 'Assessment Builder',                 updated: 'February 2026' },
+  { section: 'Media & Format Guide',               updated: 'January 2026' },
+  { section: 'Objectives Builder',                 updated: 'January 2026' },
 ]
 
 // ── Reusable section header ───────────────────────────────────────────────────
@@ -129,24 +121,22 @@ export default function AboutPage() {
         >
           <p>
             addieguide.com is a free reference and tools platform for beginning and intermediate
-            instructional designers. It covers the full ADDIE process — Analysis through Evaluation
-            — with checklists, case studies, content-level toggles for beginner and intermediate
-            readers, and a running case study through a fictional organization called Meridian
-            Manufacturing.
+            instructional designers — the kind of resource I wished existed when I was starting out.
+            It covers the full ADDIE process, Analysis through Evaluation, with checklists,
+            content-level toggles for beginner and intermediate readers, and a running case study
+            through a fictional organization called Meridian Manufacturing.
           </p>
           <p>
-            The foundational pages (Learning Theories, Bloom's Taxonomy, Instructional Models,
+            The Foundations pages (Learning Theories, Bloom's Taxonomy, Instructional Models,
             Evaluation Frameworks, Performance Consulting, Transfer of Learning) exist because
-            early IDs often know the steps of ADDIE without understanding why those steps work
-            the way they do. The tools (Objectives Builder, Assessment Builder, Template Library,
-            Media Guide, Glossary) exist because practitioners need to produce real deliverables
-            under time pressure and don't always have a mentor nearby.
+            early IDs often know the steps of ADDIE without understanding why those steps work.
+            The tools (Objectives Builder, Assessment Builder, Template Library, Media Guide,
+            Glossary) exist because practitioners need to produce real deliverables under time
+            pressure and don't always have a mentor nearby.
           </p>
           <p>
-            The target audience is IDs with 0–5 years of experience and experienced practitioners
-            who want a fast, reliable reference. The site is designed to be used during actual
-            project work — not as a study guide, not as a course, but as something you have open
-            in a browser tab while you're building.
+            The site is designed to be used during actual project work — not as a study guide,
+            not as a course, but as something you have open in a browser tab while you're building.
           </p>
         </div>
       </div>
@@ -164,21 +154,20 @@ export default function AboutPage() {
             Security Excellence (CDSE) at the Department of Defense.
           </p>
           <p>
-            I've been in training and instructional design since 2009. Before that, eight years
-            in the U.S. Army: Reserves out of Atlanta from 1996 to 2001, then Military
-            Intelligence on active deployment from 2002 to 2004. The Army didn't teach me ADDIE.
-            It did teach me to care about what the training actually needs to do, and to have
-            little patience for anything that stands between a learner and that.
+            I've been in training and instructional design since 2005. Before that, eight years
+            in the U.S. Army — Reserves out of Atlanta starting in 1996, then Military Intelligence
+            on active deployment through 2004. The Army didn't teach me ADDIE. It taught me to
+            care about what the training actually needs to do, and to have very little patience
+            for anything that gets between a learner and that outcome.
           </p>
           <p>
-            When I transitioned out, I went to Fort Huachuca as a DoD Training Manager, running
-            a team of 15-plus contractors and two government civilians. Over four years I trained
-            more than 2,000 students from across U.S. military branches. Booz Allen Hamilton
-            followed, where I designed HUMINT courses and trained 500-plus soldiers. At CGI I
-            delivered a classified computer-based training program that cleared a federal
-            government training advisory board — not a credential most ISDs have. CACI came
-            next; I was pulled from a pool of more than 50 consultants for a sensitive sub-project
-            on the Army's IPPS-A HR system. Then DTS, then Team Carney starting in 2020.
+            When I transitioned out, I spent four years at Fort Huachuca as a DoD Training Manager
+            — a team of 15-plus contractors, two government civilians, and more than 2,000 students
+            from across every U.S. military branch. Booz Allen Hamilton came next, designing HUMINT
+            courses and training 500-plus soldiers. At CGI I delivered a classified CBT program
+            through a federal government training advisory board — not something most ISDs get to
+            put on a résumé. CACI pulled me from a pool of over 50 consultants for a sensitive
+            sub-project on the Army's IPPS-A HR system. Then DTS, and Team Carney starting in 2020.
           </p>
           <p>
             Right now I support a three-person team at CDSE managing 22 active courses and five
@@ -198,18 +187,17 @@ export default function AboutPage() {
               <p>
                 I started experimenting with large language models, open-source local models,
                 and RAG workflows before most people had heard of ChatGPT. I ran a personal AI
-                lab on my own hardware, testing configurations across platforms. I wasn't trying
-                to become an AI person — I wanted to know what these tools could do before
+                lab on my own hardware, testing configurations across platforms — not to become
+                an AI person, but to understand what these tools could actually do before
                 trusting them with real work.
               </p>
               <p>
-                The difference between using AI as a search bar and using it as a design
-                accelerator is mostly accumulated experience with where it fails. Most
-                professionals who pick up AI tools take the first output and move on. In
-                instructional design that's a quality problem. A Bloom's-misaligned learning
-                objective reads fine in AI-generated prose. You won't catch it if you don't
-                know what to look for, and if you miss it before it goes to the SME, you're
-                rewriting it later.
+                The gap between using AI as a search bar and using it as a design accelerator
+                comes down to knowing where it fails. Most practitioners who pick up AI tools
+                take the first output and move on. In instructional design, that's a quality
+                problem. A Bloom's-misaligned objective reads fine in generated prose. You won't
+                catch it if you don't know what to look for — and if you miss it before it
+                reaches the SME, you're rewriting it later.
               </p>
               <p>
                 At CDSE I've built custom AI personas calibrated to the team's standards and
@@ -235,8 +223,8 @@ export default function AboutPage() {
             Outside this work, I co-founded the Indian Classical Music School of Columbia
             (ICMSC) with my wife Dhara, who is the lead teacher and the reason it exists. I
             run the operations side: LMS, AV, and coordination. We also co-produce SwarMatters,
-            a Hindustani classical music YouTube channel (17.7K subscribers as of the writing of this page). I write on Substack about Hindu and
-            Indian American identity and veteran advocacy.
+            a Hindustani classical music YouTube channel with over 17,000 subscribers. I write
+            on Substack about Hindu and Indian American identity and veteran advocacy.
           </p>
         </div>
       </div>
@@ -299,7 +287,7 @@ export default function AboutPage() {
           <span className="w-1 h-4 rounded-full shrink-0" style={{ backgroundColor: '#B45309' }} />
           <p className="text-xs font-bold uppercase tracking-widest" style={{ color: '#6B7280' }}>Civilian Honor</p>
         </div>
-        <div className="space-y-2 mb-6">
+        <div className="space-y-2">
           {CIVILIAN_HONORS.map((c, i) => (
             <div
               key={i}
@@ -309,32 +297,6 @@ export default function AboutPage() {
               <span
                 className="mt-0.5 w-1.5 h-1.5 rounded-full shrink-0"
                 style={{ backgroundColor: '#B45309' }}
-              />
-              <div>
-                <p className="text-sm font-semibold text-gray-800">{c.label}</p>
-                {c.sub && (
-                  <p className="text-xs text-gray-500 mt-0.5">{c.sub}</p>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Academic honors */}
-        <div className="flex items-center gap-2 mb-2">
-          <span className="w-1 h-4 rounded-full shrink-0" style={{ backgroundColor: '#0369A1' }} />
-          <p className="text-xs font-bold uppercase tracking-widest" style={{ color: '#6B7280' }}>Academic Honors</p>
-        </div>
-        <div className="space-y-2">
-          {ACADEMIC_HONORS.map((c, i) => (
-            <div
-              key={i}
-              className="flex items-start gap-3 px-4 py-3 rounded-lg border"
-              style={{ backgroundColor: '#F0F9FF', borderColor: '#BAE6FD' }}
-            >
-              <span
-                className="mt-0.5 w-1.5 h-1.5 rounded-full shrink-0"
-                style={{ backgroundColor: '#0369A1' }}
               />
               <div>
                 <p className="text-sm font-semibold text-gray-800">{c.label}</p>
