@@ -71,10 +71,11 @@ const CHANGELOG = [
 ]
 
 // ── Reusable section header ───────────────────────────────────────────────────
-function SectionHeading({ icon: Icon, label }) {
+function SectionHeading({ icon: Icon, label, color = '#7C3AED' }) {
   return (
-    <div className="flex items-center gap-2 mb-5">
-      <Icon size={18} style={{ color: '#475569' }} className="shrink-0" />
+    <div className="flex items-center gap-3 mb-5">
+      <span className="w-1 h-6 rounded-full shrink-0" style={{ backgroundColor: color }} />
+      <Icon size={18} style={{ color }} className="shrink-0" />
       <h2 className="text-lg font-extrabold text-gray-900 tracking-tight">{label}</h2>
     </div>
   )
@@ -116,7 +117,10 @@ export default function AboutPage() {
       {/* ── What this site is ─────────────────────────────────────────────── */}
       <div className="mb-10">
         <SectionHeading icon={BookOpen} label="What addieguide.com is" />
-        <div className="space-y-4 text-gray-700 leading-relaxed text-sm">
+        <div
+          className="space-y-4 text-gray-700 leading-relaxed text-sm rounded-xl border px-5 py-5"
+          style={{ backgroundColor: '#F5F3FF', borderColor: '#DDD6FE' }}
+        >
           <p>
             addieguide.com is a free reference and tools platform for beginning and intermediate
             instructional designers. It covers the full ADDIE process — Analysis through Evaluation
@@ -180,12 +184,12 @@ export default function AboutPage() {
           {/* AI section */}
           <div
             className="rounded-xl border px-5 py-5"
-            style={{ backgroundColor: '#F8FAFC', borderColor: '#E2E8F0' }}
+            style={{ backgroundColor: '#EEF2FF', borderColor: '#C7D2FE' }}
           >
-            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">
+            <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4338CA' }}>
               On AI in instructional design
             </p>
-            <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+            <div className="space-y-3 text-sm leading-relaxed" style={{ color: '#1E1B4B' }}>
               <p>
                 I started experimenting with large language models, open-source local models,
                 and RAG workflows before most people had heard of ChatGPT. I ran a personal AI
@@ -263,15 +267,16 @@ export default function AboutPage() {
         </div>
 
         {/* Military honors */}
-        <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-          Military Honors
-        </p>
+        <div className="flex items-center gap-2 mb-2">
+          <span className="w-1 h-4 rounded-full shrink-0" style={{ backgroundColor: '#DC2626' }} />
+          <p className="text-xs font-bold uppercase tracking-widest" style={{ color: '#6B7280' }}>Military Honors</p>
+        </div>
         <div className="space-y-2 mb-6">
           {MILITARY_HONORS.map((c, i) => (
             <div
               key={i}
               className="flex items-start gap-3 px-4 py-3 rounded-lg border"
-              style={{ backgroundColor: '#F8FAFC', borderColor: '#E2E8F0' }}
+              style={{ backgroundColor: '#FEF2F2', borderColor: '#FECACA' }}
             >
               <span
                 className="mt-0.5 w-1.5 h-1.5 rounded-full shrink-0"
@@ -288,15 +293,16 @@ export default function AboutPage() {
         </div>
 
         {/* Civilian honor */}
-        <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-          Civilian Honor
-        </p>
+        <div className="flex items-center gap-2 mb-2">
+          <span className="w-1 h-4 rounded-full shrink-0" style={{ backgroundColor: '#B45309' }} />
+          <p className="text-xs font-bold uppercase tracking-widest" style={{ color: '#6B7280' }}>Civilian Honor</p>
+        </div>
         <div className="space-y-2 mb-6">
           {CIVILIAN_HONORS.map((c, i) => (
             <div
               key={i}
               className="flex items-start gap-3 px-4 py-3 rounded-lg border"
-              style={{ backgroundColor: '#F8FAFC', borderColor: '#E2E8F0' }}
+              style={{ backgroundColor: '#FFFBEB', borderColor: '#FDE68A' }}
             >
               <span
                 className="mt-0.5 w-1.5 h-1.5 rounded-full shrink-0"
@@ -313,15 +319,16 @@ export default function AboutPage() {
         </div>
 
         {/* Academic honors */}
-        <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-          Academic Honors
-        </p>
+        <div className="flex items-center gap-2 mb-2">
+          <span className="w-1 h-4 rounded-full shrink-0" style={{ backgroundColor: '#0369A1' }} />
+          <p className="text-xs font-bold uppercase tracking-widest" style={{ color: '#6B7280' }}>Academic Honors</p>
+        </div>
         <div className="space-y-2">
           {ACADEMIC_HONORS.map((c, i) => (
             <div
               key={i}
               className="flex items-start gap-3 px-4 py-3 rounded-lg border"
-              style={{ backgroundColor: '#F8FAFC', borderColor: '#E2E8F0' }}
+              style={{ backgroundColor: '#F0F9FF', borderColor: '#BAE6FD' }}
             >
               <span
                 className="mt-0.5 w-1.5 h-1.5 rounded-full shrink-0"
@@ -342,7 +349,7 @@ export default function AboutPage() {
 
       {/* ── Editorial standards ───────────────────────────────────────────── */}
       <div className="mb-10">
-        <SectionHeading icon={Shield} label="Editorial standards" />
+        <SectionHeading icon={Shield} label="Editorial standards" color="#0369A1" />
         <p className="text-sm text-gray-600 leading-relaxed mb-5">
           addieguide.com is a practitioner resource, not a media property. These standards
           govern how content is developed and maintained.
@@ -352,9 +359,9 @@ export default function AboutPage() {
             <div
               key={i}
               className="rounded-xl border px-4 py-4"
-              style={{ backgroundColor: '#F8FAFC', borderColor: '#E2E8F0' }}
+              style={{ backgroundColor: '#F8FAFC', borderColor: '#E2E8F0', borderLeftColor: '#7C3AED', borderLeftWidth: '3px' }}
             >
-              <p className="text-sm font-bold text-gray-800 mb-1">{item.label}</p>
+              <p className="text-sm font-bold mb-1" style={{ color: '#5B21B6' }}>{item.label}</p>
               <p className="text-sm text-gray-600 leading-relaxed">{item.body}</p>
             </div>
           ))}
@@ -365,7 +372,7 @@ export default function AboutPage() {
 
       {/* ── Changelog ─────────────────────────────────────────────────────── */}
       <div className="mb-10">
-        <SectionHeading icon={Clock} label="Content changelog" />
+        <SectionHeading icon={Clock} label="Content changelog" color="#059669" />
         <p className="text-sm text-gray-500 mb-4 leading-relaxed">
           Last major content update per section. Ongoing refinements (wording, fixes) are
           not logged here.
@@ -373,7 +380,7 @@ export default function AboutPage() {
         <div className="rounded-xl border overflow-hidden" style={{ borderColor: '#E2E8F0' }}>
           <table className="w-full text-sm">
             <thead>
-              <tr style={{ backgroundColor: '#F1F5F9' }}>
+              <tr style={{ backgroundColor: '#EDE9FE' }}>
                 <th className="text-left px-4 py-2.5 text-xs font-bold text-gray-500 uppercase tracking-wider">
                   Section
                 </th>
@@ -398,7 +405,7 @@ export default function AboutPage() {
 
       {/* ── Contact / contribute ──────────────────────────────────────────── */}
       <div className="mb-4">
-        <SectionHeading icon={Mail} label="Suggest an addition or report an error" />
+        <SectionHeading icon={Mail} label="Suggest an addition or report an error" color="#C2410C" />
         <p className="text-sm text-gray-600 leading-relaxed mb-5">
           If you find an error, a gap, or a topic that should be covered, I want to know.
           This site improves because practitioners use it and tell me what's missing.
