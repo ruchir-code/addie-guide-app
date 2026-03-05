@@ -31,9 +31,27 @@ const CREDENTIALS = [
   { label: 'Generative AI for Educators', sub: 'Google' },
   { label: 'Prompt Engineering for ChatGPT', sub: 'Vanderbilt University' },
   { label: 'SCRUM Master Accredited Certificate', sub: '' },
-  { label: 'Screencasting Fundamentals', sub: '' },
   { label: 'U.S. Army Veteran, Military Intelligence', sub: '1996–2004, including combat deployments' },
-  { label: 'Civilian honors', sub: 'Achievement Medal for Civilian Service · Joint Service Commendation Medal · Army Commendation Medal' },
+]
+
+const MILITARY_HONORS = [
+  { label: 'Joint Service Achievement Medal',              sub: 'U.S. Army · Feb 2004' },
+  { label: 'Joint Service Commendation Medal',             sub: 'U.S. Army · Dec 2002' },
+  { label: 'Meritorious Unit Commendation',                sub: 'U.S. Army · Dec 2002' },
+  { label: 'Army Commendation Medal',                      sub: 'U.S. Army · Jun 2002' },
+  { label: 'Army Achievement Medal',                       sub: 'U.S. Army' },
+  { label: 'Army Good Conduct Medal',                      sub: 'U.S. Army Reserves' },
+  { label: 'Army Reserves Components Overseas Training Medal', sub: 'U.S. Army Reserves' },
+  { label: 'Operation Enduring Freedom Campaign Medal',    sub: 'U.S. Army' },
+  { label: 'Operation Iraqi Freedom Campaign Medal',       sub: 'U.S. Army' },
+]
+
+const CIVILIAN_HONORS = [
+  { label: 'Achievement Medal for Civilian Service', sub: 'Department of the Army · Feb 2013' },
+]
+
+const ACADEMIC_HONORS = [
+  { label: 'Pi Delta Phi', sub: 'National French Honor Society' },
 ]
 
 // ── Content changelog ─────────────────────────────────────────────────────────
@@ -208,7 +226,7 @@ export default function AboutPage() {
             Outside this work, I co-founded the Indian Classical Music School of Columbia
             (ICMSC) with my wife Dhara, who is the lead teacher and the reason it exists. I
             run the operations side: LMS, AV, and coordination. We also co-produce SwarMatters,
-            a Hindustani classical music YouTube channel. I write on Substack about Hindu and
+            a Hindustani classical music YouTube channel (17.7K subscribers as of the writing of this page). I write on Substack about Hindu and
             Indian American identity and veteran advocacy.
           </p>
           <p className="text-gray-500 text-xs">
@@ -222,7 +240,8 @@ export default function AboutPage() {
       {/* ── Credentials ───────────────────────────────────────────────────── */}
       <div className="mb-10">
         <SectionHeading icon={Award} label="Credentials" />
-        <div className="space-y-2">
+
+        <div className="space-y-2 mb-6">
           {CREDENTIALS.map((c, i) => (
             <div
               key={i}
@@ -232,6 +251,81 @@ export default function AboutPage() {
               <span
                 className="mt-0.5 w-1.5 h-1.5 rounded-full shrink-0"
                 style={{ backgroundColor: '#7C3AED' }}
+              />
+              <div>
+                <p className="text-sm font-semibold text-gray-800">{c.label}</p>
+                {c.sub && (
+                  <p className="text-xs text-gray-500 mt-0.5">{c.sub}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Military honors */}
+        <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+          Military Honors
+        </p>
+        <div className="space-y-2 mb-6">
+          {MILITARY_HONORS.map((c, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-3 px-4 py-3 rounded-lg border"
+              style={{ backgroundColor: '#F8FAFC', borderColor: '#E2E8F0' }}
+            >
+              <span
+                className="mt-0.5 w-1.5 h-1.5 rounded-full shrink-0"
+                style={{ backgroundColor: '#DC2626' }}
+              />
+              <div>
+                <p className="text-sm font-semibold text-gray-800">{c.label}</p>
+                {c.sub && (
+                  <p className="text-xs text-gray-500 mt-0.5">{c.sub}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Civilian honor */}
+        <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+          Civilian Honor
+        </p>
+        <div className="space-y-2 mb-6">
+          {CIVILIAN_HONORS.map((c, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-3 px-4 py-3 rounded-lg border"
+              style={{ backgroundColor: '#F8FAFC', borderColor: '#E2E8F0' }}
+            >
+              <span
+                className="mt-0.5 w-1.5 h-1.5 rounded-full shrink-0"
+                style={{ backgroundColor: '#B45309' }}
+              />
+              <div>
+                <p className="text-sm font-semibold text-gray-800">{c.label}</p>
+                {c.sub && (
+                  <p className="text-xs text-gray-500 mt-0.5">{c.sub}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Academic honors */}
+        <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+          Academic Honors
+        </p>
+        <div className="space-y-2">
+          {ACADEMIC_HONORS.map((c, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-3 px-4 py-3 rounded-lg border"
+              style={{ backgroundColor: '#F8FAFC', borderColor: '#E2E8F0' }}
+            >
+              <span
+                className="mt-0.5 w-1.5 h-1.5 rounded-full shrink-0"
+                style={{ backgroundColor: '#0369A1' }}
               />
               <div>
                 <p className="text-sm font-semibold text-gray-800">{c.label}</p>
