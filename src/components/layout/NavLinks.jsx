@@ -17,6 +17,7 @@ import {
   TrendingUp,
   Briefcase,
   Zap,
+  Bot,
   User,
 } from 'lucide-react'
 import { PHASES } from '../../utils/colors'
@@ -43,6 +44,7 @@ const FOUNDATION_LINKS = [
   { to: '/evaluation-frameworks',   label: 'Evaluation Frameworks',    icon: TrendingUp,    color: '#0369A1' },
   { to: '/performance-consulting',  label: 'Performance Consulting',   icon: Briefcase,     color: '#C2410C' },
   { to: '/transfer',                label: 'Transfer of Learning',     icon: Zap,           color: '#7C3AED' },
+  { to: '/ai-in-id',               label: 'AI in ID',                 icon: Bot,           color: '#6366F1' },
 ]
 
 export default function NavLinks({ onNavigate }) {
