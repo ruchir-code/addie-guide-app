@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { FileText, ChevronDown, ChevronUp } from 'lucide-react'
+import SEOHead from '../components/SEOHead'
 import templates from '../data/templates.json'
 import CopyButton from '../components/ui/CopyButton'
 import PhaseBadge from '../components/ui/PhaseBadge'
@@ -13,7 +14,7 @@ function TemplateCard({ template }) {
   const color = PHASE_COLORS[template.phase]?.color
 
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden bg-white hover:shadow-md transition-shadow duration-150">
+      <div className="border border-gray-200 rounded-xl overflow-hidden bg-white hover:shadow-md transition-shadow duration-150">
       <div className="px-4 py-4">
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1 min-w-0">
@@ -62,6 +63,11 @@ export default function TemplatesPage() {
 
   return (
     <div>
+      <SEOHead
+        title="Template Library"
+        description="14 free instructional design templates: ADDIE project plans, lesson plans, storyboard templates, and more. Copy-ready for immediate use."
+        path="/templates"
+      />
       <div className="mb-8">
         <h1 className="text-3xl font-extrabold text-gray-900 mb-2">
           Template Library

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEOHead from '../components/SEOHead'
 import { Link } from 'react-router-dom'
 import {
   GraduationCap,
@@ -40,7 +41,7 @@ function LevelCard({ level }) {
   const [expanded, setExpanded] = useState(false)
 
   return (
-    <div
+      <div
       id={`level-${level.slug}`}
       className="border rounded-xl overflow-hidden bg-white transition-shadow duration-150"
       style={{
@@ -207,6 +208,11 @@ function LevelCard({ level }) {
 export default function BloomPage() {
   return (
     <div>
+      <SEOHead
+        title="Bloom's Taxonomy"
+        description="All 6 levels of Bloom's Taxonomy with action verbs, assessment examples, and instructional design implications. The reference IDs actually use."
+        path="/bloom"
+      />
       {/* ── Header banner ────────────────────────────────────────────── */}
       <div
         className="rounded-2xl px-6 py-8 mb-8 relative overflow-hidden"

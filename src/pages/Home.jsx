@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
+import SEOHead from '../components/SEOHead'
 import {
   Search,
   Layers,
@@ -146,6 +147,10 @@ const FOUNDATIONS = [
 export default function Home() {
   return (
     <div>
+      <SEOHead
+        description="A free practitioner-first reference for instructional designers. Covers the full ADDIE process, Bloom's Taxonomy, learning theories, objectives builder, and ID tools — all in one place."
+        path="/"
+      />
       {/* ── Hero ─────────────────────────────────────────────────────── */}
       <div
         className="rounded-2xl mb-8 relative overflow-hidden flex flex-col"

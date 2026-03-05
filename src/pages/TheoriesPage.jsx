@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEOHead from '../components/SEOHead'
 import { Brain, ChevronDown, ChevronUp, Lightbulb, CheckCircle2 } from 'lucide-react'
 import theories from '../data/theories.json'
 
@@ -11,7 +12,7 @@ const TEAL = {
 
 function Section({ title, color, children }) {
   return (
-    <div className="mb-5">
+      <div className="mb-5">
       <div className="flex items-center gap-2 mb-2">
         <span className="w-1 h-5 rounded-full shrink-0" style={{ backgroundColor: color }} />
         <h3 className="text-sm font-extrabold text-gray-800 uppercase tracking-wide">{title}</h3>
@@ -210,6 +211,11 @@ function TheoryCard({ theory }) {
 export default function TheoriesPage() {
   return (
     <div>
+      <SEOHead
+        title="Learning Theories"
+        description="Practitioner-focused summaries of behaviorism, cognitivism, constructivism, and 4 more learning theories every instructional designer should know."
+        path="/theories"
+      />
       {/* ── Header banner ────────────────────────────────────────────── */}
       <div
         className="rounded-2xl px-6 py-8 mb-8 relative overflow-hidden"

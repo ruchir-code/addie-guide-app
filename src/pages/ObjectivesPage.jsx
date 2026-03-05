@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import SEOHead from '../components/SEOHead'
 import bloomVerbs from '../data/bloom-verbs.json'
 import CopyButton from '../components/ui/CopyButton'
 import {
@@ -153,7 +154,7 @@ function clip(text, max = 55) {
 
 function BloomPicker({ value, onChange }) {
   return (
-    <div>
+      <div>
       <div className="flex items-center justify-between mb-2">
         <label className="block text-sm font-semibold text-gray-700">
           Bloom's Taxonomy Level
@@ -1234,6 +1235,11 @@ export default function ObjectivesPage() {
 
   return (
     <div>
+      <SEOHead
+        title="Learning Objectives Builder"
+        description="Build learning objectives from CLO to TLO to ELO with Bloom's alignment checking. Free interactive tool for instructional designers."
+        path="/objectives"
+      />
       {/* Page header */}
       <div className="mb-6">
         <h1 className="text-3xl font-extrabold text-gray-900 mb-2">

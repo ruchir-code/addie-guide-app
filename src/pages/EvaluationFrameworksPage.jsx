@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEOHead from '../components/SEOHead'
 import { TrendingUp, ChevronDown, ChevronUp, Lightbulb, CheckCircle2, AlertTriangle } from 'lucide-react'
 import frameworks from '../data/evaluation-frameworks.json'
 
@@ -11,7 +12,7 @@ const COLOR = {
 
 function Section({ title, color, children }) {
   return (
-    <div className="mb-5">
+      <div className="mb-5">
       <div className="flex items-center gap-2 mb-2">
         <span className="w-1 h-5 rounded-full shrink-0" style={{ backgroundColor: color }} />
         <h3 className="text-sm font-extrabold text-gray-800 uppercase tracking-wide">{title}</h3>
@@ -192,6 +193,11 @@ function FrameworkCard({ fw }) {
 export default function EvaluationFrameworksPage() {
   return (
     <div>
+      <SEOHead
+        title="Evaluation Frameworks"
+        description="Practitioner guide to Kirkpatrick's 4 levels, Phillips ROI, and the CIPP model. Choose and apply training evaluation frameworks that fit your context."
+        path="/evaluation-frameworks"
+      />
       {/* Header */}
       <div
         className="rounded-2xl px-6 py-8 mb-8 relative overflow-hidden"

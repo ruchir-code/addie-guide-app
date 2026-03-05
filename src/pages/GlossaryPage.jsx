@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Search, ExternalLink } from 'lucide-react'
+import SEOHead from '../components/SEOHead'
 import glossary from '../data/glossary.json'
 import PhaseBadge from '../components/ui/PhaseBadge'
 import { PHASE_COLORS, PHASES } from '../utils/colors'
@@ -11,12 +12,16 @@ const SORTED_GLOSSARY = [...glossary].sort((a, b) =>
   a.term.localeCompare(b.term)
 )
 
+function slugify(term) {
+  return term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '')
+}
+
 function GlossaryTerm({ entry }) {
   const phaseSlug = entry.phaseLink?.replace('/', '') || ''
   const isPhase = PHASE_SLUGS.includes(phaseSlug)
 
   return (
-    <div className="py-4 border-b border-gray-100 last:border-0">
+    <div id={slugify(entry.term)} className="py-4 border-b border-gray-100 last:border-0">
       <div className="flex items-start justify-between gap-4 mb-1.5">
         <h3 className="font-bold text-gray-900 text-base">{entry.term}</h3>
         {entry.phaseLink && (
@@ -83,6 +88,11 @@ export default function GlossaryPage() {
 
   return (
     <div>
+      <SEOHead
+        title="ID Glossary"
+        description="86+ plain-English definitions for instructional design terms. From ADDIE to Zone of Proximal Development — the glossary practitioners actually use."
+        path="/glossary"
+      />
       <div className="mb-8">
         <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Glossary</h1>
         <p className="text-gray-500 text-base max-w-xl">

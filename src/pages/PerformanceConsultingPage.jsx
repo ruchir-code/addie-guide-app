@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEOHead from '../components/SEOHead'
 import { Briefcase, ChevronDown, ChevronUp, Lightbulb, CheckCircle2, ArrowRight } from 'lucide-react'
 import topics from '../data/performance-consulting.json'
 
@@ -11,7 +12,7 @@ const COLOR = {
 
 function Section({ title, color, children }) {
   return (
-    <div className="mb-5">
+      <div className="mb-5">
       <div className="flex items-center gap-2 mb-2">
         <span className="w-1 h-5 rounded-full shrink-0" style={{ backgroundColor: color }} />
         <h3 className="text-sm font-extrabold text-gray-800 uppercase tracking-wide">{title}</h3>
@@ -358,6 +359,11 @@ function TopicCard({ topic }) {
 export default function PerformanceConsultingPage() {
   return (
     <div>
+      <SEOHead
+        title="Performance Consulting"
+        description="When training isn't the answer. Gilbert's BEM, root cause analysis, and non-training interventions for instructional designers."
+        path="/performance-consulting"
+      />
       {/* Header */}
       <div
         className="rounded-2xl px-6 py-8 mb-8 relative overflow-hidden"

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEOHead from '../components/SEOHead'
 import {
   ClipboardCheck,
   BookOpen,
@@ -237,7 +238,7 @@ function generateTemplate(objectiveText, parsed, bloomLevel, purposeId, formatId
 
 function StepHeader({ num, label, done }) {
   return (
-    <div className="flex items-center gap-3 mb-4">
+      <div className="flex items-center gap-3 mb-4">
       <div
         className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shrink-0"
         style={{
@@ -277,6 +278,11 @@ export default function AssessmentBuilderPage() {
 
   return (
     <div>
+      <SEOHead
+        title="Assessment Builder"
+        description="Build Bloom's-aligned assessments in 4 steps: match your objective, cognitive level, assessment purpose, and item format. Free tool for IDs."
+        path="/assessment-builder"
+      />
       {/* ── Banner ──────────────────────────────────────────── */}
       <div
         className="rounded-2xl px-6 py-8 mb-8 relative overflow-hidden"

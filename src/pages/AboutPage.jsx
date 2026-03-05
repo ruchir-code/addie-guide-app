@@ -1,3 +1,4 @@
+import SEOHead from '../components/SEOHead'
 import { Info, Shield, Mail, ExternalLink, BookOpen, Award, Clock } from 'lucide-react'
 
 // ── Editorial standards ──────────────────────────────────────────────────────
@@ -73,7 +74,7 @@ const CHANGELOG = [
 // ── Reusable section header ───────────────────────────────────────────────────
 function SectionHeading({ icon: Icon, label, color = '#7C3AED' }) {
   return (
-    <div className="flex items-center gap-3 mb-5">
+      <div className="flex items-center gap-3 mb-5">
       <span className="w-1 h-6 rounded-full shrink-0" style={{ backgroundColor: color }} />
       <Icon size={18} style={{ color }} className="shrink-0" />
       <h2 className="text-lg font-extrabold text-gray-900 tracking-tight">{label}</h2>
@@ -89,6 +90,11 @@ function Divider() {
 export default function AboutPage() {
   return (
     <div>
+      <SEOHead
+        title="About"
+        description="Who built addieguide.com, the practitioner experience behind the content, editorial standards, and how to suggest additions or report errors."
+        path="/about"
+      />
 
       {/* ── Header banner ─────────────────────────────────────────────────── */}
       <div

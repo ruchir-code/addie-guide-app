@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEOHead from '../components/SEOHead'
 import { Link } from 'react-router-dom'
 import {
   Network, GitBranch, RefreshCw, FileCheck, Box, Repeat,
@@ -55,7 +56,7 @@ function ModelCard({ model }) {
   const Icon = ICON_MAP[model.icon] || GitBranch
 
   return (
-    <div
+      <div
       id={`model-${model.slug}`}
       className="rounded-xl border bg-white scroll-mt-4"
       style={{ borderColor: '#E2E8F0' }}
@@ -326,6 +327,11 @@ function DecisionGuide() {
 export default function ModelsPage() {
   return (
     <div>
+      <SEOHead
+        title="Instructional Design Models"
+        description="Compare ADDIE, SAM, Agile ID, Dick & Carey, and Kemp. Myth-busting guidance for choosing the right ID model for your project."
+        path="/models"
+      />
       {/* Header banner */}
       <div
         className="rounded-2xl px-6 py-8 mb-8 relative overflow-hidden"

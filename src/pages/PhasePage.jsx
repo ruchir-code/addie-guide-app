@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
+import SEOHead from '../components/SEOHead'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useLevel } from '../context/LevelContext'
 import Checklist from '../components/checklist/Checklist'
@@ -182,6 +183,14 @@ function AdvancedInsights({ insights }) {
   )
 }
 
+const PHASE_SEO = {
+  analysis:  { title: 'Analysis Phase',  description: 'Master the Analysis phase of ADDIE. Needs assessment, audience analysis, learning gap identification, and a full checklist for instructional designers.' },
+  design:    { title: 'Design Phase',    description: 'Write learning objectives, sequence content, and select instructional strategies. ADDIE Design phase checklist and Meridian Manufacturing case study.' },
+  develop:   { title: 'Develop Phase',   description: 'Build storyboards, prototypes, and course content. ADDIE Develop phase checklist and case study for instructional designers.' },
+  implement: { title: 'Implement Phase', description: 'Facilitator prep, pilot testing, and rollout. ADDIE Implement phase checklist and launch planning for instructional designers.' },
+  evaluate:  { title: 'Evaluate Phase',  description: 'Formative and summative evaluation, Kirkpatrick alignment, and continuous improvement. ADDIE Evaluate phase checklist for instructional designers.' },
+}
+
 export default function PhasePage() {
   const { phase } = useParams()
   const { level } = useLevel()
@@ -192,9 +201,15 @@ export default function PhasePage() {
   const { data, checklist } = entry
   const contentLevel = level === 'advanced' ? 'advanced' : 'beginner'
   const number = PHASE_NUMBERS[phase] || ''
+  const seo = PHASE_SEO[phase] || {}
 
   return (
     <div>
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        path={`/${phase}`}
+      />
       {/* ── Breadcrumb ───────────────────────────────────────────────── */}
       <nav className="flex items-center gap-1.5 text-sm mb-4">
         <Link to="/" className="text-gray-400 hover:text-gray-600 transition-colors">Home</Link>

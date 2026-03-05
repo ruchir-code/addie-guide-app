@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEOHead from '../components/SEOHead'
 import {
   Monitor, Users, Video, Zap, Film, FileText, Layers, Headphones,
   CheckCircle2, XCircle, ChevronDown, ChevronUp, RotateCcw, ArrowRight,
@@ -399,6 +400,11 @@ export default function MediaGuidePage() {
 
   return (
     <div>
+      <SEOHead
+        title="Media & Format Selection Guide"
+        description="Choose the right training delivery format. Compares e-learning, ILT, VILT, job aids, and 5 more formats with a Format Selector decision tool."
+        path="/media-guide"
+      />
       {/* Header banner */}
       <div
         className="rounded-2xl px-6 py-8 mb-8 relative overflow-hidden"
