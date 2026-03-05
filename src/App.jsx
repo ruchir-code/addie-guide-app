@@ -15,6 +15,7 @@ import AssessmentBuilderPage from './pages/AssessmentBuilderPage'
 import EvaluationFrameworksPage from './pages/EvaluationFrameworksPage'
 import PerformanceConsultingPage from './pages/PerformanceConsultingPage'
 import TransferPage from './pages/TransferPage'
+import AboutPage from './pages/AboutPage'
 
 function NotFound() {
   return (
@@ -48,6 +49,7 @@ export default function App() {
               <Route path="evaluation-frameworks" element={<EvaluationFrameworksPage />} />
               <Route path="performance-consulting" element={<PerformanceConsultingPage />} />
               <Route path="transfer" element={<TransferPage />} />
+              <Route path="about" element={<AboutPage />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

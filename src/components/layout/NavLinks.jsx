@@ -17,6 +17,7 @@ import {
   TrendingUp,
   Briefcase,
   Zap,
+  User,
 } from 'lucide-react'
 import { PHASES } from '../../utils/colors'
 
@@ -132,6 +133,18 @@ export default function NavLinks({ onNavigate }) {
           <span>{label}</span>
         </NavLink>
       ))}
+
+      <div className="mt-4 pt-3" style={{ borderTop: '1px solid #1E293B' }}>
+        <NavLink
+          to="/about"
+          className={navClass}
+          style={navStyle}
+          onClick={onNavigate}
+        >
+          <User size={18} className="shrink-0" style={{ color: '#64748B' }} />
+          <span>About</span>
+        </NavLink>
+      </div>
     </nav>
   )
 }
