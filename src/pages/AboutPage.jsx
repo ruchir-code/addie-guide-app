@@ -48,6 +48,8 @@ const CIVILIAN_HONORS = [
 
 // ── Content changelog ─────────────────────────────────────────────────────────
 const CHANGELOG = [
+  { section: 'ID Self-Assessment Quiz',             updated: 'March 2026' },
+  { section: 'Scenario Writing Guide',              updated: 'March 2026' },
   { section: 'AI in Instructional Design',         updated: 'March 2026' },
   { section: 'Evaluation Frameworks',              updated: 'March 2026' },
   { section: 'Performance Consulting',             updated: 'March 2026' },

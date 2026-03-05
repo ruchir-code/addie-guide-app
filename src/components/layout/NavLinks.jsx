@@ -14,6 +14,7 @@ import {
   Monitor,
   Network,
   ClipboardCheck,
+  ListChecks,
   TrendingUp,
   Briefcase,
   Zap,
@@ -37,6 +38,7 @@ const TOOL_LINKS = [
   { to: '/media-guide',         label: 'Media & Format Guide',    icon: Monitor },
   { to: '/assessment-builder',  label: 'Assessment Builder',      icon: ClipboardCheck },
   { to: '/scenario-guide',      label: 'Scenario Writing',        icon: GitBranch },
+  { to: '/quiz',                label: 'ID Self-Assessment',      icon: ListChecks },
 ]
 
 const FOUNDATION_LINKS = [

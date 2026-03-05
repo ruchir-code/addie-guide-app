@@ -17,6 +17,7 @@ import PerformanceConsultingPage from './pages/PerformanceConsultingPage'
 import TransferPage from './pages/TransferPage'
 import AiInIDPage from './pages/AiInIDPage'
 import ScenarioGuidePage from './pages/ScenarioGuidePage'
+import QuizPage from './pages/QuizPage'
 import AboutPage from './pages/AboutPage'
 
 function NotFound() {
@@ -53,6 +54,7 @@ export default function App() {
               <Route path="transfer" element={<TransferPage />} />
               <Route path="ai-in-id" element={<AiInIDPage />} />
               <Route path="scenario-guide" element={<ScenarioGuidePage />} />
+              <Route path="quiz" element={<QuizPage />} />
               <Route path="about" element={<AboutPage />} />
               <Route path="*" element={<NotFound />} />
             </Route>

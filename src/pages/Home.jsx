@@ -18,9 +18,12 @@ import {
   Monitor,
   Network,
   ClipboardCheck,
+  ListChecks,
+  GitBranch,
   TrendingUp,
   Briefcase,
   Zap,
+  Bot,
 } from 'lucide-react'
 import { PHASES as PHASE_DATA } from '../utils/colors'
 
@@ -37,7 +40,7 @@ const HERO_STATS = [
   { value: '5',   label: 'Full Phases',     sub: 'Checklists, deep-dives & case studies' },
   { value: '86+', label: 'Glossary Terms',  sub: 'Plain-English ID definitions' },
   { value: '14',  label: 'Templates',       sub: 'Copy-ready, zero formatting needed' },
-  { value: '5',   label: 'Built-in Tools',  sub: 'Objectives, assessment, media guide' },
+  { value: '7',   label: 'Tools & Guides',   sub: 'Objectives, quizzes, scenario guide & more' },
 ]
 
 const ICON_MAP = {
@@ -91,6 +94,22 @@ const TOOLS = [
     style: { backgroundColor: '#ECFEFF', borderColor: '#0891B2', color: '#164E63' },
     iconBg: '#0891B2',
   },
+  {
+    to: '/scenario-guide',
+    label: 'Scenario Writing Guide',
+    desc: 'Four scenario types, writing triggers and decision points, common mistakes, and a Scenario Starter Tool',
+    icon: GitBranch,
+    style: { backgroundColor: '#FFF1EE', borderColor: '#FDBA74', color: '#7C2D12' },
+    iconBg: '#C2410C',
+  },
+  {
+    to: '/quiz',
+    label: 'ID Self-Assessment',
+    desc: 'Two quizzes: identify which ADDIE phase needs work, or benchmark your level from Beginner to Senior ID',
+    icon: ListChecks,
+    style: { backgroundColor: '#F5F3FF', borderColor: '#C4B5FD', color: '#4C1D95' },
+    iconBg: '#7C3AED',
+  },
 ]
 
 const FOUNDATIONS = [
@@ -141,6 +160,14 @@ const FOUNDATIONS = [
     icon: Zap,
     style: { backgroundColor: '#F5F3FF', borderColor: '#DDD6FE', color: '#5B21B6' },
     iconBg: '#7C3AED',
+  },
+  {
+    to: '/ai-in-id',
+    label: 'AI in Instructional Design',
+    desc: 'AI at each ADDIE phase — practical prompts, ethical guardrails, and what not to outsource to a language model',
+    icon: Bot,
+    style: { backgroundColor: '#EEF2FF', borderColor: '#A5B4FC', color: '#312E81' },
+    iconBg: '#6366F1',
   },
 ]
 
