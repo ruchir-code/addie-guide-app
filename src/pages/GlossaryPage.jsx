@@ -90,7 +90,7 @@ export default function GlossaryPage() {
     <div>
       <SEOHead
         title="ID Glossary"
-        description="86+ plain-English definitions for instructional design terms. From ADDIE to Zone of Proximal Development — the glossary practitioners actually use."
+        description="150+ plain-English definitions for instructional design terms. From ADDIE to Zone of Proximal Development — the glossary practitioners actually use."
         path="/glossary"
       />
       <div

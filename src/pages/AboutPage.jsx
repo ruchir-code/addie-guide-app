@@ -62,7 +62,7 @@ const CHANGELOG = [
   { section: 'Learning Theories',                  updated: 'February 2026' },
   { section: "Bloom's Taxonomy",                   updated: 'February 2026' },
   { section: 'Template Library (14 templates)',    updated: 'February 2026' },
-  { section: 'Glossary (86+ terms)',               updated: 'February 2026' },
+  { section: 'Glossary (150+ terms)',               updated: 'March 2026' },
   { section: 'Assessment Builder',                 updated: 'February 2026' },
   { section: 'Media & Format Guide',               updated: 'January 2026' },
   { section: 'Objectives Builder',                 updated: 'January 2026' },

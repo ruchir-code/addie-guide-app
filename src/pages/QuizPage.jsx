@@ -358,7 +358,7 @@ const LEVEL_RESULTS = {
       { label: 'ADDIE Phase Pages', route: '/analysis', note: 'Start with Analysis — the most commonly skipped phase' },
       { label: "Bloom's Taxonomy", route: '/bloom', note: 'Essential for writing objectives and choosing the right assessment type' },
       { label: 'Objectives Builder', route: '/objectives', note: 'Practice writing CLOs, TLOs, and ELOs with the interactive tool' },
-      { label: 'Glossary', route: '/glossary', note: 'Build your ID vocabulary — 86+ terms, phase-tagged' },
+      { label: 'Glossary', route: '/glossary', note: 'Build your ID vocabulary — 150+ terms, phase-tagged' },
       { label: 'Learning Theories', route: '/theories', note: 'Understand the research behind why design decisions work' },
     ],
   },

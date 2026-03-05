@@ -600,5 +600,460 @@
     "definition": "A scoring guide that defines performance expectations across multiple criteria for an assessment task. Rubrics specify the levels of quality for each criterion (e.g., Exceeds / Meets / Approaching / Does Not Meet), making evaluation consistent, transparent, and defensible. Analytic rubrics score each criterion separately and provide detailed diagnostic feedback. Holistic rubrics give a single overall score based on a gestalt impression. Rubrics are essential for performance-based and authentic assessment in workplace training.",
     "phaseLink": "/evaluate",
     "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g87",
+    "term": "Action Mapping",
+    "definition": "A visual instructional design method created by Cathy Moore that starts with a business goal and works backward to identify the specific actions people need to take — filtering out all content that doesn't directly support those actions. Action mapping challenges the 'information dump' approach by asking: what do people need to do, not what do they need to know? It is particularly effective for behavior-change training where reducing non-essential content is as important as covering essential content.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g88",
+    "term": "Advance Organizer",
+    "definition": "A brief instructional device — a summary, analogy, diagram, or overview — presented before new content to activate prior knowledge and provide a conceptual framework for what learners are about to encounter. Developed by David Ausubel, advance organizers help learners connect new material to existing schemas rather than processing it as isolated information. In practice, a well-framed module introduction or a clear 'what you'll be able to do' statement serves as a simple advance organizer.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g89",
+    "term": "Affective Domain",
+    "definition": "One of Bloom's three learning domains (alongside cognitive and psychomotor), covering attitudes, values, emotions, and motivation. The affective domain ranges from receiving (passive attention) through responding, valuing, organizing, and characterizing by a value. In workplace training, the affective domain is relevant for compliance, cultural competence, and any program where behavior change requires a shift in values, not just knowledge.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g90",
+    "term": "ARCS Model",
+    "definition": "John Keller's instructional design model for motivating learners, built around four conditions: Attention (gaining and maintaining learner interest), Relevance (connecting content to learner goals), Confidence (building belief that success is achievable), and Satisfaction (providing intrinsic or extrinsic rewards for achievement). The ARCS model is a practical diagnostic tool — if learners disengage, you can identify which condition is failing and redesign accordingly.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g91",
+    "term": "Authoring Tool",
+    "definition": "Software used to build e-learning content without programming. Common tools include Articulate Storyline (slide-based, highly interactive), Articulate Rise (web-based, responsive), Adobe Captivate, iSpring Suite, and Lectora. Authoring tools typically export SCORM or xAPI packages for LMS upload. The choice of tool affects what interaction types, assessment formats, and media integrations are possible.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g92",
+    "term": "Backward Design",
+    "definition": "An instructional design approach by Wiggins and McTighe that starts with desired outcomes and assessment evidence, then plans instruction to achieve those outcomes — rather than starting with content. Also called Understanding by Design (UbD). The core question: what evidence will prove that learning happened? Backward design prevents teaching to cover content and keeps every course element aligned to its actual goal.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g93",
+    "term": "Change Management",
+    "definition": "The structured process of transitioning individuals, teams, and organizations from a current state to a desired future state. In L&D, training is often one component of a broader change management initiative — IDs need to understand that training alone cannot drive change when organizational systems or incentives work against the new behavior. Common models used alongside training design include ADKAR (Prosci) and Kotter's 8-Step Model.",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g94",
+    "term": "Cognitive Apprenticeship",
+    "definition": "An instructional design framework (Collins, Brown & Newman, 1989) that applies apprenticeship principles to cognitive and professional tasks. Key strategies: modeling (the expert makes their thinking visible), coaching (expert observes and gives feedback), scaffolding (support fades as competence grows), articulation (learners explain their reasoning), reflection (learners compare their performance to the expert's), and exploration (learners solve problems independently). Particularly effective for developing complex judgment, diagnostic, and problem-solving skills.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g95",
+    "term": "Cognitive Task Analysis",
+    "definition": "A method for uncovering the tacit knowledge, mental models, and decision-making processes that experts use when performing complex tasks — information they often cannot articulate without structured prompting. Common CTA techniques include think-aloud protocols, critical decision method interviews, and concept mapping. CTA is especially valuable for expert judgment tasks where procedural task analysis captures what someone does but not how they think.",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g96",
+    "term": "Community of Practice (CoP)",
+    "definition": "A group of people who share a concern or passion for a topic and deepen their knowledge and expertise through ongoing interaction (Wenger, 1998). Communities of practice are informal, self-organizing learning networks — distinct from formal training. In L&D design, creating or supporting a CoP is often a higher-leverage long-term learning intervention than a standalone course, particularly for professional knowledge that evolves quickly.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g97",
+    "term": "Competency Framework",
+    "definition": "A structured model defining the specific knowledge, skills, abilities, and behaviors required for effective performance in a role or function. Competency frameworks are used in workforce planning, hiring, performance management, and L&D to identify capability gaps and target development investments. In instructional design, the competency framework is the source document for needs analysis — training should develop competencies, not just cover topics.",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g98",
+    "term": "Course Map",
+    "definition": "A visual diagram showing the structure and flow of a course: how modules connect, where branching occurs, the relationship between objectives and content, and the placement of assessments. A course map is created during the Design phase before storyboarding begins. It ensures stakeholders share a common understanding of scope and navigation logic — and helps catch structural problems before production starts.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g99",
+    "term": "Curriculum Map",
+    "definition": "A visual or tabular document showing the relationships, sequence, and coverage of learning content across a program, course series, or organizational curriculum. A curriculum map helps IDs identify gaps (topics not covered), redundancies (topics covered without design intent), and alignment issues (objectives not tied to content or assessment). Used in large-scale curriculum design and periodic content audits.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g100",
+    "term": "Design Document",
+    "definition": "Also called an Instructional Design Document (IDD) or blueprint. A formal project artifact that documents the instructional plan before development begins: objectives, audience, content outline, instructional strategy, assessment approach, media decisions, and interaction types. SME sign-off on the design document prevents expensive rebuilds during development. It is the bridge between Analysis and Develop — and the closest thing to a construction blueprint that ID produces.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g101",
+    "term": "Diagnostic Assessment",
+    "definition": "An assessment conducted before instruction begins to identify learners' current knowledge, skills, and misconceptions — used to calibrate the instructional approach rather than to grade. A diagnostic assessment might reveal that half the learners already know the foundational content, allowing branching or streamlined delivery. Distinct from a pre-test, which establishes a baseline for measuring learning gains post-training.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g102",
+    "term": "Distributed Practice",
+    "definition": "Spreading practice sessions over time rather than concentrating them in a single session (massed practice or cramming). Distributed practice dramatically improves long-term retention — the same total practice time produces better results when spread across multiple sessions. In training design, this means structuring multi-session programs, booster modules, and follow-up reinforcement rather than a single intensive course.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g103",
+    "term": "Dual Coding Theory",
+    "definition": "Allan Paivio's theory that information is encoded in two separate but connected mental systems: a verbal system (words and language) and an imagistic system (mental images and visuals). Learning is stronger when both systems are engaged simultaneously — which is why well-designed visuals paired with narration outperform text alone. Dual coding theory is a foundational justification for using conceptual diagrams, timelines, and infographics alongside text in e-learning.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g104",
+    "term": "Electronic Performance Support System (EPSS)",
+    "definition": "A digital system that provides on-demand guidance, information, and tools to support job performance at the moment of need — embedded in the work environment rather than delivered as separate training. Examples include guided step-by-step wizards, embedded help systems, in-app tutorials, and AI-powered assistants. An EPSS reduces the need to memorize procedures that can be referenced in context.",
+    "phaseLink": "/implement",
+    "phaseLabel": "Implement"
+  },
+  {
+    "id": "g105",
+    "term": "Evaluation Plan",
+    "definition": "A written document developed during the Design phase that specifies how a training program will be evaluated: what will be measured (Kirkpatrick levels), when measurements will be taken, what data collection methods will be used, who is responsible, and how results will be reported. An evaluation plan prevents the common situation where Levels 3 and 4 evaluation never happens because baseline data wasn't collected before training launched.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g106",
+    "term": "Experiential Learning",
+    "definition": "David Kolb's theory that learning occurs through a four-stage cycle: Concrete Experience (doing), Reflective Observation (reviewing), Abstract Conceptualization (concluding), and Active Experimentation (applying). Kolb's model implies that learning requires more than content delivery — learners must reflect, make meaning, and test new understanding. In ID, the cycle informs the design of debriefs, reflective activities, and action learning projects.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g107",
+    "term": "Far Transfer",
+    "definition": "The application of learned skills or knowledge to contexts that are significantly different from the original learning environment — requiring adaptation, generalization, and higher-order thinking. Far transfer is much harder to achieve than near transfer and requires instructional strategies beyond content delivery: varied practice contexts, principle-based teaching, reflection, and application support. Most complex professional skills — judgment, strategy, leadership — require far transfer.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g108",
+    "term": "First Principles of Instruction",
+    "definition": "David Merrill's research-based framework identifying five principles that consistently improve instructional effectiveness: (1) Problem-centered — learning is situated around a real-world problem; (2) Activation — prior experience is activated; (3) Demonstration — learning is shown, not just told; (4) Application — learners practice with feedback; (5) Integration — new knowledge is integrated into real-world application. Courses that satisfy all five principles consistently outperform those that don't.",
+    "phaseLink": "/models",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g109",
+    "term": "Flipped Classroom",
+    "definition": "An instructional model in which learners engage with foundational content (videos, readings, e-learning) before a session, and live time is used for active practice, discussion, and problem-solving. In corporate L&D, flipped design makes ILT and VILT sessions far more efficient by offloading content delivery to pre-work — allowing live time to focus on application, coaching, and questions that require human interaction.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g110",
+    "term": "Formal Learning",
+    "definition": "Structured, intentional learning experiences — courses, certifications, workshops, and programs — that are designed, delivered, and tracked by an L&D function. Formal learning typically has defined objectives, content, assessment, and completion records. The 70-20-10 model estimates formal learning accounts for roughly 10% of professional development, highlighting the importance of designing for informal and social learning as well.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g111",
+    "term": "Front-End Analysis",
+    "definition": "A broad term for all investigative work done at the start of an ID project to understand the problem, audience, context, and constraints before designing a solution. Front-end analysis encompasses needs assessment, audience analysis, task analysis, environmental analysis, and gap analysis. Skipping or rushing front-end analysis is the single most common cause of training that doesn't solve the actual performance problem.",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g112",
+    "term": "Gamification",
+    "definition": "The application of game design elements — points, badges, leaderboards, levels, challenges, and progress bars — to non-game contexts like training, to increase engagement and motivation. Gamification is not the same as game-based learning (which uses actual games). Evidence for gamification's effectiveness is mixed — it works best when it reinforces meaningful behavior rather than mere completion, and when it aligns with learner motivation rather than imposing purely extrinsic rewards.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g113",
+    "term": "Game-Based Learning (GBL)",
+    "definition": "An instructional approach that uses actual games — digital, board, or simulation games — as the primary learning vehicle. Unlike gamification, GBL places learners inside a game structure with its own objectives, rules, and feedback loops. Effective learning games embed targeted practice, provide immediate consequences for decisions, and create safe environments for failure. GBL is particularly powerful for developing strategy, systems thinking, and complex decision-making skills.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g114",
+    "term": "Informal Learning",
+    "definition": "Learning that happens outside structured programs — through on-the-job experience, conversations with colleagues, self-directed reading, mentoring, and community participation. The 70-20-10 model estimates informal learning accounts for 70% of professional development. L&D increasingly designs for informal learning by creating knowledge bases, communities of practice, coaching frameworks, and social learning tools rather than relying solely on courses.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g115",
+    "term": "Interactivity Levels",
+    "definition": "A classification system for e-learning complexity: Level 1 (Passive) — content with minimal interaction such as text, audio, and linear navigation; Level 2 (Limited) — basic interactions like click-to-reveal and simple quizzes; Level 3 (Moderate) — scenario-based decisions, drag-and-drop, and branching; Level 4 (Full Simulation) — high-fidelity environments, adaptive branching, and complex game-based experiences. Interactivity level is a key variable in development time estimation, with higher levels requiring exponentially more production resources.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g116",
+    "term": "Interleaving",
+    "definition": "A learning strategy where different topics or skills are mixed within a practice session rather than practicing one skill to mastery before moving to the next (blocked practice). Interleaved practice feels harder and produces lower immediate performance, but dramatically improves long-term retention and transfer — the 'desirable difficulty' effect. Most effective for training where learners need to identify which approach to use in a novel situation, rather than repeating a known procedure.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g117",
+    "term": "Just-in-Time (JIT) Learning",
+    "definition": "Delivering the right learning content at the exact moment a learner needs it for a specific task or decision — rather than in advance of when the skill will be used. JIT learning minimizes the 'shelf life' problem of training delivered weeks before the job requires the skill. Digital performance support tools, in-app guidance, video how-tos, and job aids are common JIT formats.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g118",
+    "term": "Learner Agency",
+    "definition": "The degree of control learners have over their own learning experience — including what to study, in what order, at what pace, and how to demonstrate mastery. High learner agency is associated with intrinsic motivation, engagement, and ownership of outcomes. In instructional design, agency is built through branching, learner-selected pathways, and self-paced formats. The appropriate amount of agency varies with experience level — novices often benefit from more structure, not more choice.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g119",
+    "term": "Learning Analytics",
+    "definition": "The measurement, collection, analysis, and reporting of data about learners and learning contexts to understand and optimize learning experiences and environments. Learning analytics draws from LMS data (completions, scores, time-on-task), xAPI statements, survey responses, and business performance metrics. Advanced analytics can identify at-risk learners, predict performance outcomes, and guide content revision decisions.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g120",
+    "term": "Learning Experience Design (LXD)",
+    "definition": "A multidisciplinary approach to creating learning experiences that draws from instructional design, UX design, human-centered design, and motivational psychology. LXD treats the entire learner journey — from discovery through application — as the design space, not just the course itself. The key distinction from traditional ID: LXD explicitly incorporates the learner's emotional experience, choice architecture, and post-course ecosystem into design decisions.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g121",
+    "term": "Learning Path",
+    "definition": "A structured sequence of learning resources — courses, modules, videos, articles, coaching sessions — designed to develop a specific competency or take a learner from novice to proficient in a defined domain. Learning paths can be linear (prescribed sequence) or adaptive (personalized based on assessment). They are widely used in onboarding programs, leadership development, and role-based training curricula.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g122",
+    "term": "Mastery Learning",
+    "definition": "An instructional approach in which every learner is expected to achieve a high level of mastery (typically 80–90%) before advancing to new content. Mastery learning provides additional practice and corrective instruction to learners who don't reach the threshold on first attempt rather than moving all learners forward regardless of performance. It is evidence-based for procedural and safety-critical training but requires personalized pacing that challenges traditional cohort-based delivery.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g123",
+    "term": "Metacognition",
+    "definition": "The awareness and regulation of one's own thinking and learning processes — thinking about thinking. Metacognitive learners monitor their own understanding, recognize when they don't understand something, and adjust their strategies accordingly. In instructional design, metacognition is supported through reflection prompts, self-assessment activities, and explicit instruction in learning strategies. High metacognitive awareness is strongly correlated with learning transfer.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g124",
+    "term": "Mobile Learning (mLearning)",
+    "definition": "Learning content designed for, or natively adapted to, delivery on smartphones and tablets. Effective mobile learning uses short modules, vertical scrolling layouts, large tap targets, and offline capability. Mobile learning is not the same as responsive design — true mLearning is designed for mobile contexts from the start, not merely reformatted desktop content. Push notifications and microlearning bursts make mobile an effective platform for spaced repetition.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g125",
+    "term": "Near Transfer",
+    "definition": "The application of learned skills to situations that closely resemble the original training context — minimal variation in task or conditions. Near transfer is the default assumption behind most training design, and the easiest type to produce. Workplace procedures, compliance tasks, and standardized processes typically require only near transfer. When the job context varies significantly from training, far transfer design strategies are required.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g126",
+    "term": "Onboarding",
+    "definition": "A structured process of integrating a new employee into an organization — including role-specific training, cultural orientation, relationship-building, and access to tools and information needed to perform effectively. Effective onboarding design distinguishes between compliance requirements (day one), role competency development (30–60–90 days), and cultural integration (ongoing). Most programs under-invest in structured skill development and over-invest in information delivery.",
+    "phaseLink": "/implement",
+    "phaseLabel": "Implement"
+  },
+  {
+    "id": "g127",
+    "term": "Performance Support",
+    "definition": "Any tool, system, or resource that helps someone perform a task correctly at the moment of need — without requiring prior memorization or formal training. Performance support includes job aids, reference guides, decision trees, checklists, help systems, and electronic performance support systems (EPSS). The key question that drives performance support design: does this knowledge need to live in the learner's head, or can it live in the environment?",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g128",
+    "term": "Pre-Assessment",
+    "definition": "An assessment administered before instruction begins to measure current learner knowledge and establish a baseline for measuring learning gains. Pre-assessments can also enable adaptive branching — learners who already know the material skip to advanced content. Unlike a diagnostic assessment (which calibrates instruction), a pre-assessment is specifically designed to be compared to a post-assessment to quantify how much learning occurred.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g129",
+    "term": "Problem-Based Learning (PBL)",
+    "definition": "An instructional approach in which learners work to investigate and solve a complex, real-world problem — constructing knowledge as they go rather than receiving it from an instructor. PBL originated in medical education and has been adapted across many professional development contexts. It develops critical thinking, collaboration, and self-directed learning alongside content knowledge. The problem itself is the primary learning vehicle.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g130",
+    "term": "Psychomotor Domain",
+    "definition": "One of Bloom's three learning domains, covering physical and motor skills — the ability to perform tasks requiring coordination and precision. Psychomotor learning ranges from imitation (copying a demonstrated movement) through guided response, mechanism, complex overt response, adaptation, and origination. In workplace ID, the psychomotor domain applies to technical skills training, safety procedures involving physical manipulation, and simulated equipment operation.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g131",
+    "term": "Rapid eLearning",
+    "definition": "An approach to e-learning development that prioritizes speed-to-market by using templates, existing content, simplified interactions, and streamlined review cycles. Rapid eLearning tools (Articulate Rise, iSpring) enable faster production without specialist development skills. The trade-off: reduced customization, lower visual production quality, and limited interaction complexity. Rapid eLearning is appropriate for compliance training, evergreen knowledge content, and programs where speed outweighs the need for high engagement.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g132",
+    "term": "Retrieval Practice",
+    "definition": "The learning strategy of actively recalling information from memory — rather than re-reading or re-watching — as a study and practice technique. Retrieval practice leverages the 'testing effect': the act of retrieving information strengthens memory more than passive review of the same material. Low-stakes quizzes, flashcards, and recall prompts embedded throughout a course are retrieval practice techniques. The counterintuitive insight: the difficulty of retrieval is what makes it effective.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g133",
+    "term": "Return on Expectations (ROE)",
+    "definition": "A Kirkpatrick-developed approach to training evaluation focused on whether the training delivered on the stakeholder expectations established at the outset — rather than calculating a financial ROI. ROE requires upfront conversations to document expected outcomes, and post-training evidence collection to show whether those outcomes were achieved. It is more achievable than formal ROI calculation for most training programs and builds L&D credibility by holding training accountable to business goals.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g134",
+    "term": "Review Cycle",
+    "definition": "A structured process in which a completed draft of a learning asset is shared with designated reviewers — typically an instructional peer (alpha review) and subject matter experts (beta review) — who provide feedback within a specified timeframe. A well-managed review cycle specifies who reviews, what they're reviewing for, the turnaround deadline, and how conflicting feedback is resolved. Review cycles are where timeline slippage most often occurs on ID projects.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g135",
+    "term": "Section 508",
+    "definition": "A provision of the U.S. Rehabilitation Act requiring federal agencies and their contractors to make electronic and information technology accessible to people with disabilities. For instructional designers, Section 508 compliance means ensuring e-learning content includes captions for audio/video, alt text for images, keyboard navigability, sufficient color contrast, and screen reader compatibility. Section 508 standards align closely with WCAG 2.1 Level AA.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g136",
+    "term": "Self-Regulated Learning",
+    "definition": "A cyclical, self-directed process in which learners set goals, monitor their progress, evaluate their performance, and adjust their strategies in response — autonomously managing their own learning. Self-regulated learners consistently perform better across contexts and show stronger transfer. In ID, SRL is supported through reflection activities, goal-setting tools, performance dashboards, and metacognitive prompts embedded throughout the learning experience.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g137",
+    "term": "Simulation",
+    "definition": "A training environment that replicates real-world situations, tasks, or systems in a controlled, consequence-free setting — allowing learners to practice complex skills and make decisions without real-world risk. Simulations range from software walkthroughs and branching scenario players to clinical patient simulators and full VR environments. Effective simulations provide realistic fidelity on the dimensions that most affect transfer, without unnecessary complexity that increases cognitive load.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g138",
+    "term": "Situated Learning",
+    "definition": "Jean Lave and Etienne Wenger's theory that learning is fundamentally embedded in authentic activity, context, and culture — not a decontextualized cognitive process. Situated learning argues that learners acquire knowledge most effectively when embedded in a community of practice, engaged in realistic tasks, and working alongside experienced practitioners. The theory strongly supports scenario-based learning, apprenticeship, and on-the-job training over abstract, out-of-context instruction.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g139",
+    "term": "Social Cognitive Theory",
+    "definition": "Albert Bandura's comprehensive theory of human learning and behavior, built on the premise that people learn through observation, imitation, and modeling — influenced by personal cognition, behavior, and environment in a reciprocal, interactive system (reciprocal determinism). Social cognitive theory encompasses observational learning, self-efficacy, and outcome expectations, providing a broad framework for designing training that changes behavior rather than just builds knowledge.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g140",
+    "term": "Social Learning",
+    "definition": "Learning that occurs through observation, interaction, and collaboration with others — peers, mentors, experts, and communities. Social learning is the '20%' component of the 70-20-10 model. In instructional design, it is supported through cohort-based programs, peer discussion, collaborative projects, mentoring structures, and communities of practice. Technology-enabled social learning platforms attempt to formalize and capture learning that naturally happens through conversation and observation.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g141",
+    "term": "Stakeholder Analysis",
+    "definition": "The process of identifying all parties with an interest in a training project, understanding their roles, needs, influence, and potential resistance, and developing a strategy for engaging them appropriately throughout the project. In ID, stakeholders typically include the project sponsor, subject matter experts, target learners, managers, LMS administrators, and compliance officers. A thorough stakeholder analysis prevents late surprises — like discovering at sign-off that legal review is required.",
+    "phaseLink": "/analysis",
+    "phaseLabel": "Analysis"
+  },
+  {
+    "id": "g142",
+    "term": "Story-Based Learning",
+    "definition": "An instructional design approach that embeds learning objectives within a narrative — a character, conflict, and resolution that learners follow throughout a course. Story-based learning leverages the brain's natural affinity for narrative, increases engagement and emotional connection, and makes abstract content concrete. It is distinct from scenario-based learning (which focuses on specific decision points) in that the narrative arc drives the entire course structure.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g143",
+    "term": "Transformative Learning",
+    "definition": "Jack Mezirow's theory that meaningful adult learning involves not just acquiring new knowledge but fundamentally shifting one's frame of reference — questioning and revising underlying assumptions, beliefs, and worldviews in response to disorienting dilemmas. Transformative learning requires reflection, discourse, and critical self-examination — not information transfer. It is most relevant for leadership development, diversity and inclusion training, and programs aimed at changing deeply held professional identities.",
+    "phaseLink": "/theories",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g144",
+    "term": "Transfer Climate",
+    "definition": "The organizational environment — including managerial support, peer reinforcement, opportunity to practice, and removal of environmental barriers — that either supports or inhibits the transfer of newly learned skills to the job. Transfer climate is often the most powerful predictor of whether training produces behavioral change, more powerful than the quality of the training itself. IDs who assess transfer climate before design can build in transfer-supporting elements (manager briefings, job aids, follow-up coaching) from the start.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
+  },
+  {
+    "id": "g145",
+    "term": "Treatment Document",
+    "definition": "A brief early-stage creative brief for a training project that describes the proposed look, feel, tone, and high-level approach before detailed design begins. A treatment document typically includes the narrative premise or concept, visual style direction, key interaction types, and rationale for the design approach. It lets stakeholders react to the creative direction early — before significant development resources are committed — and gives the ID team a shared agreement on tone and approach.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g146",
+    "term": "Universal Design for Learning (UDL)",
+    "definition": "A framework by CAST that guides the design of learning experiences to be accessible and effective for all learners from the outset — rather than retrofitting for accessibility later. UDL is built on three principles: Multiple Means of Representation (different ways to present information), Multiple Means of Action and Expression (different ways learners can demonstrate knowledge), and Multiple Means of Engagement (different ways to motivate interest). UDL goes beyond legal compliance to address the full range of learner variability.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g147",
+    "term": "Virtual Reality (VR) Training",
+    "definition": "An immersive training format using head-mounted displays to place learners in fully simulated three-dimensional environments for realistic skill practice. VR training is most effective for high-stakes tasks where real practice is dangerous, expensive, or rare — surgical procedures, emergency response, industrial safety, and complex equipment operation. Evidence for procedural and behavioral skill development is strong; primary barriers to adoption are development cost and hardware requirements.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g148",
+    "term": "Augmented Reality (AR) Training",
+    "definition": "A training format that overlays digital information — labels, animations, step-by-step guides, and 3D models — onto the real-world environment viewed through a smartphone, tablet, or AR headset. Unlike VR (fully simulated), AR enhances the real environment with contextual learning support at the moment of task performance. AR is particularly effective for equipment maintenance, on-the-job procedure guidance, and spatial learning tasks where instructions are shown overlaid on the actual object being worked on.",
+    "phaseLink": "/develop",
+    "phaseLabel": "Develop"
+  },
+  {
+    "id": "g149",
+    "term": "Worked Example",
+    "definition": "An instructional technique in which a fully solved problem or completed task is presented for the learner to study — rather than asking the learner to solve it independently. Worked examples reduce cognitive load during initial learning by making the process, strategy, and reasoning visible. Particularly effective in early-stage skill acquisition. As competence grows, worked examples should be faded and replaced with independent problem-solving — the 'guidance fading' principle.",
+    "phaseLink": "/design",
+    "phaseLabel": "Design"
+  },
+  {
+    "id": "g150",
+    "term": "ASSURE Model",
+    "definition": "A classroom-focused instructional design model designed for individual instructors rather than ID teams. Six steps: Analyze learners, State objectives, Select methods/media/materials, Utilize media and materials, Require learner participation, Evaluate and revise. ASSURE is simpler and less rigorous than ADDIE or SAM — it is most commonly taught in teacher education programs. Its primary utility is as an introduction to systematic instructional thinking for non-specialist facilitators.",
+    "phaseLink": "/models",
+    "phaseLabel": "Foundations"
+  },
+  {
+    "id": "g151",
+    "term": "Performance-Based Assessment",
+    "definition": "An assessment approach that evaluates whether learners can perform a specific job task or demonstrate a skill under realistic conditions — rather than recalling information on a written test. Performance-based assessments include scored role-plays, observed task demonstrations, simulation completions, and portfolio reviews. They produce the strongest evidence of whether training will transfer to the job because they measure doing, not knowing.",
+    "phaseLink": "/evaluate",
+    "phaseLabel": "Evaluate"
   }
 ]

@@ -41,7 +41,7 @@ const HERO_LETTERS = [
 
 const HERO_STATS = [
   { value: '5',   label: 'Full Phases',     sub: 'Checklists, deep-dives & case studies' },
-  { value: '86+', label: 'Glossary Terms',  sub: 'Plain-English ID definitions' },
+  { value: '150+', label: 'Glossary Terms',  sub: 'Plain-English ID definitions' },
   { value: '14',  label: 'Templates',       sub: 'Copy-ready, zero formatting needed' },
   { value: '9',   label: 'Tools & Guides',   sub: 'Objectives, quizzes, scenario guide & more' },
 ]
@@ -76,7 +76,7 @@ const TOOLS = [
   {
     to: '/glossary',
     label: 'Glossary',
-    desc: '86+ plain-English definitions for ID terms',
+    desc: '150+ plain-English definitions for ID terms',
     icon: BookOpen,
     style: { backgroundColor: '#ECFDF5', borderColor: '#059669', color: '#065F46' },
     iconBg: '#059669',
