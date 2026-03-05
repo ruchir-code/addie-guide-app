@@ -417,11 +417,10 @@ export default function MediaGuidePage() {
         <div className="relative z-10">
           <div className="flex items-center gap-2 mb-2">
             <Monitor size={18} className="text-amber-300" />
-            <p className="text-xs font-bold uppercase tracking-widest text-amber-300">Tools</p>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              Media & Format Selection Guide
+            </h1>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">
-            Media & Format Selection Guide
-          </h1>
           <p className="text-sm max-w-xl" style={{ color: '#FDE68A' }}>
             Eight delivery formats explained — when to use each one, when not to, and how to choose.
             Start with the Format Selector or browse all formats below.

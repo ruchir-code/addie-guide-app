@@ -297,9 +297,6 @@ export default function AssessmentBuilderPage() {
           style={{ backgroundColor: '#0EA5E9' }}
         />
         <div className="relative z-10">
-          <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#67E8F9' }}>
-            Assessment Tool
-          </p>
           <div className="flex items-center gap-3 mb-3">
             <div
               className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"

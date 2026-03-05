@@ -580,13 +580,10 @@ export default function AiInIDPage() {
         <div className="relative z-10">
           <div className="flex items-center gap-2 mb-3">
             <Bot size={20} className="text-white/80" />
-            <span className="text-xs font-bold uppercase tracking-widest text-white/60">
-              Foundations
-            </span>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              AI in Instructional Design
+            </h1>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-2 leading-tight">
-            AI in Instructional Design
-          </h1>
           <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.80)' }}>
             Practical guidance for using AI at each ADDIE phase — what it does well, where it
             fails, and how to prompt it effectively.

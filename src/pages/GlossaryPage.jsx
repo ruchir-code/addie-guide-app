@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Search, ExternalLink } from 'lucide-react'
+import { Search, ExternalLink, BookOpen } from 'lucide-react'
 import SEOHead from '../components/SEOHead'
 import glossary from '../data/glossary.json'
 import PhaseBadge from '../components/ui/PhaseBadge'
@@ -93,12 +93,24 @@ export default function GlossaryPage() {
         description="86+ plain-English definitions for instructional design terms. From ADDIE to Zone of Proximal Development — the glossary practitioners actually use."
         path="/glossary"
       />
-      <div className="mb-8">
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Glossary</h1>
-        <p className="text-gray-500 text-base max-w-xl">
-          {glossary.length}+ plain-English definitions for instructional design terms.
-          Each term links back to the relevant ADDIE phase.
-        </p>
+      <div
+        className="rounded-2xl px-6 py-8 mb-8 relative overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #312E81 0%, #3730A3 55%, #4F46E5 100%)' }}
+      >
+        <div className="absolute -right-12 -top-12 w-48 h-48 rounded-full opacity-10" style={{ backgroundColor: '#fff' }} />
+        <div className="absolute -right-4 -bottom-8 w-32 h-32 rounded-full opacity-10" style={{ backgroundColor: '#fff' }} />
+        <div className="relative z-10">
+          <div className="flex items-center gap-2 mb-3">
+            <BookOpen size={20} className="text-white/80" />
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              Glossary
+            </h1>
+          </div>
+          <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.78)' }}>
+            {glossary.length}+ plain-English definitions for instructional design terms.
+            Each term links back to the relevant ADDIE phase.
+          </p>
+        </div>
       </div>
 
       {/* Search */}

@@ -797,11 +797,8 @@ export default function QuizPage() {
           <div className="p-2.5 rounded-xl bg-white/20">
             <Brain size={24} className="text-white" />
           </div>
-          <span className="text-white/70 text-sm font-semibold uppercase tracking-wider">
-            Self-Assessment
-          </span>
+          <h1 className="text-3xl font-black leading-tight">ID Knowledge Quiz</h1>
         </div>
-        <h1 className="text-3xl font-black mb-2">ID Knowledge Quiz</h1>
         <p className="text-white/80 text-lg max-w-xl">
           Two quizzes to benchmark your skills and point you toward the right resources.
         </p>

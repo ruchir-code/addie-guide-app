@@ -355,11 +355,10 @@ export default function ScenarioGuidePage() {
         <div className="relative z-10">
           <div className="flex items-center gap-2 mb-3">
             <GitBranch size={20} className="text-white/80" />
-            <span className="text-xs font-bold uppercase tracking-widest text-white/60">Tools</span>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              Scenario Writing Guide
+            </h1>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-2 leading-tight">
-            Scenario Writing Guide
-          </h1>
           <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.80)' }}>
             How to write scenarios that actually change behavior — not just test whether learners
             can recognize the obvious answer.

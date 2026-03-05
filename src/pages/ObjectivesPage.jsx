@@ -1241,14 +1241,24 @@ export default function ObjectivesPage() {
         path="/objectives"
       />
       {/* Page header */}
-      <div className="mb-6">
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">
-          Outcomes &amp; Objectives Builder
-        </h1>
-        <p className="text-gray-500 text-base max-w-2xl">
-          Design a complete learning hierarchy. Start with Course Learning Outcomes (CLO), build Terminal
-          Learning Objectives (TLO) that map to them, then break each TLO into Enabling Learning Objectives (ELO).
-        </p>
+      <div
+        className="rounded-2xl px-6 py-8 mb-6 relative overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #1E3A5F 0%, #1D4ED8 55%, #3B82F6 100%)' }}
+      >
+        <div className="absolute -right-12 -top-12 w-48 h-48 rounded-full opacity-10" style={{ backgroundColor: '#fff' }} />
+        <div className="absolute -right-4 -bottom-8 w-32 h-32 rounded-full opacity-10" style={{ backgroundColor: '#fff' }} />
+        <div className="relative z-10">
+          <div className="flex items-center gap-2 mb-3">
+            <Target size={20} className="text-white/80" />
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              Outcomes &amp; Objectives Builder
+            </h1>
+          </div>
+          <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.78)' }}>
+            Design a complete learning hierarchy. Start with Course Learning Outcomes (CLO), build Terminal
+            Learning Objectives (TLO) that map to them, then break each TLO into Enabling Learning Objectives (ELO).
+          </p>
+        </div>
       </div>
 
       {/* Chain indicator */}

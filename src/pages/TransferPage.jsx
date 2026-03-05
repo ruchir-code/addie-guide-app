@@ -292,11 +292,10 @@ export default function TransferPage() {
         <div className="relative z-10">
           <div className="flex items-center gap-2 mb-3">
             <Zap size={20} className="text-white/80" />
-            <span className="text-xs font-bold uppercase tracking-widest text-white/60">Foundations</span>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              Transfer of Learning
+            </h1>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-2 leading-tight">
-            Transfer of Learning
-          </h1>
           <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.78)' }}>
             Training that doesn't transfer is just activity. These frameworks help you design
             learning that actually changes what people do on the job.

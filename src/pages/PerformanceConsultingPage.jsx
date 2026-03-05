@@ -374,11 +374,10 @@ export default function PerformanceConsultingPage() {
         <div className="relative z-10">
           <div className="flex items-center gap-2 mb-3">
             <Briefcase size={20} className="text-white/80" />
-            <span className="text-xs font-bold uppercase tracking-widest text-white/60">Foundations</span>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              Performance Consulting
+            </h1>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-2 leading-tight">
-            Performance Consulting
-          </h1>
           <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.78)' }}>
             Before designing a single slide, answer this: is this actually a training problem?
             The frameworks here help you diagnose root causes and recommend the right solution.

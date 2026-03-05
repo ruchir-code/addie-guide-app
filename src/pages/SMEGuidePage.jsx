@@ -263,11 +263,8 @@ export default function SMEGuidePage() {
           <div className="p-2.5 rounded-xl bg-white/20">
             <Users2 size={24} className="text-white" />
           </div>
-          <span className="text-white/70 text-sm font-semibold uppercase tracking-wider">
-            Tools
-          </span>
+          <h1 className="text-3xl font-black leading-tight">SME Management Guide</h1>
         </div>
-        <h1 className="text-3xl font-black mb-2">SME Management Guide</h1>
         <p className="text-white/80 text-lg max-w-xl">
           Subject matter experts have the knowledge. You have the process. How well you manage that relationship determines whether the project succeeds.
         </p>

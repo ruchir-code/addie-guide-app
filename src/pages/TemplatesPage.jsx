@@ -68,14 +68,24 @@ export default function TemplatesPage() {
         description="14 free instructional design templates: ADDIE project plans, lesson plans, storyboard templates, and more. Copy-ready for immediate use."
         path="/templates"
       />
-      <div className="mb-8">
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-2">
-          Template Library
-        </h1>
-        <p className="text-gray-500 text-base max-w-xl">
-          Copy-ready templates for every phase of ADDIE. Click Preview to see the
-          full template, then copy it to your clipboard.
-        </p>
+      <div
+        className="rounded-2xl px-6 py-8 mb-8 relative overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #134E4A 0%, #0F766E 55%, #0D9488 100%)' }}
+      >
+        <div className="absolute -right-12 -top-12 w-48 h-48 rounded-full opacity-10" style={{ backgroundColor: '#fff' }} />
+        <div className="absolute -right-4 -bottom-8 w-32 h-32 rounded-full opacity-10" style={{ backgroundColor: '#fff' }} />
+        <div className="relative z-10">
+          <div className="flex items-center gap-2 mb-3">
+            <FileText size={20} className="text-white/80" />
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              Template Library
+            </h1>
+          </div>
+          <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.78)' }}>
+            Copy-ready templates for every phase of ADDIE. Click Preview to see the
+            full template, then copy it to your clipboard.
+          </p>
+        </div>
       </div>
 
       {/* Phase filter */}

@@ -232,13 +232,10 @@ export default function TheoriesPage() {
         <div className="relative z-10">
           <div className="flex items-center gap-2 mb-3">
             <Brain size={20} className="text-white/80" />
-            <span className="text-xs font-bold uppercase tracking-widest text-white/60">
-              Foundations
-            </span>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              Learning Theories
+            </h1>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-2 leading-tight">
-            Learning Theories
-          </h1>
           <p className="text-base font-medium" style={{ color: 'rgba(255,255,255,0.78)' }}>
             The theoretical frameworks behind every design decision. Know these and you'll know
             <em> why</em> the methods work — not just what to do.

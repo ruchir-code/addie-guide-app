@@ -344,11 +344,10 @@ export default function ModelsPage() {
         <div className="relative z-10">
           <div className="flex items-center gap-2 mb-2">
             <Network size={18} className="text-indigo-300" />
-            <p className="text-xs font-bold uppercase tracking-widest text-indigo-300">Foundations</p>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              Instructional Models
+            </h1>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">
-            Instructional Models
-          </h1>
           <p className="text-sm max-w-xl" style={{ color: '#C7D2FE' }}>
             ADDIE, SAM, Dick &amp; Carey, Rapid Prototyping, and Agile ID — compared side by side
             so you can choose the right model for your project, not the one you always default to.
