@@ -441,9 +441,9 @@ export default function ProjectManagementPage() {
             [ProjectCode]_[Deliverable]_v[version]_[YYYYMMDD]<br />
             <br />
             Examples:<br />
-            CDSE_CyberAware_Storyboard_v1.0_20260301.pptx<br />
-            CDSE_CyberAware_Storyboard_v1.1_SMEreview_20260308.pptx<br />
-            CDSE_CyberAware_Storyboard_v2.0_APPROVED_20260315.pptx<br />
+            APEX_CyberAware_Storyboard_v1.0_20260301.pptx<br />
+            APEX_CyberAware_Storyboard_v1.1_SMEreview_20260308.pptx<br />
+            APEX_CyberAware_Storyboard_v2.0_APPROVED_20260315.pptx<br />
           </div>
           <p><strong>Recommended folder structure:</strong></p>
           <div className="font-mono text-xs bg-gray-900 text-green-400 rounded-lg p-4 leading-relaxed">
