@@ -21,6 +21,7 @@ import {
   ListChecks,
   GitBranch,
   Users2,
+  Building2,
   TrendingUp,
   Briefcase,
   Zap,
@@ -177,6 +178,17 @@ const FOUNDATIONS = [
     icon: Bot,
     style: { backgroundColor: '#EEF2FF', borderColor: '#A5B4FC', color: '#312E81' },
     iconBg: '#6366F1',
+  },
+]
+
+const CONTEXTS = [
+  {
+    to: '/federal-id',
+    label: 'Federal & Government ID',
+    desc: 'Section 508, SCORM in gov LMS, TNA as a deliverable, working with CORs, clearance-level content, and federal training types',
+    icon: Building2,
+    style: { backgroundColor: '#EFF6FF', borderColor: '#BFDBFE', color: '#1E3A5F' },
+    iconBg: '#1D4ED8',
   },
 ]
 
@@ -445,8 +457,37 @@ export default function Home() {
       <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1">
         Foundations
       </h2>
-      <div className="grid grid-cols-1 gap-3">
+      <div className="grid grid-cols-1 gap-3 mb-8">
         {FOUNDATIONS.map(({ to, label, desc, icon: Icon, style, iconBg }) => (
+          <Link
+            key={to}
+            to={to}
+            className="group p-4 rounded-xl border transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+            style={style}
+          >
+            <div className="flex items-center gap-2 mb-2">
+              <div
+                className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+                style={{ backgroundColor: iconBg }}
+              >
+                <Icon size={14} className="text-white" />
+              </div>
+              <span className="font-bold text-sm">{label}</span>
+            </div>
+            <p className="text-xs opacity-70 leading-relaxed">{desc}</p>
+            <div className="mt-2 flex items-center gap-1 text-xs font-semibold opacity-60 group-hover:opacity-100 transition-opacity">
+              Open <ChevronRight size={12} />
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* ── Contexts ─────────────────────────────────────────────────── */}
+      <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1">
+        Contexts
+      </h2>
+      <div className="grid grid-cols-1 gap-3">
+        {CONTEXTS.map(({ to, label, desc, icon: Icon, style, iconBg }) => (
           <Link
             key={to}
             to={to}

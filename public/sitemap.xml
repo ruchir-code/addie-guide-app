@@ -77,6 +77,13 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Contexts -->
+  <url>
+    <loc>https://www.addieguide.com/federal-id</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Foundations -->
   <url>
     <loc>https://www.addieguide.com/theories</loc>

@@ -22,6 +22,7 @@ import {
   Bot,
   GitBranch,
   User,
+  Building2,
 } from 'lucide-react'
 import { PHASES } from '../../utils/colors'
 
@@ -41,6 +42,10 @@ const TOOL_LINKS = [
   { to: '/scenario-guide',      label: 'Scenario Writing',        icon: GitBranch },
   { to: '/quiz',                label: 'ID Self-Assessment',      icon: ListChecks },
   { to: '/sme-guide',          label: 'SME Management',          icon: Users2 },
+]
+
+const CONTEXT_LINKS = [
+  { to: '/federal-id', label: 'Federal / Gov ID', icon: Building2, color: '#1D4ED8' },
 ]
 
 const FOUNDATION_LINKS = [
@@ -130,6 +135,26 @@ export default function NavLinks({ onNavigate }) {
       </p>
 
       {FOUNDATION_LINKS.map(({ to, label, icon: Icon, color }) => (
+        <NavLink
+          key={to}
+          to={to}
+          className={navClass}
+          style={navStyle}
+          onClick={onNavigate}
+        >
+          <Icon size={18} className="shrink-0" style={{ color }} />
+          <span>{label}</span>
+        </NavLink>
+      ))}
+
+      <p
+        className="px-3 pt-4 pb-1 text-xs font-semibold uppercase tracking-wider"
+        style={{ color: '#475569' }}
+      >
+        Contexts
+      </p>
+
+      {CONTEXT_LINKS.map(({ to, label, icon: Icon, color }) => (
         <NavLink
           key={to}
           to={to}

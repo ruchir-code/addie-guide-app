@@ -19,6 +19,7 @@ import AiInIDPage from './pages/AiInIDPage'
 import ScenarioGuidePage from './pages/ScenarioGuidePage'
 import QuizPage from './pages/QuizPage'
 import SMEGuidePage from './pages/SMEGuidePage'
+import FederalIDPage from './pages/FederalIDPage'
 import AboutPage from './pages/AboutPage'
 
 function NotFound() {
@@ -57,6 +58,7 @@ export default function App() {
               <Route path="scenario-guide" element={<ScenarioGuidePage />} />
               <Route path="quiz" element={<QuizPage />} />
               <Route path="sme-guide" element={<SMEGuidePage />} />
+              <Route path="federal-id" element={<FederalIDPage />} />
               <Route path="about" element={<AboutPage />} />
               <Route path="*" element={<NotFound />} />
             </Route>
