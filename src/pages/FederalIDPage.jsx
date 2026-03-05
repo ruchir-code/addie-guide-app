@@ -491,6 +491,9 @@ export default function FederalIDPage() {
                 <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider" style={{ color: ACCENT }}>Acronym</th>
                 <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider" style={{ color: ACCENT }}>Meaning</th>
                 <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider hidden sm:table-cell" style={{ color: ACCENT }}>Context</th>
+                <th className="px-4 py-3 text-right">
+                  <CopyButton text={QUICK_REF} />
+                </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
@@ -499,14 +502,11 @@ export default function FederalIDPage() {
                   <td className="px-4 py-3 font-bold text-gray-900 whitespace-nowrap">{acronym}</td>
                   <td className="px-4 py-3 text-gray-700">{meaning}</td>
                   <td className="px-4 py-3 text-gray-500 hidden sm:table-cell">{note}</td>
+                  <td className="px-4 py-3"></td>
                 </tr>
               ))}
             </tbody>
           </table>
-        </div>
-        <div className="flex items-center gap-2">
-          <CopyButton text={QUICK_REF} />
-          <span className="text-xs text-gray-400">Copy all acronyms</span>
         </div>
       </div>
     </div>
