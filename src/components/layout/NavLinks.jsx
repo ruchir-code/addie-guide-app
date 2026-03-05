@@ -18,6 +18,7 @@ import {
   Briefcase,
   Zap,
   Bot,
+  GitBranch,
   User,
 } from 'lucide-react'
 import { PHASES } from '../../utils/colors'
@@ -35,6 +36,7 @@ const TOOL_LINKS = [
   { to: '/glossary',            label: 'Glossary',                icon: BookOpen },
   { to: '/media-guide',         label: 'Media & Format Guide',    icon: Monitor },
   { to: '/assessment-builder',  label: 'Assessment Builder',      icon: ClipboardCheck },
+  { to: '/scenario-guide',      label: 'Scenario Writing',        icon: GitBranch },
 ]
 
 const FOUNDATION_LINKS = [
