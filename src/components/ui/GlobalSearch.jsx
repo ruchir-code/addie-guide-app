@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import {
   Search, X,
   BookOpen, FileText, GraduationCap, Brain, Monitor, Network, ClipboardCheck, Target,
-  TrendingUp, Briefcase, Zap,
+  TrendingUp, Briefcase, Zap, GitBranch, ListChecks, Users2, GanttChart, Building2, Bot,
 } from 'lucide-react'
 
 import analysisData  from '../../data/phases/analysis.json'
@@ -40,17 +40,23 @@ const PHASES = [
 
 // ─── All navigable tool / foundation pages ───────────────────────────────────
 const TOOLS = [
-  { title: 'Outcomes & Objectives',  desc: "Build your CLO → TLO → ELO hierarchy with Bloom's verbs",        path: '/objectives',        icon: Target },
-  { title: 'Assessment Builder',     desc: "Generate assessment templates aligned to Bloom's levels",         path: '/assessment-builder',icon: ClipboardCheck },
-  { title: 'Media & Format Guide',   desc: 'Decision guide for e-learning, ILT, VILT, job aids, and more',   path: '/media-guide',        icon: Monitor },
-  { title: "Bloom's Taxonomy",       desc: 'All six cognitive levels with verbs, objectives, and activities', path: '/bloom',              icon: GraduationCap },
-  { title: 'Learning Theories',      desc: 'Behaviorism, Cognitivism, Constructivism, Andragogy, CLT',        path: '/theories',           icon: Brain },
-  { title: 'Instructional Models',   desc: 'ADDIE, SAM, Dick & Carey, Agile ID — compared side by side',     path: '/models',             icon: Network },
-  { title: 'Template Library',        desc: '14 copy-ready ID templates organised by ADDIE phase',                        path: '/templates',              icon: FileText },
-  { title: 'Glossary',               desc: '150+ plain-English definitions for ID terms',                                 path: '/glossary',               icon: BookOpen },
-  { title: 'Evaluation Frameworks',  desc: 'Kirkpatrick, Phillips ROI, CIPP — measuring training effectiveness and impact', path: '/evaluation-frameworks',  icon: TrendingUp },
-  { title: 'Performance Consulting', desc: 'Training vs. non-training solutions, root cause analysis, Gilbert\'s BEM',     path: '/performance-consulting', icon: Briefcase },
-  { title: 'Transfer of Learning',   desc: 'Near/far transfer, conditions for transfer, before/during/after strategies',   path: '/transfer',               icon: Zap },
+  { title: 'Outcomes & Objectives',     desc: "Build your CLO → TLO → ELO hierarchy with Bloom's verbs",                                    path: '/objectives',             icon: Target },
+  { title: 'Assessment Builder',        desc: "Generate assessment templates aligned to Bloom's levels",                                      path: '/assessment-builder',     icon: ClipboardCheck },
+  { title: 'Media & Format Guide',      desc: 'Decision guide for e-learning, ILT, VILT, job aids, and more',                                path: '/media-guide',            icon: Monitor },
+  { title: "Bloom's Taxonomy",          desc: 'All six cognitive levels with verbs, objectives, and activities',                              path: '/bloom',                  icon: GraduationCap },
+  { title: 'Learning Theories',         desc: 'Behaviorism, Cognitivism, Constructivism, Andragogy, CLT',                                    path: '/theories',               icon: Brain },
+  { title: 'Instructional Models',      desc: 'ADDIE, SAM, Dick & Carey, Agile ID — compared side by side',                                  path: '/models',                 icon: Network },
+  { title: 'Template Library',          desc: '14 copy-ready ID templates organised by ADDIE phase',                                         path: '/templates',              icon: FileText },
+  { title: 'Glossary',                  desc: '150+ plain-English definitions for ID terms',                                                  path: '/glossary',               icon: BookOpen },
+  { title: 'Evaluation Frameworks',     desc: 'Kirkpatrick, Phillips ROI, CIPP — measuring training effectiveness and impact',                path: '/evaluation-frameworks',  icon: TrendingUp },
+  { title: 'Performance Consulting',    desc: "Training vs. non-training solutions, root cause analysis, Gilbert's BEM",                     path: '/performance-consulting', icon: Briefcase },
+  { title: 'Transfer of Learning',      desc: 'Near/far transfer, conditions for transfer, before/during/after strategies',                   path: '/transfer',               icon: Zap },
+  { title: 'Scenario Writing Guide',    desc: 'Write realistic branching scenarios and practice stories for ID',                              path: '/scenario-guide',         icon: GitBranch,  keywords: 'scenario branching push pull trigger consequence feedback context character decision tree story narrative' },
+  { title: 'ID Self-Assessment Quiz',   desc: 'Test your instructional design knowledge across all ADDIE phases',                            path: '/quiz',                   icon: ListChecks, keywords: 'quiz test knowledge check self assessment competency practice questions answers score' },
+  { title: 'SME Management Guide',      desc: 'Work effectively with subject matter experts to extract and validate content',                 path: '/sme-guide',              icon: Users2,     keywords: 'sme subject matter expert interview content extraction review stakeholder collaboration difficult elicit' },
+  { title: 'Project Management',        desc: 'Timelines, estimates, and development-time ratios for ID projects',                           path: '/project-management',     icon: GanttChart, keywords: 'chapman alliance development time ratios hours estimate ilt elearning level 1 2 3 calculator budget scope kickoff RACI waterfall agile version control project plan timeline deliverables' },
+  { title: 'AI in Instructional Design', desc: 'How to use AI tools effectively across the ID workflow',                                     path: '/ai-in-id',               icon: Bot,        keywords: 'AI ChatGPT artificial intelligence tools automation prompt scripting storyboard generation GPT LLM machine learning' },
+  { title: 'Federal / Government ID',   desc: 'Instructional design in federal and government agency contexts',                              path: '/federal-id',             icon: Building2,  keywords: 'federal government Section 508 accessibility compliance clearance SCORM DoD military agency contracting regulations policy' },
 ]
 
 // ─── Search ──────────────────────────────────────────────────────────────────
@@ -62,7 +68,10 @@ function runSearch(query) {
       (p) => p.label.toLowerCase().includes(q) || p.tagline.toLowerCase().includes(q) || p.text.includes(q)
     ),
     tools: TOOLS.filter(
-      (t) => t.title.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q)
+      (t) =>
+        t.title.toLowerCase().includes(q) ||
+        t.desc.toLowerCase().includes(q) ||
+        (t.keywords && t.keywords.toLowerCase().includes(q))
     ),
     glossary: glossaryData
       .filter((g) => g.term.toLowerCase().includes(q) || g.definition.toLowerCase().includes(q))
