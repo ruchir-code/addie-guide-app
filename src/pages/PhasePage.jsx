@@ -5,7 +5,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useLevel } from '../context/LevelContext'
 import Checklist from '../components/checklist/Checklist'
 
-function InlineLevelToggle() {
+function InlineLevelToggle({ color }) {
   const { level, toggle } = useLevel()
   const isAdvanced = level === 'advanced'
   return (
@@ -21,11 +21,12 @@ function InlineLevelToggle() {
       >
         <span
           className={`inline-block h-3 w-3 transform rounded-full shadow transition duration-200 ${
-            isAdvanced ? 'translate-x-4 bg-violet-600' : 'translate-x-0 bg-white'
+            isAdvanced ? 'translate-x-4' : 'translate-x-0 bg-white'
           }`}
+          style={isAdvanced ? { backgroundColor: color } : {}}
         />
       </div>
-      <span className="text-xs font-semibold text-white/90 whitespace-nowrap">
+      <span className="text-xs font-semibold text-white/90 whitespace-nowrap inline-block min-w-[5.5rem]">
         {isAdvanced ? 'Intermediate' : 'Beginner'}
       </span>
     </button>
@@ -249,7 +250,7 @@ export default function PhasePage() {
               <span className="text-xs font-semibold uppercase tracking-wider text-white/50">
                 Content Level
               </span>
-              <InlineLevelToggle />
+              <InlineLevelToggle color={data.color} />
             </div>
           </div>
         </div>
