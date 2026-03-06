@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
   GitFork, Plus, Trash2, ChevronDown, ChevronUp,
-  Wand2, AlertCircle, Loader2, RotateCcw,
+  Wand2, AlertCircle, Loader2, RotateCcw, Download,
 } from 'lucide-react'
 import SEOHead from '../components/SEOHead'
 import CopyButton from '../components/ui/CopyButton'
@@ -573,6 +573,7 @@ function EditorPanel({ tree, onTreeChange }) {
 
 // ─── DiagramPanel (SVG) ───────────────────────────────────────────────────────
 function DiagramPanel({ tree }) {
+  const svgRef    = useRef(null)
   const positions = layoutTree(tree)
   const { w, h }  = svgDims(tree)
 
@@ -592,16 +593,52 @@ function DiagramPanel({ tree }) {
     })
   })
 
+  function downloadPng() {
+    const svg = svgRef.current
+    if (!svg) return
+    const svgData = new XMLSerializer().serializeToString(svg)
+    const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' })
+    const url     = URL.createObjectURL(svgBlob)
+    const img     = new Image()
+    img.onload = () => {
+      const scale  = 2  // 2× for retina-quality export
+      const canvas = document.createElement('canvas')
+      canvas.width  = img.width  * scale
+      canvas.height = img.height * scale
+      const ctx = canvas.getContext('2d')
+      ctx.scale(scale, scale)
+      ctx.fillStyle = '#F9FAFB'  // match bg-gray-50
+      ctx.fillRect(0, 0, img.width, img.height)
+      ctx.drawImage(img, 0, 0)
+      URL.revokeObjectURL(url)
+      const a = document.createElement('a')
+      a.download = 'scenario-diagram.png'
+      a.href = canvas.toDataURL('image/png')
+      a.click()
+    }
+    img.src = url
+  }
+
   return (
-    <div
-      className="overflow-auto rounded-xl border border-gray-200 bg-gray-50"
-      style={{ maxHeight: 580 }}
-    >
-      <svg
-        width={Math.max(w, 300)}
-        height={Math.max(h, 260)}
-        xmlns="http://www.w3.org/2000/svg"
+    <div className="relative">
+      <button
+        onClick={downloadPng}
+        title="Download diagram as PNG"
+        className="absolute top-2 right-2 z-10 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white border border-gray-200 text-xs font-medium text-gray-600 hover:text-gray-900 hover:border-gray-300 shadow-sm transition-colors"
       >
+        <Download size={13} />
+        PNG
+      </button>
+      <div
+        className="overflow-auto rounded-xl border border-gray-200 bg-gray-50"
+        style={{ maxHeight: 580 }}
+      >
+        <svg
+          ref={svgRef}
+          width={Math.max(w, 300)}
+          height={Math.max(h, 260)}
+          xmlns="http://www.w3.org/2000/svg"
+        >
         {/* 1 ── Edge paths (drawn first, behind everything) */}
         {edges.map(({ key, x1, y1, x2, y2, mx }) => (
           <path
@@ -699,6 +736,7 @@ function DiagramPanel({ tree }) {
           )
         })}
       </svg>
+      </div>
     </div>
   )
 }
