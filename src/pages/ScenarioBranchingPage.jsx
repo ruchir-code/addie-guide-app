@@ -183,7 +183,10 @@ Rules:
       model: model,
       max_tokens: model.includes('sonnet') ? 4096 : 2048,
       system: systemPrompt,
-      messages: [{ role: 'user', content: userPrompt }],
+      messages: [
+        { role: 'user',      content: userPrompt },
+        { role: 'assistant', content: '{'        }, // prefill: forces model to start JSON immediately, no preamble
+      ],
     }),
   })
 
@@ -193,20 +196,18 @@ Rules:
   }
 
   const data  = await response.json()
-  const raw   = data.content?.[0]?.text || ''
-  const clean = raw.replace(/```json?\n?/g, '').replace(/```/g, '').trim()
-  // Use bracket-depth tracking to extract exactly the outermost JSON object,
-  // regardless of any trailing explanation text the model appends
-  const start = clean.indexOf('{')
-  if (start === -1) throw new Error('AI did not return a valid scenario structure. Please try again.')
+  // Prepend the prefill '{' — the API response contains everything AFTER it
+  const raw   = '{' + (data.content?.[0]?.text || '')
+  // Use bracket-depth tracking to find the exact closing } of the root object,
+  // safely ignoring any trailing text the model appends after the JSON
   let depth = 0
   let end = -1
-  for (let i = start; i < clean.length; i++) {
-    if (clean[i] === '{') depth++
-    else if (clean[i] === '}') { depth--; if (depth === 0) { end = i; break } }
+  for (let i = 0; i < raw.length; i++) {
+    if (raw[i] === '{') depth++
+    else if (raw[i] === '}') { depth--; if (depth === 0) { end = i; break } }
   }
   if (end === -1) throw new Error('AI returned an incomplete JSON structure. Please try again.')
-  return JSON.parse(clean.slice(start, end + 1))
+  return JSON.parse(raw.slice(0, end + 1))
 }
 
 // ─── StartModeSelector ────────────────────────────────────────────────────────
