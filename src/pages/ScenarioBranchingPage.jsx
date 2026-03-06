@@ -912,26 +912,25 @@ export default function ScenarioBranchingPage() {
 
       {/* Hero banner */}
       <div
-        className="rounded-2xl p-6 mb-6 flex items-start gap-4"
-        style={{
-          background: `linear-gradient(135deg, ${ACCENT_LIGHT} 0%, #F0F9FF 100%)`,
-          border: `1px solid ${ACCENT_BORDER}`,
-        }}
+        className="rounded-2xl px-6 py-8 mb-6 relative overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #164E63 0%, #0E7490 55%, #0891B2 100%)' }}
       >
-        <div className="p-2.5 rounded-xl shrink-0" style={{ backgroundColor: ACCENT }}>
-          <GitFork size={22} color="white" />
-        </div>
-        <div>
-          <h1 className="text-2xl font-black text-gray-900 mb-1">
-            Scenario Builder
-          </h1>
-          <p className="text-gray-600 text-sm leading-relaxed">
+        <div className="absolute -right-12 -top-12 w-48 h-48 rounded-full opacity-15 blur-2xl" style={{ backgroundColor: '#fff' }} />
+        <div className="absolute -bottom-8 -left-8 w-40 h-40 rounded-full opacity-15 blur-2xl" style={{ backgroundColor: '#67E8F9' }} />
+        <div className="relative z-10">
+          <div className="flex items-center gap-2 mb-3">
+            <GitFork size={20} className="text-white/80" />
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              Scenario Builder
+            </h1>
+          </div>
+          <p className="text-base max-w-xl" style={{ color: 'rgba(255,255,255,0.78)' }}>
             Map out the decision points, learner choices, and consequences of your branching scenario.
-            Build the structure manually, or describe your idea in plain English and let AI draft a starting tree for you to refine.{' '}
+            Build manually, or let AI draft a starting tree for you to refine.{' '}
             <Link
               to="/scenario-guide"
-              className="underline font-medium hover:opacity-80 transition-opacity"
-              style={{ color: ACCENT }}
+              className="underline font-medium hover:text-white transition-colors"
+              style={{ color: '#A5F3FC' }}
             >
               New to scenario writing? Start here →
             </Link>
