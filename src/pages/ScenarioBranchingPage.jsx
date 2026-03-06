@@ -181,7 +181,7 @@ Rules:
     },
     body: JSON.stringify({
       model: model,
-      max_tokens: model.includes('sonnet') ? 4096 : 2048,
+      max_tokens: 4096,
       system: systemPrompt,
       messages: [
         { role: 'user',      content: userPrompt },
