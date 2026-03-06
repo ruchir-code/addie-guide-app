@@ -27,12 +27,13 @@ function getNodeCfg(node) {
   return NODE_CFG[node.endingType] || NODE_CFG.neutral
 }
 
-// SVG layout constants
-const NODE_W = 190
-const NODE_H = 88
-const H_GAP  = 90
-const LEAF_H = 120
-const PAD    = 24
+// SVG layout constants — H_GAP widened to 120 to accommodate choice boxes
+const NODE_W   = 190
+const NODE_H   = 88
+const H_GAP    = 120
+const LEAF_H   = 120
+const PAD      = 24
+const CHOICE_W = 110   // choice-label box width
 
 // ─── ID generation ────────────────────────────────────────────────────────────
 function makeId() {
@@ -105,6 +106,21 @@ function svgDims(root) {
     w: PAD * 2 + (maxDepth(root) + 1) * (NODE_W + H_GAP),
     h: PAD * 2 + countLeaves(root) * LEAF_H,
   }
+}
+
+// Split choice text into at most two lines, max 16 chars each
+function splitChoiceText(text) {
+  if (!text) return { line1: '', line2: '' }
+  const MAX1 = 16
+  const MAX2 = 18
+  if (text.length <= MAX1) return { line1: text, line2: '' }
+  // Break at last space before MAX1 chars
+  const breakAt = text.lastIndexOf(' ', MAX1)
+  const split = breakAt > 2 ? breakAt : MAX1
+  const line1     = text.slice(0, split).trim()
+  const remaining = text.slice(split).trim()
+  const line2     = remaining.length > MAX2 ? remaining.slice(0, MAX2 - 1) + '…' : remaining
+  return { line1, line2 }
 }
 
 // ─── Export helpers ───────────────────────────────────────────────────────────
@@ -184,10 +200,10 @@ Rules:
 
 // ─── StartModeSelector ────────────────────────────────────────────────────────
 function StartModeSelector({ onStart, apiKey, setApiKey }) {
-  const [showAI, setShowAI]         = useState(false)
-  const [description, setDesc]      = useState('')
-  const [loading, setLoading]       = useState(false)
-  const [error, setError]           = useState(null)
+  const [showAI, setShowAI]    = useState(false)
+  const [description, setDesc] = useState('')
+  const [loading, setLoading]  = useState(false)
+  const [error, setError]      = useState(null)
 
   async function handleGenerate() {
     if (!description.trim()) { setError('Please describe your scenario first.'); return }
@@ -338,117 +354,138 @@ function StartModeSelector({ onStart, apiKey, setApiKey }) {
   )
 }
 
-// ─── NodeEditorCard ───────────────────────────────────────────────────────────
+// ─── NodeEditorCard — collapsible ─────────────────────────────────────────────
 function NodeEditorCard({ node, depth, isRoot, onUpdate, onAddDecision, onAddOutcome, onDelete }) {
   const cfg    = getNodeCfg(node)
-  const indent = Math.min(depth * 18, 72)
+  const indent = Math.min(depth * 14, 56)
+
+  // Open by default only if the node has no content yet (newly created nodes)
+  const [open, setOpen] = useState(!node.text)
+
+  const preview = node.text
+    ? (node.text.length > 55 ? node.text.slice(0, 55) + '…' : node.text)
+    : node.type === 'start'    ? 'Add opening situation…'
+    : node.type === 'decision' ? 'Add decision prompt…'
+    :                            'Add outcome description…'
 
   return (
     <div
-      className="rounded-lg border border-gray-200 bg-white mb-2 shadow-sm"
+      className="rounded-lg border border-gray-200 bg-white mb-1.5 shadow-sm overflow-hidden"
       style={{ marginLeft: indent, borderLeftColor: cfg.border, borderLeftWidth: 3 }}
     >
-      <div className="p-3.5">
-
-        {/* Header row */}
-        <div className="flex items-center justify-between mb-2.5">
-          <span
-            className="text-xs font-bold px-2 py-0.5 rounded-full"
-            style={{ backgroundColor: cfg.bg, color: cfg.text, border: `1px solid ${cfg.border}` }}
-          >
-            {cfg.label}
-          </span>
+      {/* Always-visible header row — click to expand/collapse */}
+      <button
+        onClick={() => setOpen(v => !v)}
+        className="w-full flex items-center gap-2 px-3 py-2 text-left hover:bg-gray-50 transition-colors"
+      >
+        <span
+          className="text-[10px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap shrink-0"
+          style={{ backgroundColor: cfg.bg, color: cfg.text, border: `1px solid ${cfg.border}` }}
+        >
+          {cfg.label}
+        </span>
+        <span className="text-xs text-gray-500 flex-1 min-w-0 truncate">{preview}</span>
+        <div className="flex items-center gap-1 shrink-0">
           {!isRoot && (
-            <button
-              onClick={onDelete}
-              className="p-1 text-gray-300 hover:text-red-400 transition-colors rounded"
+            <span
+              role="button"
+              onClick={e => { e.stopPropagation(); onDelete() }}
+              className="p-0.5 text-gray-300 hover:text-red-400 transition-colors rounded cursor-pointer"
               title="Delete this node and all its children"
             >
-              <Trash2 size={13} />
-            </button>
+              <Trash2 size={11} />
+            </span>
           )}
+          {open
+            ? <ChevronUp size={13} className="text-gray-400 shrink-0" />
+            : <ChevronDown size={13} className="text-gray-400 shrink-0" />}
         </div>
+      </button>
 
-        {/* Choice text — what the learner selects to arrive at this node */}
-        {!isRoot && (
-          <div className="mb-2.5">
-            <label className="block text-xs text-gray-400 font-medium mb-1">
-              Learner's choice to reach this point
+      {/* Expandable form fields */}
+      {open && (
+        <div className="px-3 pb-3 border-t border-gray-100 space-y-2 pt-2">
+
+          {/* Learner's choice text — not shown for root */}
+          {!isRoot && (
+            <div>
+              <label className="block text-[10px] text-gray-400 font-medium mb-1">
+                Learner's choice to reach this point
+              </label>
+              <input
+                type="text"
+                value={node.choiceText || ''}
+                onChange={e => onUpdate({ choiceText: e.target.value })}
+                placeholder="e.g. Report it to the supervisor immediately"
+                className="w-full text-xs border border-gray-200 rounded-md px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-blue-400"
+              />
+            </div>
+          )}
+
+          {/* Main node text */}
+          <div>
+            <label className="block text-[10px] text-gray-400 font-medium mb-1">
+              {node.type === 'start'    ? 'Opening situation'           :
+               node.type === 'decision' ? 'Situation / decision prompt' :
+                                          'Consequence of this choice'  }
             </label>
-            <input
-              type="text"
-              value={node.choiceText || ''}
-              onChange={e => onUpdate({ choiceText: e.target.value })}
-              placeholder="e.g. Report it to the supervisor immediately"
-              className="w-full text-xs border border-gray-200 rounded-md px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-blue-400"
+            <textarea
+              value={node.text || ''}
+              onChange={e => onUpdate({ text: e.target.value })}
+              rows={2}
+              placeholder={
+                node.type === 'start'
+                  ? 'Describe the situation the learner encounters at the start…'
+                  : node.type === 'decision'
+                  ? 'Describe the dilemma the learner now faces…'
+                  : 'Describe what happens as a result of this choice…'
+              }
+              className="w-full text-xs border border-gray-200 rounded-md px-2.5 py-1.5 resize-none focus:outline-none focus:ring-1 leading-relaxed"
             />
           </div>
-        )}
 
-        {/* Main node text */}
-        <div className="mb-2.5">
-          <label className="block text-xs text-gray-400 font-medium mb-1">
-            {node.type === 'start'    ? 'Opening situation'           :
-             node.type === 'decision' ? 'Situation / decision prompt' :
-                                        'Consequence of this choice'  }
-          </label>
-          <textarea
-            value={node.text || ''}
-            onChange={e => onUpdate({ text: e.target.value })}
-            rows={3}
-            placeholder={
-              node.type === 'start'
-                ? 'Describe the situation the learner encounters at the start of the scenario…'
-                : node.type === 'decision'
-                ? 'Describe the dilemma or situation the learner now faces. What decision must they make?'
-                : 'Describe what happens as a direct result of this choice…'
-            }
-            className="w-full text-xs border border-gray-200 rounded-md px-2.5 py-1.5 resize-none focus:outline-none focus:ring-1 leading-relaxed"
-            style={{ '--tw-ring-color': cfg.border }}
-          />
-        </div>
-
-        {/* Ending type selector for outcome nodes */}
-        {node.type === 'outcome' && (
-          <div className="mb-2.5">
-            <label className="block text-xs text-gray-400 font-medium mb-1.5">Outcome type</label>
-            <div className="flex gap-1.5">
-              {['good', 'neutral', 'bad'].map(et => (
-                <button
-                  key={et}
-                  onClick={() => onUpdate({ endingType: et })}
-                  className="flex-1 text-xs py-1 px-2 rounded-md border font-semibold transition-all"
-                  style={
-                    node.endingType === et
-                      ? { backgroundColor: NODE_CFG[et].bg, borderColor: NODE_CFG[et].border, color: NODE_CFG[et].text }
-                      : { backgroundColor: 'white', borderColor: '#E5E7EB', color: '#9CA3AF' }
-                  }
-                >
-                  {et === 'good' ? '✓ Good' : et === 'bad' ? '✗ Bad' : '~ Neutral'}
-                </button>
-              ))}
+          {/* Outcome type selector */}
+          {node.type === 'outcome' && (
+            <div>
+              <label className="block text-[10px] text-gray-400 font-medium mb-1">Outcome type</label>
+              <div className="flex gap-1.5">
+                {['good', 'neutral', 'bad'].map(et => (
+                  <button
+                    key={et}
+                    onClick={() => onUpdate({ endingType: et })}
+                    className="flex-1 text-[10px] py-1 px-2 rounded border font-semibold transition-all"
+                    style={
+                      node.endingType === et
+                        ? { backgroundColor: NODE_CFG[et].bg, borderColor: NODE_CFG[et].border, color: NODE_CFG[et].text }
+                        : { backgroundColor: 'white', borderColor: '#E5E7EB', color: '#9CA3AF' }
+                    }
+                  >
+                    {et === 'good' ? '✓ Good' : et === 'bad' ? '✗ Bad' : '~ Neutral'}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {/* Add child buttons — only for non-outcome nodes */}
-        {node.type !== 'outcome' && (
-          <div className="flex gap-2 pt-1">
-            <button
-              onClick={onAddDecision}
-              className="flex items-center gap-1 text-xs px-2.5 py-1 rounded-md border border-blue-200 text-blue-600 hover:bg-blue-50 transition-colors font-medium"
-            >
-              <Plus size={11} /> Decision
-            </button>
-            <button
-              onClick={onAddOutcome}
-              className="flex items-center gap-1 text-xs px-2.5 py-1 rounded-md border border-green-200 text-green-600 hover:bg-green-50 transition-colors font-medium"
-            >
-              <Plus size={11} /> Outcome
-            </button>
-          </div>
-        )}
-      </div>
+          {/* Add child buttons — only for decision / start nodes */}
+          {node.type !== 'outcome' && (
+            <div className="flex gap-2 pt-0.5">
+              <button
+                onClick={onAddDecision}
+                className="flex items-center gap-1 text-[10px] px-2 py-1 rounded border border-blue-200 text-blue-600 hover:bg-blue-50 transition-colors font-medium"
+              >
+                <Plus size={10} /> Decision point
+              </button>
+              <button
+                onClick={onAddOutcome}
+                className="flex items-center gap-1 text-[10px] px-2 py-1 rounded border border-green-200 text-green-600 hover:bg-green-50 transition-colors font-medium"
+              >
+                <Plus size={10} /> Outcome
+              </button>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   )
 }
@@ -480,18 +517,19 @@ function DiagramPanel({ tree }) {
   const positions = layoutTree(tree)
   const { w, h }  = svgDims(tree)
 
-  // Collect edges
+  // Collect edges with pre-computed midpoints
   const edges = []
   Object.values(positions).forEach(({ x, y, node }) => {
     ;(node.children || []).forEach(child => {
       const cp = positions[child.id]
       if (!cp) return
-      const x1 = x + NODE_W
-      const y1 = y + NODE_H / 2
-      const x2 = cp.x
-      const y2 = cp.y + NODE_H / 2
-      const mx = (x1 + x2) / 2
-      edges.push({ key: `${node.id}-${child.id}`, x1, y1, x2, y2, mx, child })
+      const x1   = x + NODE_W
+      const y1   = y + NODE_H / 2
+      const x2   = cp.x
+      const y2   = cp.y + NODE_H / 2
+      const mx   = (x1 + x2) / 2   // bezier midpoint x (proven: t=0.5 lands here)
+      const midY = (y1 + y2) / 2   // bezier midpoint y
+      edges.push({ key: `${node.id}-${child.id}`, x1, y1, x2, y2, mx, midY, child })
     })
   })
 
@@ -505,34 +543,53 @@ function DiagramPanel({ tree }) {
         height={Math.max(h, 260)}
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Edges */}
-        {edges.map(({ key, x1, y1, x2, y2, mx, child }) => (
-          <g key={key}>
-            <path
-              d={`M ${x1} ${y1} C ${mx} ${y1} ${mx} ${y2} ${x2} ${y2}`}
-              fill="none"
-              stroke="#CBD5E1"
-              strokeWidth={1.5}
-            />
-            {/* Choice label near midpoint of edge */}
-            {child.choiceText && (
-              <text
-                x={mx}
-                y={(y1 + y2) / 2 - 5}
-                textAnchor="middle"
-                fontSize={8.5}
-                fill="#94A3B8"
-                fontFamily="system-ui, -apple-system, sans-serif"
-              >
-                {child.choiceText.length > 30
-                  ? child.choiceText.slice(0, 30) + '…'
-                  : child.choiceText}
-              </text>
-            )}
-          </g>
+        {/* 1 ── Edge paths (drawn first, behind everything) */}
+        {edges.map(({ key, x1, y1, x2, y2, mx }) => (
+          <path
+            key={`path-${key}`}
+            d={`M ${x1} ${y1} C ${mx} ${y1} ${mx} ${y2} ${x2} ${y2}`}
+            fill="none"
+            stroke="#CBD5E1"
+            strokeWidth={1.5}
+          />
         ))}
 
-        {/* Nodes */}
+        {/* 2 ── Choice-label boxes (on top of edges, behind nodes) */}
+        {edges.map(({ key, mx, midY, child }) => {
+          if (!child.choiceText) return null
+          const { line1, line2 } = splitChoiceText(child.choiceText)
+          const boxH = line2 ? 32 : 22
+          const boxX = mx - CHOICE_W / 2
+          const boxY = midY - boxH / 2
+
+          return (
+            <g key={`choice-${key}`}>
+              {/* White pill with dashed border — visually distinct from nodes */}
+              <rect
+                x={boxX} y={boxY}
+                width={CHOICE_W} height={boxH}
+                rx={4}
+                fill="white"
+                stroke="#94A3B8"
+                strokeWidth={1}
+                strokeDasharray="3 2"
+              />
+              {/* Choice text — up to 2 lines */}
+              <text
+                textAnchor="middle"
+                fontSize={8.5}
+                fill="#334155"
+                fontWeight="600"
+                fontFamily="system-ui, -apple-system, sans-serif"
+              >
+                <tspan x={mx} y={midY + (line2 ? -7 : 4)}>{line1}</tspan>
+                {line2 && <tspan x={mx} dy="13">{line2}</tspan>}
+              </text>
+            </g>
+          )
+        })}
+
+        {/* 3 ── Nodes (drawn last, always on top) */}
         {Object.values(positions).map(({ x, y, node }) => {
           const cfg = getNodeCfg(node)
           const display = node.text
@@ -562,7 +619,7 @@ function DiagramPanel({ tree }) {
               >
                 {cfg.label.toUpperCase()}
               </text>
-              {/* Content via foreignObject for proper text wrapping */}
+              {/* Node content — foreignObject for proper text wrapping */}
               <foreignObject x={x + 7} y={y + 22} width={NODE_W - 14} height={NODE_H - 28}>
                 <div
                   xmlns="http://www.w3.org/1999/xhtml"
@@ -684,8 +741,7 @@ export default function ScenarioBranchingPage() {
     }
   }
 
-  const totalNodes   = tree ? countNodes(tree)  : 0
-  const totalLeaves  = tree ? countLeaves(tree) : 0
+  const totalNodes    = tree ? countNodes(tree)  : 0
   const totalOutcomes = tree
     ? flattenTree(tree).filter(({ node }) => node.type === 'outcome').length
     : 0
@@ -724,6 +780,15 @@ export default function ScenarioBranchingPage() {
             </Link>
           </p>
         </div>
+      </div>
+
+      {/* Device recommendation */}
+      <div className="flex items-center gap-2.5 mb-5 px-3.5 py-2.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-xs">
+        <span className="text-base leading-none shrink-0">💻</span>
+        <p>
+          <span className="font-semibold">Best on a laptop or desktop.</span>{' '}
+          The diagram panel needs room to breathe — phones and small tablets will make editing and reading the tree difficult.
+        </p>
       </div>
 
       {/* Mode selector or builder */}
