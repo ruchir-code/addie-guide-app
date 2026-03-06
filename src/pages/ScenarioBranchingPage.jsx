@@ -11,7 +11,7 @@ import CopyButton from '../components/ui/CopyButton'
 const ACCENT        = '#0891B2'
 const ACCENT_LIGHT  = '#ECFEFF'
 const ACCENT_BORDER = '#67E8F9'
-const AI_MODEL      = 'claude-3-5-haiku-20241022'
+const AI_MODEL      = 'claude-haiku-4-5'
 
 const NODE_CFG = {
   start:   { bg: '#ECFDF5', border: '#059669', text: '#065F46', label: 'Start'           },
