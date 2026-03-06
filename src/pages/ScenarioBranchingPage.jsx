@@ -207,7 +207,38 @@ Rules:
     else if (raw[i] === '}') { depth--; if (depth === 0) { end = i; break } }
   }
   if (end === -1) throw new Error('AI returned an incomplete JSON structure. Please try again.')
-  return JSON.parse(raw.slice(0, end + 1))
+  const parsed = JSON.parse(raw.slice(0, end + 1))
+  return normalizeAITree(parsed)
+}
+
+// Normalize + validate the AI-generated tree so the app can always render it
+function normalizeAITree(obj) {
+  // Unwrap container objects like {"scenario":{...}} or {"tree":{...}}
+  if (!obj.type && !obj.id) {
+    const inner = Object.values(obj).find(v => v && typeof v === 'object' && (v.type || v.id))
+    if (inner) return normalizeAITree(inner)
+    throw new Error('AI generated an unexpected structure. Please try again.')
+  }
+
+  function normalizeNode(node) {
+    return {
+      id:         node.id         || makeId(),
+      type:       node.type       || 'decision',
+      text:       node.text       || '',
+      choiceText: node.choiceText || '',
+      endingType: node.endingType || null,
+      children:   (node.children  || []).map(normalizeNode),
+    }
+  }
+
+  const tree = normalizeNode(obj)
+  if (tree.type !== 'start') {
+    throw new Error('AI did not generate a valid starting node. Please try again.')
+  }
+  if (!tree.children || tree.children.length === 0) {
+    throw new Error('AI generated a tree with no branches. Please try again.')
+  }
+  return tree
 }
 
 // ─── StartModeSelector ────────────────────────────────────────────────────────
