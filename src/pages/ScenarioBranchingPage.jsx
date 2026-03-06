@@ -749,7 +749,7 @@ export default function ScenarioBranchingPage() {
   return (
     <>
       <SEOHead
-        title="Scenario Branching Builder — ADDIE Guide"
+        title="Scenario Builder — ADDIE Guide"
         description="Design branching scenarios for e-learning. Map decision points, choices, and consequences — build manually or use AI to draft a starting structure from your description."
       />
 
@@ -766,7 +766,7 @@ export default function ScenarioBranchingPage() {
         </div>
         <div>
           <h1 className="text-2xl font-black text-gray-900 mb-1">
-            Scenario Branching Builder
+            Scenario Builder
           </h1>
           <p className="text-gray-600 text-sm leading-relaxed">
             Map out the decision points, learner choices, and consequences of your branching scenario.

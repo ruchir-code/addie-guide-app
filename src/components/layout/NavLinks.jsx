@@ -36,16 +36,16 @@ const PHASE_LINKS = PHASES.map((p) => ({
 }))
 
 const TOOL_LINKS = [
-  { to: '/objectives',          label: 'Outcomes & Objectives',   icon: Target },
-  { to: '/templates',           label: 'Template Library',        icon: FileText },
-  { to: '/glossary',            label: 'Glossary',                icon: BookOpen },
-  { to: '/media-guide',         label: 'Media & Format Guide',    icon: Monitor },
   { to: '/assessment-builder',  label: 'Assessment Builder',      icon: ClipboardCheck },
-  { to: '/scenario-guide',      label: 'Scenario Writing',        icon: GitBranch },
+  { to: '/glossary',            label: 'Glossary',                icon: BookOpen },
   { to: '/quiz',                label: 'ID Self-Assessment',      icon: ListChecks },
+  { to: '/media-guide',         label: 'Media & Format Guide',    icon: Monitor },
+  { to: '/objectives',          label: 'Outcomes & Objectives',   icon: Target },
+  { to: '/project-management',  label: 'Project Management',      icon: GanttChart },
+  { to: '/scenario-branching',  label: 'Scenario Builder',        icon: GitFork },
+  { to: '/scenario-guide',      label: 'Scenario Writing',        icon: GitBranch },
   { to: '/sme-guide',           label: 'SME Management',          icon: Users2 },
-  { to: '/project-management',   label: 'Project Management',       icon: GanttChart },
-  { to: '/scenario-branching',   label: 'Branching Builder',        icon: GitFork    },
+  { to: '/templates',           label: 'Template Library',        icon: FileText },
 ]
 
 const CONTEXT_LINKS = [
@@ -53,13 +53,13 @@ const CONTEXT_LINKS = [
 ]
 
 const FOUNDATION_LINKS = [
-  { to: '/theories',                label: 'Learning Theories',        icon: Brain,         color: '#0D9488' },
+  { to: '/ai-in-id',               label: 'AI in ID',                 icon: Bot,           color: '#6366F1' },
   { to: '/bloom',                   label: "Bloom's Taxonomy",         icon: GraduationCap, color: '#D97706' },
-  { to: '/models',                  label: 'Instructional Models',     icon: Network,       color: '#4338CA' },
   { to: '/evaluation-frameworks',   label: 'Evaluation Frameworks',    icon: TrendingUp,    color: '#0369A1' },
+  { to: '/models',                  label: 'Instructional Models',     icon: Network,       color: '#4338CA' },
+  { to: '/theories',                label: 'Learning Theories',        icon: Brain,         color: '#0D9488' },
   { to: '/performance-consulting',  label: 'Performance Consulting',   icon: Briefcase,     color: '#C2410C' },
   { to: '/transfer',                label: 'Transfer of Learning',     icon: Zap,           color: '#7C3AED' },
-  { to: '/ai-in-id',               label: 'AI in ID',                 icon: Bot,           color: '#6366F1' },
 ]
 
 export default function NavLinks({ onNavigate }) {
