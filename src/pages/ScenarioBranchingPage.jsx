@@ -195,7 +195,10 @@ Rules:
   const data  = await response.json()
   const raw   = data.content?.[0]?.text || ''
   const clean = raw.replace(/```json?\n?/g, '').replace(/```/g, '').trim()
-  return JSON.parse(clean)
+  // Extract just the outermost JSON object, ignoring any trailing explanation text
+  const jsonMatch = clean.match(/\{[\s\S]*\}/)
+  if (!jsonMatch) throw new Error('AI did not return a valid scenario structure. Please try again.')
+  return JSON.parse(jsonMatch[0])
 }
 
 // ─── StartModeSelector ────────────────────────────────────────────────────────
