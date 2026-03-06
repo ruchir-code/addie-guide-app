@@ -330,7 +330,23 @@ function StartModeSelector({ onStart, apiKey, setApiKey }) {
               {error && (
                 <div className="flex items-start gap-2 bg-red-50 border border-red-200 rounded-lg p-3">
                   <AlertCircle size={14} className="text-red-500 shrink-0 mt-0.5" />
-                  <p className="text-xs text-red-700">{error}</p>
+                  <div className="text-xs text-red-700 space-y-1">
+                    <p>{error}</p>
+                    {error.toLowerCase().includes('credit') && (
+                      <p>
+                        Check your{' '}
+                        <a
+                          href="https://console.anthropic.com/settings/billing"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline font-semibold hover:opacity-80"
+                        >
+                          Anthropic billing page
+                        </a>
+                        {' '}— a payment method must be on file and credits must be purchased (not trial credits) to reach API Tier 1.
+                      </p>
+                    )}
+                  </div>
                 </div>
               )}
 
