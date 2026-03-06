@@ -155,7 +155,7 @@ function toMarkdown(node, depth = 2) {
 }
 
 // ─── AI generation ────────────────────────────────────────────────────────────
-async function generateScenario(description, apiKey) {
+async function generateScenario(description, apiKey, model) {
   const systemPrompt = `You are an instructional design assistant specializing in branching scenarios for e-learning. Generate a realistic, practitioner-quality branching scenario tree as JSON.
 
 Rules:
@@ -180,7 +180,7 @@ Rules:
       'anthropic-dangerous-direct-browser-access': 'true',
     },
     body: JSON.stringify({
-      model: AI_MODEL,
+      model: model,
       max_tokens: 2048,
       system: systemPrompt,
       messages: [{ role: 'user', content: userPrompt }],
@@ -213,6 +213,7 @@ Rules:
 function StartModeSelector({ onStart, apiKey, setApiKey }) {
   const [showAI, setShowAI]    = useState(false)
   const [description, setDesc] = useState('')
+  const [model, setModel]      = useState(AI_MODEL)
   const [loading, setLoading]  = useState(false)
   const [error, setError]      = useState(null)
 
@@ -223,7 +224,7 @@ function StartModeSelector({ onStart, apiKey, setApiKey }) {
     setError(null)
     try {
       localStorage.setItem('addie-anthropic-key', apiKey)
-      const tree = await generateScenario(description, apiKey)
+      const tree = await generateScenario(description, apiKey, model)
       onStart(tree)
     } catch (e) {
       setError(e.message || 'Something went wrong. Check your API key and try again.')
@@ -336,6 +337,32 @@ function StartModeSelector({ onStart, apiKey, setApiKey }) {
                 <p className="text-xs text-gray-400 mt-1">
                   Saved to your browser only. Never transmitted to addieguide.com.
                 </p>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+                  Model
+                </label>
+                <div className="flex rounded-lg border border-gray-200 overflow-hidden text-xs font-medium">
+                  {[
+                    { id: 'claude-haiku-4-5',  label: 'Haiku 4.5',  note: 'Fast & affordable' },
+                    { id: 'claude-sonnet-4-5', label: 'Sonnet 4.5', note: 'Higher quality' },
+                  ].map(({ id, label, note }) => (
+                    <button
+                      key={id}
+                      type="button"
+                      onClick={() => setModel(id)}
+                      className="flex-1 py-2 px-3 text-center transition-colors"
+                      style={model === id
+                        ? { backgroundColor: ACCENT, color: 'white' }
+                        : { backgroundColor: 'white', color: '#6B7280' }
+                      }
+                    >
+                      <span className="block">{label}</span>
+                      <span className="block text-[10px] mt-0.5 opacity-75">{note}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
 
               {error && (
