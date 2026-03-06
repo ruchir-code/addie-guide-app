@@ -195,10 +195,18 @@ Rules:
   const data  = await response.json()
   const raw   = data.content?.[0]?.text || ''
   const clean = raw.replace(/```json?\n?/g, '').replace(/```/g, '').trim()
-  // Extract just the outermost JSON object, ignoring any trailing explanation text
-  const jsonMatch = clean.match(/\{[\s\S]*\}/)
-  if (!jsonMatch) throw new Error('AI did not return a valid scenario structure. Please try again.')
-  return JSON.parse(jsonMatch[0])
+  // Use bracket-depth tracking to extract exactly the outermost JSON object,
+  // regardless of any trailing explanation text the model appends
+  const start = clean.indexOf('{')
+  if (start === -1) throw new Error('AI did not return a valid scenario structure. Please try again.')
+  let depth = 0
+  let end = -1
+  for (let i = start; i < clean.length; i++) {
+    if (clean[i] === '{') depth++
+    else if (clean[i] === '}') { depth--; if (depth === 0) { end = i; break } }
+  }
+  if (end === -1) throw new Error('AI returned an incomplete JSON structure. Please try again.')
+  return JSON.parse(clean.slice(start, end + 1))
 }
 
 // ─── StartModeSelector ────────────────────────────────────────────────────────
