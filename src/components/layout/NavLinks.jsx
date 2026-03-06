@@ -21,6 +21,7 @@ import {
   Zap,
   Bot,
   GitBranch,
+  GitFork,
   User,
   Building2,
   GanttChart,
@@ -43,7 +44,8 @@ const TOOL_LINKS = [
   { to: '/scenario-guide',      label: 'Scenario Writing',        icon: GitBranch },
   { to: '/quiz',                label: 'ID Self-Assessment',      icon: ListChecks },
   { to: '/sme-guide',           label: 'SME Management',          icon: Users2 },
-  { to: '/project-management', label: 'Project Management',      icon: GanttChart },
+  { to: '/project-management',   label: 'Project Management',       icon: GanttChart },
+  { to: '/scenario-branching',   label: 'Branching Builder',        icon: GitFork    },
 ]
 
 const CONTEXT_LINKS = [

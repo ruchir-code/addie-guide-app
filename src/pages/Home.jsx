@@ -20,6 +20,7 @@ import {
   ClipboardCheck,
   ListChecks,
   GitBranch,
+  GitFork,
   Users2,
   Building2,
   GanttChart,
@@ -43,7 +44,7 @@ const HERO_STATS = [
   { value: '5',   label: 'Full Phases',     sub: 'Checklists, deep-dives & case studies' },
   { value: '150+', label: 'Glossary Terms',  sub: 'Plain-English ID definitions' },
   { value: '14',  label: 'Templates',       sub: 'Copy-ready, zero formatting needed' },
-  { value: '9',   label: 'Tools & Guides',   sub: 'Objectives, quizzes, scenario guide & more' },
+  { value: '10',  label: 'Tools & Guides',   sub: 'Objectives, quizzes, branching builder & more' },
 ]
 
 const ICON_MAP = {
@@ -128,6 +129,14 @@ const TOOLS = [
     icon: GanttChart,
     style: { backgroundColor: '#ECFDF5', borderColor: '#6EE7B7', color: '#064E3B' },
     iconBg: '#059669',
+  },
+  {
+    to: '/scenario-branching',
+    label: 'Scenario Branching Builder',
+    desc: 'Map decision points and consequences visually. Build manually or draft with AI from a plain-English description.',
+    icon: GitFork,
+    style: { backgroundColor: '#ECFEFF', borderColor: '#67E8F9', color: '#164E63' },
+    iconBg: '#0891B2',
   },
 ]
 

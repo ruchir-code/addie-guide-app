@@ -48,6 +48,7 @@ const CIVILIAN_HONORS = [
 
 // ── Content changelog ─────────────────────────────────────────────────────────
 const CHANGELOG = [
+  { section: 'Scenario Branching Builder',           updated: 'March 2026' },
   { section: 'Project Management for IDs',          updated: 'March 2026' },
   { section: 'Federal & Government ID Guide',       updated: 'March 2026' },
   { section: 'SME Management Guide',                updated: 'March 2026' },

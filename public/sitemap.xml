@@ -126,6 +126,12 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://www.addieguide.com/scenario-branching</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- About -->
   <url>
     <loc>https://www.addieguide.com/about</loc>

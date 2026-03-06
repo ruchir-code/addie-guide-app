@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import {
   Search, X,
   BookOpen, FileText, GraduationCap, Brain, Monitor, Network, ClipboardCheck, Target,
-  TrendingUp, Briefcase, Zap, GitBranch, ListChecks, Users2, GanttChart, Building2, Bot,
+  TrendingUp, Briefcase, Zap, GitBranch, GitFork, ListChecks, Users2, GanttChart, Building2, Bot,
 } from 'lucide-react'
 
 import analysisData  from '../../data/phases/analysis.json'
@@ -57,6 +57,7 @@ const TOOLS = [
   { title: 'Project Management',        desc: 'Timelines, estimates, and development-time ratios for ID projects',                           path: '/project-management',     icon: GanttChart, keywords: 'chapman alliance development time ratios hours estimate ilt elearning level 1 2 3 calculator budget scope kickoff RACI waterfall agile version control project plan timeline deliverables' },
   { title: 'AI in Instructional Design', desc: 'How to use AI tools effectively across the ID workflow',                                     path: '/ai-in-id',               icon: Bot,        keywords: 'AI ChatGPT artificial intelligence tools automation prompt scripting storyboard generation GPT LLM machine learning' },
   { title: 'Federal / Government ID',   desc: 'Instructional design in federal and government agency contexts',                              path: '/federal-id',             icon: Building2,  keywords: 'federal government Section 508 accessibility compliance clearance SCORM DoD military agency contracting regulations policy' },
+  { title: 'Scenario Branching Builder', desc: 'Map decision points and consequences. Build manually or draft with AI.',                        path: '/scenario-branching',     icon: GitFork,    keywords: 'branching diagram tree decision consequence outcome flowchart map storyline storyboard AI draft generate BYOK scenario builder visual' },
 ]
 
 // ─── Search ──────────────────────────────────────────────────────────────────
