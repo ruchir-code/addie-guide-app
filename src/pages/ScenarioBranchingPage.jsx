@@ -596,10 +596,58 @@ function DiagramPanel({ tree }) {
   function downloadPng() {
     const svg = svgRef.current
     if (!svg) return
-    const svgData = new XMLSerializer().serializeToString(svg)
-    const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' })
-    const url     = URL.createObjectURL(svgBlob)
-    const img     = new Image()
+
+    // Clone SVG and replace foreignObject (HTML) with pure SVG <text>,
+    // because browsers block foreignObject when rendering SVG-as-image on canvas
+    const clone = svg.cloneNode(true)
+    clone.querySelectorAll('foreignObject').forEach(fo => {
+      const text  = (fo.textContent || '').trim()
+      const x     = parseFloat(fo.getAttribute('x')) + 4
+      const y     = parseFloat(fo.getAttribute('y')) + 12
+      const w     = parseFloat(fo.getAttribute('width')) || 160
+      const parent = fo.closest('g')
+      // Inherit color from the type-label text in the same <g>
+      const fill  = parent?.querySelector('text')?.getAttribute('fill') || '#334155'
+
+      const svgText = document.createElementNS('http://www.w3.org/2000/svg', 'text')
+      svgText.setAttribute('x', x)
+      svgText.setAttribute('y', y)
+      svgText.setAttribute('font-size', '10')
+      svgText.setAttribute('fill', fill)
+      svgText.setAttribute('font-family', 'system-ui, -apple-system, sans-serif')
+
+      // Word-wrap into multiple <tspan> lines that fit the node width
+      const maxChars = Math.floor(w / 5.5)
+      const words = text.split(/\s+/)
+      const lines = []
+      let line = ''
+      for (const word of words) {
+        if ((line + ' ' + word).trim().length > maxChars && line) {
+          lines.push(line)
+          line = word
+        } else {
+          line = (line + ' ' + word).trim()
+        }
+      }
+      if (line) lines.push(line)
+
+      lines.slice(0, 4).forEach((ln, i) => {
+        const tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan')
+        tspan.setAttribute('x', x)
+        tspan.setAttribute('dy', i === 0 ? '0' : '13')
+        tspan.textContent = i === 3 && lines.length > 4 ? ln.slice(0, maxChars - 1) + '…' : ln
+        svgText.appendChild(tspan)
+      })
+
+      fo.parentNode.replaceChild(svgText, fo)
+    })
+
+    // Encode as base64 data URL (more reliable than blob URL for SVG→Image)
+    const svgData = new XMLSerializer().serializeToString(clone)
+    const encoded = btoa(unescape(encodeURIComponent(svgData)))
+    const dataUrl = 'data:image/svg+xml;base64,' + encoded
+
+    const img = new Image()
     img.onload = () => {
       const scale  = 2  // 2× for retina-quality export
       const canvas = document.createElement('canvas')
@@ -610,13 +658,20 @@ function DiagramPanel({ tree }) {
       ctx.fillStyle = '#F9FAFB'  // match bg-gray-50
       ctx.fillRect(0, 0, img.width, img.height)
       ctx.drawImage(img, 0, 0)
-      URL.revokeObjectURL(url)
       const a = document.createElement('a')
       a.download = 'scenario-diagram.png'
       a.href = canvas.toDataURL('image/png')
       a.click()
     }
-    img.src = url
+    img.onerror = () => {
+      // Fallback: download as SVG if canvas conversion still fails
+      const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' })
+      const a = document.createElement('a')
+      a.download = 'scenario-diagram.svg'
+      a.href = URL.createObjectURL(blob)
+      a.click()
+    }
+    img.src = dataUrl
   }
 
   return (
