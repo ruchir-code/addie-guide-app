@@ -620,15 +620,20 @@ function DiagramPanel({ tree }) {
   }
 
   return (
-    <div className="relative">
-      <button
-        onClick={downloadPng}
-        title="Download diagram as PNG"
-        className="absolute top-2 right-2 z-10 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white border border-gray-200 text-xs font-medium text-gray-600 hover:text-gray-900 hover:border-gray-300 shadow-sm transition-colors"
-      >
-        <Download size={13} />
-        PNG
-      </button>
+    <div>
+      <div className="flex items-center justify-between mb-2 px-1">
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+          Diagram
+        </p>
+        <button
+          onClick={downloadPng}
+          title="Download diagram as PNG"
+          className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white border border-gray-200 text-xs font-medium text-gray-500 hover:text-gray-900 hover:border-gray-300 transition-colors"
+        >
+          <Download size={12} />
+          PNG
+        </button>
+      </div>
       <div
         className="overflow-auto rounded-xl border border-gray-200 bg-gray-50"
         style={{ maxHeight: 580 }}
@@ -927,9 +932,6 @@ export default function ScenarioBranchingPage() {
               <EditorPanel tree={tree} onTreeChange={setTree} />
             </div>
             <div>
-              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 px-1">
-                Diagram
-              </p>
               <DiagramPanel tree={tree} />
             </div>
           </div>
