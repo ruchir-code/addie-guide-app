@@ -154,13 +154,13 @@ export default function AboutPage() {
         <SectionHeading icon={Award} label="Who built this" />
 
         <div className="space-y-6 text-sm text-gray-700 leading-relaxed">
-          <div className="flex flex-col sm:flex-row items-start gap-5">
+          <div>
             <img
               src="/headshot.jpg"
               alt="Ruchir Bakshi"
-              className="w-28 h-28 rounded-full object-cover object-top ring-4 ring-white shadow-lg shrink-0 self-center sm:self-start"
+              className="w-28 h-28 rounded-full object-cover object-top ring-4 ring-white shadow-lg float-left mr-5 mb-2"
             />
-            <p className="pt-0 sm:pt-2">
+            <p>
               I'm <strong className="text-gray-900">Ruchir Bakshi</strong>, a Senior Instructional
               Systems Designer at Team Carney, Inc., supporting the Center for Development of
               Security Excellence (CDSE) at the Department of Defense.
