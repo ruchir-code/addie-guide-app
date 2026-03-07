@@ -577,7 +577,7 @@ export default function AiInIDPage() {
           className="absolute -right-12 -top-12 w-48 h-48 rounded-full opacity-10"
           style={{ backgroundColor: '#fff' }}
         />
-        <div className="relative z-10">
+        <div className="relative z-10 animate-fade-in-up">
           <div className="flex items-center gap-2 mb-3">
             <Bot size={20} className="text-white/80" />
             <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">

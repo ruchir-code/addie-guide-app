@@ -259,7 +259,7 @@ export default function SMEGuidePage() {
           background: 'linear-gradient(135deg, #9D174D 0%, #BE185D 35%, #DB2777 65%, #EC4899 100%)',
         }}
       >
-        <div className="flex items-center gap-3 mb-3">
+        <div className="flex items-center gap-3 mb-3 animate-fade-in-up">
           <div className="p-2.5 rounded-xl bg-white/20">
             <Users2 size={24} className="text-white" />
           </div>

@@ -793,7 +793,7 @@ export default function QuizPage() {
           background: 'linear-gradient(135deg, #4338CA 0%, #7C3AED 40%, #9333EA 70%, #C026D3 100%)',
         }}
       >
-        <div className="flex items-center gap-3 mb-3">
+        <div className="flex items-center gap-3 mb-3 animate-fade-in-up">
           <div className="p-2.5 rounded-xl bg-white/20">
             <Brain size={24} className="text-white" />
           </div>

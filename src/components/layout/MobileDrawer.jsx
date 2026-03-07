@@ -12,20 +12,26 @@ export default function MobileDrawer({ isOpen, onClose }) {
     return () => { document.body.style.overflow = '' }
   }, [isOpen])
 
-  if (!isOpen) return null
-
   return (
-    <div className="fixed inset-0 z-50 md:hidden">
+    <div
+      className={`fixed inset-0 z-50 md:hidden transition-all duration-300 ${
+        isOpen ? 'visible' : 'invisible pointer-events-none'
+      }`}
+    >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/50"
+        className={`absolute inset-0 bg-black transition-opacity duration-300 ${
+          isOpen ? 'opacity-50' : 'opacity-0'
+        }`}
         onClick={onClose}
         aria-hidden="true"
       />
 
       {/* Drawer panel — dark navy, matching desktop sidebar */}
       <div
-        className="absolute left-0 top-0 h-full w-64 shadow-2xl flex flex-col"
+        className={`absolute left-0 top-0 h-full w-64 shadow-2xl flex flex-col transition-transform duration-300 ease-out ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
         style={{ backgroundColor: '#0F172A' }}
       >
         <div

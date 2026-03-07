@@ -296,7 +296,7 @@ export default function AssessmentBuilderPage() {
           className="absolute -bottom-8 -left-8 w-40 h-40 rounded-full opacity-15 blur-2xl"
           style={{ backgroundColor: '#0EA5E9' }}
         />
-        <div className="relative z-10">
+        <div className="relative z-10 animate-fade-in-up">
           <div className="flex items-center gap-3 mb-3">
             <div
               className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"

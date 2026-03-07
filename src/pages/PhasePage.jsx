@@ -233,7 +233,7 @@ export default function PhasePage() {
           style={{ backgroundColor: '#fff' }}
         />
 
-        <div className="relative z-10">
+        <div className="relative z-10 animate-fade-in-up">
           <div className="flex items-start justify-between gap-4">
             <div>
               <span className="text-5xl font-black text-white/20 leading-none block mb-1">

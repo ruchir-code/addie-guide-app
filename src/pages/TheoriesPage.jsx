@@ -229,7 +229,7 @@ export default function TheoriesPage() {
           className="absolute -right-4 -bottom-8 w-32 h-32 rounded-full opacity-10"
           style={{ backgroundColor: '#fff' }}
         />
-        <div className="relative z-10">
+        <div className="relative z-10 animate-fade-in-up">
           <div className="flex items-center gap-2 mb-3">
             <Brain size={20} className="text-white/80" />
             <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">

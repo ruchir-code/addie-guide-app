@@ -141,11 +141,11 @@ export default function GlobalSearch({ isOpen, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-start justify-center pt-16 px-4"
+      className="fixed inset-0 z-50 flex items-start justify-center pt-16 px-4 animate-fade-in"
       style={{ backgroundColor: 'rgba(15,23,42,0.6)' }}
       onClick={(e) => { if (e.target === e.currentTarget) onClose() }}
     >
-      <div className="w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden">
+      <div className="w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden animate-scale-in">
         {/* Input */}
         <div className="flex items-center gap-3 px-4 py-3 border-b border-gray-100">
           <Search size={18} className="text-gray-400 shrink-0" />

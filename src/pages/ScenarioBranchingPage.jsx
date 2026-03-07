@@ -917,7 +917,7 @@ export default function ScenarioBranchingPage() {
       >
         <div className="absolute -right-12 -top-12 w-48 h-48 rounded-full opacity-15 blur-2xl" style={{ backgroundColor: '#fff' }} />
         <div className="absolute -bottom-8 -left-8 w-40 h-40 rounded-full opacity-15 blur-2xl" style={{ backgroundColor: '#67E8F9' }} />
-        <div className="relative z-10">
+        <div className="relative z-10 animate-fade-in-up">
           <div className="flex items-center gap-2 mb-3">
             <GitFork size={20} className="text-white/80" />
             <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">

@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import SEOHead from '../components/SEOHead'
+import useScrollReveal from '../hooks/useScrollReveal'
 import {
   Search,
   Layers,
@@ -211,6 +212,12 @@ const CONTEXTS = [
 ]
 
 export default function Home() {
+  const phases    = useScrollReveal()
+  const flowBar   = useScrollReveal()
+  const tools     = useScrollReveal()
+  const founds    = useScrollReveal()
+  const contexts  = useScrollReveal()
+
   return (
     <div>
       <SEOHead
@@ -239,7 +246,7 @@ export default function Home() {
           style={{ backgroundColor: '#059669' }}
         />
 
-        <div className="relative z-10 flex flex-col gap-8">
+        <div className="relative z-10 flex flex-col gap-8 animate-fade-in-up">
           {/* Overline */}
           <p className="text-xs font-bold uppercase tracking-widest" style={{ color: '#7C3AED' }}>
             Instructional Design Reference
@@ -366,19 +373,23 @@ export default function Home() {
 
       {/* ── Phase Cards ─────────────────────────────────────────────── */}
       <div id="guide-content" />
-      <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1">
+      <h2
+        ref={phases.ref}
+        className={`text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1 transition-all duration-700 ${phases.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+      >
         Phases
       </h2>
       <div className="flex flex-col gap-3 mb-10">
-        {PHASES.map((phase) => {
+        {PHASES.map((phase, i) => {
           const Icon = phase.icon
           return (
             <Link
               key={phase.slug}
               to={`/${phase.slug}`}
-              className="group rounded-xl overflow-hidden border border-gray-200 bg-white transition-all duration-200 hover:-translate-y-0.5"
+              className={`group rounded-xl overflow-hidden border border-gray-200 bg-white transition-all duration-200 hover:-translate-y-0.5 ${phases.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               style={{
                 boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
+                transitionDelay: phases.isVisible ? `${i * 80}ms` : '0ms',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.boxShadow = `0 8px 24px ${phase.color}30`
@@ -420,7 +431,7 @@ export default function Home() {
       </div>
 
       {/* ── Flow bar ────────────────────────────────────────────────── */}
-      <div className="mb-10 overflow-x-auto">
+      <div ref={flowBar.ref} className={`mb-10 overflow-x-auto transition-all duration-700 ${flowBar.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <div className="flex items-center gap-1 min-w-max">
           {PHASES.map((phase, idx) => (
             <div key={phase.slug} className="flex items-center">
@@ -443,16 +454,19 @@ export default function Home() {
       </div>
 
       {/* ── Tool quick links ─────────────────────────────────────────── */}
-      <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1">
+      <h2
+        ref={tools.ref}
+        className={`text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1 transition-all duration-700 ${tools.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+      >
         Tools
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-        {TOOLS.map(({ to, label, desc, icon: Icon, style, iconBg }) => (
+        {TOOLS.map(({ to, label, desc, icon: Icon, style, iconBg }, i) => (
           <Link
             key={to}
             to={to}
-            className="group p-4 rounded-xl border transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
-            style={style}
+            className={`group p-4 rounded-xl border transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg ${tools.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+            style={{ ...style, transitionDelay: tools.isVisible ? `${i * 60}ms` : '0ms' }}
           >
             <div className="flex items-center gap-2 mb-2">
               <div
@@ -472,16 +486,19 @@ export default function Home() {
       </div>
 
       {/* ── Foundations ─────────────────────────────────────────────── */}
-      <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1">
+      <h2
+        ref={founds.ref}
+        className={`text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1 transition-all duration-700 ${founds.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+      >
         Foundations
       </h2>
       <div className="grid grid-cols-1 gap-3 mb-8">
-        {FOUNDATIONS.map(({ to, label, desc, icon: Icon, style, iconBg }) => (
+        {FOUNDATIONS.map(({ to, label, desc, icon: Icon, style, iconBg }, i) => (
           <Link
             key={to}
             to={to}
-            className="group p-4 rounded-xl border transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
-            style={style}
+            className={`group p-4 rounded-xl border transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg ${founds.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+            style={{ ...style, transitionDelay: founds.isVisible ? `${i * 60}ms` : '0ms' }}
           >
             <div className="flex items-center gap-2 mb-2">
               <div
@@ -501,16 +518,19 @@ export default function Home() {
       </div>
 
       {/* ── Contexts ─────────────────────────────────────────────────── */}
-      <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1">
+      <h2
+        ref={contexts.ref}
+        className={`text-xs font-bold uppercase tracking-widest text-gray-400 mb-3 px-1 transition-all duration-700 ${contexts.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+      >
         Contexts
       </h2>
       <div className="grid grid-cols-1 gap-3">
-        {CONTEXTS.map(({ to, label, desc, icon: Icon, style, iconBg }) => (
+        {CONTEXTS.map(({ to, label, desc, icon: Icon, style, iconBg }, i) => (
           <Link
             key={to}
             to={to}
-            className="group p-4 rounded-xl border transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
-            style={style}
+            className={`group p-4 rounded-xl border transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg ${contexts.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+            style={{ ...style, transitionDelay: contexts.isVisible ? `${i * 60}ms` : '0ms' }}
           >
             <div className="flex items-center gap-2 mb-2">
               <div

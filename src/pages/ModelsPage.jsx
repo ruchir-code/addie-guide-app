@@ -341,7 +341,7 @@ export default function ModelsPage() {
           className="absolute -top-8 -right-8 w-40 h-40 rounded-full opacity-20 blur-2xl"
           style={{ backgroundColor: '#A5B4FC' }}
         />
-        <div className="relative z-10">
+        <div className="relative z-10 animate-fade-in-up">
           <div className="flex items-center gap-2 mb-2">
             <Network size={18} className="text-indigo-300" />
             <h1 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
