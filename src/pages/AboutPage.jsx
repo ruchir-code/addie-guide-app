@@ -154,11 +154,18 @@ export default function AboutPage() {
         <SectionHeading icon={Award} label="Who built this" />
 
         <div className="space-y-6 text-sm text-gray-700 leading-relaxed">
-          <p>
-            I'm <strong className="text-gray-900">Ruchir Bakshi</strong>, a Senior Instructional
-            Systems Designer at Team Carney, Inc., supporting the Center for Development of
-            Security Excellence (CDSE) at the Department of Defense.
-          </p>
+          <div className="flex flex-col sm:flex-row items-start gap-5">
+            <img
+              src="/headshot.jpg"
+              alt="Ruchir Bakshi"
+              className="w-28 h-28 rounded-full object-cover object-top ring-4 ring-white shadow-lg shrink-0 self-center sm:self-start"
+            />
+            <p className="pt-0 sm:pt-2">
+              I'm <strong className="text-gray-900">Ruchir Bakshi</strong>, a Senior Instructional
+              Systems Designer at Team Carney, Inc., supporting the Center for Development of
+              Security Excellence (CDSE) at the Department of Defense.
+            </p>
+          </div>
           <p>
             I've been in training and instructional design since 2005. Before that, eight years
             in the U.S. Army — Reserves out of Atlanta starting in 1996, then Military Intelligence
